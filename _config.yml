@@ -1,6 +1,6 @@
 title: 'slinkinone.github.io'
 description: "Website"
-baseurl: "/"
+baseurl: ""
 url: "https://slinkinone.github.io"
 
 header_pages:
