@@ -1,1 +1,17 @@
+title: 'slinkinone.github.io'
+description: "Website"
+baseurl: "/"
+url: "https://slinkinone.github.io"
+
+header_pages:
+  - index.md
+  - about.md
+  - contact.md
+
+style: light 
+
+footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+
+# Build settings
+markdown: kramdown
 remote_theme: b2a3e8/jekyll-theme-console
