@@ -10,6 +10,8 @@ header_pages:
   - request.md
 
 style: light # dark (default), light, hacker, or nord
+#listen_for_clients_preferred_style: true
+disable_google_fonts: true
 
 footer: 'Slinkin Technologies 2020-2026: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>'
 
