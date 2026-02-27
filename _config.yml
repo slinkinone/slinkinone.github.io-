@@ -1,5 +1,5 @@
 title: 'slinkinone.github.io'
-description: "Website"
+description: "Slinkin Technologies"
 baseurl: ""
 url: "https://slinkinone.github.io"
 
@@ -8,9 +8,9 @@ header_pages:
   - about.md
   - contact.md
 
-style: light 
+style: dark # dark (default), light, hacker, or nord
 
-footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+footer: 'Slinkin Technologies 2020-2026: <a href="https://twitter.com/">website</a>, <a href="mailto:info@slinkin.tech">email</a>'
 
 # Build settings
 markdown: kramdown
