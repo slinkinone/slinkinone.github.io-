@@ -1,7 +1,7 @@
 ---
-title: /
+title: /about
 layout: home
-permalink: /
+permalink: /about
 ---
 
 # About Us

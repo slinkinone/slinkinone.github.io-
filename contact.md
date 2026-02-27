@@ -1,7 +1,7 @@
 ---
-title: /
+title: /contact
 layout: home
-permalink: /
+permalink: /contact
 ---
 
 # Contact
