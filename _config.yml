@@ -3,11 +3,21 @@ description: "Slinkin Technologies"
 baseurl: ""
 url: "https://slinkinone.github.io"
 
+#
+
+plugins:
+  - jekyll-seo-tag
+
+logo: assets/img/favicon.png
+#
+
 header_pages:
   - index.md
   - blog.md
   - about.md
   - request.md
+
+#
 
 style: light # dark (default), light, hacker, or nord
 #listen_for_clients_preferred_style: true
