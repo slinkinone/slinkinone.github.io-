@@ -13,6 +13,7 @@ logo: assets/img/favicon.png
 
 header_pages:
   - index.md
+  - dc_engine.md
   - blog.md
   - about.md
   - request.md

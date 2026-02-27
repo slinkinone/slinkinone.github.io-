@@ -5,7 +5,7 @@ layout: page
 permalink: /
 ---
 
-# > DC Engine
+# DC Engine
 
 Dissection and Classification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
 
