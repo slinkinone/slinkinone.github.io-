@@ -5,10 +5,11 @@ url: "https://slinkinone.github.io"
 
 header_pages:
   - index.md
+  - blog.md
   - about.md
-  - contact.md
+  - request.md
 
-#style: light # dark (default), light, hacker, or nord
+style: light # dark (default), light, hacker, or nord
 
 footer: 'Slinkin Technologies 2020-2026: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>'
 
