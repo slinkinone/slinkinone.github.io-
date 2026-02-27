@@ -6,7 +6,6 @@ permalink: /request
 
 # Contact us
 
-
 <form>
   <input type="text" id="name" name="name" placeholder="name:" autocomplete="off">
   <input type="text" id="email" name="email" placeholder="email:" autocomplete="off">
