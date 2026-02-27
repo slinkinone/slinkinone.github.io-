@@ -17,6 +17,6 @@ author: Vyacheslav Slinkin
 
 ---
 
-# Introduction
+# [Introduction](#introduction)
 
 The article describes the advantages of using **DPI** software not on endpoint devices. It is important to note that, despite the title of the article, the described cases are not related fully to **inline** mode and it is also applicable for **asymmetric** and **mirroring** modes.
