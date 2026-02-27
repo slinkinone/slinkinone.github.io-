@@ -4,7 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="color-scheme" content="dark light">
   <title>{{ page.title }}</title>
-  {%- seo title=false -%}
   {% seo %}
 
   {% if page.robots %}
@@ -17,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
   {%- endunless -%}
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/img/favicon.png" | relative_url }}">
+  <link rel="shortcut icon" type="image/png" href="{{ "/assets/img/favicon.png" | relative_url }}">
 
   {%- if site.listen_for_clients_preferred_style -%}
   <link rel="stylesheet" type="text/css" href="{{ "/assets/main.css" | relative_url }}">
