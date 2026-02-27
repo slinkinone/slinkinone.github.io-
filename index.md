@@ -10,8 +10,8 @@ permalink: /
 Dissection and Classification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
 
 | Protocols   | Attributes | Metadata     | Services |
-| :---        | :---       |:---          | 553      |
-| 60          | 1157       | 25           |          |
+| :---        | :---       | :---         | :---     |
+| 60          | 1157       | 25           | 553      |
 
 ---
 
