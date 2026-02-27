@@ -1,6 +1,6 @@
 ---
 title: /request
-layout: home
+layout: page
 permalink: /request
 ---
 

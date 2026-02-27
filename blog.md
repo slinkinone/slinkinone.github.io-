@@ -1,9 +1,8 @@
 ---
 title: /blog
-layout: archive
+layout: home
 permalink: /blog
 ---
 
 # Blog
 
-None
