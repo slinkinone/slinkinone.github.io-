@@ -11,7 +11,7 @@ Dissection and Classification Engine. Cross-platform and network independent DPI
 
 | Protocols           | Attributes            | Metadata            | Services             |
 | :---                | :---                  | :---                | :---                 |
-| 60 <img width=100/> | 1157 <img width=100/> | 25 <img width=100/> | 553 <img width=100/> |
+| 60 <img width=125/> | 1157 <img width=125/> | 25 <img width=125/> | 553 <img width=125/> |
 
 ---
 
