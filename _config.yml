@@ -24,7 +24,7 @@ style: light # dark (default), light, hacker, or nord
 #listen_for_clients_preferred_style: true
 disable_google_fonts: true
 
-footer: 'slinkin-tech 2020-2026: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="privacy-polocy.html">privacy-polocy</a>'
+footer: 'slinkin-tech 2020-2026: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
 
 # Build settings
 markdown: kramdown
