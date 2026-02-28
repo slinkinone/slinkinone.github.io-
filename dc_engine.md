@@ -15,17 +15,28 @@ permalink: /dc-engine
 ## > functionality
 
 ### # protocol detection
-- identifying network protocols, extracting fields, decoding values.
+identifying network protocols, extracting fields, decoding values.
 
 ### # internet services classificaion
-- classification of services and definition of the nature of the flow (audio/video/file transfer).
+classification of services and definition of the nature of the flow (audio/video/file transfer).
 
-* **integration into other solutions**: ips/ids, siem, dlp, etc.
-* **network activity logging**: logging of network activity that can be used in the investigation of incidents.
-* **data collection for ai**: collecting an array of data for use in AI systems.
-* **user control**: putting users under control (saving all or selected information for certain users).
-* **collecting information for billing**: accumulation of information on streams for use in billing.
-* **hotfix of new vulnerabilities**: prevention of exploitation of new vulnerabilities, before the release of official fixes.
+### # integration into other solutions
+ips/ids, siem, dlp, etc.
+
+### # network activity logging
+logging of network activity that can be used in the investigation of incidents.
+
+### # data collection for ai
+collecting an array of data for use in AI systems.
+
+### # user control
+putting users under control (saving all or selected information for certain users).
+
+### # collecting information for billing
+accumulation of information on streams for use in billing.
+
+### # hotfix of new vulnerabilities
+prevention of exploitation of new vulnerabilities, before the release of official fixes.
 
 ---
 
@@ -54,3 +65,7 @@ Traffic control allows you to solve problems such as load balancing in the netwo
 ### # network services classification
 
 Classification tasks are typical for such areas as information security, where data is classified as malicious or malicious, system administration, where incorrect network operation is diagnosed, and in the field of mobile operators and Internet providers, where network flows are classified as popular Internet services. SL DC Engine provides functionality to classify network activity through a tagging mechanism. This means that the user can independently create any tag and describe the rule for assigning it to a packet or flow (for example, tethering, fraud, etc.). This approach implies universality in matters of classification and allows users to create their tags for any purpose.
+
+## > technical information
+
+Technical information is available on our portal: <a href="https://wiki.slinkin.tech">wiki.slinkin.tech</a>.
