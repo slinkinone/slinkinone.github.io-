@@ -1,7 +1,7 @@
 ---
-title: /dc-engine
+title: /privacy-policy
 layout: page
-permalink: /dc-engine
+permalink: /privacy-policy
 ---
 
 # > privacy-policy
