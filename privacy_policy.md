@@ -25,13 +25,16 @@ When you reach out to us to inquire about our products or services, we may colle
 ## # how we use your information
 
 &nbsp;
-**$ analytics**:
+
+<p style="text-indent: 25px;">
+<b>$ analytics<b/>:
 
 The data collected through analytics services is used to improve the functionality and content of our website. It helps us understand how users interact with our site and enables us to make informed decisions to enhance user experience.
 
-**$ communication**:
+<b>$ communication<b/>:
 
 We may use the contact information you provide to respond to your inquiries, provide information about our products or services, and keep you updated about relevant news or promotions.
+</p>
 
 ## # cookies and similar technologies
 
