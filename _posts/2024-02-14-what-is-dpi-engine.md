@@ -56,7 +56,7 @@ IMPORTANT: This introductory section briefly covers basic networking concepts an
 
 &nbsp;
 
-&nbsp;<hr>
+<hr>
   <b>IMPORTANT: Inline vs. Mirroring</b>
   </br>
   </br>
