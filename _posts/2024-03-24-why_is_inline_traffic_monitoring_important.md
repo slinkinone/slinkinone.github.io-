@@ -37,21 +37,18 @@ The recommended sequence of actions in such a case:
 
 **DPI** system helps to detect and prevent further spreading of infection (or evil activity) inside the local network. In addition to that, it provides valuable log information for the incident analysis.
 
+<!---
 ![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-attack.png "Endpoint attack")
-
-```
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-```
-
+-->
 
 ## $ [Endpoint hardware limitation](#endpoint-hardware-limitation)
 
 &nbsp;
 These days, there are many **IoT** devices that operate within local networks. The main lack of using them is hardware limitation. They are invented/built to perform one task and nothing more. It is absolutely different story than PC/Laptop/etc. **IoT** devices in the most cases cannot be upgraded.
 
+<!---
 ![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-hardware-limitation.png "Endpoint hardware limitation")
+-->
 
 In a case, when **DPI** system is presented in the network then there is no need to install security programs on each device. **DPI** collects all network activity and the network engineer can get network log information for any interested device.
 
@@ -60,7 +57,9 @@ In a case, when **DPI** system is presented in the network then there is no need
 &nbsp;
 Another important note about event collection is a count of agents. When the network is huge enough and it contains machines with different hardware and different operating systems - it becomes difficult to manage them. Much easier to collect data when count of agents are limited by few instances.
 
+<!---
 ![](/assets/blog/why-is-inline-traffic-monitoring-important/img/agent-control.png "Agent control")
+-->
 
 In such cases it is more reliable to have one **DPI** system for the whole network or at least on instance per network cluster for network log collection. It will reduce the amount of work for network software debugging at endpoint devices drammaticly.
 
@@ -69,7 +68,9 @@ In such cases it is more reliable to have one **DPI** system for the whole netwo
 &nbsp;
 **IoT** devices are the part of many companies and they cannot be ignored. They are difficult to manage, not to mention difficult to install anything on them (in most cases, simply impossible). But they also need protection, because like any device on the network, it is accessible and potentially vulnerable.
 
+<!---
 ![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-software-limitation.png "Endpoint software limitation")
+-->
 
 For such cases, **DPI** can resolve the problem just like in all previous cases - monitoring traffic on a separate node.
 
