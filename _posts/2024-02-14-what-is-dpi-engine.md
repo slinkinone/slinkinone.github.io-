@@ -50,13 +50,9 @@ The task of traffic classification is fundamental to a full-fledged DPI solution
 
 <hr>
   <strong>
-  IMPORTANT: This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.
+IMPORTANT: This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.
   </strong>
 <hr>
-
-<div style="border-top: 2px solid black; border-bottom: 2px solid black; padding: 10px 0; font-weight: bold; text-align: justify;">
-IMPORTANT: This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.
-</div>
 
 &nbsp;
 
