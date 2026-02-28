@@ -1,5 +1,5 @@
 ---
-title: /poetal
+title: /portal
 layout: page
 permalink: /portal
 ---
