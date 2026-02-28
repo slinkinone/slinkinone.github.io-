@@ -38,6 +38,7 @@ The recommended sequence of actions in such a case:
 **DPI** system helps to detect and prevent further spreading of infection (or evil activity) inside the local network. In addition to that, it provides valuable log information for the incident analysis.
 
 ![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-attack.png "Endpoint attack")
+<img src="/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-attack.png" style="max-width: 100%;">
 
 ## $ [Endpoint hardware limitation](#endpoint-hardware-limitation)
 
