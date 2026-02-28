@@ -13,6 +13,8 @@ permalink: /
 | :---                              | :---                                  | :---                              | :---     |
 | 60                                | 1157                                  | 25                                | 553      |
 
+[Read more in the brochure](/assets/pdf/brochure/sl-dpi-en-2024.pdf)
+
 ---
 
 ## > network protocols
