@@ -49,12 +49,14 @@ In an operator’s network, DPI must not only classify network flows but also au
 The task of traffic classification is fundamental to a full-fledged DPI solution and belongs to a distinct class known as **DPI Engine**. This is due to the constant evolution of services — names change (e.g., Twitter -> X), new domain names, CDNs, new service optimization methods are developed (such as voice or video calls), and new protocols are adopted. As a result, a separate segment of tasks arises that is independent of the type of network (Mobile Core, ISP, Wi-Fi AP, etc.), yet solving these tasks remains essential for each network type. For this reason, deep traffic analysis and network flow classification are carried out specifically by **DPI Engine** solutions.
 
 <hr>
-  <strong>
 IMPORTANT: This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.
-  </strong>
 <hr>
 
 &nbsp;
+
+<hr>
+IMPORTANT: This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.
+<hr>
 
 <hr>
   <b>IMPORTANT: Inline vs. Mirroring</b>
