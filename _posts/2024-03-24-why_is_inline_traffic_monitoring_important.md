@@ -8,7 +8,6 @@ author: Vyacheslav Slinkin
 
 # > Content Table
 
-&nbsp;
 * [Introduction](#introduction)
 * [Endpoint node attack](#endpoint-node-attack)
 * [Endpoint hardware limitation](#endpoint-hardware-limitation)
