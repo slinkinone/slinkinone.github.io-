@@ -4,5 +4,4 @@ layout: home
 permalink: /blog
 ---
 
-# Blog
-
+# > blog
