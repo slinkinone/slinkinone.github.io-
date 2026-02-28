@@ -11,7 +11,7 @@ permalink: /
 
 [# brochure](/assets/pdf/brochure/sl-dpi-en-2024.pdf)
 
-| Protocols &nbsp;&nbsp;&nbsp;&nbsp;| Attributes &nbsp;&nbsp;&nbsp;&nbsp;   | Metadata &nbsp;&nbsp;&nbsp;&nbsp; | Services |
+| protocols &nbsp;&nbsp;&nbsp;&nbsp;| attributes &nbsp;&nbsp;&nbsp;&nbsp;   | metadata &nbsp;&nbsp;&nbsp;&nbsp; | services |
 | :---                              | :---                                  | :---                              | :---     |
 | 60                                | 1157                                  | 25                                | 553      |
 
