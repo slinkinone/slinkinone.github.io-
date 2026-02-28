@@ -8,6 +8,7 @@ author: Vyacheslav Slinkin
 
 # > Content Table
 
+&nbsp;
 * [Introduction](#introduction)
 * [What is a network protocol, packet, layer?](#)
 * [OSI](#)
@@ -24,6 +25,7 @@ author: Vyacheslav Slinkin
 * [Flow type classification (workflow)](#)
 * [Why is it difficult?](#)
 * [What else is interesting about the DPI Engine?](#)
+&nbsp;
 
 ---
 
