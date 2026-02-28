@@ -8,7 +8,7 @@ permalink: /dc-engine
 
 **D**issection and **C**lassification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
 
-[brochure](/assets/pdf/brochure/sl-dpi-en-2024.pdf)
+[# brochure](/assets/pdf/brochure/sl-dpi-en-2024.pdf)
 
 ---
 
