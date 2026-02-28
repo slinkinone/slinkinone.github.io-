@@ -6,7 +6,7 @@ permalink: /
 ---
 
 # > dc-engine
-<br/>
+&nbsp;
 **D**issection and **C**lassification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
 
 [# brochure](/assets/pdf/brochure/sl-dpi-en-2024.pdf)
@@ -18,17 +18,21 @@ permalink: /
 ---
 
 ## > network protocols
-<br/>
+
+&nbsp;
 We help improve network activity analytics based on network protocols: protocol detection, structure verification, and extracting the most significant fields needed for analysis. Field values play an important role in traffic classification, and the list of extracted values affects the classification type: Internet service, cyber attack, network problems, potential data leakage, etc.
 
 ## > internet services
-<br/>
+
+&nbsp;
 We solve problems with the classification of Internet services (YouTube, WhatsApp, Telegram, etc.) and the determination of the nature of traffic (audio, video, chat, etc.). We maintain and update the database of signatures, IP addresses, CDN, and classification methods.
 
 ## > ml/ai
-<br/>
+
+&nbsp;
 We process traffic and extract the maximum possible number of fields/properties/metrics, after which we generate a granular dataset for training your AI systems. The set of produced information is constantly updated with the release of new product versions, which expand the list of supported protocols, fields, and metadata.
 
 ## > ipdr
-<br/>
+
+&nbsp;
 The ability to independently configure events for traffic processing. The event processing module generates records with a pre-configured set of properties and sends them to the server for subsequent processing/analysis.
