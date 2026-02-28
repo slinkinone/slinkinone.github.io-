@@ -6,7 +6,9 @@ categories: tech, article
 author: Vyacheslav Slinkin
 ---
 
-# Content Table
+# > Content Table
+
+&nbsp;
 
 * [Introduction](#introduction)
 * [Endpoint node attack](#endpoint-node-attack)
@@ -17,27 +19,33 @@ author: Vyacheslav Slinkin
 
 ---
 
-# [Introduction](#introduction)
+## $ [Introduction](#introduction)
 
+&nbsp;
 The article describes the advantages of using **DPI** software not on endpoint devices. It is important to note that, despite the title of the article, the described cases are not related fully to **inline** mode and it is also applicable for **asymmetric** and **mirroring** modes.
 
-# [Endpoint node attack](#endpoint-node-attack)
+## $ [Endpoint node attack](#endpoint-node-attack)
 
+&nbsp;
 ...
 
-# [Endpoint hardware limitation](#endpoint-hardware-limitation)
+## $ [Endpoint hardware limitation](#endpoint-hardware-limitation)
 
+&nbsp;
 ...
 
-# [Agent control](#agent-control)
+## $ [Agent control](#agent-control)
 
+&nbsp;
 ...
 
 
-# [Endpoint software limitation](#endpoint-software-limitation)
+## $ [Endpoint software limitation](#endpoint-software-limitation)
 
+&nbsp;
 ...
 
-# [Conclusion](#conclusion)
+## $ [Conclusion](#conclusion)
 
+&nbsp;
 ...
