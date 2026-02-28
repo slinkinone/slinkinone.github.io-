@@ -14,6 +14,13 @@ Despite the fact that our products function away from the eyes of most people, w
 
 ---
 
-# Contacts
+# Contact
 
-* info@slinkin.tech
+Contact us by email <a href="mailto:info@slinkin.tech">info@slinkin.tech</a> or use the form bellow:
+
+<form>
+  <input type="text" id="name" name="name" placeholder="name:" autocomplete="off">
+  <input type="text" id="email" name="email" placeholder="email:" autocomplete="off">
+  <textarea rows="5" id="message" name="message" placeholder="message:" autocomplete="off"></textarea>
+  <input type="submit" value="[ submit ]">
+</form>
