@@ -7,7 +7,7 @@ permalink: /
 
 # DC Engine
 
-Dissection and Classification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
+**D**issection and **C**lassification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
 
 | Protocols &nbsp;&nbsp;&nbsp;&nbsp;| Attributes &nbsp;&nbsp;&nbsp;&nbsp;   | Metadata &nbsp;&nbsp;&nbsp;&nbsp; | Services |
 | :---                              | :---                                  | :---                              | :---     |
