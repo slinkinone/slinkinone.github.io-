@@ -39,9 +39,12 @@ The recommended sequence of actions in such a case:
 
 ![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-attack.png "Endpoint attack")
 
-<div style="width: 100%; overflow: hidden;">
-  <img src="/assets/blog/.../endpoint-attack.png" style="max-width: 100%; height: auto;">
-</div>
+```
+++++
+++++
+++++
+```
+
 
 ## $ [Endpoint hardware limitation](#endpoint-hardware-limitation)
 
