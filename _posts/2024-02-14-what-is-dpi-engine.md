@@ -51,7 +51,9 @@ The task of traffic classification is fundamental to a full-fledged DPI solution
 ---
 >IMPORTANT: This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.
 ---
+
 &nbsp;
+
 ---
 >IMPORTANT: Inline vs. Mirroring
 >
