@@ -11,7 +11,7 @@ author: Vyacheslav Slinkin
 <b><center>What is DPI Engine?</center></b>
 &nbsp;
 
-![](/assets/blog/why-is-inline-traffic-monitoring-important/img/dpi_engine_cover.png "What is DPI Engine?")
+![](/assets/blog/what-is-dpi-engine/img/dpi_engine_cover.png "What is DPI Engine?")
 
 ---
 
