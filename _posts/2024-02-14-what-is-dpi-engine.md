@@ -9,7 +9,12 @@ categories: article
 author: Vyacheslav Slinkin
 ---
 
+# What is DPI Engine?
+
+<!---
 <b><center>What is DPI Engine?</center></b>
+--->
+
 &nbsp;
 
 ![](/assets/blog/what_is_dpi_engine/img/dpi_engine_cover.png "What is DPI Engine?")
