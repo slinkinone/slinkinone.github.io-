@@ -9,7 +9,7 @@ categories: article
 author: Vyacheslav Slinkin
 ---
 
-<center><h1>Why is inline traffic monitoring is important?</h1></center>
+<b><center>Why is inline traffic monitoring is important?</center></b>
 &nbsp;
 
 ![](/assets/blog/why_is_inline_traffic_monitoring_important/img/inline_cover.png "Why is inline traffic monitoring is important?")
