@@ -9,6 +9,12 @@ categories: article
 author: Vyacheslav Slinkin
 ---
 
+<style>
+  header h1 {
+    text-align: center;
+  }
+</style>
+
 # Why is inline traffic monitoring is important?
 
 <!---
