@@ -6,6 +6,8 @@ categories: article
 author: Vyacheslav Slinkin
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
 <b><center>What is DPI Engine?</center></b>
 &nbsp;
 
