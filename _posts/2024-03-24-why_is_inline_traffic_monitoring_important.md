@@ -9,7 +9,7 @@ author: Vyacheslav Slinkin
 <b><center>Why is inline traffic monitoring is important?</center></b>
 &nbsp;
 
-![](/assets/blog/why-is-inline-traffic-monitoring-important/img/inline-cover.png "Why is inline traffic monitoring is important?")
+![](/assets/blog/why-is-inline-traffic-monitoring-important/img/inline_cover.png "Why is inline traffic monitoring is important?")
 
 ---
 
@@ -46,7 +46,7 @@ The recommended sequence of actions in such a case:
 
 ![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-attack.png "Endpoint attack")
 <!---
-![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-attack.png "Endpoint attack")
+![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint_attack.png "Endpoint attack")
 -->
 
 ## $ [Endpoint hardware limitation](#endpoint-hardware-limitation)
@@ -56,7 +56,7 @@ These days, there are many **IoT** devices that operate within local networks. T
 
 // img
 <!---
-![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-hardware-limitation.png "Endpoint hardware limitation")
+![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint_hardware_limitation.png "Endpoint hardware limitation")
 -->
 
 In a case, when **DPI** system is presented in the network then there is no need to install security programs on each device. **DPI** collects all network activity and the network engineer can get network log information for any interested device.
@@ -68,7 +68,7 @@ Another important note about event collection is a count of agents. When the net
 
 // img
 <!---
-![](/assets/blog/why-is-inline-traffic-monitoring-important/img/agent-control.png "Agent control")
+![](/assets/blog/why-is-inline-traffic-monitoring-important/img/agent_control.png "Agent control")
 -->
 
 In such cases it is more reliable to have one **DPI** system for the whole network or at least on instance per network cluster for network log collection. It will reduce the amount of work for network software debugging at endpoint devices drammaticly.
@@ -80,7 +80,7 @@ In such cases it is more reliable to have one **DPI** system for the whole netwo
 
 // img
 <!---
-![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint-software-limitation.png "Endpoint software limitation")
+![](/assets/blog/why-is-inline-traffic-monitoring-important/img/endpoint_software_limitation.png "Endpoint software limitation")
 -->
 
 For such cases, **DPI** can resolve the problem just like in all previous cases - monitoring traffic on a separate node.
