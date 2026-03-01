@@ -6,6 +6,7 @@ url: "https://slinkinone.github.io"
 #
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-seo-tag
 
 logo: assets/img/favicon.png
