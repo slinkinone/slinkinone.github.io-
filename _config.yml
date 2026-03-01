@@ -27,24 +27,6 @@ disable_google_fonts: true
 
 #
 tracking: true
-
-tracking:
-  script_src: 
-    - "https://mc.yandex.ru"  # Добавлен путь к файлу
-  async: true
-  init: |
-    window.ym = window.ym || function() { (window.ym.a = window.ym.a || []).push(arguments) };
-    window.ym.l = 1 * new Date();
-    ym(107060220, "init", {
-        clickmap:true, 
-        trackLinks:true, 
-        accurateTrackBounce:true, 
-        webvisor:true, 
-        ecommerce:"dataLayer"
-    });
-
-#
-
 footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
 
 # Build settings
