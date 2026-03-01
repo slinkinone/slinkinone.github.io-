@@ -1,6 +1,6 @@
 ---
 title: /about
-description: Slinkin Technologies develops software in the field of network traffic analysis, with an emphasis on performance and flexibility of use.
+description: Development team specializing in network traffic analysis, with an emphasis on performance and flexibility.
 keywords: slinkin, slinkin technologies, slinkin tech
 layout: page
 permalink: /about

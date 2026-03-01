@@ -10,7 +10,7 @@ permalink: /privacy-policy
 &nbsp;
 **update-date**: 01.03.2024
 
-Thank you for visiting **Slinkin Technologies**! Your privacy is important to us, and we are committed to protecting your personal information. This Privacy Policy is designed to help you understand how we collect, use, and safeguard the information you provide on our website.
+Thank you for visiting our website! Your privacy is important to us, and we are committed to protecting your personal information. This Privacy Policy is designed to help you understand how we collect, use, and safeguard the information you provide on our website.
 
 ## # information we collect
 
@@ -59,4 +59,4 @@ If you have any questions about our Privacy Policy or the practices of our websi
 &nbsp;
 We may update our **Privacy Policy** from time to time. Any changes will be posted on this page with an updated effective date.
 
-Thank you for trusting **Slinkin Technologies** with your information.
+Thank you for trusting us with your information.
