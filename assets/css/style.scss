@@ -1,6 +1,17 @@
 ---
 ---
-.container img {
-  max-width: 100% !important;
-  height: auto !important;
+/* Принудительно ограничиваем ширину для всех оберток и самих картинок */
+.container, 
+.content,
+article,
+section {
+    max-width: 100% !important;
+    overflow-x: hidden !important; /* Предотвращает горизонтальный скролл */
+}
+
+img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain; /* Сохраняет пропорции внутри блока */
 }
