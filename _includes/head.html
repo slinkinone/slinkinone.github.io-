@@ -5,12 +5,11 @@
   <meta name="color-scheme" content="dark light">
   <!--<title>{{ page.title }}</title>-->
   <title>
-  {% if site.title %}
-    {{ site.title }}
-    {% if page.title %}:{{ page.title }}{% endif %}
-  {% else %}
-    {{ page.title }}
-  {% endif %}
+    {%- if site.title -%}
+      {{ site.title }}{%- if page.title -%}:{{ page.title }}{%- endif -%}
+    {%- else -%}
+      {{ page.title }}
+    {%- endif -%}
   </title>
 
   {% seo %}
