@@ -18,14 +18,6 @@ permalink: /
 
 &nbsp;
 
-```bash
-./DcEngineCli --info
-protocols:   60
-attributes:  1157
-metadata:    25
-services:    553
-```
-
 ---
 
 ## > network protocols
