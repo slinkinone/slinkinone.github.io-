@@ -9,17 +9,7 @@ categories: article
 author: Vyacheslav Slinkin
 ---
 
-<style>
-  header h1 {
-    text-align: center;
-  }
-</style>
-
-# Why is inline traffic monitoring is important?
-
-<!---
-<b><center>Why is inline traffic monitoring is important?</center></b>
---->
+<b><center><h1>Why is inline traffic monitoring is important?</h1></center></b>
 
 &nbsp;
 
@@ -27,7 +17,7 @@ author: Vyacheslav Slinkin
 
 ---
 
-# > Content Table
+## > Content Table
 
 &nbsp;
 * [Introduction](#introduction)
