@@ -6,4 +6,6 @@ layout: home
 permalink: /blog
 ---
 
-# > blog
+<h1 hidden>Technical articles and news.</h1>
+
+## > blog

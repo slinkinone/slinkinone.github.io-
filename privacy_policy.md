@@ -5,7 +5,9 @@ layout: page
 permalink: /privacy-policy
 ---
 
-# > privacy-policy
+<h1 hidden>Privacy policy information page.</h1>
+
+## > privacy-policy
 
 &nbsp;
 **update-date**: 01.03.2024

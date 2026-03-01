@@ -6,7 +6,9 @@ layout: page
 permalink: /about
 ---
 
-# > about
+<h1 hidden>Developement profile and contact information.</h1>
+
+## > about
 
 &nbsp;
 Slinkin Technologies is an independent team of networking experts. We combine deep engineering expertise with an agile approach to deliver high-performance, flexible solutions for traffic analysis, balancing, and modification.

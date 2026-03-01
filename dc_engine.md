@@ -6,7 +6,9 @@ layout: page
 permalink: /dc-engine
 ---
 
-# > dc-engine
+<h1 hidden>Dissection and Classification engine. DPI Engine solution.</h1>
+
+## > dc-engine
 
 &nbsp;
 **D**issection and **C**lassification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
