@@ -1,7 +1,54 @@
-.post img,
-.page-content img,
-.content img {
-  max-width: 100%;
+---
+---
+
+/* Import the original theme */
+@import "jekyll-theme-console";
+
+/* =========================
+   Layout Fix (critical)
+   ========================= */
+
+/* Constrain the main content width */
+main,
+.container,
+article {
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Image Fix (core issue)
+   ========================= */
+
+/* Force images to stay inside content */
+main img,
+.container img,
+article img {
+  max-width: 100% !important;
+  width: 100%;
   height: auto;
   display: block;
+  margin: 1.5rem auto;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Optional improvements
+   ========================= */
+
+/* Prevent any overflow from breaking layout */
+body {
+  overflow-x: hidden;
+}
+
+/* Make sure pre/code blocks don’t overflow either */
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Optional: nicer image appearance */
+article img {
+  border-radius: 4px;
 }
