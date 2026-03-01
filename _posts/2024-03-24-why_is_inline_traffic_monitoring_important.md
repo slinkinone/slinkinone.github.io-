@@ -6,9 +6,7 @@ categories: article
 author: Vyacheslav Slinkin
 ---
 
-<!---
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
--->
 
 <b><center>Why is inline traffic monitoring is important?</center></b>
 &nbsp;
