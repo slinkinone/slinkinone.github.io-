@@ -1,5 +1,5 @@
 ---
-title: /
+title: /slinkin-tech
 #layout: home
 layout: page
 permalink: /
