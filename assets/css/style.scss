@@ -1,10 +1,8 @@
 ---
 ---
+@import "jekyll-theme-console";
 
-/* Import theme's base styles */
-@import "base";
-
-/* Your custom overrides */
+/* Image fit fix for the container */
 .container img,
 article img,
 main img {
@@ -13,7 +11,7 @@ main img {
   display: block;
 }
 
-/* Optional: constrain content width */
+/* Optional: Constrain content width */
 main, .container, article {
   max-width: 800px;
   margin: 0 auto;
