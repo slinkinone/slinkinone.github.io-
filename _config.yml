@@ -5,6 +5,8 @@ url: "https://slinkinone.github.io"
 
 #
 
+title: "Slinkin Tech."
+
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
