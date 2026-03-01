@@ -2,7 +2,7 @@
 layout: post
 title:  "Why is inline traffic monitoring is important?"
 date:   2024-03-24 12:00:00 +0000
-categories: tech, article
+categories: article
 author: Vyacheslav Slinkin
 ---
 
