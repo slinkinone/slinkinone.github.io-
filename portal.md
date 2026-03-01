@@ -1,5 +1,7 @@
 ---
 title: /portal
+description: Technical portal - detailed product information, documentation, performance data, and support.
+keywords: support, documentation, performance
 layout: page
 permalink: /portal
 ---

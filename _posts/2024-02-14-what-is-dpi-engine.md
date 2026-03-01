@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "What is DPI Engine?"
+description: The task of traffic classification is fundamental to a comprehensive DPI solution and falls under a separate category known as the DPI Engine.
+keywords: dpi, deep packet inspection, dpi engine, reassembling, packet dissection, flow classification, network service, domain fronting, domain patterns, data patterns, ip database, data structure, dns cache, tls session cache, audio/video call classification
 date:   2024-02-14 12:00:00 +0000
 categories: article
 author: Vyacheslav Slinkin

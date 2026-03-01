@@ -1,5 +1,6 @@
 ---
 title: /privacy-policy
+description: Be in touch what specific information is collected, and whether it is kept confidential, shared with partners, or sold to other firms or enterprises.
 layout: page
 permalink: /privacy-policy
 ---
