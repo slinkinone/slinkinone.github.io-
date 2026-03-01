@@ -6,7 +6,9 @@ layout: page
 permalink: /about
 ---
 
+<!--
 <h1 hidden>Developement profile and contact information.</h1>
+-->
 
 ## > about
 

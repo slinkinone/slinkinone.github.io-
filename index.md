@@ -7,7 +7,9 @@ layout: page
 permalink: /
 ---
 
+<!--
 <h1 hidden>Network software - network traffic analysis, internet service classification, metadata extraction.</h1>
+-->
 
 ## > dc-engine
 

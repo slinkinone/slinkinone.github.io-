@@ -6,6 +6,10 @@ layout: page
 permalink: /portal
 ---
 
+<!--
+<h1 hidden>Technical portal.</h1>
+-->
+
 ## > portal
 
 &nbsp;
