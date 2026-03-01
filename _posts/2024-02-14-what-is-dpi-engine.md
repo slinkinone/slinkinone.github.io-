@@ -9,7 +9,7 @@ categories: article
 author: Vyacheslav Slinkin
 ---
 
-<center># What is DPI Engine?</center>
+<center><h1>What is DPI Engine?</h1></center>
 
 <!---
 <b><center>What is DPI Engine?</center></b>
@@ -21,7 +21,7 @@ author: Vyacheslav Slinkin
 
 ---
 
-# > Content Table
+## > Content Table
 
 &nbsp;
 * [Introduction](#introduction)
