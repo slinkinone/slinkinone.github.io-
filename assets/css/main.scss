@@ -1,0 +1,21 @@
+---
+---
+
+/* Import theme's base styles */
+@import "base";
+
+/* Your custom overrides */
+.container img,
+article img,
+main img {
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}
+
+/* Optional: constrain content width */
+main, .container, article {
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
