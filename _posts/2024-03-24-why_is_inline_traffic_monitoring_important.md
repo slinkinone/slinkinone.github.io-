@@ -2,6 +2,7 @@
 layout: post
 title:  "Why is inline traffic monitoring is important?"
 description: Advantages and disadvantages of monitoring traffic on a dedicated server.
+image: /assets/blog/why_is_inline_traffic_monitoring_important/img/inline_cover.png
 keywords: dpi, deep packet inspection, inline, cybersecurity, endpoint
 date:   2024-03-24 12:00:00 +0000
 categories: article
