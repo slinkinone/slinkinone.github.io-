@@ -1,11 +1,9 @@
-title: 'slinkinone.github.io'
+title: "slinkin-tech"
 description: "Slinkin Technologies"
 baseurl: ""
 url: "https://slinkinone.github.io"
 
 #
-
-title: "slinkin-tech"
 
 plugins:
   - jekyll-remote-theme
@@ -26,7 +24,26 @@ header_pages:
 style: light # dark (default), light, hacker, or nord
 #listen_for_clients_preferred_style: true
 disable_google_fonts: true
+
+#
 tracking: true
+
+tracking:
+  script_src: 
+    - "https://mc.yandex.ru"
+  async: true
+  init: |
+    window.ym = window.ym || function() { (window.ym.a = window.ym.a || []).push(arguments) };
+    window.ym.l = 1 * new Date();
+    ym(107060220, "init", {
+        clickmap:true, 
+        trackLinks:true, 
+        accurateTrackBounce:true, 
+        webvisor:true, 
+        ecommerce:"dataLayer"
+    });
+
+#
 
 footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
 
