@@ -1,14 +1,10 @@
 ---
 ---
 
-/* Import the original theme */
-@import "jekyll-theme-console";
-
 /* =========================
-   Layout Fix (critical)
+   Layout Fix
    ========================= */
 
-/* Constrain the main content width */
 main,
 .container,
 article {
@@ -18,10 +14,9 @@ article {
 }
 
 /* =========================
-   Image Fix (core issue)
+   Image Fix
    ========================= */
 
-/* Force images to stay inside content */
 main img,
 .container img,
 article img {
@@ -30,25 +25,15 @@ article img {
   height: auto;
   display: block;
   margin: 1.5rem auto;
-  box-sizing: border-box;
 }
 
-/* =========================
-   Optional improvements
-   ========================= */
-
-/* Prevent any overflow from breaking layout */
+/* Prevent horizontal scroll */
 body {
   overflow-x: hidden;
 }
 
-/* Make sure pre/code blocks don’t overflow either */
+/* Fix code blocks overflow */
 pre {
   max-width: 100%;
   overflow-x: auto;
-}
-
-/* Optional: nicer image appearance */
-article img {
-  border-radius: 4px;
 }
