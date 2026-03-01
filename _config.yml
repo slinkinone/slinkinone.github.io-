@@ -30,7 +30,7 @@ tracking: true
 
 tracking:
   script_src: 
-    - "https://mc.yandex.ru"
+    - "https://mc.yandex.ru"  # Добавлен путь к файлу
   async: true
   init: |
     window.ym = window.ym || function() { (window.ym.a = window.ym.a || []).push(arguments) };
