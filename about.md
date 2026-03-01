@@ -9,9 +9,9 @@ permalink: /about
 # > about
 
 &nbsp;
-Slinkin Technologies is an IT company whose main specialization is software development in the field of computer networks. We develop flexible solutions that can be used in the field of analysis, balancing, and modification of network traffic.
+Slinkin Technologies is an independent team of networking experts. We combine deep engineering expertise with an agile approach to deliver high-performance, flexible solutions for traffic analysis, balancing, and modification.
 
-Despite the fact that our products function away from the eyes of most people, we try to make them as pleasant and convenient to use as possible.
+Even though our products function deep within network infrastructures, we take extra pride in making our complex tools as intuitive, reliable, and user-friendly as possible.
 
 ---
 
