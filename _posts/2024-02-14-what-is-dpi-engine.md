@@ -9,7 +9,7 @@ categories: article
 author: Vyacheslav Slinkin
 ---
 
-# What is DPI Engine?
+<center># What is DPI Engine?</center>
 
 <!---
 <b><center>What is DPI Engine?</center></b>
