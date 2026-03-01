@@ -1,6 +1,6 @@
 ---
 title: /
-description: Network software: network traffic analysis, internet service classification, metadata extraction.
+description: Network software - network traffic analysis, internet service classification, metadata extraction.
 keywords: dpi, deep packet inspection, traffic classification, nta, network traffic analyzer, integration solution, network monitor, dpi framework, dpi library, dpi engine, industrial dpi, sl dc engine, dc engine
 #layout: home
 layout: page
