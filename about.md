@@ -1,6 +1,5 @@
 ---
 title: /about
-browser_title: "Slinkin Tech. | /about"
 layout: page
 permalink: /about
 ---
