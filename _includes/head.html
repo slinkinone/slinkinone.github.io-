@@ -9,7 +9,7 @@
   {%- elsif site.keywords -%}
     <meta name="keywords" content="{{ site.keywords }}">
   {%- endif -%}
-  
+
   <!--<title>{{ page.title }}</title>-->
   <title>
     {%- if site.title -%}
@@ -18,6 +18,8 @@
       {{ page.title }}
     {%- endif -%}
   </title>
+
+  {% seo title=false %}
 
   {% seo %}
 
