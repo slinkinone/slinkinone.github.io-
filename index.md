@@ -1,6 +1,5 @@
 ---
 title: /
-browser_title: "Slinkin Tech. | /"
 #layout: home
 layout: page
 permalink: /

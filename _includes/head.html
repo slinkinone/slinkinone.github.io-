@@ -4,7 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="color-scheme" content="dark light">
   <!--<title>{{ page.title }}</title>-->
-  <title>{% if page.browser_title %}{{ page.browser_title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>
+  {% if site.title %}
+    {{ site.title }}
+    {% if page.title %} | {{ page.title }}{% endif %}
+  {% else %}
+    {{ page.title }}
+  {% endif %}
+</title>
   {% seo %}
 
   {% if page.robots %}
