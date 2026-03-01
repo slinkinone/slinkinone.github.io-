@@ -1,39 +1,8 @@
 ---
 ---
 
-/* =========================
-   Layout Fix
-   ========================= */
-
-main,
-.container,
-article {
-  max-width: 800px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* =========================
-   Image Fix
-   ========================= */
-
-main img,
-.container img,
-article img {
-  max-width: 100% !important;
-  width: 100%;
+.container img {
+  max-width: 100%;
   height: auto;
   display: block;
-  margin: 1.5rem auto;
-}
-
-/* Prevent horizontal scroll */
-body {
-  overflow-x: hidden;
-}
-
-/* Fix code blocks overflow */
-pre {
-  max-width: 100%;
-  overflow-x: auto;
 }
