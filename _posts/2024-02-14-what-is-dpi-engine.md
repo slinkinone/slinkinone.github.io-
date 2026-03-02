@@ -265,14 +265,13 @@ To improve this setup, you should add two more DNS records that point to the sam
 | privatezone.com                | git                                   | A                             | 90.156.176.56    |
 | privatezone.com                | youtrack                              | A                             | 90.156.176.56    |
 
+&nbsp;
 Thus, when a user requests gitlab.privatezone.com in a browser, the browser sends a TLS request with the domain gitlab.privatezone.com specified in the server_name field (SNI). However, the server still won’t respond, because there is no program running on port 443. To route incoming connections between YouTrack and GitLab, you need to install **Nginx** (or any other web server) and configure it to forward requests for youtrack.privatezone.com to YouTrack (127.0.0.1:9000) and requests for gitlab.privatezone.com to GitLab (127.0.0.1:9001). The addresses 127.0.0.1:9000 and 127.0.0.1:9001 mean that the requests are routed locally (127.0.0.1) to ports 9000 and 9001, where they are handled by the appropriate applications.
 
 ![](/assets/blog/what_is_dpi_engine/img/vm_2_services.png "Scheme 10: 2 services on one virtual machine")
 <p align="center"><i>Scheme 10: 2 services on one virtual machine</i></p>
 
 From the example above, it becomes clear that if multiple services are running on a server/virtual machine, classification by IP address cannot be performed. Domain name checking is absolutely necessary to determine the service. This is important to understand. For example, if a hypothetical Google has a large pool of IP addresses, and there is no information (not received from the service) that, for instance, the pool 142.250.221.0/24 is reserved exclusively for the Gmail service, then IP-based classification is impossible, and additional domain name checking is required (unless, of course, Google is considered as one service). Google can deploy YouTube, Cloud, and so on within this pool without any warning, which would break IP classification.
-
-&nbsp;
 
 
 ## $ [Traffic classification](#traffic-classification)
@@ -303,6 +302,7 @@ The following methods can be used to identify the protocol in a packet:
 * **Patterns** – specific patterns or markers whose appearance indicates the packet belongs to a certain protocol. Examples of protocols that can be identified by patterns include HTTP, SSDP, SIP, and a few others.
 * **Try-dissect** – checking the structure of the protocol (message size, field values, etc.). There may be collisions with other protocols if their message structures are similar.
 
+&nbsp;
 It might seem logical to assume that identifying a protocol is an easy task: just check the port number and, based on it, parse the corresponding protocol. For example, 80 means HTTP, 443 means TLS, and so on. In reality, this assumption is wrong — the port only serves as a hint for which protocol to check first (using patterns or structural analysis). If you rely solely on the port number, services running on non-standard ports will be misidentified. For instance, imagine QUIC traffic traveling to a server not on port 443, but on port 1194 (the default port for OpenVPN). In this case, DPI would first attempt to parse QUIC as OpenVPN, fail, and then label the protocol as unknown. Simple port spoofing would interfere with correct protocol identification and, consequently, with service classification (since the first QUIC message can be reassembled, decrypted, and used to extract the TLS layer and obtain the SNI).
 
 An additional challenge is posed by protocols with high data entropy, such as OpenVPN or RTP/SRTP. In such protocols, only a very small portion of the bytes can be checked against the expected protocol structure. The majority of the message consists of payload, which is essentially unpredictable and useless for analysis. For these protocols, it's usually necessary to collect more than one packet to either correlate certain fields across multiple messages or verify that the structure of a subsequent packet no longer matches the protocol initially assumed by the **DPI Engine** (i.e., using the method of elimination).
