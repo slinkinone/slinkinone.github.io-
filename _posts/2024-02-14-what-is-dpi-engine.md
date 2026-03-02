@@ -27,8 +27,8 @@ author: Vyacheslav Slinkin
 * [Introduction](#introduction)
 * [What is a network protocol, packet, layer?](#what-is-network-protocol-packet-and-layer)
 * [OSI](#osi)
-* [What is a network flow?](#)
-* [Flow direction](#)
+* [What is a network flow?](#what-is-a-network-flow)
+* [Flow direction](#flow-direction)
 * [What is Uplink/Downlink and why is it not the same as CTS/STC?](#)
 * [What is reassembling?](#)
 * [How can reassembling affect traffic classification?](#)
@@ -99,12 +99,66 @@ In order to explain how traffic classification works, it is necessary to introdu
 
 ![](/assets/blog/what_is_dpi_engine/img/osi_pdu.png "Scheme 2: OSI model")
 
-## [What is a network flow?](#)
+The diagram was taken from [here](https://www.linkedin.com/pulse/what-protocol-data-unitpdu-rahima-aktar-mvp1e).
+
+By simplifying the formal definitions of the OSI model layers, we can say the following:
+
+* Network layer protocols are responsible for data transmission based on the IP addresses of the recipients.
+
+* Transport layer protocols ensure that, once data reaches the destination server, the correct application can process it (based on ports). In other words, they "navigate" data not between network nodes but between applications on a device.
+
+* Presentation layer protocols determine how the data will be transmitted (encryption, compression, etc.).
+
+* Application layer protocols are used to structure data between the client and server applications, so both can process it. For example, in the HTTP protocol (application layer), before the actual data payload (request or response body) is transmitted, information is provided about which resource the request is for, the format of the payload, whether compression is used, and so on. In essence, application layer protocols are what programs/services on end devices process.
+
+
+![](/assets/blog/what_is_dpi_engine/img/osi_data_transfer.png "Scheme 3: Data transmission according to the OSI model")
+
+The diagram was taken from [here](https://www.linkedin.com/pulse/how-do-devices-talk-each-other-rahima-aktar-yhbbc).
+
+## [What is a network flow?](#what-is-a-network-flow)
 
 &nbsp;
-...
+A **network flow** (or simply **flow**) is an abstraction over network packets, used to group them. For example, consider the Internet, which can be viewed as a large number of packets being transmitted between different network participants. Packets are the smallest unit of network exchange. While a packet represents a more physical abstraction (information, a set of bytes transmitted over a communication channel), a flow is more of a logical entity that helps organize packets into groups. For instance, if the sender and receiver IP addresses are the same, that would constitute an IP flow. Another example: when both the sender and receiver IP addresses, as well as the TCP ports, match. This flow could be considered as part of a specific TCP connection. There can be several TCP connections (and not just TCP) between a sender and a receiver.
 
-## [Flow direction](#)
+Thus, the chaos of packets within the network takes on a more structured form when the packets are divided into groups. To better understand, it is easier to imagine a flow as a pipe through which packets fly. From the sender to the receiver, they travel through one pipe (the forward flow), while the return packets go through a neighboring one (the reverse flow). In this example, the pipe represents a grouping of packets.
+
+<hr>
+<b>IMPORTANT: It is important to distinguish between a network flow and an execution thread. A network flow is referred to as flow, while an execution thread is called thread.
+<hr>
+
+![](/assets/blog/what_is_dpi_engine/img/client_server_flow.png "Scheme 4: Forward and reverse flows")
+
+Packets need to be divided into flows for several reasons. For example, to keep statistics (such as the number of processed packets, bytes, timestamps, etc.), which can be useful for traffic classification or for [shaping](https://en.wikipedia.org/wiki/Traffic_shaping) (speed limiting).
+
+The forward and reverse flows are linked to each other (referencing each other), forming a session. A **session** is a collection of shared information for related flows. For instance, for two TLS flows (forming a session) after the handshake is completed, parameters such as _supported_version_, _application_layer_protocol_negotiation_, _session_id_, _tls_cipher_suite_, and _compression_method_ are common to both flows.
+
+In Diagram 4, the session context is presented as a shared entity that consolidates information characteristic of both flows.
+
+When a packet is processed, the **DPI Engine** must associate the packet with a flow. To do this, a flow _key_/_identifier_ must be calculated based on data from the packet. The key is calculated differently depending on the structure of the packet. Flows can be of various types, but the most common ones are:
+
+| Type | Description | Key |
+| :--- | :--- | :--- |
+| **Tuple3** | IPv4/IPv6 fragmented flow | { src_ip, dst_ip, id } |
+| **Tuple5** | IPv4/IPv6 transport flow | { src_ip, src_port, dst_ip, dst_port, protocol } |
+| **Tuple6** | Tunnel flow (VLAN-C-TAG, GRE, …) | { src_ip, src_port, dst_ip, dst_port, protocol, tag } |
+
+
+That is, to calculate the key, it is necessary to reach the IP layer, extract the IP addresses, and check that the flow is not fragmented (by verifying the offsets and the MF flag). If the IP packet is fragmented, the ID field should be used to construct a Tuple3 key. If the packet is not fragmented, the next layer after IP should be examined to extract the ports (if it is a transport layer protocol and ports are present), and a Tuple5 key should be constructed.
+
+![](/assets/blog/what_is_dpi_engine/img/flow_table.png "Scheme 5: Flow table example")
+
+In the diagram above, the _identifier_ field is shown so that its values can be referenced later in the text. In practice, however, the key field is the only key used for lookup.
+
+Previously, we discussed types of flows grouped by the type of key. This classification is useful for managing the flow context (buffering data, collecting statistics, etc.), but it is not the only way flows are categorized. Flows can also be divided into [Control Plane](https://en.wikipedia.org/wiki/Control_plane) and **User Plane** (or **Data Plane**) flows.
+
+A **Control Plane** flow is a network flow where packets carry "control information."
+Control information refers to data that is not related to the transmission of user content, but instead serves to negotiate transmission conditions and prepare for data transfer.
+
+For example, consider the FTP protocol. After establishing a TCP connection, when the user enters credentials, navigates directories, or queries file sizes — all of this constitutes control information (_Control Plane_). At the same time, when the user decides to download a file, within the FTP session, a message exchange takes place announcing a socket on the server side that the client must connect to in order to retrieve the file. Then the client initiates a connection to this socket, and the file download begins — but already in a separate flow. This flow is considered part of the _User Plane_.
+
+
+## [Flow direction](#flow-direction)
 
 &nbsp;
 ...
