@@ -2,7 +2,7 @@ title: "slinkin-tech"
 description: "Network software: network traffic analysis, internet service classification, metadata extraction"
 keywords: dpi, deep packet inspection, traffic classification, nta, network traffic analyzer, integration solution, network monitor, dpi framework, dpi library, dpi engine, industrial dpi, sl dc engine, dc engine
 baseurl: ""
-url: "http://txt.slinkin.tech"
+url: "https://txt.slinkin.tech"
 
 #
 
@@ -37,7 +37,7 @@ disable_google_fonts: true
 #
 tracking: true
 #csp_extra: "'unsafe-inline' https://mc.yandex.ru"
-csp_extra: "script-src 'self' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru; img-src 'self' https://mc.yandex.ru;"
+#csp_extra: "script-src 'self' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru; img-src 'self' https://mc.yandex.ru;"
 #disable_csp: true
 
 #
