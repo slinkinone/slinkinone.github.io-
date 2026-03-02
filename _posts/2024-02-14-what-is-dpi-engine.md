@@ -25,8 +25,8 @@ author: Vyacheslav Slinkin
 
 &nbsp;
 * [Introduction](#introduction)
-* [What is a network protocol, packet, layer?](#)
-* [OSI](#)
+* [What is a network protocol, packet, layer?](#what-is-network-protocol-packet-and-layer)
+* [OSI](#osi)
 * [What is a network flow?](#)
 * [Flow direction](#)
 * [What is Uplink/Downlink and why is it not the same as CTS/STC?](#)
@@ -75,3 +75,103 @@ The task of traffic classification is fundamental to a full-fledged DPI solution
 <b>DPI solutions typically operate in one of two modes: inline or mirroring.
 Inline deployment means that the DPI system is positioned between the client and the external network and must make real-time decisions regarding traffic flow without delayed processing. In contrast, in mirroring mode, the DPI system receives a copy of the traffic rather than the actual live packets. Even when operating in mirroring mode, a DPI can still influence session behavior (for example, by terminating a session through sending a TCP-RST packet); however, such intervention does not require introducing delays to the rest of the packet flow.</b>
 <hr>
+
+## $ [What is a network protocol, packet, layer?](#what-is-network-protocol-packet-and-layer)
+
+&nbsp;
+In order to explain how traffic classification works, it is necessary to introduce some basic concepts. While these may be familiar to experienced readers, it is still worth defining them.
+
+**Packet** — a packet is a set of bytes, structured in a specific way, that is received or transmitted over a network interface.
+
+**Protocol** — a protocol is a set of rules that govern how data is transmitted between different nodes in a network. Protocols define how data should be formatted, processed, transmitted in order, and more. Different protocols serve different roles in data transmission and are responsible for various functions.
+
+**Layer** — a layer refers to the portion of a network packet associated with a particular protocol. This section (__set of bytes__) cannot belong to more than one protocol at the same time.
+
+**Field** — a field is a part of a layer (__set of bytes__) that stores information for specific, predefined purposes. For example, in an IPv4 layer, which occupies 20 bytes (without Options), the sender’s address (4 bytes) is located at byte offset 12, while the receiver’s address (also 4 bytes) is located at offset 16.
+
+
+![](/assets/blog/what_is_dpi_engine/img/packet.png "Scheme 1: Protocol layers inside a packet")
+
+## $ [OSI](#osi)
+
+&nbsp;
+[OSI](https://en.wikipedia.org/wiki/OSI_model) (**O**pen **S**ystems **I**nterconnection model) is a hierarchical, multi-layered framework for network protocols, where each layer plays a specific role in ensuring the successful transmission of data.
+
+![](/assets/blog/what_is_dpi_engine/img/osi_pdu.png "Scheme 2: OSI model")
+
+## [What is a network flow?](#)
+
+&nbsp;
+...
+
+## [Flow direction](#)
+
+&nbsp;
+...
+
+
+## [What is Uplink/Downlink and why is it not the same as CTS/STC?](#)
+
+&nbsp;
+...
+
+
+## [What is reassembling?](#)
+
+&nbsp;
+...
+
+
+## [How can reassembling affect traffic classification?](#)
+
+&nbsp;
+...
+
+
+## [What is a service?](#)
+
+&nbsp;
+...
+
+
+## [More than one service on a single server](#)
+
+&nbsp;
+...
+
+
+## [Traffic classification](#)
+
+&nbsp;
+...
+
+
+## [Methods for protocol detection](#)
+
+&nbsp;
+...
+
+
+## [Methods for classifying internet services](#)
+
+&nbsp;
+...
+
+
+## [Flow type classification (workflow)](#)
+
+&nbsp;
+...
+
+
+## [Why is it difficult?](#)
+
+&nbsp;
+...
+
+
+## [What else is interesting about the DPI Engine?](#)
+
+&nbsp;
+...
+
