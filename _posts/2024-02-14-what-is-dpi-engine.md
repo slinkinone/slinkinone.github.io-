@@ -35,11 +35,11 @@ author: Vyacheslav Slinkin
 * [What is a service?](#what-is-a-service)
 * [More than one service on a single server](#more-than-one-service-on-a-sigle-server)
 * [Traffic classification](#traffic-classification)
-* [Methods for protocol detection](#methods-for-protocol-identification)
-* [Methods for classifying internet services](#)
-* [Flow type classification (workflow)](#)
-* [Why is it difficult?](#)
-* [What else is interesting about the DPI Engine?](#)
+* [Protocol detection methods](#protocol-detection-methods)
+* [Internet service classification methods](#internet-service-classification-methods)
+* [Workflow classification](#workflow-classification)
+* [Why is it difficult?](#why-is-it-difficult)
+* [What else is interesting about the DPI Engine?](#what-else-is-interesting-about-the-dpi-engine)
 &nbsp;
 
 ---
@@ -288,7 +288,7 @@ Traffic classification is the process of determining which service a network flo
 * **Application of techniques** to classify the nature of the network flow
 
 
-## $ [Methods for protocol detection](#methods-for-protocol-identification)
+## $ [Protocol detection methods](#protocol-detection-methods)
 
 &nbsp;
 From the user's perspective, who has deployed OpenVPN and Nginx on their server, everything is simple: they know that OpenVPN operates on port 1194 and Nginx serves their website on port 443. In other words, the OpenVPN server (openvpn-server), running on the user's server on UDP port 1194, knows for sure that the data in the packet is formatted according to the OpenVPN specification. If the data does not comply with this specification, it should not be processed (an error should be reported or simply ignored). Everything is straightforward for the openvpn-server, but not for the network analyzer.
@@ -312,26 +312,129 @@ Thus, for a DPI Engine, it is important not only to recognize a protocol based o
 There are also some edge cases where protocol identification seems straightforward at first glance, but isn't in practice. A good example is ICMP traffic with an embedded payload. ICMP is a simple and important protocol, typically allowed across most networks and usually treated as a terminal protocol (at least in an ideal world). However, ICMP packets can carry payload data. Since payload analysis in ICMP is rarely needed (and analyzing every payload would unnecessarily burden the system in 99% of cases), it is often skipped. That said, payloads can be used to establish covert ICMP tunnels.
 
 
-## $ [Methods for classifying internet services](#)
+## $ [Internet service classification methods](#internet-service-classification-methods)
 
 &nbsp;
-...
+The DPI Engine uses a variety of techniques to classify services. The main goal of classification is to identify the service as early as possible, so that the network flow can be offloaded, reducing the load on the software (packets belonging to an offloaded flow are no longer analyzed). There is even a concept called **FPC** (**F**irst **P**acket **C**lassification), although not all techniques can guarantee FPC.
+Below are some of the most common approaches to service classification:
 
+* IP Database
+* Domain Name Patterns
+* Data Patterns
+* Data Structure
+* Cache
+* Domain Fronting
+* SPID (**S**tatistical **P**rotocol **ID**entification)
 
-## $ [Flow type classification (workflow)](#)
+<hr>
+<b>IMPORTANT</b>
+</br>
+DPI not only analyzes traffic, but also passes, throttles, or blocks network packets. Packets from the network interface are captured by a dedicated DPI module, usually referred to as a <i>traffic capture</i> or <i>packet filter</i> module. Such a module typically operates at the <a href="https://en.wikipedia.org/wiki/User_space_and_kernel_space">Kernel space</a> level. It is responsible for enforcing restrictions applied to a flow. Popular libraries for traffic capture include <a href="https://www.dpdk.org/">DPDK</a> and <a href="https://www.ntop.org/products/packet-capture/pf_ring/">PF_Ring</a>.
+
+Until a flow is classified, its packets are forwarded for analysis by the <b>DPI Engine</b>, whose code usually runs in <a href="https://en.wikipedia.org/wiki/User_space_and_kernel_space">User space</a>. Once the flow has been classified, further packet analysis becomes unnecessary — only statistics need to be collected so that they can be reported to billing once the flow ends. To achieve this, the traffic capture module is sent a <b>policy</b> (instructions on what to do with the flow’s packets: pass, throttle, or block). After receiving the policy, the capture module stops queuing the flow’s packets for analysis and instead either simply collects statistics or drops the packets if the flow was blocked.
+<hr>
 
 &nbsp;
-...
+**IP Database** is a fairly basic scenario for classification, especially in cases where an entire pool of IP addresses is reserved for a service. A good example is Telegram, which publishes a list of CIDR ranges on its website. If the packet’s IP address falls within one of these CIDR intervals, the DPI can safely conclude that the traffic belongs to Telegram.
 
+**Domain Name Patterns** is also a standard classification scenario. If the DPI Engine is able to extract the hostname from the packet (which is typical for protocols like HTTP, HTTP/2, SSDP, SIP, TLS, QUIC+TLS), it checks the hostname against a list of known domain patterns to classify the service. There are plenty of examples for this method. For instance, for Telegram alone, at least three domains can be identified: telegram.org, t.me, and telegram.me.
 
-## $ [Why is it difficult?](#)
+![](/assets/blog/what_is_dpi_engine/img/ip_domain_database.png "Scheme 11: Classification based on IP address and domain name")
+<p align="center"><i>Scheme 11: Classification based on IP address and domain name</i></p>
+
+**Data Patterns** – a method that analyzes specific parts of the payload for which the final protocol has not been determined. For example, a packet might show the following protocol chain: ethernet.ipv4.tcp.payload. 'Payload' indicates that the final (in this case, application) protocol could not be determined. Therefore, a payload analyzer is used to check its individual parts in order to make a decision. An example of this could be the search for 'magic numbers' in the payload at specific offsets.
+
+![](/assets/blog/what_is_dpi_engine/img/data_pattern.png "Scheme 12: Data patterns")
+<p align="center"><i>Scheme 12: Data patterns</i></p>
+
+**Data Structure** – this method is conceptually very similar to the protocol (not service) identification method **Try-Dissect**, which verifies the structure of the payload according to the specification of the protocol. However, there are cases where services use their own protocols and do not share their specifications and/or implementations with the world. In such cases, researchers (or AI) have to analyze captured dumps of such traffic to identify any patterns. For example, the first byte/two bytes indicate the packet length, while the message size fluctuates between 124 and 256. Or, when the packet size is between 130 and 180, the first byte indicates the message length, and the 24th byte falls within the range of 0–8. And so on. This technique is not used frequently and is not very reliable. Any change in the protocol on the service side is not announced anywhere and may break the classification. Moreover, if the protocol is changed, it requires re-analysis by researchers and then code modifications (unlike classification based on IP addresses or domain names), which takes a lot of time.
+
+**Cache** – ne of the most commonly used methods of classification, after the basic ones (IP, Domain Names). The essence of this method is to store information from one flow to help classify another. There are several types of caching techniques, for example:
+
+* DNS Cache
+* TLS/DTLS Session ID Cache
+* QUIC Cache
 
 &nbsp;
-...
+For example, consider **DNS Cache**. _DNS Cache_ allows performing _FPC_, meaning the service will be classified from the first packet. The essence of the DNS Cache approach is to store the IP addresses obtained from the DNS response for a specific service of a particular user. Before accessing a resource by domain name, in most cases, the client first sends a DNS query and receives a DNS response with a list of IP addresses for the requested domain. Thus, the **DPI Engine** analyzes the DNS response, checks the domain name, and if it is relevant (i.e., the domain name is in the classification lists and associated with a specific service), it caches the list of received IP addresses. After that, the client is expected to establish a new connection to one of these IP addresses, and if it appears, the **DPI Engine** makes a verdict about the classified service.
 
+![](/assets/blog/what_is_dpi_engine/img/dns_cache.png "Scheme 13: DNS Cache")
+<p align="center"><i>Scheme 13: DNS Cache</i></p>
 
-## $ [What else is interesting about the DPI Engine?](#)
+To briefly touch on **TLS/DTLS Session ID Cache**, this technique is used to control _Connection Migration_ (referred to as Session Resumption in TLS). TLS connection migration is a scenario in which the first connection contains an SNI in the TLS Client Hello, but the subsequent connection does not. That is, the client requests youtube.com in the TLS Client Hello during the first connection, and the server responds with a Server Hello, which includes a Session ID field (connection identifier). Then, for one reason or another, the connection is closed and a new one is opened. But in the new connection, there is no SNI, and the client sends the Session ID used in the first connection, and the previous session is resumed.
+
+![](/assets/blog/what_is_dpi_engine/img/session_cache.png "Scheme 13: TLS Session Resumption")
+<p align="center"><i>Scheme 13: TLS Session Resumption</i></p>
+
+It is worth noting that caching is useful when a service uses an IP address not from a pre-known list (IP Database). DNS and TLS Cache are not the only, but the most commonly used types of caching.
+
+**Domain Fronting** – a method to bypass blocks, which involves hiding the domain of the requested resource in the client->CDN->server chain. To briefly describe the principle – in a world where almost all traffic goes through TLS, the requested resource (host) is indicated twice: in the TLS Client Hello (unless ECH – Encrypted Client Hello – is used) and HTTP Host.
+
+In this scenario, the client application establishes a TLS connection with the CDN server, but the domains in the TLS Client Hello and HTTP Host differ. In the TLS Client Hello, a fake (but legitimate from the censor's point of view) domain is used, while the encrypted TLS HTTP request is sent to a domain different from the one indicated in the Client Hello. To illustrate this more clearly, consider the following diagram:
+
+![](/assets/blog/what_is_dpi_engine/img/domain_fronting.png "Scheme 13: Domain Fronting")
+<p align="center"><i>Scheme 13: Domain Fronting</i></p>
+
+The diagram was taken from [here](https://www.hideipvpn.com/privacy/domain-fronting-attack/).
+
+As can be seen, the client queries an unblocked domain from the DNS server, whose address matches that of the blocked resource. Then the TLS connection is easily established with the server, as only the SNI is visible to the censor, and the HTTP Host domain is encrypted under the TLS layer.
+
+Determining Domain Fronting without decrypting TLS is quite difficult. TLS decryption can be used in cybersecurity products, but it is not feasible for telecoms. For this reason, detecting Domain Fronting for specific services (i.e., you need to know in advance which services use this technique) lies at the intersection of collecting “garbage” domains (which act as a cover for the main domain) and identifying behavioral patterns typical of such sessions.
+
+Domain collection can be done by monitoring CDN providers used by the service, catching TLS connections where one domain was requested in the Client Hello, but the certificate from the server returns another (typical for the service being investigated). This may involve reverse engineering or semi-automated domain collection generated by the application (e.g., writing a sniffer to collect the domains accessed by the application).
+
+Domain Fronting has become irrelevant for service developers with large audiences (such as Telegram, WhatsApp, and others), as major CDN providers have started to control the use of their nodes to prevent bypassing blocks through their servers (Google, AWS, Cloudflare).
+
+**SPID** (_Statistical Protocol Identification_) – is a method based on analyzing the statistical characteristics of the flow, such as average packet size, bitrate, IAT (Inter Arrival Time), and so on. This method is not very reliable for service identification and is mainly used to classify the flow's nature (workflow), for example, file transfer, audio/video call, etc.
+
+**ML**/**AI** – a method based on the analysis of various flow characteristics (including statistical ones) that classifies a service with a certain probability. This method is used when it is not possible to make a definitive verdict. Unlike SPID, the values/ranges used for classification in ML/AI can change during traffic processing (the model is self-learning), whereas in SPID they are always static.
+The main need for ML/AI classification is to adapt to traffic variability. This method is used for classifying VPN services that cannot be identified by IP addresses or protocol verification, as well as for determining the flow's nature (to be described in the next paragraph).
+ 
+The most popular techniques for traffic classification have been described above. There are also other techniques that may be based on specific criteria characteristic of individual services (or service groups), but these require deeper analysis, such as using AI, source code analysis, or reverse engineering.
+
+## $ [Workflow classification](#workflow-classification)
 
 &nbsp;
-...
+Classifying the service itself is important, but it is not always enough. For example, a mobile operator might use file transfer speed in messengers as a competitive advantage for one of its tariffs. In other words, there arises a need to determine what kind of work the flow is performing (_workflow_). Several of the most popular types of such work can be highlighted:
 
+* Chat
+* Audio call
+* Video call
+* File transfer
+
+This type of classification is usually based on the analysis of the statistical characteristics of the flow (_SPID_).
+
+Statistics-based classification is highly sensitive to changes in the service's operation (for example, the release of a new version). For instance, consider a situation where a messaging app starts using a new audio codec, which changes the statistical metrics, affecting the classification.
+
+There is also the concept of «[Comfort Noise](https://en.wikipedia.org/wiki/Comfort_noise)», which can, in certain situations, affect the definition of workflow.
+
+In any case, _workflow_ is very useful information both for telecom solutions and for products in the field of information security. For example, consider a scenario where a subscriber, while having an active voice call, opens a session in an online banking service. That's an interesting combination! Or another example: during an incident investigation, one might find that several audio calls were made on a device involved in the breach, followed by a file being received, and then after N minutes, the device was compromised.
+
+
+## $ [Why is it difficult?](#why-is-it-difficult)
+
+&nbsp;
+The main criteria for **DPI Engine** products are classification quality and speed. Quality is especially critical for classifying services and protocols that are subject to blocking. Incorrect classification of such services (or more precisely, its absence) can lead to penalties from regulators.
+
+Performance is important because the load in networks using DPI is usually very high, and analyzing every packet in a stream is not feasible. Therefore, the goal is to deliver a verdict on the service as quickly as possible so that new packets no longer need to be analyzed and do not consume DPI resources.
+
+In terms of performance, it is crucial how quickly the **DPI Engine** extracts domain names, searches for matches in the IP and domain name database, performs flow table lookups to restore session context; how well it decides what information to cache and retrieves it quickly when needed, cleans outdated data in the cache, and much more.
+
+As for classification quality, it is essential to keep the list of IP addresses and domain names for services up to date, update them in a timely manner, and be able to export cached data via an API so that the DPI can pass it to other clusters in the network.
+
+
+## $ [What else is interesting about the DPI Engine?](#what-else-is-interesting-about-the-dpi-engine)
+
+&nbsp;
+The application of DPI Engine is quite diverse. Here are some examples of its use:
+
+- **Attribute Extraction** – extracting protocol attributes is useful for many purposes. For example, within a network, protocols that do not use encryption (FTP, HTTP, POP3, etc.) can be monitored, sensitive data can be extracted from them, and reports can be generated showing which users, which nodes in the network, and the percentage of overall traffic use insecure connections. Another example is analyzing the ciphers used in TLS connections (cipher_suites; [Cipher Suite](https://en.wikipedia.org/wiki/Cipher_suite)) and/or TLS versions to detect outdated versions of protocols or vulnerable encryption algorithms.
+- **File Extraction** – for unencrypted protocols, files can be extracted if a file is present in the packet. For example, extracting images from HTTP or FTP streams. Extracted files can be further analyzed, such as in DLP (Data Loss Prevention).
+- **Dataset Producing** – for the **DPI Engine**, a set of parameters can be configured for extraction (e.g., _src_ip_, _dst_ip_, _src_port_, _dst_port_, _hostname_, _protocol_tree_, _service_id_, _byte_count_, _bitrate_, etc.), after which pcap dumps can be uploaded for analysis, and the requested parameter set will be output in JSON format for each packet. This set can be used for AI training and the identification of new metrics for classification. Another example: a similar data set can be generated not per packet but per flow and used as IPDR (IP Detail Record).
+* **[Tethering](https://en.wikipedia.org/wiki/Tethering) Detection** – detecting the use of a mobile phone as a hotspot.
+
+---
+
+<hr>
+<b>If you fond an error in the article, please let us know - <a href="mailto:edit@slinkin.tech">edit@slinkin.tech</a>.</b>
+<hr>
