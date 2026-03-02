@@ -91,6 +91,7 @@ In order to explain how traffic classification works, it is necessary to introdu
 
 
 ![](/assets/blog/what_is_dpi_engine/img/packet.png "Scheme 1: Protocol layers inside a packet")
+*Scheme 1: Protocol layers inside a packet*
 
 ## $ [OSI](#osi)
 
@@ -98,6 +99,7 @@ In order to explain how traffic classification works, it is necessary to introdu
 [OSI](https://en.wikipedia.org/wiki/OSI_model) (**O**pen **S**ystems **I**nterconnection model) is a hierarchical, multi-layered framework for network protocols, where each layer plays a specific role in ensuring the successful transmission of data.
 
 ![](/assets/blog/what_is_dpi_engine/img/osi_pdu.png "Scheme 2: OSI model")
+*Scheme 2: OSI model*
 
 The diagram was taken from [here](https://www.linkedin.com/pulse/what-protocol-data-unitpdu-rahima-aktar-mvp1e).
 
@@ -110,6 +112,7 @@ By simplifying the formal definitions of the OSI model layers, we can say the fo
 
 
 ![](/assets/blog/what_is_dpi_engine/img/osi_data_transfer.png "Scheme 3: Data transmission according to the OSI model")
+*Scheme 3: Data transmission according to the OSI model*
 
 The diagram was taken from [here](https://www.linkedin.com/pulse/how-do-devices-talk-each-other-rahima-aktar-yhbbc).
 
@@ -125,6 +128,7 @@ Thus, the chaos of packets within the network takes on a more structured form wh
 <hr>
 
 ![](/assets/blog/what_is_dpi_engine/img/client_server_flow.png "Scheme 4: Forward and reverse flows")
+*Scheme 4: Forward and reverse flows*
 
 Packets need to be divided into flows for several reasons. For example, to keep statistics (such as the number of processed packets, bytes, timestamps, etc.), which can be useful for traffic classification or for [shaping](https://en.wikipedia.org/wiki/Traffic_shaping) (speed limiting).
 
@@ -145,6 +149,7 @@ When a packet is processed, the **DPI Engine** must associate the packet with a 
 That is, to calculate the key, it is necessary to reach the IP layer, extract the IP addresses, and check that the flow is not fragmented (by verifying the offsets and the MF flag). If the IP packet is fragmented, the ID field should be used to construct a Tuple3 key. If the packet is not fragmented, the next layer after IP should be examined to extract the ports (if it is a transport layer protocol and ports are present), and a Tuple5 key should be constructed.
 
 ![](/assets/blog/what_is_dpi_engine/img/flow_table.png "Scheme 5: Flow table example")
+*Scheme 5: Flow table example*
 
 In the diagram above, the _identifier_ field is shown so that its values can be referenced later in the text. In practice, however, the key field is the only key used for lookup.
 
@@ -170,6 +175,7 @@ In Diagram 5, the forward and reverse flows are shown — identifiers 1 and 2. H
 In networking, the terms **Uplink** and **Downlink** are also used in relation to network interfaces. Thus, all packets captured from the Uplink interface are considered to belong to the subscriber, while packets captured from the Downlink interface belong to the external network. At first glance, it may seem that the flow direction can always be easily determined based on which interface the packet was captured from (captured from _Uplink_ — _CTS_, captured from _Downlink_ — _STC_). However, this is not entirely correct. For example, imagine a subscriber sets up a mini-server at home (such as a media server with movies), requests a static IP address from the provider, then goes on a two-week vacation and accesses their server remotely from, say, Georgia. In this case, for the provider's DPI system, traffic from the user's server to the user (which is _STC_) will actually go through Uplink, while traffic from the user to the server (_CTS_) will go through _Downlink_.
 
 ![](/assets/blog/what_is_dpi_engine/img/uplink_downlink.png "Scheme 6: Uplink/Downlink")
+*Scheme 6: Uplink/Downlink*
 
 In Diagram 6, two devices are shown connected to an access point (a home router), which in turn is connected to the **ISP** (**I**nternet **S**ervice **P**rovider) via a wired link. All traffic coming **from** the tablet and laptop is considered **Uplink** for both the router and the ISP. Conversely, all traffic going **to** these devices is considered **Downlink**.
 
