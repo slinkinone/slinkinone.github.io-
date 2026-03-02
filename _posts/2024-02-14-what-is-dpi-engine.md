@@ -32,7 +32,7 @@ author: Vyacheslav Slinkin
 * [What is Uplink/Downlink and why is it not the same as CTS/STC?](#what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
 * [What is reassembling?](#what-is-reassembling)
 * [How can reassembling affect traffic classification?](#how-can-reassembling-affect-traffic-classification)
-* [What is a service?](#)
+* [What is a service?](#what-is-a-service)
 * [More than one service on a single server](#)
 * [Traffic classification](#)
 * [Methods for protocol detection](#)
@@ -116,7 +116,7 @@ By simplifying the formal definitions of the OSI model layers, we can say the fo
 
 The diagram was taken from [here](https://www.linkedin.com/pulse/how-do-devices-talk-each-other-rahima-aktar-yhbbc).
 
-## [What is a network flow?](#what-is-a-network-flow)
+## $ [What is a network flow?](#what-is-a-network-flow)
 
 &nbsp;
 A **network flow** (or simply **flow**) is an abstraction over network packets, used to group them. For example, consider the Internet, which can be viewed as a large number of packets being transmitted between different network participants. Packets are the smallest unit of network exchange. While a packet represents a more physical abstraction (information, a set of bytes transmitted over a communication channel), a flow is more of a logical entity that helps organize packets into groups. For instance, if the sender and receiver IP addresses are the same, that would constitute an IP flow. Another example: when both the sender and receiver IP addresses, as well as the TCP ports, match. This flow could be considered as part of a specific TCP connection. There can be several TCP connections (and not just TCP) between a sender and a receiver.
@@ -161,7 +161,7 @@ Control information refers to data that is not related to the transmission of us
 For example, consider the FTP protocol. After establishing a TCP connection, when the user enters credentials, navigates directories, or queries file sizes — all of this constitutes control information (_Control Plane_). At the same time, when the user decides to download a file, within the FTP session, a message exchange takes place announcing a socket on the server side that the client must connect to in order to retrieve the file. Then the client initiates a connection to this socket, and the file download begins — but already in a separate flow. This flow is considered part of the _User Plane_.
 
 
-## [Flow direction](#flow-direction)
+## $ [Flow direction](#flow-direction)
 
 &nbsp;
 Flow direction is typically divided into **Client-To-Server** (**CTS**) and **Server-To-Client** (**STC**). To determine which side is the client, it is necessary to identify who initiated the connection. For example, if a packet contains a TCP layer with only the SYN flag set, it indicates the first packet of a session, and the initiator is the _src_ip:src_port_ socket. In this case, the packet’s direction is _Client-To-Server_. By swapping the IP addresses and ports, we obtain the socket for the _Server-To-Client_ direction.
@@ -169,7 +169,7 @@ Flow direction is typically divided into **Client-To-Server** (**CTS**) and **Se
 In Diagram 5, the forward and reverse flows are shown — identifiers 1 and 2. Here, the address 192.168.1.33 represents a server running an SSH service on port 22.
 
 
-## [What is Uplink/Downlink and why it is not the same as CTS/STC?](#what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
+## $ [What is Uplink/Downlink and why it is not the same as CTS/STC?](#what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
 
 &nbsp;
 In networking, the terms **Uplink** and **Downlink** are also used in relation to network interfaces. Thus, all packets captured from the Uplink interface are considered to belong to the subscriber, while packets captured from the Downlink interface belong to the external network. At first glance, it may seem that the flow direction can always be easily determined based on which interface the packet was captured from (captured from _Uplink_ — _CTS_, captured from _Downlink_ — _STC_). However, this is not entirely correct. For example, imagine a subscriber sets up a mini-server at home (such as a media server with movies), requests a static IP address from the provider, then goes on a two-week vacation and accesses their server remotely from, say, Georgia. In this case, for the provider's DPI system, traffic from the user's server to the user (which is _STC_) will actually go through Uplink, while traffic from the user to the server (_CTS_) will go through _Downlink_.
@@ -180,7 +180,7 @@ In networking, the terms **Uplink** and **Downlink** are also used in relation t
 In Diagram 6, two devices are shown connected to an access point (a home router), which in turn is connected to the **ISP** (**I**nternet **S**ervice **P**rovider) via a wired link. All traffic coming **from** the tablet and laptop is considered **Uplink** for both the router and the ISP. Conversely, all traffic going **to** these devices is considered **Downlink**.
 
 
-## [What is reassembling?](#what-is-reassembling)
+## $ [What is reassembling?](#what-is-reassembling)
 
 &nbsp;
 Packets in a network can be compared to freight cars carrying coal. But not everything that needs to be sent can always fit into a single car.
@@ -197,6 +197,7 @@ For example, if 180 tons of coal need to be transported from point A to point B,
 * QUIC
 * HTTP/2
 
+&nbsp;
 It’s important to note that if IPv4/IPv6 fragmentation is present in the network, the task for the reassembler becomes more complex. In this case, it first has to reconstruct the message at the IP (network) layer, and only after that can it reassemble the message at the transport layer — and, if necessary (depending on the protocol), even at the application layer.
 
 ![](/assets/blog/what_is_dpi_engine/img/reassembler.png "Scheme 7: Message assembling")
@@ -209,7 +210,7 @@ At **Stage 2**, the AP sends the previously delayed first segment to the ISP, an
 
 At **Stage 3**, the DPI finally receives the missing first segment. With the full message now assembled, it can analyze it and make a decision. In this case, the resource is perfectly legitimate — so the flow is allowed to pass.
 
-## [How can reassembling affect traffic classification?](#how-can-reassembling-affect-traffic-classification)
+## $ [How can reassembling affect traffic classification?](#how-can-reassembling-affect-traffic-classification)
 
 &nbsp;
 Segmentation is one of the simplest ways to interfere with traffic classification (after tricks like changing the case in a domain name — for example, YoUTubE.COM). Why does this work? Because if a user forces their OS to set the segment size to 1 byte, and the request to a resource is 2048 bytes in size, then, in the worst case, the DPI will classify the flow only by the **2048th** packet (assuming the hostname is visible in plaintext). In practice, classification happens earlier — as soon as the DPI can extract the server_name (from the TLS protocol) or host/authority (from HTTP/HTTP2). For example, if the server name appears around the 100th byte, the DPI will classify the flow on the 100th packet.
@@ -219,49 +220,96 @@ What's happening inside the DPI: the engine gathers incoming packets, byte by by
 Of course, these days there are entire clusters of IP addresses reserved for large services, so sometimes classification can happen based on IP address alone without needing the hostname at all.
 
 
-## [What is a service?](#)
+## $ [What is a service?](#what-is-a-service)
+
+&nbsp;
+In previous sections, the terms "service" and "protocol" have already been used. However, it is necessary to clarify these concepts to make everything completely clear.
+
+A service is a program running on a server (or a virtual machine) that accepts incoming connections from users and sends/receives data. For example, Telegram is a service for instant messaging ([IM](https://en.wikipedia.org/wiki/Instant_messaging)), YouTube is a media service for uploading and watching video content, and so on. Unlike protocols, services do not have RFCs. In other words, a service is a program that sends and receives data, regardless of the format (JSON, XML, etc.).
+
+If the main goal of a service is to exchange data in a way that the user can read (and vice versa), the role of **protocols** is to define how these data are delivered or presented.
+
+For example, IPv4/IPv6 protocols are responsible for transferring data between network devices like routers and/or servers. Data is transmitted from one device to another based on IP addresses.
+
+<hr>
+<b>In addition to routers and servers, there are also switches that handle data transmission between different network segments (typically to other switches). However, switches perform this task based on VLANs (numerical identifiers) rather than IP addresses. It is important to note that VLANs are not considered during traffic classification by the DPI Engine.</b>
+<hr>
+
+&nbsp;
+Transport protocols (TCP, UDP, QUIC) are responsible for delivering messages from a client to a server at the application level. The choice of transport protocol also determines how critical data loss is. For example, TCP guarantees message delivery, while UDP does not. To better understand what "delivery at the application level" means, let's consider a user (with IP address 192.168.12.22) who opens WhatsApp and YouTube on their smartphone. On the user's device, two ports are opened (let's say 4444 and 5555). Now, packets are sent from the user to the WhatsApp server from port 4444, and to the YouTube server from port 5555. When the smartphone receives a packet with destination port 4444, the operating system forwards the received data to the WhatsApp application. Similarly, packets with destination port 5555 are delivered to YouTube.
+
+![](/assets/blog/what_is_dpi_engine/img/service_sockets.png "Scheme 8: Application ports")
+<p align="center"><i>Scheme 8: Application ports</i></p>
+
+SSL/TLS protocols are responsible for encrypting data and verifying the server (and/or the client, if necessary). In other words, they ensure the secure transmission of data.
+HTTP/HTTP2 protocols (and other application-layer protocols) are directly responsible for transferring the original message. In particular, HTTP/HTTP2 handle the task of formatting the message so that both sides of the connection (the client and the server) can understand it. For example, an HTTP request includes a URI field that helps the service understand which data the user is requesting. HTTP also has a Content-Type header that indicates the type of transmitted data (text/html, audio/mpeg, image/gif, and so on).
+
+![](/assets/blog/what_is_dpi_engine/img/packet_protocols.png "Scheme 9: Protocol layer cutting")
+<p align="center"><i>Scheme 9: Protocol layer cutting</i></p>
+
+The diagram above illustrates how packet layers are stripped off before the application receives the data. The packet first arrives at the **NIC** (**N**etwork **I**nterface **C**ard), where the Ethernet layer is removed, and the data is passed to the OS kernel. The kernel then checks the listening sockets (ip:port). If there is an application listening on the corresponding socket, the network and transport layers are also stripped, and the remaining data is delivered to the application.
+In summary, a service is a program. A protocol is a method for transferring or presenting data.
+
+### Running multiple services on a single server
+
+It is quite common to run multiple services on a single server. For example, a user rents a virtual machine with the IPv4 address 90.156.176.56 and deploys YouTrack and GitLab on it. They purchase a domain (privatezone.com), an SSL certificate, and configure DNS records. As a result, two services are now running on the same IP address.
+If the services are launched with default parameters (HTTP port 80, TLS port 443), only the first service to start will run successfully, while the second one will fail to launch (and vice versa) because the default ports are already in use.
+To resolve this, the services must be started on different ports — for example, YouTrack on port 9000 and GitLab on port 9001. Now, when a user types privatezone.com into the browser, they will see an error, because no program is running on port 443 (TLS) or 80 (HTTP), which the browser uses by default to send requests.
+To access YouTrack, the user would have to enter privatezone.com:9000, and for GitLab — privatezone.com:9001. This is inconvenient since it requires remembering specific ports for each service.
+To improve this setup, you should add two more DNS records that point to the same IPv4 address (90.156.176.56), but make the service being accessed clear from the domain name itself. For example, in our case, the DNS records would look like this:
+
+| domain &nbsp;&nbsp;&nbsp;&nbsp;| sub-domain &nbsp;&nbsp;&nbsp;&nbsp;   | type &nbsp;&nbsp;&nbsp;&nbsp; | address          |
+| :---                           | :---                                  | :---                          | :---             |
+| privatezone.com                | @                                     | A                             | 90.156.176.56    |
+| privatezone.com                | git                                   | A                             | 90.156.176.56    |
+| privatezone.com                | youtrack                              | A                             | 90.156.176.56    |
+
+Thus, when a user requests gitlab.privatezone.com in a browser, the browser sends a TLS request with the domain gitlab.privatezone.com specified in the server_name field (SNI). However, the server still won’t respond, because there is no program running on port 443. To route incoming connections between YouTrack and GitLab, you need to install **Nginx** (or any other web server) and configure it to forward requests for youtrack.privatezone.com to YouTrack (127.0.0.1:9000) and requests for gitlab.privatezone.com to GitLab (127.0.0.1:9001). The addresses 127.0.0.1:9000 and 127.0.0.1:9001 mean that the requests are routed locally (127.0.0.1) to ports 9000 and 9001, where they are handled by the appropriate applications.
+
+![](/assets/blog/what_is_dpi_engine/img/vm_2_services.png "Scheme 10: 2 services on one virtual machine")
+<p align="center"><i>Scheme 10: 2 services on one virtual machine</i></p>
+
+From the example above, it becomes clear that if multiple services are running on a server/virtual machine, classification by IP address cannot be performed. Domain name checking is absolutely necessary to determine the service. This is important to understand. For example, if a hypothetical Google has a large pool of IP addresses, and there is no information (not received from the service) that, for instance, the pool 142.250.221.0/24 is reserved exclusively for the Gmail service, then IP-based classification is impossible, and additional domain name checking is required (unless, of course, Google is considered as one service). Google can deploy YouTube, Cloud, and so on within this pool without any warning, which would break IP classification.
+
+&nbsp;
+
+## $ [More than one service on a single server](#)
 
 &nbsp;
 ...
 
 
-## [More than one service on a single server](#)
+## $ [Traffic classification](#)
 
 &nbsp;
 ...
 
 
-## [Traffic classification](#)
+## $ [Methods for protocol detection](#)
 
 &nbsp;
 ...
 
 
-## [Methods for protocol detection](#)
+## $ [Methods for classifying internet services](#)
 
 &nbsp;
 ...
 
 
-## [Methods for classifying internet services](#)
+## $ [Flow type classification (workflow)](#)
 
 &nbsp;
 ...
 
 
-## [Flow type classification (workflow)](#)
+## $ [Why is it difficult?](#)
 
 &nbsp;
 ...
 
 
-## [Why is it difficult?](#)
-
-&nbsp;
-...
-
-
-## [What else is interesting about the DPI Engine?](#)
+## $ [What else is interesting about the DPI Engine?](#)
 
 &nbsp;
 ...
