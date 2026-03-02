@@ -30,8 +30,8 @@ author: Vyacheslav Slinkin
 * [What is a network flow?](#what-is-a-network-flow)
 * [Flow direction](#flow-direction)
 * [What is Uplink/Downlink and why is it not the same as CTS/STC?](#what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
-* [What is reassembling?](#)
-* [How can reassembling affect traffic classification?](#)
+* [What is reassembling?](#what-is-reassembling)
+* [How can reassembling affect traffic classification?](#how-can-reassembling-affect-traffic-classification)
 * [What is a service?](#)
 * [More than one service on a single server](#)
 * [Traffic classification](#)
@@ -180,16 +180,43 @@ In networking, the terms **Uplink** and **Downlink** are also used in relation t
 In Diagram 6, two devices are shown connected to an access point (a home router), which in turn is connected to the **ISP** (**I**nternet **S**ervice **P**rovider) via a wired link. All traffic coming **from** the tablet and laptop is considered **Uplink** for both the router and the ISP. Conversely, all traffic going **to** these devices is considered **Downlink**.
 
 
-## [What is reassembling?](#)
+## [What is reassembling?](#what-is-reassembling)
 
 &nbsp;
-...
+Packets in a network can be compared to freight cars carrying coal. But not everything that needs to be sent can always fit into a single car.
+For example, if 180 tons of coal need to be transported from point A to point B, and each car can only hold 60 tons, three cars will be needed to deliver the full amount. The same idea applies to networks. For instance, when a user's browser forms an HTTP request to YouTube that, let's say, is 2048 bytes in size, this request is handed over to the operating system’s TCP stack. The OS kernel then takes responsibility for delivering the request to YouTube’s server. The request might be sent in a single packet or it might be split into multiple segments and sent in parts. This process is called **TCP segmentation**, and the process of putting the segments back together is called **reassembling**.
+
+**Reassembling** is an essential part of how a DPI (Deep Packet Inspection) system operates. In order to extract domain names from packets or decrypt the payload, the DPI system must first reconstruct the full packet or message — and to do that, it needs to capture all of the segments, stitch them back together, and only then perform analysis.
+
+**Segmentation**/**Fragmentation** can occur at different layers of the OSI model. The most common protocols where this happens are:
+
+* IPv4/IPv6
+* TCP
+* DTLS
+* OpenVPN
+* QUIC
+* HTTP/2
+
+It’s important to note that if IPv4/IPv6 fragmentation is present in the network, the task for the reassembler becomes more complex. In this case, it first has to reconstruct the message at the IP (network) layer, and only after that can it reassemble the message at the transport layer — and, if necessary (depending on the protocol), even at the application layer.
+
+![](/assets/blog/what_is_dpi_engine/img/reassembler.png "Scheme 7: Message assembling")
+<p align="center"><i>Scheme 7: Message assembling</i></p>
 
 
-## [How can reassembling affect traffic classification?](#)
+**Diagram 7** shows a very simplified example of message reassembly (without sequence numbers, packet sizes, acknowledgments, etc.). At **Stage 0**, you can see that the user's device sends 4 TCP segments to the **AP** (**A**ccess **P**oint), but only 3 segments leave the **AP** — one segment got delayed for some reason. Meanwhile, the **ISP** was also only able to forward two segments to the **DPI** at once, due to its own limitations. The DPI is deployed **inline**, meaning it must make real-time decisions about whether to allow traffic through. However, based on the information currently available for this flow, the DPI does not have enough data to make a decision about whether to let the packets into the external network.
+
+At **Stage 2**, the AP sends the previously delayed first segment to the ISP, and the ISP forwards the third segment that was held back in the previous step. Again, the DPI still lacks the complete message needed to make a final decision for this flow.
+
+At **Stage 3**, the DPI finally receives the missing first segment. With the full message now assembled, it can analyze it and make a decision. In this case, the resource is perfectly legitimate — so the flow is allowed to pass.
+
+## [How can reassembling affect traffic classification?](#how-can-reassembling-affect-traffic-classification)
 
 &nbsp;
-...
+Segmentation is one of the simplest ways to interfere with traffic classification (after tricks like changing the case in a domain name — for example, YoUTubE.COM). Why does this work? Because if a user forces their OS to set the segment size to 1 byte, and the request to a resource is 2048 bytes in size, then, in the worst case, the DPI will classify the flow only by the **2048th** packet (assuming the hostname is visible in plaintext). In practice, classification happens earlier — as soon as the DPI can extract the server_name (from the TLS protocol) or host/authority (from HTTP/HTTP2). For example, if the server name appears around the 100th byte, the DPI will classify the flow on the 100th packet.
+
+What's happening inside the DPI: the engine gathers incoming packets, byte by byte, into a buffer and continuously checks whether a hostname has already appeared. This is very expensive for high-load systems like DPI. Not only is the final buffer size unpredictable (so it has to be stretched or preallocated generously), but the system also has to repeatedly scan the buffer after every packet, which hits performance hard. Additionally, all this buffering leads to significant memory consumption — a critical issue for DPI systems. Thus, to remain operational, a DPI engine must **self-balance**: it needs to enforce limits on buffering and the number of packets it processes before a flow is marked as **unclassified** (assigned a default policy and its buffers are dropped).
+
+Of course, these days there are entire clusters of IP addresses reserved for large services, so sometimes classification can happen based on IP address alone without needing the hostname at all.
 
 
 ## [What is a service?](#)
