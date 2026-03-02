@@ -402,21 +402,29 @@ The most popular techniques for traffic classification have been described above
 ## $ [Workflow classification](#-workflow-classification)
 
 &nbsp;
-Classifying the service itself is important, but it is not always enough. For example, a mobile operator might use file transfer speed in messengers as a competitive advantage for one of its tariffs. In other words, there arises a need to determine what kind of work the flow is performing (_workflow_). Several of the most popular types of such work can be highlighted:
+Classifying the service itself is important, but it is not always enough. For example, a mobile operator might use file transfer speed in messengers as a competitive advantage for one of its tariffs. This creates a need to determine the specific nature of the work the flow is performing, known as **workflow**.
 
-* Chat
-* Audio call
-* Video call
-* File transfer
+Several of the most popular workflow types include:
 
-This type of classification is usually based on the analysis of the statistical characteristics of the flow (_SPID_).
+* **Chat** (messaging)
+* **Audio call**
+* **Video call**
+* **File transfer**
 
-Statistics-based classification is highly sensitive to changes in the service's operation (for example, the release of a new version). For instance, consider a situation where a messaging app starts using a new audio codec, which changes the statistical metrics, affecting the classification.
+**Classification Methods**
 
-There is also the concept of «[Comfort Noise](https://en.wikipedia.org/wiki/Comfort_noise)», which can, in certain situations, affect the definition of workflow.
+The approach to identifying these workflows depends significantly on the underlying transport and encryption protocols:
 
-In any case, _workflow_ is very useful information both for telecom solutions and for products in the field of information security. For example, consider a scenario where a subscriber, while having an active voice call, opens a session in an online banking service. That's an interesting combination! Or another example: during an incident investigation, one might find that several audio calls were made on a device involved in the breach, followed by a file being received, and then after N minutes, the device was compromised.
+1. **Statistics-based (SPID):** This method is essential when traffic is encapsulated in encrypted tunnels such as **TLS** or **QUIC**. In these cases, classification relies on analyzing the statistical characteristics of the flow. However, this approach is highly sensitive to changes in service operation (e.g., a new version release). For instance, a new audio codec can alter statistical metrics, and the use of "[Comfort Noise](https://en.wikipedia.org/wiki/Comfort_noise)" can further complicate definition.
 
+2. **Signature-based (DPI):** In many cases, especially for voice and video, SPID may be redundant. If the traffic uses standard protocols like **SIP**, **RTP**, or specific **WebSocket** implementations, the workflow can be identified using signatures of characteristic protocols. For example, detecting an **RTP (Real-time Transport Protocol)** stream allows for a deterministic classification of Audio or Video workflows without the need for complex statistical modeling.
+
+**Practical Application**
+
+In any case, workflow data is invaluable for both telecom solutions and information security products:
+
+* **Telecom:** Identifying an "interesting" combination, such as a subscriber opening an online banking session while having an active voice call.
+* **Security:** During an incident investigation, workflow analysis might reveal that several audio calls were made on a device, followed by a file being received, after which the device was compromised. This sequence provides a much deeper understanding of the attack vector than service-level identification alone.
 
 ## $ [Why is it difficult?](#-why-is-it-difficult)
 
