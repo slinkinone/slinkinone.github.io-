@@ -64,13 +64,13 @@ In an operator’s network, DPI must not only classify network flows but also au
 The task of traffic classification is fundamental to a full-fledged DPI solution and belongs to a distinct class known as **DPI Engine**. This is due to the constant evolution of services — names change (e.g., Twitter -> X), new domain names, CDNs, new service optimization methods are developed (such as voice or video calls), and new protocols are adopted. As a result, a separate segment of tasks arises that is independent of the type of network (Mobile Core, ISP, Wi-Fi AP, etc.), yet solving these tasks remains essential for each network type. For this reason, deep traffic analysis and network flow classification are carried out specifically by **DPI Engine** solutions.
 
 <hr>
-<b>IMPORTANT: This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.</b>
+<b>This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.</b>
 <hr>
 
 &nbsp;
 
 <hr>
-<b>IMPORTANT: Inline vs. Mirroring</b>
+<b>Inline vs. Mirroring</b>
 &nbsp;
 <b>DPI solutions typically operate in one of two modes: inline or mirroring.
 Inline deployment means that the DPI system is positioned between the client and the external network and must make real-time decisions regarding traffic flow without delayed processing. In contrast, in mirroring mode, the DPI system receives a copy of the traffic rather than the actual live packets. Even when operating in mirroring mode, a DPI can still influence session behavior (for example, by terminating a session through sending a TCP-RST packet); however, such intervention does not require introducing delays to the rest of the packet flow.</b>
@@ -112,7 +112,6 @@ By simplifying the formal definitions of the OSI model layers, we can say the fo
 
 
 ![](/assets/blog/what_is_dpi_engine/img/osi_data_transfer.png "Scheme 3: Data transmission according to the OSI model")
-*Scheme 3: Data transmission according to the OSI model*
 <p align="center"><i>Scheme 3: Data transmission according to the OSI model</i></p>
 
 The diagram was taken from [here](https://www.linkedin.com/pulse/how-do-devices-talk-each-other-rahima-aktar-yhbbc).
@@ -125,7 +124,7 @@ A **network flow** (or simply **flow**) is an abstraction over network packets, 
 Thus, the chaos of packets within the network takes on a more structured form when the packets are divided into groups. To better understand, it is easier to imagine a flow as a pipe through which packets fly. From the sender to the receiver, they travel through one pipe (the forward flow), while the return packets go through a neighboring one (the reverse flow). In this example, the pipe represents a grouping of packets.
 
 <hr>
-<b>IMPORTANT: It is important to distinguish between a network flow and an execution thread. A network flow is referred to as flow, while an execution thread is called thread.
+<b>It is important to distinguish between a network flow and an execution thread. A network flow is referred to as flow, while an execution thread is called thread.
 <hr>
 
 ![](/assets/blog/what_is_dpi_engine/img/client_server_flow.png "Scheme 4: Forward and reverse flows")
