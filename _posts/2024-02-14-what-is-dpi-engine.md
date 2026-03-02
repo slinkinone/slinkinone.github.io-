@@ -33,9 +33,9 @@ author: Vyacheslav Slinkin
 * [What is reassembling?](#what-is-reassembling)
 * [How can reassembling affect traffic classification?](#how-can-reassembling-affect-traffic-classification)
 * [What is a service?](#what-is-a-service)
-* [More than one service on a single server](#)
-* [Traffic classification](#)
-* [Methods for protocol detection](#)
+* [More than one service on a single server](#more-than-one-service-on-a-sigle-server)
+* [Traffic classification](#traffic-classification)
+* [Methods for protocol detection](#methods-for-protocol-identification)
 * [Methods for classifying internet services](#)
 * [Flow type classification (workflow)](#)
 * [Why is it difficult?](#)
@@ -250,8 +250,9 @@ HTTP/HTTP2 protocols (and other application-layer protocols) are directly respon
 The diagram above illustrates how packet layers are stripped off before the application receives the data. The packet first arrives at the **NIC** (**N**etwork **I**nterface **C**ard), where the Ethernet layer is removed, and the data is passed to the OS kernel. The kernel then checks the listening sockets (ip:port). If there is an application listening on the corresponding socket, the network and transport layers are also stripped, and the remaining data is delivered to the application.
 In summary, a service is a program. A protocol is a method for transferring or presenting data.
 
-### Running multiple services on a single server
+## $ [More than one service on a single server](#more-than-one-service-on-a-sigle-server)
 
+&nbsp;
 It is quite common to run multiple services on a single server. For example, a user rents a virtual machine with the IPv4 address 90.156.176.56 and deploys YouTrack and GitLab on it. They purchase a domain (privatezone.com), an SSL certificate, and configure DNS records. As a result, two services are now running on the same IP address.
 If the services are launched with default parameters (HTTP port 80, TLS port 443), only the first service to start will run successfully, while the second one will fail to launch (and vice versa) because the default ports are already in use.
 To resolve this, the services must be started on different ports — for example, YouTrack on port 9000 and GitLab on port 9001. Now, when a user types privatezone.com into the browser, they will see an error, because no program is running on port 443 (TLS) or 80 (HTTP), which the browser uses by default to send requests.
@@ -273,22 +274,42 @@ From the example above, it becomes clear that if multiple services are running o
 
 &nbsp;
 
-## $ [More than one service on a single server](#)
+
+## $ [Traffic classification](#traffic-classification)
 
 &nbsp;
-...
+Traffic classification is the process of determining which service a network flow belongs to. Classification consists of the following steps, some of which may be skipped depending on the protocol or classification technique:
+
+* **Protocol identification** represented in the packet
+* **Field dissection** necessary for classification (IP addresses, ports, domain names, etc.)
+* **Reassembling** (IPv4, TCP, QUIC, HTTP/2, etc.)
+* **Field unpacking** (e.g., DNS Name consisting of labels)
+* **Decryption** (e.g., QUIC Initial)
+* **Application of techniques** to identify the service of the network flow
+* **Application of techniques** to classify the nature of the network flow
 
 
-## $ [Traffic classification](#)
+## $ [Methods for protocol detection](#methods-for-protocol-identification)
 
 &nbsp;
-...
+From the user's perspective, who has deployed OpenVPN and Nginx on their server, everything is simple: they know that OpenVPN operates on port 1194 and Nginx serves their website on port 443. In other words, the OpenVPN server (openvpn-server), running on the user's server on UDP port 1194, knows for sure that the data in the packet is formatted according to the OpenVPN specification. If the data does not comply with this specification, it should not be processed (an error should be reported or simply ignored). Everything is straightforward for the openvpn-server, but not for the network analyzer.
 
+Protocols in a packet can be represented as bricks of different colors, stacked one after another. Determining the color of the next brick can be easy: for example, when the first blue brick says that the next one is red. This example applies to protocols like Ethernet, VLAN, IPv4, IPv6, etc. In one of the fields of such protocols, there is an indication of what protocol comes after it. However, difficulties arise when trying to determine the protocol following the transport layer (TCP/UDP). UDP and TCP protocols do not contain information about which protocol follows them, so identifying the next protocol is possible only heuristically.
 
-## $ [Methods for protocol detection](#)
+The following methods can be used to identify the protocol in a packet:
 
-&nbsp;
-...
+* **Explicit** – the next protocol is explicitly known (explicit identification).
+* **Port-based** – a hint indicating which protocol is most likely.
+* **Patterns** – specific patterns or markers whose appearance indicates the packet belongs to a certain protocol. Examples of protocols that can be identified by patterns include HTTP, SSDP, SIP, and a few others.
+* **Try-dissect** – checking the structure of the protocol (message size, field values, etc.). There may be collisions with other protocols if their message structures are similar.
+
+It might seem logical to assume that identifying a protocol is an easy task: just check the port number and, based on it, parse the corresponding protocol. For example, 80 means HTTP, 443 means TLS, and so on. In reality, this assumption is wrong — the port only serves as a hint for which protocol to check first (using patterns or structural analysis). If you rely solely on the port number, services running on non-standard ports will be misidentified. For instance, imagine QUIC traffic traveling to a server not on port 443, but on port 1194 (the default port for OpenVPN). In this case, DPI would first attempt to parse QUIC as OpenVPN, fail, and then label the protocol as unknown. Simple port spoofing would interfere with correct protocol identification and, consequently, with service classification (since the first QUIC message can be reassembled, decrypted, and used to extract the TLS layer and obtain the SNI).
+
+An additional challenge is posed by protocols with high data entropy, such as OpenVPN or RTP/SRTP. In such protocols, only a very small portion of the bytes can be checked against the expected protocol structure. The majority of the message consists of payload, which is essentially unpredictable and useless for analysis. For these protocols, it's usually necessary to collect more than one packet to either correlate certain fields across multiple messages or verify that the structure of a subsequent packet no longer matches the protocol initially assumed by the **DPI Engine** (i.e., using the method of elimination).
+
+Thus, for a DPI Engine, it is important not only to recognize a protocol based on a single message type (for example, TLS Client Hello), which can directly influence the final service classification. It is equally important to understand the structure of every message type supported by the protocol (such as TLS Alert, Change Cipher Spec, Application Data, and others), because the ability to correctly parse any message type reduces the risk of false positives and increases the chance of identifying the protocol from the very first packet. In other words, the more protocols are supported and the more message types a DPI Engine can accurately dissect for each protocol, the more reliable the classification will be.
+
+There are also some edge cases where protocol identification seems straightforward at first glance, but isn't in practice. A good example is ICMP traffic with an embedded payload. ICMP is a simple and important protocol, typically allowed across most networks and usually treated as a terminal protocol (at least in an ideal world). However, ICMP packets can carry payload data. Since payload analysis in ICMP is rarely needed (and analyzing every payload would unnecessarily burden the system in 99% of cases), it is often skipped. That said, payloads can be used to establish covert ICMP tunnels.
 
 
 ## $ [Methods for classifying internet services](#)
