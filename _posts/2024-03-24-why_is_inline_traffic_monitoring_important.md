@@ -85,4 +85,3 @@ No one argues, it is important to have security software on endpoint devices. Ho
 
 <hr>
 <b>If you fond an error in the article, please let us know - <a href="mailto:edit@slinkin.tech">edit@slinkin.tech</a>.</b>
-<hr>

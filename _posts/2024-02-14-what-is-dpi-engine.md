@@ -64,16 +64,20 @@ In an operator’s network, DPI must not only classify network flows but also au
 The task of traffic classification is fundamental to a full-fledged DPI solution and belongs to a distinct class known as **DPI Engine**. This is due to the constant evolution of services — names change (e.g., Twitter -> X), new domain names, CDNs, new service optimization methods are developed (such as voice or video calls), and new protocols are adopted. As a result, a separate segment of tasks arises that is independent of the type of network (Mobile Core, ISP, Wi-Fi AP, etc.), yet solving these tasks remains essential for each network type. For this reason, deep traffic analysis and network flow classification are carried out specifically by **DPI Engine** solutions.
 
 <hr>
-<b>This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.</b>
+<b>NOTE</b>
+
+This introductory section briefly covers basic networking concepts and principles. It is intended to establish a common understanding that will be referenced throughout the more in-depth technical discussions in the following parts.
 <hr>
 
 &nbsp;
 
 <hr>
+<b>NOTE</b>
+
 <b>Inline vs. Mirroring</b>
 &nbsp;
-<b>DPI solutions typically operate in one of two modes: inline or mirroring.
-Inline deployment means that the DPI system is positioned between the client and the external network and must make real-time decisions regarding traffic flow without delayed processing. In contrast, in mirroring mode, the DPI system receives a copy of the traffic rather than the actual live packets. Even when operating in mirroring mode, a DPI can still influence session behavior (for example, by terminating a session through sending a TCP-RST packet); however, such intervention does not require introducing delays to the rest of the packet flow.</b>
+DPI solutions typically operate in one of two modes: inline or mirroring.
+Inline deployment means that the DPI system is positioned between the client and the external network and must make real-time decisions regarding traffic flow without delayed processing. In contrast, in mirroring mode, the DPI system receives a copy of the traffic rather than the actual live packets. Even when operating in mirroring mode, a DPI can still influence session behavior (for example, by terminating a session through sending a TCP-RST packet); however, such intervention does not require introducing delays to the rest of the packet flow.
 <hr>
 
 ## $ [What is a network protocol, packet, layer?](#what-is-network-protocol-packet-and-layer)
@@ -124,7 +128,8 @@ A **network flow** (or simply **flow**) is an abstraction over network packets, 
 Thus, the chaos of packets within the network takes on a more structured form when the packets are divided into groups. To better understand, it is easier to imagine a flow as a pipe through which packets fly. From the sender to the receiver, they travel through one pipe (the forward flow), while the return packets go through a neighboring one (the reverse flow). In this example, the pipe represents a grouping of packets.
 
 <hr>
-<b>It is important to distinguish between a network flow and an execution thread. A network flow is referred to as flow, while an execution thread is called thread.
+<b>NOTE</b>
+It is important to distinguish between a network flow and an execution thread. A network flow is referred to as <b>flow</b>, while an execution thread is called <b>thread</b>.
 <hr>
 
 ![](/assets/blog/what_is_dpi_engine/img/client_server_flow.png "Scheme 4: Forward and reverse flows")
@@ -232,7 +237,9 @@ If the main goal of a service is to exchange data in a way that the user can rea
 For example, IPv4/IPv6 protocols are responsible for transferring data between network devices like routers and/or servers. Data is transmitted from one device to another based on IP addresses.
 
 <hr>
-<b>In addition to routers and servers, there are also switches that handle data transmission between different network segments (typically to other switches). However, switches perform this task based on VLANs (numerical identifiers) rather than IP addresses. It is important to note that VLANs are not considered during traffic classification by the DPI Engine.</b>
+<b>NOTE</b>
+
+In addition to routers and servers, there are also switches that handle data transmission between different network segments (typically to other switches). However, switches perform this task based on VLANs (numerical identifiers) rather than IP addresses. It is important to note that VLANs are not considered during traffic classification by the DPI Engine.
 <hr>
 
 &nbsp;
@@ -435,4 +442,3 @@ The application of DPI Engine is quite diverse. Here are some examples of its us
 
 <hr>
 <b>If you fond an error in the article, please let us know - <a href="mailto:edit@slinkin.tech">edit@slinkin.tech</a>.</b>
-<hr>
