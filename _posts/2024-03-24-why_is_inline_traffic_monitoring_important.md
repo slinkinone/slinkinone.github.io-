@@ -83,8 +83,6 @@ For such cases, **DPI** can resolve the problem just like in all previous cases 
 &nbsp;
 No one argues, it is important to have security software on endpoint devices. However, it doesn't always work and much better to have **DPI** system in your local network and also have another security solution since working together they provide the best results. In such cases, DPI solves the problem in the same way as in all the cases described above: by analyzing traffic on a separate network node, which plays not only a security role. It also provides an important information about network activity what can be used for network touble shooting and building reports of user activities or network load statistic.
 
----
-
 <hr>
 <b>If you fond an error in the article, please let us know - <a href="mailto:edit@slinkin.tech">edit@slinkin.tech</a>.</b>
 <hr>

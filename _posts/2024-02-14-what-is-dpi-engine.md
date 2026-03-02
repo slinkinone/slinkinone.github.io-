@@ -328,7 +328,7 @@ Below are some of the most common approaches to service classification:
 
 <hr>
 <b>IMPORTANT</b>
-</br>
+
 DPI not only analyzes traffic, but also passes, throttles, or blocks network packets. Packets from the network interface are captured by a dedicated DPI module, usually referred to as a <i>traffic capture</i> or <i>packet filter</i> module. Such a module typically operates at the <a href="https://en.wikipedia.org/wiki/User_space_and_kernel_space">Kernel space</a> level. It is responsible for enforcing restrictions applied to a flow. Popular libraries for traffic capture include <a href="https://www.dpdk.org/">DPDK</a> and <a href="https://www.ntop.org/products/packet-capture/pf_ring/">PF_Ring</a>.
 
 Until a flow is classified, its packets are forwarded for analysis by the <b>DPI Engine</b>, whose code usually runs in <a href="https://en.wikipedia.org/wiki/User_space_and_kernel_space">User space</a>. Once the flow has been classified, further packet analysis becomes unnecessary — only statistics need to be collected so that they can be reported to billing once the flow ends. To achieve this, the traffic capture module is sent a <b>policy</b> (instructions on what to do with the flow’s packets: pass, throttle, or block). After receiving the policy, the capture module stops queuing the flow’s packets for analysis and instead either simply collects statistics or drops the packets if the flow was blocked.
@@ -432,8 +432,6 @@ The application of DPI Engine is quite diverse. Here are some examples of its us
 - **File Extraction** – for unencrypted protocols, files can be extracted if a file is present in the packet. For example, extracting images from HTTP or FTP streams. Extracted files can be further analyzed, such as in DLP (Data Loss Prevention).
 - **Dataset Producing** – for the **DPI Engine**, a set of parameters can be configured for extraction (e.g., _src_ip_, _dst_ip_, _src_port_, _dst_port_, _hostname_, _protocol_tree_, _service_id_, _byte_count_, _bitrate_, etc.), after which pcap dumps can be uploaded for analysis, and the requested parameter set will be output in JSON format for each packet. This set can be used for AI training and the identification of new metrics for classification. Another example: a similar data set can be generated not per packet but per flow and used as IPDR (IP Detail Record).
 * **[Tethering](https://en.wikipedia.org/wiki/Tethering) Detection** – detecting the use of a mobile phone as a hotspot.
-
----
 
 <hr>
 <b>If you fond an error in the article, please let us know - <a href="mailto:edit@slinkin.tech">edit@slinkin.tech</a>.</b>
