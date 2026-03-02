@@ -91,7 +91,7 @@ In order to explain how traffic classification works, it is necessary to introdu
 
 
 ![](/assets/blog/what_is_dpi_engine/img/packet.png "Scheme 1: Protocol layers inside a packet")
-*Scheme 1: Protocol layers inside a packet*
+<p align="center"><i>Scheme 1: Protocol layers inside a packet</i></p>
 
 ## $ [OSI](#osi)
 
