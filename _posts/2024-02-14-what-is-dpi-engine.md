@@ -104,11 +104,8 @@ The diagram was taken from [here](https://www.linkedin.com/pulse/what-protocol-d
 By simplifying the formal definitions of the OSI model layers, we can say the following:
 
 * Network layer protocols are responsible for data transmission based on the IP addresses of the recipients.
-
 * Transport layer protocols ensure that, once data reaches the destination server, the correct application can process it (based on ports). In other words, they "navigate" data not between network nodes but between applications on a device.
-
 * Presentation layer protocols determine how the data will be transmitted (encryption, compression, etc.).
-
 * Application layer protocols are used to structure data between the client and server applications, so both can process it. For example, in the HTTP protocol (application layer), before the actual data payload (request or response body) is transmitted, information is provided about which resource the request is for, the format of the payload, whether compression is used, and so on. In essence, application layer protocols are what programs/services on end devices process.
 
 
@@ -137,12 +134,13 @@ In Diagram 4, the session context is presented as a shared entity that consolida
 
 When a packet is processed, the **DPI Engine** must associate the packet with a flow. To do this, a flow _key_/_identifier_ must be calculated based on data from the packet. The key is calculated differently depending on the structure of the packet. Flows can be of various types, but the most common ones are:
 
-| Type | Description | Key |
-| :--- | :--- | :--- |
+| type &nbsp;&nbsp;&nbsp;&nbsp;| Description &nbsp;&nbsp;&nbsp;&nbsp; | key  |
+| :---                         | :---                                 | :--- |
 | **Tuple3** | IPv4/IPv6 fragmented flow | { src_ip, dst_ip, id } |
 | **Tuple5** | IPv4/IPv6 transport flow | { src_ip, src_port, dst_ip, dst_port, protocol } |
 | **Tuple6** | Tunnel flow (VLAN-C-TAG, GRE, …) | { src_ip, src_port, dst_ip, dst_port, protocol, tag } |
 
+&nbsp;
 
 That is, to calculate the key, it is necessary to reach the IP layer, extract the IP addresses, and check that the flow is not fragmented (by verifying the offsets and the MF flag). If the IP packet is fragmented, the ID field should be used to construct a Tuple3 key. If the packet is not fragmented, the next layer after IP should be examined to extract the ports (if it is a transport layer protocol and ports are present), and a Tuple5 key should be constructed.
 
