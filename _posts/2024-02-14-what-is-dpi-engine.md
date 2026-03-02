@@ -29,7 +29,7 @@ author: Vyacheslav Slinkin
 * [OSI](#osi)
 * [What is a network flow?](#what-is-a-network-flow)
 * [Flow direction](#flow-direction)
-* [What is Uplink/Downlink and why is it not the same as CTS/STC?](#)
+* [What is Uplink/Downlink and why is it not the same as CTS/STC?](#what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
 * [What is reassembling?](#)
 * [How can reassembling affect traffic classification?](#)
 * [What is a service?](#)
@@ -161,13 +161,15 @@ For example, consider the FTP protocol. After establishing a TCP connection, whe
 ## [Flow direction](#flow-direction)
 
 &nbsp;
-...
+Flow direction is typically divided into **Client-To-Server** (**CTS**) and **Server-To-Client** (**STC**). To determine which side is the client, it is necessary to identify who initiated the connection. For example, if a packet contains a TCP layer with only the SYN flag set, it indicates the first packet of a session, and the initiator is the _src_ip:src_port_ socket. In this case, the packet’s direction is _Client-To-Server_. By swapping the IP addresses and ports, we obtain the socket for the _Server-To-Client_ direction.
+
+In Diagram 5, the forward and reverse flows are shown — identifiers 1 and 2. Here, the address 192.168.1.33 represents a server running an SSH service on port 22.
 
 
-## [What is Uplink/Downlink and why is it not the same as CTS/STC?](#)
+## [What is Uplink/Downlink and why it is not the same as CTS/STC?](#what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
 
 &nbsp;
-...
+In networking, the terms **Uplink** and **Downlink** are also used in relation to network interfaces. Thus, all packets captured from the Uplink interface are considered to belong to the subscriber, while packets captured from the Downlink interface belong to the external network. At first glance, it may seem that the flow direction can always be easily determined based on which interface the packet was captured from (captured from _Uplink_ — _CTS_, captured from _Downlink_ — _STC_). However, this is not entirely correct. For example, imagine a subscriber sets up a mini-server at home (such as a media server with movies), requests a static IP address from the provider, then goes on a two-week vacation and accesses their server remotely from, say, Georgia. In this case, for the provider's DPI system, traffic from the user's server to the user (which is _STC_) will actually go through Uplink, while traffic from the user to the server (_CTS_) will go through _Downlink_.
 
 
 ## [What is reassembling?](#)
