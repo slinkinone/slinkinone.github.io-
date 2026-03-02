@@ -259,7 +259,7 @@ To resolve this, the services must be started on different ports — for example
 To access YouTrack, the user would have to enter privatezone.com:9000, and for GitLab — privatezone.com:9001. This is inconvenient since it requires remembering specific ports for each service.
 To improve this setup, you should add two more DNS records that point to the same IPv4 address (90.156.176.56), but make the service being accessed clear from the domain name itself. For example, in our case, the DNS records would look like this:
 
-| domain &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp    | sub-domain &nbsp;&nbsp;&nbsp;&nbsp;   | type &nbsp;&nbsp;&nbsp;&nbsp; | address          |
+| domain &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   | sub-domain &nbsp;&nbsp;&nbsp;&nbsp;   | type &nbsp;&nbsp;&nbsp;&nbsp; | address          |
 | :---                                                      | :---                                  | :---                          | :---             |
 | privatezone.com                                           | @                                     | A                             | 90.156.176.56    |
 | privatezone.com                                           | git                                   | A                             | 90.156.176.56    |
