@@ -259,11 +259,11 @@ To resolve this, the services must be started on different ports — for example
 To access YouTrack, the user would have to enter privatezone.com:9000, and for GitLab — privatezone.com:9001. This is inconvenient since it requires remembering specific ports for each service.
 To improve this setup, you should add two more DNS records that point to the same IPv4 address (90.156.176.56), but make the service being accessed clear from the domain name itself. For example, in our case, the DNS records would look like this:
 
-| domain &nbsp;&nbsp;&nbsp;&nbsp;| sub-domain &nbsp;&nbsp;&nbsp;&nbsp;   | type &nbsp;&nbsp;&nbsp;&nbsp; | address          |
-| :---                           | :---                                  | :---                          | :---             |
-| privatezone.com                | @                                     | A                             | 90.156.176.56    |
-| privatezone.com                | git                                   | A                             | 90.156.176.56    |
-| privatezone.com                | youtrack                              | A                             | 90.156.176.56    |
+| domain &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp    | sub-domain &nbsp;&nbsp;&nbsp;&nbsp;   | type &nbsp;&nbsp;&nbsp;&nbsp; | address          |
+| :---                                                      | :---                                  | :---                          | :---             |
+| privatezone.com                                           | @                                     | A                             | 90.156.176.56    |
+| privatezone.com                                           | git                                   | A                             | 90.156.176.56    |
+| privatezone.com                                           | youtrack                              | A                             | 90.156.176.56    |
 
 &nbsp;
 Thus, when a user requests gitlab.privatezone.com in a browser, the browser sends a TLS request with the domain gitlab.privatezone.com specified in the server_name field (SNI). However, the server still won’t respond, because there is no program running on port 443. To route incoming connections between YouTrack and GitLab, you need to install **Nginx** (or any other web server) and configure it to forward requests for youtrack.privatezone.com to YouTrack (127.0.0.1:9000) and requests for gitlab.privatezone.com to GitLab (127.0.0.1:9001). The addresses 127.0.0.1:9000 and 127.0.0.1:9001 mean that the requests are routed locally (127.0.0.1) to ports 9000 and 9001, where they are handled by the appropriate applications.
