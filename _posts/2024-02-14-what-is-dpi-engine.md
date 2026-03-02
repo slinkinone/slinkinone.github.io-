@@ -24,27 +24,27 @@ author: Vyacheslav Slinkin
 ## > Content Table
 
 &nbsp;
-* [Introduction](#introduction)
-* [What is a network protocol, packet, layer?](#what-is-network-protocol-packet-and-layer)
-* [OSI](#osi)
-* [What is a network flow?](#what-is-a-network-flow)
-* [Flow direction](#flow-direction)
-* [What is Uplink/Downlink and why is it not the same as CTS/STC?](#what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
-* [What is reassembling?](#what-is-reassembling)
-* [How can reassembling affect traffic classification?](#how-can-reassembling-affect-traffic-classification)
-* [What is a service?](#what-is-a-service)
-* [More than one service on a single server](#more-than-one-service-on-a-sigle-server)
-* [Traffic classification](#traffic-classification)
-* [Protocol detection methods](#protocol-detection-methods)
-* [Internet service classification methods](#internet-service-classification-methods)
-* [Workflow classification](#workflow-classification)
-* [Why is it difficult?](#why-is-it-difficult)
-* [What else is interesting about the DPI Engine?](#what-else-is-interesting-about-the-dpi-engine)
+* [Introduction](#-introduction)
+* [What is a network protocol, packet, layer?](#-what-is-network-protocol-packet-and-layer)
+* [OSI](#-osi)
+* [What is a network flow?](#-what-is-a-network-flow)
+* [Flow direction](#-flow-direction)
+* [What is Uplink/Downlink and why is it not the same as CTS/STC?](#-what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
+* [What is reassembling?](#-what-is-reassembling)
+* [How can reassembling affect traffic classification?](#-how-can-reassembling-affect-traffic-classification)
+* [What is a service?](#-what-is-a-service)
+* [More than one service on a single server](#-more-than-one-service-on-a-sigle-server)
+* [Traffic classification](#-traffic-classification)
+* [Protocol detection methods](#-protocol-detection-methods)
+* [Internet service classification methods](#-internet-service-classification-methods)
+* [Workflow classification](#-workflow-classification)
+* [Why is it difficult?](#-why-is-it-difficult)
+* [What else is interesting about the DPI Engine?](#-what-else-is-interesting-about-the-dpi-engine)
 &nbsp;
 
 ---
 
-## $ [Introduction](#introduction)
+## $ [Introduction](#-introduction)
 
 &nbsp;
 For those familiar with the term DPI (**Deep Packet Inspection**), it often evokes unpleasant associations: blocking, regulators, censorship, tightening controls, and so on. In reality, DPI is simply the name of a technology whose essence lies in the deep analysis of network traffic.
@@ -80,7 +80,7 @@ DPI solutions typically operate in one of two modes: inline or mirroring.
 Inline deployment means that the DPI system is positioned between the client and the external network and must make real-time decisions regarding traffic flow without delayed processing. In contrast, in mirroring mode, the DPI system receives a copy of the traffic rather than the actual live packets. Even when operating in mirroring mode, a DPI can still influence session behavior (for example, by terminating a session through sending a TCP-RST packet); however, such intervention does not require introducing delays to the rest of the packet flow.
 <hr>
 
-## $ [What is a network protocol, packet, layer?](#what-is-network-protocol-packet-and-layer)
+## $ [What is a network protocol, packet, layer?](#-what-is-network-protocol-packet-and-layer)
 
 &nbsp;
 In order to explain how traffic classification works, it is necessary to introduce some basic concepts. While these may be familiar to experienced readers, it is still worth defining them.
@@ -97,7 +97,7 @@ In order to explain how traffic classification works, it is necessary to introdu
 ![](/assets/blog/what_is_dpi_engine/img/packet.png "Scheme 1: Protocol layers inside a packet")
 <p align="center"><i>Scheme 1: Protocol layers inside a packet</i></p>
 
-## $ [OSI](#osi)
+## $ [OSI](#-osi)
 
 &nbsp;
 [OSI](https://en.wikipedia.org/wiki/OSI_model) (**O**pen **S**ystems **I**nterconnection model) is a hierarchical, multi-layered framework for network protocols, where each layer plays a specific role in ensuring the successful transmission of data.
@@ -120,7 +120,7 @@ By simplifying the formal definitions of the OSI model layers, we can say the fo
 
 The diagram was taken from [here](https://www.linkedin.com/pulse/how-do-devices-talk-each-other-rahima-aktar-yhbbc).
 
-## $ [What is a network flow?](#what-is-a-network-flow)
+## $ [What is a network flow?](#-what-is-a-network-flow)
 
 &nbsp;
 A **network flow** (or simply **flow**) is an abstraction over network packets, used to group them. For example, consider the Internet, which can be viewed as a large number of packets being transmitted between different network participants. Packets are the smallest unit of network exchange. While a packet represents a more physical abstraction (information, a set of bytes transmitted over a communication channel), a flow is more of a logical entity that helps organize packets into groups. For instance, if the sender and receiver IP addresses are the same, that would constitute an IP flow. Another example: when both the sender and receiver IP addresses, as well as the TCP ports, match. This flow could be considered as part of a specific TCP connection. There can be several TCP connections (and not just TCP) between a sender and a receiver.
@@ -166,7 +166,7 @@ Control information refers to data that is not related to the transmission of us
 For example, consider the FTP protocol. After establishing a TCP connection, when the user enters credentials, navigates directories, or queries file sizes — all of this constitutes control information (_Control Plane_). At the same time, when the user decides to download a file, within the FTP session, a message exchange takes place announcing a socket on the server side that the client must connect to in order to retrieve the file. Then the client initiates a connection to this socket, and the file download begins — but already in a separate flow. This flow is considered part of the _User Plane_.
 
 
-## $ [Flow direction](#flow-direction)
+## $ [Flow direction](#-flow-direction)
 
 &nbsp;
 Flow direction is typically divided into **Client-To-Server** (**CTS**) and **Server-To-Client** (**STC**). To determine which side is the client, it is necessary to identify who initiated the connection. For example, if a packet contains a TCP layer with only the SYN flag set, it indicates the first packet of a session, and the initiator is the _src_ip:src_port_ socket. In this case, the packet’s direction is _Client-To-Server_. By swapping the IP addresses and ports, we obtain the socket for the _Server-To-Client_ direction.
@@ -174,7 +174,7 @@ Flow direction is typically divided into **Client-To-Server** (**CTS**) and **Se
 In Diagram 5, the forward and reverse flows are shown — identifiers 1 and 2. Here, the address 192.168.1.33 represents a server running an SSH service on port 22.
 
 
-## $ [What is Uplink/Downlink and why it is not the same as CTS/STC?](#what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
+## $ [What is Uplink/Downlink and why it is not the same as CTS/STC?](#-what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
 
 &nbsp;
 In networking, the terms **Uplink** and **Downlink** are also used in relation to network interfaces. Thus, all packets captured from the Uplink interface are considered to belong to the subscriber, while packets captured from the Downlink interface belong to the external network. At first glance, it may seem that the flow direction can always be easily determined based on which interface the packet was captured from (captured from _Uplink_ — _CTS_, captured from _Downlink_ — _STC_). However, this is not entirely correct. For example, imagine a subscriber sets up a mini-server at home (such as a media server with movies), requests a static IP address from the provider, then goes on a two-week vacation and accesses their server remotely from, say, Georgia. In this case, for the provider's DPI system, traffic from the user's server to the user (which is _STC_) will actually go through Uplink, while traffic from the user to the server (_CTS_) will go through _Downlink_.
@@ -185,7 +185,7 @@ In networking, the terms **Uplink** and **Downlink** are also used in relation t
 In Diagram 6, two devices are shown connected to an access point (a home router), which in turn is connected to the **ISP** (**I**nternet **S**ervice **P**rovider) via a wired link. All traffic coming **from** the tablet and laptop is considered **Uplink** for both the router and the ISP. Conversely, all traffic going **to** these devices is considered **Downlink**.
 
 
-## $ [What is reassembling?](#what-is-reassembling)
+## $ [What is reassembling?](#-what-is-reassembling)
 
 &nbsp;
 Packets in a network can be compared to freight cars carrying coal. But not everything that needs to be sent can always fit into a single car.
@@ -215,7 +215,7 @@ At **Stage 2**, the AP sends the previously delayed first segment to the ISP, an
 
 At **Stage 3**, the DPI finally receives the missing first segment. With the full message now assembled, it can analyze it and make a decision. In this case, the resource is perfectly legitimate — so the flow is allowed to pass.
 
-## $ [How can reassembling affect traffic classification?](#how-can-reassembling-affect-traffic-classification)
+## $ [How can reassembling affect traffic classification?](#-how-can-reassembling-affect-traffic-classification)
 
 &nbsp;
 Segmentation is one of the simplest ways to interfere with traffic classification (after tricks like changing the case in a domain name — for example, YoUTubE.COM). Why does this work? Because if a user forces their OS to set the segment size to 1 byte, and the request to a resource is 2048 bytes in size, then, in the worst case, the DPI will classify the flow only by the **2048th** packet (assuming the hostname is visible in plaintext). In practice, classification happens earlier — as soon as the DPI can extract the server_name (from the TLS protocol) or host/authority (from HTTP/HTTP2). For example, if the server name appears around the 100th byte, the DPI will classify the flow on the 100th packet.
@@ -225,7 +225,7 @@ What's happening inside the DPI: the engine gathers incoming packets, byte by by
 Of course, these days there are entire clusters of IP addresses reserved for large services, so sometimes classification can happen based on IP address alone without needing the hostname at all.
 
 
-## $ [What is a service?](#what-is-a-service)
+## $ [What is a service?](#-what-is-a-service)
 
 &nbsp;
 In previous sections, the terms "service" and "protocol" have already been used. However, it is necessary to clarify these concepts to make everything completely clear.
@@ -257,7 +257,7 @@ HTTP/HTTP2 protocols (and other application-layer protocols) are directly respon
 The diagram above illustrates how packet layers are stripped off before the application receives the data. The packet first arrives at the **NIC** (**N**etwork **I**nterface **C**ard), where the Ethernet layer is removed, and the data is passed to the OS kernel. The kernel then checks the listening sockets (ip:port). If there is an application listening on the corresponding socket, the network and transport layers are also stripped, and the remaining data is delivered to the application.
 In summary, a service is a program. A protocol is a method for transferring or presenting data.
 
-## $ [More than one service on a single server](#more-than-one-service-on-a-sigle-server)
+## $ [More than one service on a single server](#-more-than-one-service-on-a-sigle-server)
 
 &nbsp;
 It is quite common to run multiple services on a single server. For example, a user rents a virtual machine with the IPv4 address 90.156.176.56 and deploys YouTrack and GitLab on it. They purchase a domain (privatezone.com), an SSL certificate, and configure DNS records. As a result, two services are now running on the same IP address.
@@ -281,7 +281,7 @@ Thus, when a user requests gitlab.privatezone.com in a browser, the browser send
 From the example above, it becomes clear that if multiple services are running on a server/virtual machine, classification by IP address cannot be performed. Domain name checking is absolutely necessary to determine the service. This is important to understand. For example, if a hypothetical Google has a large pool of IP addresses, and there is no information (not received from the service) that, for instance, the pool 142.250.221.0/24 is reserved exclusively for the Gmail service, then IP-based classification is impossible, and additional domain name checking is required (unless, of course, Google is considered as one service). Google can deploy YouTube, Cloud, and so on within this pool without any warning, which would break IP classification.
 
 
-## $ [Traffic classification](#traffic-classification)
+## $ [Traffic classification](#-traffic-classification)
 
 &nbsp;
 Traffic classification is the process of determining which service a network flow belongs to. Classification consists of the following steps, some of which may be skipped depending on the protocol or classification technique:
@@ -295,7 +295,7 @@ Traffic classification is the process of determining which service a network flo
 * **Application of techniques** to classify the nature of the network flow
 
 
-## $ [Protocol detection methods](#protocol-detection-methods)
+## $ [Protocol detection methods](#-protocol-detection-methods)
 
 &nbsp;
 From the user's perspective, who has deployed OpenVPN and Nginx on their server, everything is simple: they know that OpenVPN operates on port 1194 and Nginx serves their website on port 443. In other words, the OpenVPN server (openvpn-server), running on the user's server on UDP port 1194, knows for sure that the data in the packet is formatted according to the OpenVPN specification. If the data does not comply with this specification, it should not be processed (an error should be reported or simply ignored). Everything is straightforward for the openvpn-server, but not for the network analyzer.
@@ -319,7 +319,7 @@ Thus, for a DPI Engine, it is important not only to recognize a protocol based o
 There are also some edge cases where protocol identification seems straightforward at first glance, but isn't in practice. A good example is ICMP traffic with an embedded payload. ICMP is a simple and important protocol, typically allowed across most networks and usually treated as a terminal protocol (at least in an ideal world). However, ICMP packets can carry payload data. Since payload analysis in ICMP is rarely needed (and analyzing every payload would unnecessarily burden the system in 99% of cases), it is often skipped. That said, payloads can be used to establish covert ICMP tunnels.
 
 
-## $ [Internet service classification methods](#internet-service-classification-methods)
+## $ [Internet service classification methods](#-internet-service-classification-methods)
 
 &nbsp;
 The DPI Engine uses a variety of techniques to classify services. The main goal of classification is to identify the service as early as possible, so that the network flow can be offloaded, reducing the load on the software (packets belonging to an offloaded flow are no longer analyzed). There is even a concept called **FPC** (**F**irst **P**acket **C**lassification), although not all techniques can guarantee FPC.
@@ -399,7 +399,7 @@ The main need for ML/AI classification is to adapt to traffic variability. This 
  
 The most popular techniques for traffic classification have been described above. There are also other techniques that may be based on specific criteria characteristic of individual services (or service groups), but these require deeper analysis, such as using AI, source code analysis, or reverse engineering.
 
-## $ [Workflow classification](#workflow-classification)
+## $ [Workflow classification](#-workflow-classification)
 
 &nbsp;
 Classifying the service itself is important, but it is not always enough. For example, a mobile operator might use file transfer speed in messengers as a competitive advantage for one of its tariffs. In other words, there arises a need to determine what kind of work the flow is performing (_workflow_). Several of the most popular types of such work can be highlighted:
@@ -418,7 +418,7 @@ There is also the concept of «[Comfort Noise](https://en.wikipedia.org/wiki/Com
 In any case, _workflow_ is very useful information both for telecom solutions and for products in the field of information security. For example, consider a scenario where a subscriber, while having an active voice call, opens a session in an online banking service. That's an interesting combination! Or another example: during an incident investigation, one might find that several audio calls were made on a device involved in the breach, followed by a file being received, and then after N minutes, the device was compromised.
 
 
-## $ [Why is it difficult?](#why-is-it-difficult)
+## $ [Why is it difficult?](#-why-is-it-difficult)
 
 &nbsp;
 The main criteria for **DPI Engine** products are classification quality and speed. Quality is especially critical for classifying services and protocols that are subject to blocking. Incorrect classification of such services (or more precisely, its absence) can lead to penalties from regulators.
@@ -430,7 +430,7 @@ In terms of performance, it is crucial how quickly the **DPI Engine** extracts d
 As for classification quality, it is essential to keep the list of IP addresses and domain names for services up to date, update them in a timely manner, and be able to export cached data via an API so that the DPI can pass it to other clusters in the network.
 
 
-## $ [What else is interesting about the DPI Engine?](#what-else-is-interesting-about-the-dpi-engine)
+## $ [What else is interesting about the DPI Engine?](#-what-else-is-interesting-about-the-dpi-engine)
 
 &nbsp;
 The application of DPI Engine is quite diverse. Here are some examples of its use:
