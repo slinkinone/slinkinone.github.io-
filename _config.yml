@@ -36,7 +36,8 @@ disable_google_fonts: true
 
 #
 tracking: true
-csp_extra: "'unsafe-inline' https://mc.yandex.ru"
+#csp_extra: "'unsafe-inline' https://mc.yandex.ru"
+disable_csp: true
 
 #
 #footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
