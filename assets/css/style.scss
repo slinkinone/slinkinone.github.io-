@@ -17,3 +17,11 @@ main, .container, article {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+.mobile-only { display: none; }
+
+/* If the width less than 768px (standard for mobile/laptops) */
+@media screen and (max-width: 767px) {
+  .mobile-only { display: block; }
+  .desktop-only { display: none; }
+}
