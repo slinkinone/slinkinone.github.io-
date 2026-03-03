@@ -41,7 +41,7 @@ permalink: /dc-engine
 &nbsp;&nbsp;identifying network protocols, extracting fields, decoding values.
 
 ### # internet services classificaion
-&nbsp;&nbsp;classification of services and definition of the nature of the flow (audio/video/file transfer).
+&nbsp;&nbsp;classification of services and workflow definition (audio/video/file transfer).
 
 ### # integration into other solutions
 &nbsp;&nbsp;ips/ids, siem, dlp, etc.
