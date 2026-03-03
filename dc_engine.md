@@ -19,28 +19,28 @@ permalink: /dc-engine
 ## > functionality
 
 ### # protocol detection
-&nbsp;&nbsp;identifying network protocols, extracting fields, decoding values.
+identifying network protocols, extracting fields, decoding values.
 
 ### # internet services classificaion
-&nbsp;&nbsp;classification of services and workflow definition (audio/video/file transfer).
+classification of services and workflow definition (audio/video/file transfer).
 
 ### # integration into other solutions
-&nbsp;&nbsp;ips/ids, siem, dlp, etc.
+ips/ids, siem, dlp, etc.
 
 ### # network activity logging
-&nbsp;&nbsp;logging of network activity that can be used in the investigation of incidents.
+logging of network activity that can be used in the investigation of incidents.
 
 ### # data collection for ai
-&nbsp;&nbsp;collecting an array of data for use in AI systems.
+collecting an array of data for use in AI systems.
 
 ### # user control
-&nbsp;&nbsp;putting users under control (saving all or selected information for certain users).
+putting users under control (saving all or selected information for certain users).
 
 ### # collecting information for billing
-&nbsp;&nbsp;accumulation of information on streams for use in billing.
+accumulation of information on streams for use in billing.
 
 ### # hotfix of new vulnerabilities
-&nbsp;&nbsp;prevention of exploitation of new vulnerabilities, before the release of official fixes.
+prevention of exploitation of new vulnerabilities, before the release of official fixes.
 
 ---
 
