@@ -27,6 +27,7 @@ Even though our products function deep within network infrastructures, we take e
 Contact us by email <a href="mailto:info@slinkin.tech?subject=Website request&body=Hello!">info@slinkin.tech</a> or use the form bellow:
 
 <form>
+    ---
     <select id="templateSelect">
         <option value="" disabled selected>template [click]</option>
         <option value="general">> general-question</option>
@@ -35,7 +36,9 @@ Contact us by email <a href="mailto:info@slinkin.tech?subject=Website request&bo
         <option value="feature">> feature-request</option>
         <option value="feedback">> feedback</option>
     </select>
+    ---
     <textarea rows="10" id="message" name="message" placeholder="message:" autocomplete="off"></textarea>
+    ---
     <input type="submit" value="[ submit ]">
 </form>
 
