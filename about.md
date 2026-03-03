@@ -38,6 +38,7 @@ Contact us by email <a href="mailto:info@slinkin.tech?subject=Website request&bo
     </select>
     ---
     <textarea rows="10" id="message" name="message" placeholder="message:" autocomplete="off"></textarea>
+    ---
     > 
     <input type="submit" value="[ submit ]">
 </form>
