@@ -35,7 +35,7 @@ Contact us by email <a href="mailto:info@slinkin.tech?subject=Website request&bo
         <option value="feature">> feature-request</option>
         <option value="feedback">> feedback</option>
     </select>
-    <textarea rows="8" id="message" name="message" placeholder="message:" autocomplete="off"></textarea>
+    <textarea rows="10" id="message" name="message" placeholder="message:" autocomplete="off"></textarea>
     <input type="submit" value="[ submit ]">
 </form>
 
