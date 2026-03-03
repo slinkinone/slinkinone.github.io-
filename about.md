@@ -12,10 +12,8 @@ permalink: /about
 
 ## > about
 
-
 <img src="/assets/img/logo_black.png" width="200" alt="Slinkin Technologies">
 
-&nbsp;
 Slinkin Technologies is an independent team of networking experts. We combine deep engineering expertise with an agile approach to deliver high-performance, flexible solutions for traffic analysis, balancing, and modification.
 
 Even though our products function deep within network infrastructures, we take extra pride in making our complex tools as intuitive, reliable, and user-friendly as possible.
