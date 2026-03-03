@@ -12,26 +12,7 @@ permalink: /dc-engine
 
 ## > dc-engine
 
-<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
-  <tbody>
-    <tr>
-      <td style="width: 60%; vertical-align: top; padding-right: 25px; text-align: justify; line-height: 1.5;">
-          <p><b>D</b>issection and <b>C</b>lassification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.</p>
-          <b>> protocols</b>:  60</b>
-          <b>> attributes</b>: 1157</b>
-          <b>> metadata</b>:   25</b>
-          <b>> services</b>:   553</b>
-          <p><a href="/assets/pdf/brochure/sl-dpi-en.pdf"># brochure</a></p>
-      </td>
-
-      <td style="width: 40%; vertical-align: middle; text-align: center;">
-          <img src="/assets/dc_engine/img/pipeline.png" alt="DC Engine" 
-               style="max-width: 100%; height: auto; display: inline-block;" />
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+{% include dc-engine.html %}
 
 ---
 
