@@ -18,33 +18,11 @@ permalink: /
 
 [# brochure](/assets/pdf/brochure/sl-dpi-en.pdf)
 
-<!--
 | protocols &nbsp;&nbsp;&nbsp;&nbsp;| attributes &nbsp;&nbsp;&nbsp;&nbsp;   | metadata &nbsp;&nbsp;&nbsp;&nbsp; | services |
 | :---                              | :---                                  | :---                              | :---     |
 | 60                                | 1157                                  | 25                                | 553      |
 
 &nbsp;
--->
-
-<table style="width: 100%; border-collapse: collapse; table-layout: fixed; font-family: sans-serif;">
-  <thead>
-    <tr style="border-bottom: 2px solid #333;">
-      <th style="width: 25%; padding: 12px; text-align: left; text-transform: lowercase; color: #666; font-weight: normal;">protocols</th>
-      <th style="width: 25%; padding: 12px; text-align: left; text-transform: lowercase; color: #666; font-weight: normal;">attributes</th>
-      <th style="width: 25%; padding: 12px; text-align: left; text-transform: lowercase; color: #666; font-weight: normal;">metadata</th>
-      <th style="width: 25%; padding: 12px; text-align: left; text-transform: lowercase; color: #666; font-weight: normal;">services</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 12px; font-size: 24px; font-weight: bold; text-align: left;">60</td>
-      <td style="padding: 12px; font-size: 24px; font-weight: bold; text-align: left;">1157</td>
-      <td style="padding: 12px; font-size: 24px; font-weight: bold; text-align: left;">25</td>
-      <td style="padding: 12px; font-size: 24px; font-weight: bold; text-align: left;">553</td>
-    </tr>
-  </tbody>
-</table>
-
 
 ---
 
