@@ -47,7 +47,9 @@ tracking:
     gtag('js', new Date());
     gtag('config', 'G-P66RJVJM2R');
 
-csp_extra: "script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; connect-src 'self' https://www.googletagmanager.com; img-src 'self' https://www.googletagmanager.com;"
+#csp_extra: "script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; connect-src 'self' https://www.googletagmanager.com; img-src 'self' https://www.googletagmanager.com;"
+csp_extra: "script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com;"
+
 
 #
 #footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
