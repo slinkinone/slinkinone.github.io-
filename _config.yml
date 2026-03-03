@@ -47,7 +47,8 @@ tracking:
     })(window, document,'script','https://mc.yandex.ru', 'ym');
     ym(107060220, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
 
-csp_extra: "'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru; img-src 'self' https: data: https://mc.yandex.ru; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com"
+#csp_extra: "'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru; img-src 'self' https: data: https://mc.yandex.ru; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com"
+disable_csp: true 
 
 #
 #footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
