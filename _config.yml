@@ -37,7 +37,8 @@ disable_google_fonts: false
 #
 tracking:
   script_src:
-    - https://www.googletagmanager.com/gtag/js?id=G-P66RJVJM2R
+    #- https://www.googletagmanager.com/gtag/js?id=G-P66RJVJM2R
+    - https://www.googletagmanager.com
   async: true
   defer: false
   # Optional inline init snippet (requires CSP allowance if used)
