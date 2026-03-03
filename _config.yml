@@ -35,11 +35,19 @@ style: light # dark (default), light, hacker, or nord
 disable_google_fonts: true
 
 #
-disable_csp: true
-tracking: true
-#csp_extra: "; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru; img-src 'self' https://mc.yandex.ru"
-#csp_extra: "script-src 'self' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru; img-src 'self' https://mc.yandex.ru;"
-#disable_csp: true
+tracking:
+  script_src:
+    - https://mc.yandex.ru
+  async: true
+  init: |
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru', 'ym');
+    ym(107060220, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+
+csp_extra: "script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru; img-src 'self' https://mc.yandex.ru;"
 
 #
 #footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
