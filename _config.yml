@@ -32,13 +32,12 @@ header_pages:
 
 style: light # dark (default), light, hacker, or nord
 #listen_for_clients_preferred_style: true
-disable_google_fonts: false
+disable_google_fonts: true
 
 #
 tracking:
   script_src:
-    #- https://www.googletagmanager.com/gtag/js?id=G-P66RJVJM2R
-    - https://www.googletagmanager.com
+    - https://www.googletagmanager.com/gtag/js?id=G-P66RJVJM2R
   async: true
   defer: false
   # Optional inline init snippet (requires CSP allowance if used)
