@@ -12,12 +12,27 @@ permalink: /dc-engine
 
 ## > dc-engine
 
-![](/assets/dc_engine/img/pipeline.png "DC Engine")
+<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+  <tbody>
+    <tr>
+      <td style="width: 50%; vertical-align: top; padding-right: 25px; text-align: justify; line-height: 1.5;">
+          <p>
+            <b>D</b>issection and <b>C</b>lassification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
+          </p>
 
-&nbsp;
-**D**issection and **C**lassification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.
+          <p style="margin: 0; text-align: left;">
+            <a href="/assets/pdf/brochure/sl-dpi-en.pdf"># brochure</a>
+          </p>
+      </td>
 
-[# brochure](/assets/pdf/brochure/sl-dpi-en.pdf)
+      <td style="width: 50%; vertical-align: middle; text-align: center;">
+          <img src="/assets/dc_engine/img/pipeline.png" alt="DC Engine" 
+               style="max-width: 100%; height: auto; display: inline-block;" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ---
 
