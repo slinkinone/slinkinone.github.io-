@@ -1,16 +1,43 @@
-title: 'slinkinone.github.io'
-description: "Website"
+title: "slinkin-tech"
+description: "Network software: network traffic analysis, internet service classification, metadata extraction"
+keywords: dpi, deep packet inspection, traffic classification, nta, network traffic analyzer, integration solution, network monitor, dpi framework, dpi library, dpi engine, industrial dpi, sl dc engine, dc engine
 baseurl: ""
-url: "https://slinkinone.github.io"
+url: "https://txt.slinkin.tech"
+
+#
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/img/logo.png"
+
+#
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+logo: assets/img/favicon.png
+#
 
 header_pages:
   - index.md
+  - dc_engine.md
+  - blog.md
   - about.md
-  - contact.md
+  - portal.md
 
-style: light 
+#
 
-footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+style: light # dark (default), light, hacker, or nord
+#listen_for_clients_preferred_style: true
+disable_google_fonts: true
+
+#
+#footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
+#footer: '© 2020-2026 slinkin-tech: <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
+footer: '© 2020-2026 slinkin-tech: <a href="mailto:info@slinkin.tech">email</a>, <a href="https://wiki.slinkin.tech">portal</a>'
 
 # Build settings
 markdown: kramdown

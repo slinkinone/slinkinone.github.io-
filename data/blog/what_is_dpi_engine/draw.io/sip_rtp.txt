@@ -1,0 +1,27 @@
+@startuml
+skinparam ParticipantBackgroundColor lightblue
+skinparam ParticipantFontColor white
+skinparam ParticipantBorderColor black
+
+participant "Caller" as Caller #5DAFFE
+participant "SIP Server" as SIP #5DAFFE
+participant "Callee" as Callee #5DAFFE
+participant "RTP Stream" as RTP #5DAFFE
+
+Caller -> SIP: INVITE (SDP)
+SIP -> Callee: INVITE (SDP)
+Callee -> SIP: 180 Ringing
+SIP -> Caller: 180 Ringing
+Callee -> SIP: 200 OK (SDP)
+SIP -> Caller: 200 OK (SDP)
+Caller -> SIP: ACK
+SIP -> Callee: ACK
+
+Caller -> RTP: RTP Media Stream
+Callee -> RTP: RTP Media Stream
+
+Caller -> SIP: BYE
+SIP -> Callee: BYE
+Callee -> SIP: 200 OK
+SIP -> Caller: 200 OK
+@enduml
