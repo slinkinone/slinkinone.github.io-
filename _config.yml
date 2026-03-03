@@ -35,25 +35,9 @@ style: light # dark (default), light, hacker, or nord
 disable_google_fonts: true
 
 #
-tracking:
-  script_src:
-    - https://www.googletagmanager.com/gtag/js?id=G-P66RJVJM2R
-  async: true
-  defer: false
-  # Optional inline init snippet (requires CSP allowance if used)
-  init: |
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-P66RJVJM2R');
-
-#csp_extra: "script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; connect-src 'self' https://www.googletagmanager.com; img-src 'self' https://www.googletagmanager.com;"
-csp_extra: "script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com;"
-
-
-#
 #footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
-footer: '© 2020-2026 slinkin-tech: <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
+#footer: '© 2020-2026 slinkin-tech: <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
+footer: '© 2020-2026 slinkin-tech: <a href="mailto:info@slinkin.tech">email</a>, <a href="https://wiki.slinkin.tech">portal</a>'
 
 # Build settings
 markdown: kramdown
