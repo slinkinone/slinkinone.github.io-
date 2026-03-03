@@ -21,7 +21,7 @@ Thank you for visiting our website! Your privacy is important to us, and we are 
 &nbsp;
 **$ analytical data**
 
-We use third-party analytics services, such as **Google Analytics**, to collect and analyze standard internet log information. This information is used to track visitor behavior and gather statistical information, such as the number of visitors to different sections of our site.
+We use third-party analytics services, such as **Google Analytics** and **Yandex Metrica**, to collect and analyze standard internet log information. This information is used to track visitor behavior and gather statistical information, such as the number of visitors to different sections of our site.
 
 **$ contact information**
 
@@ -46,7 +46,7 @@ Our website may use cookies and similar technologies to enhance your browsing ex
 ## # third-party services
 
 &nbsp;
-Our website utilizes third-party services such as **Google Analytics**. These services have their own privacy policies, and we recommend reviewing them to understand how your information is handled by these services.
+Our website utilizes third-party services such as **Google Analytics** and **Yandex Metrica**. These services have their own privacy policies, and we recommend reviewing them to understand how your information is handled by these services.
 
 ## # your rights
 
