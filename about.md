@@ -37,75 +37,81 @@ Contact us by email <a href="mailto:info@slinkin.tech?subject=Website request&bo
 </form>
 -->
 
-<div class="email-tool">
+<div class="email-tool" style="margin-top: 2rem; border: 1px dashed #555; padding: 20px;">
     <div style="margin-bottom: 20px;">
-        <label for="templateSelect"># Select_Request_Type:</label><br>
-        <select id="templateSelect" style="background: transparent; color: inherit; border: 1px solid currentColor; padding: 5px; width: 100%; margin-top: 5px;">
-            <option value="" disabled selected>-- Select Template --</option>
-            <option value="general">General Question</option>
-            <option value="product">Product Request</option>
-            <option value="bug">Bug Report</option>
-            <option value="feature">Feature Request</option>
-            <option value="feedback">Feedback</option>
+        <label style="color: #00ff00;"># user@terminal: select_template --type</label><br>
+        <select id="templateSelect" style="background: #000; color: #fff; border: 1px solid #fff; padding: 8px; width: 100%; margin-top: 10px; font-family: 'Courier New', Courier, monospace; appearance: auto; -webkit-appearance: auto;">
+            <option value="" disabled selected style="background: #000; color: #fff;">-- [CHOOSE_REQUEST_TYPE] --</option>
+            <option value="general" style="background: #000; color: #fff;">General Question</option>
+            <option value="product" style="background: #000; color: #fff;">Product Request</option>
+            <option value="bug" style="background: #000; color: #fff;">Bug Report</option>
+            <option value="feature" style="background: #000; color: #fff;">Feature Request</option>
+            <option value="feedback" style="background: #000; color: #fff;">Feedback</option>
         </select>
     </div>
 
     <div style="margin-bottom: 20px;">
-        <label for="templateText"># Message_Preview:</label><br>
-        <textarea id="templateText" rows="10" style="background: transparent; color: inherit; border: 1px solid currentColor; padding: 10px; width: 100%; margin-top: 5px; font-family: monospace;"></textarea>
+        <label style="color: #00ff00;"># user@terminal: vim message_body.txt</label><br>
+        <textarea id="templateText" rows="10" style="background: #0b0b0b; color: #00ff00; border: 1px solid #555; padding: 10px; width: 100%; margin-top: 10px; font-family: 'Courier New', Courier, monospace; outline: none;"></textarea>
     </div>
 
-    <button id="sendBtn" style="background: currentColor; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; font-family: inherit;">
+    <button id="sendBtn" style="background: #fff; color: #000; border: 1px solid #fff; padding: 10px 25px; cursor: pointer; font-weight: bold; font-family: 'Courier New', Courier, monospace; transition: all 0.2s;">
         [ EXECUTE_SEND ]
     </button>
 </div>
 
 <script>
-    const templates = {
-        general: {
-            subject: "Question regarding [Topic]",
-            body: "Hi Team,\n\nI have a question regarding [Topic]. Could you please clarify how this works?\n\nBest regards,\n[Your Name]"
-        },
-        product: {
-            subject: "Information Request: [Product]",
-            body: "Hello,\n\nI am interested in [Product Name] and would like to request more details regarding its availability.\n\nThank you,\n[Your Name]"
-        },
-        bug: {
-            subject: "Bug Report: [Short Description]",
-            body: "Steps to reproduce:\n1. Open [Page]\n2. Click on [Action]\n\nExpected Result:\nActual Result:\n\nEnvironment: [Browser/OS]"
-        },
-        feature: {
-            subject: "Feature Request: [Feature]",
-            body: "Hi,\n\nI suggest adding [Feature Name].\n\nWhy: This would allow users to [Benefit].\n\nIs this on your roadmap?"
-        },
-        feedback: {
-            subject: "User Feedback",
-            body: "Hi there,\n\nI wanted to share some feedback regarding [Product]. I really liked [Point], but [Improvement] could be better.\n\nCheers!"
-        }
-    };
+    (function() {
+        const templates = {
+            general: {
+                subject: "Question regarding [Topic]",
+                body: "Hi Team,\n\nI have a question regarding [Topic]. Could you please clarify how this works?\n\nBest regards,\n[Your Name]"
+            },
+            product: {
+                subject: "Product Information Request",
+                body: "Hello,\n\nI am interested in your solutions and would like to request more details regarding [Product Name].\n\nThank you,\n[Your Name]"
+            },
+            bug: {
+                subject: "Bug Report: [Issue Description]",
+                body: "Steps to reproduce:\n1. Open [Context]\n2. Action [What you did]\n\nExpected Result:\nActual Result:\n\nEnvironment: [OS/Browser]"
+            },
+            feature: {
+                subject: "Feature Request",
+                body: "Hi,\n\nI suggest adding [Feature].\n\nWhy: This would help in [Scenario].\n\nIs this on your roadmap?"
+            },
+            feedback: {
+                subject: "Feedback regarding [Service/Product]",
+                body: "Hi there,\n\nI wanted to share some feedback. I really liked [Point], but [Improvement] could be better.\n\nCheers!"
+            }
+        };
 
-    const select = document.getElementById('templateSelect');
-    const textarea = document.getElementById('templateText');
-    const btn = document.getElementById('sendBtn');
+        const select = document.getElementById('templateSelect');
+        const textarea = document.getElementById('templateText');
+        const btn = document.getElementById('sendBtn');
 
-    select.addEventListener('change', () => {
-        const selected = templates[select.value];
-        if (selected) {
-            textarea.value = selected.body;
-        }
-    });
+        select.addEventListener('change', function() {
+            const selected = templates[this.value];
+            if (selected) {
+                textarea.value = selected.body;
+                textarea.style.borderColor = "#00ff00";
+            }
+        });
 
-    btn.addEventListener('click', () => {
-        const selectedKey = select.value;
-        if (!selectedKey) {
-            alert('Please select a template first!');
-            return;
-        }
+        btn.addEventListener('click', function() {
+            const selectedKey = select.value;
+            if (!selectedKey) {
+                alert('ERROR: Select template first.');
+                return;
+            }
 
-        const subject = encodeURIComponent(templates[selectedKey].subject);
-        const body = encodeURIComponent(textarea.value);
-        const email = "your-email@example.com"; 
+            const subject = encodeURIComponent(templates[selectedKey].subject);
+            const body = encodeURIComponent(textarea.value);
+            const email = "info@slinkin.tech"; 
 
-        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-    });
+            window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+        });
+
+        btn.onmouseover = function() { this.style.background = "#00ff00"; };
+        btn.onmouseout = function() { this.style.background = "#fff"; };
+    })();
 </script>
