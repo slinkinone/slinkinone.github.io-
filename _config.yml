@@ -32,7 +32,7 @@ header_pages:
 
 style: light # dark (default), light, hacker, or nord
 #listen_for_clients_preferred_style: true
-disable_google_fonts: true
+disable_google_fonts: false
 
 #
 tracking:
