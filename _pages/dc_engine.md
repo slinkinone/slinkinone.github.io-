@@ -79,4 +79,4 @@ Classification tasks are typical for such areas as information security, where d
 ## > technical information
 
 &nbsp;
-Technical information is available on our portal: <a href="https://wiki.slinkin.tech">wiki.slinkin.tech</a>.
+Technical information is <a href="/tech">here</a>.

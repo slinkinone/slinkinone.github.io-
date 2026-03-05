@@ -30,7 +30,7 @@ header_pages:
   - _pages/dc_engine.md
   - _pages/blog.md
   - _pages/about.md
-  - _pages/portal.md
+  - _pages/tech.md
 
 #
 
@@ -39,9 +39,7 @@ style: light # dark (default), light, hacker, or nord
 disable_google_fonts: true
 
 #
-#footer: '© 2020-2026 slinkin-tech: <a href="https://slinkin.tech/">website</a>, <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
-#footer: '© 2020-2026 slinkin-tech: <a href="mailto:info@slinkin.tech">email</a>, <a href="/privacy-policy">privacy-policy</a>'
-footer: '© 2020-2026 slinkin-tech: <a href="mailto:info@slinkin.tech">email</a>, <a href="https://wiki.slinkin.tech">portal</a>'
+footer: '© 2020-2026 slinkin-tech: <a href="mailto:info@slinkin.tech">email</a>, <a href="/tech">tech</a>'
 
 # Build settings
 markdown: kramdown
