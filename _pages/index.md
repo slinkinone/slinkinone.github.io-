@@ -19,8 +19,53 @@ permalink: /
 
 ## > network protocols
 
-&nbsp;
-We help improve network activity analytics based on network protocols: protocol detection, structure verification, and extracting the most significant fields needed for analysis. Field values play an important role in traffic classification, and the list of extracted values affects the classification type: Internet service, cyber attack, network problems, potential data leakage, etc.
+<div class="mobile-only">
+  <img src="/assets/dc_engine/img/pipeline.png" alt="DC Engine" width="400/">
+  <br>
+  <p>We help improve network activity analytics based on network protocols: protocol detection, structure verification, and extracting the most significant fields needed for analysis. Field values play an important role in traffic classification, and the list of extracted values affects the classification type: Internet service, cyber attack, network problems, potential data leakage, etc.</p>
+</div>
+
+<div class="desktop-only">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="width: 60%; vertical-align: top; padding-right: 25px; text-align: left; line-height: 1.5;">
+            <p>We help improve network activity analytics based on network protocols: protocol detection, structure verification, and extracting the most significant fields needed for analysis. Field values play an important role in traffic classification, and the list of extracted values affects the classification type: Internet service, cyber attack, network problems, potential data leakage, etc.</p>
+        </td>
+
+        <td style="width: 40%; vertical-align: middle; text-align: center;">
+            <img src="/assets/dc_engine/img/protocols.png" alt="Network Protocols" 
+                 style="max-width: 100%; height: auto; display: inline-block;" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="desktop-only">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="width: 60%; vertical-align: top; padding-right: 25px; text-align: left; line-height: 1.5;">
+            <p><b>D</b>issection and <b>C</b>lassification Engine. Cross-platform and network independent DPI Engine. Integration solution which is written in modern C++.</p>
+            
+            <b>> protocols</b>: 60<br>
+            <b>> attributes</b>: 1157<br>
+            <b>> metadata</b>: 25<br>
+            <b>> services</b>: 553<br>
+            <br>
+            <a href="/assets/pdf/brochure/sl-dpi-en.pdf"># brochure</a><br>
+            <a href="https://wiki.slinkin.tech"># tech</a>
+        </td>
+
+        <td style="width: 40%; vertical-align: middle; text-align: center;">
+            <img src="/assets/dc_engine/img/pipeline.png" alt="DC Engine" 
+                 style="max-width: 100%; height: auto; display: inline-block;" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## > internet services
 
