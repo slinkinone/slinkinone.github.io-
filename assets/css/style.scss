@@ -18,15 +18,14 @@ main, .container, article {
   box-sizing: border-box;
 }
 
-td img {
-  width: 100% !important;
-  max-width: 100% !important;
-  display: block;
-  height: auto;
+.protocol-img img {
+  width:100%;
+  height:auto;
+  display:block;
 }
 
-td {
-  padding: 0 !important;
+.protocol-table td{
+  padding:0;
 }
 
 /* --- */
