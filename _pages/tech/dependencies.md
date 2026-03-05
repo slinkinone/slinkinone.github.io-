@@ -14,7 +14,7 @@ permalink: /tech/dependencies
 
 &nbsp;
 
-| Name | &nbsp;Version 	|
-| :--- | :--- 			|
-{% for item in site.data.release.json.dependencies.dependencies %}| {{ item.name }} | &nbsp; {{ item.version }} |
+| Name | &nbsp;Version |
+| :--- | :---           |
+{% for item in site.data.release.json.dependencies.dependencies %}| {{ item.name }} | &nbsp;{{ item.version }} |
 {% endfor %}
