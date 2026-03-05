@@ -1,1 +1,0 @@
-<b><a href="" onclick="history.back()"><</a></b>
