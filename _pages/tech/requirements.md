@@ -12,7 +12,9 @@ permalink: /tech/requirements
 
 ## > requirements
 
-### # os support list
+### # os-support-list
+
+&nbsp;
 
 | os            | &nbsp;status 	|
 | :---          | :---   		|
@@ -20,12 +22,15 @@ permalink: /tech/requirements
 |macos          | &nbsp;+   	|
 |windows        | &nbsp;+   	|
 
-### # development requirements
+
+### # development-requirements
+
+&nbsp;
 
 | name                      | &nbsp;description	|
 | :---                      | :---        		|
 |compiler                   | &nbsp;clang   	|
-|programming language       | &nbsp;C++     	|
+|programming language       | &nbsp;c++     	|
 |glibc                      | &nbsp;2.39    	|
-|c++ standard               | &nbsp;C++17   	|
+|c++ standard               | &nbsp;c++17   	|
 |building system            | &nbsp;cmake   	|

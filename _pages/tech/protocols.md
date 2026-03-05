@@ -12,7 +12,7 @@ permalink: /tech/protocols
 
 ## > protocols
 
-| Protocol | OSI | Extracted field count |
+| protocol | osi | extracted field count |
 | :--- | :--- | :--- |
 | Ethernet | Data Link | 3 |
 | ARP/RARP | Data Link | 10 |
@@ -76,16 +76,19 @@ permalink: /tech/protocols
 | RTP over QUIC | Application | - |
 
 
-## > protocol fields
+## > protocol-fields
 
+&nbsp;
 todo
 
 
-## > protocol decoders
+## > protocol-decoders
 
+&nbsp;
 todo
 
 
-## > information tables
+## > information-tables
 
+&nbsp;
 todo
