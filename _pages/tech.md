@@ -12,7 +12,7 @@ permalink: /tech
 
 ## > tech
 
-### ${{ site.data.version_info.version.data }}
+### ${{ site.data.release.json.version.version.data }}
 
 &nbsp;
 \# [requirements](/tech/requirements)
