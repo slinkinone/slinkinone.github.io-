@@ -10,6 +10,8 @@ permalink: /tech/requirements
 <h1 hidden>DC Engine requirements</h1>
 -->
 
+<script src="/assets/js/back.js"></script>
+
 ## > requirements
 
 ### # os-support-list
