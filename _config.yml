@@ -29,7 +29,7 @@ header_pages:
   - index.md
   - dc_engine.md
   - blog.md
-  - about.md
+  - _pages/about.md
   - portal.md
 
 #
