@@ -8,6 +8,7 @@ url: "https://slinkin.tech"
 
 include:
   - _pages
+  - _pages/tech/
 
 defaults:
   - scope:
@@ -31,16 +32,6 @@ header_pages:
   - _pages/blog.md
   - _pages/about.md
   - _pages/tech.md
-  - _pages/tech/requirements.md
-  - _pages/tech/dependencies.md
-  - _pages/tech/protocols.md
-  - _pages/tech/services.md
-  - _pages/tech/metadata.md
-  - _pages/tech/extensions.md
-  - _pages/tech/performance.md
-  - _pages/tech/faq.md
-  - _pages/tech/changelog.md
-  - _pages/tech/roadmap.md
 
 #
 
