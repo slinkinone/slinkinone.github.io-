@@ -6,6 +6,9 @@ url: "https://slinkin.tech"
 
 #
 
+include:
+  - _pages
+
 defaults:
   - scope:
       path: ""
