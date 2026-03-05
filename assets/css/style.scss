@@ -8,7 +8,7 @@ main img {
 }
 
 /* Optional: Constrain content width */
-main {
+main, .container {
   max-width: 700px;
   margin: 0 auto;
 }
