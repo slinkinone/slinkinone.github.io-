@@ -17,6 +17,7 @@ defaults:
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 logo: assets/img/favicon.png
 #
