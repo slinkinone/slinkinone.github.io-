@@ -12,7 +12,7 @@ permalink: /tech/protocols
 
 ## > protocols
 
-| protocol | osi | extracted field count |
+| protocol | osi | field count |
 | :--- | :--- | :--- |
 | Ethernet | Data Link | 3 |
 | ARP/RARP | Data Link | 10 |
