@@ -1,9 +1,9 @@
 ---
 ---
 /* Image fit fix for the container */
-.container img,
-article img,
-main img {
+.container img:not(td img),
+article img:not(td img),
+main img:not(td img) {
   max-width: 100% !important;
   height: auto;
   display: block;
@@ -16,6 +16,12 @@ main, .container, article {
   max-width: 700px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+td img {
+  max-width: 100%; /* Убираем !important, чтобы HTML-атрибуты работали */
+  display: inline-block; 
+  height: auto;
 }
 
 .mobile-only { display: none; }
