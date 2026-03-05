@@ -1,0 +1,48 @@
+{
+  "dependencies": [
+    {
+      "name": "pcap",
+      "version": "libpcap version 1.10.4 (with TPACKET_V3)"
+    },
+    {
+      "name": "nlohmann ",
+      "version": "3.12.0"
+    },
+    {
+      "name": "re2",
+      "version": "9.0.0"
+    },
+    {
+      "name": "openssl",
+      "version": "3.2.1"
+    },
+    {
+      "name": "tcmalloc",
+      "version": "2.17.2"
+    },
+    {
+      "name": "Common",
+      "version": "3.5.2+519ffbc"
+    },
+    {
+      "name": "Configuration ",
+      "version": "1.5.2+676dc2e"
+    },
+    {
+      "name": "Packet",
+      "version": "2.11.2+a3ac372"
+    },
+    {
+      "name": "Flow",
+      "version": "1.13.2+dcc194a"
+    },
+    {
+      "name": "Global",
+      "version": "1.13.2+2202a17"
+    },
+    {
+      "name": "DcEngine",
+      "version": "1.13.11+36bdaeb"
+    }
+  ]
+}
