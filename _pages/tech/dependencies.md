@@ -11,7 +11,6 @@ permalink: /tech/dependencies
 -->
 
 ## > dependencies
-&nbsp;
 
 | name | &nbsp;version  |
 | :--- | :---           |

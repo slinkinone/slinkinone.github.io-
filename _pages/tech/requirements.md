@@ -13,7 +13,6 @@ permalink: /tech/requirements
 ## > requirements
 
 ### # os-support-list
-&nbsp;
 
 | os            | &nbsp;status 	|
 | :---          | :---   		|
@@ -23,7 +22,6 @@ permalink: /tech/requirements
 
 
 ### # development-requirements
-&nbsp;
 
 | name                      | &nbsp;description	|
 | :---                      | :---        		|
