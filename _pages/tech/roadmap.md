@@ -12,4 +12,10 @@ permalink: /tech/roadmap
 
 ## > roadmap
 
-TODO
+### $2025
+
+- [ ] Change C++ standard: C++20 to C++11
+- [ ] Wokflow classification: chat, audio/video call, file transfer fot the most famous services
+- [ ] FTP/HTTP file extraction
+- [ ] Performance improvements: avoid heap allocation in runtime
+- [ ] Extend protocol and service list to 1000 items
