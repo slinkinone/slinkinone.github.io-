@@ -19,29 +19,8 @@ permalink: /
 
 ## > network protocols
 
-<br>
-<div class="mobile-only">
-  <img src="/assets/dc_engine/img/protocols.png" alt="Network Protocols" width="400/">
-  <br>
-  <p>We help improve network activity analytics based on network protocols: protocol detection, structure verification, and extracting the most significant fields needed for analysis. Field values play an important role in traffic classification, and the list of extracted values affects the classification type: Internet service, cyber attack, network problems, potential data leakage, etc.</p>
-</div>
-
-<div class="desktop-only">
-  <table style="width: 100%; border-collapse: collapse;">
-    <tbody>
-      <tr>
-        <td style="width: 60%; vertical-align: top; padding-right: 25px; text-align: left; line-height: 1.5;">
-            <p>We help improve network activity analytics based on network protocols: protocol detection, structure verification, and extracting the most significant fields needed for analysis. Field values play an important role in traffic classification, and the list of extracted values affects the classification type: Internet service, cyber attack, network problems, potential data leakage, etc.</p>
-        </td>
-
-        <td style="width: 40%; vertical-align: middle; text-align: center;">
-            <img src="/assets/dc_engine/img/protocols.png" alt="Network Protocols" 
-                 style="max-width: 100%; height: auto; display: inline-block;" />
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+&nbsp;
+We help improve network activity analytics based on network protocols: protocol detection, structure verification, and extracting the most significant fields needed for analysis. Field values play an important role in traffic classification, and the list of extracted values affects the classification type: Internet service, cyber attack, network problems, potential data leakage, etc.
 
 ## > internet services
 
