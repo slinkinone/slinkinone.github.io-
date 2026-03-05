@@ -7,14 +7,20 @@ main img {
   display: block;
 }
 
-/* Optional: Constrain content width */
-main, .container {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 img {
   height: auto;
+}
+
+main, .container {
+  text-align: justify;
+}
+
+text-align: justify;
+
+/* Optional: Constrain content width */
+main, .container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .mobile-only { display: none; }
