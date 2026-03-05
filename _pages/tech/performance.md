@@ -12,5 +12,6 @@ permalink: /tech/performance
 
 ## > performance
 
-TODO
-+ config summary
+**Preparing...**
+
+todo (+ config summary)
