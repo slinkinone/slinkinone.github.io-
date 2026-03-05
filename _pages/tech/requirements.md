@@ -14,18 +14,18 @@ permalink: /tech/requirements
 
 ### # os support list
 
-| os            | status |
-| :---          | :---   |
-|Unix-like      | +      |
-|MacOS          | +      |
-|Windows        | +      |
+| os            | status 	|
+| :---          | :---   	|
+|Unix-like      | &nbsp;+   |
+|MacOS          | &nbsp;+   |
+|Windows        | &nbsp;+   |
 
 ### # development requirements
 
 | name                      | description   |
-| :---                      | :---          |
-|Compiler                   | Clang         |
-|Programming language       | C++           |
-|Glibc                      | 2.39          |
-|C++ standard               | C++17         |
-|Building system            | CMake         |
+| :---                      | :---        	|
+|Compiler                   | &nbsp;Clang   |
+|Programming language       | &nbsp;C++     |
+|Glibc                      | &nbsp;2.39    |
+|C++ standard               | &nbsp;C++17   |
+|Building system            | &nbsp;CMake   |
