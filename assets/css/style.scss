@@ -19,8 +19,9 @@ main, .container, article {
 }
 
 td img {
-  max-width: 100%; /* Убираем !important, чтобы HTML-атрибуты работали */
-  display: inline-block; 
+  width: 100%;
+  max-width: 100%; 
+  display: block;
   height: auto;
 }
 
