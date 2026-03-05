@@ -12,4 +12,33 @@ permalink: /tech/requirements
 
 ## > requirements
 
-TODO
+### # os support list
+
+| os            | status |
+| :---          | :---   |
+|Unix-like      | +      |
+|MacOS          | +      |
+|Windows        | +      |
+
+### # development requirements
+
+| name                      | description   |
+| :---                      | :---          |
+|Compiler                   | Clang         |
+|Programming language       | C++           |
+|Glibc                      | 2.39          |
+|C++ standard               | C++17         |
+|Building system            | CMake         |
+
+
+.Development requirements
+|===
+|Name |Description
+
+|Compiler                   | Clang
+|Programming language       | C++
+|Glibc                      | 2.39
+|C++ standard               | C++20
+|Building system            | CMake
+
+|===
