@@ -19,8 +19,8 @@ permalink: /
 
 ## > network protocols
 
-&nbsp;
-We help improve network activity analytics based on network protocols: protocol detection, structure verification, and extracting the most significant fields needed for analysis. Field values play an important role in traffic classification, and the list of extracted values affects the classification type: Internet service, cyber attack, network problems, potential data leakage, etc.
+
+{% include network_protocols.html %}
 
 ## > internet services
 
