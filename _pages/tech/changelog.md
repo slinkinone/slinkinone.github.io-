@@ -12,6 +12,7 @@ permalink: /tech/changelog
 
 ## > changelog
 
+&nbsp;
 **2026**
 
 <details>
@@ -24,7 +25,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.13.9 [26.02.2026]</summary>
+<summary>v1.13.9  [26.02.2026]</summary>
 
 * Downgrade standard C++20 -> C++17
 * Remove spdlog and Trace library dependency and provide callback mechanism for trace events
@@ -38,7 +39,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.13.8 [30.01.2026]</summary>
+<summary>v1.13.8  [30.01.2026]</summary>
 
 * Add C API example
 * Service update: yandex_marketing_platform, amazon_aws, apple, digital_ocean, facebook, github, google_cloud, icloud_private_relay, meta, netflix,
@@ -46,7 +47,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.13.7 [18.01.2026]</summary>
+<summary>v1.13.7  [18.01.2026]</summary>
 
 * Advanced performance test
 * Fix some service naming
@@ -58,7 +59,7 @@ permalink: /tech/changelog
 **2025**
 
 <details>
-<summary>v1.13.6 [18.12.2025]</summary>
+<summary>v1.13.6  [18.12.2025]</summary>
 
 * Update service signatures: webex, vultr, meta, icloud_private_relay, facebook, apple, amazon_aws, discord, disney_plus, facebook, github, icloud_private_relay, kingsoft, meta, netflix, roblox, vultr
 * Calculation of JA4+ and JA4s+ hashes
@@ -68,7 +69,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.13.1 [1.12.2025]</summary>
+<summary>v1.13.1  [1.12.2025]</summary>
 
 * Update classification rules for the following services: Amazon AWS, Apple, Facebook
 * Fix QUIC decryption (Server->Client)
@@ -82,7 +83,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.13.0 [18.11.2025]</summary>
+<summary>v1.13.0  [18.11.2025]</summary>
 
 * Update classification rules for the following services: Amazon AWS, Apple, Discord, Disney Plus, Meta, Facebook, GitHub, iCloud Private Relay, Nintendo, Roblox, Vultr
 * New protocol: GTP
@@ -90,7 +91,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.12.0 [10.11.2025]</summary>
+<summary>v1.12.0  [10.11.2025]</summary>
 
 * Update classification rules for the following services: Meta, Facebook, Apple, Amazon AWS, Netflix
 * Universal session storage for byte-sequence data (in-built, user storage)
@@ -99,7 +100,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.11.0 [5.11.2025]</summary>
+<summary>v1.11.0  [5.11.2025]</summary>
 
 * New protocol: RTP Over QUIC
 * Update classification rules for the following services: Meta, Yahoo, Snapchat, Line, Kingsoft, GitHub, Google Cloud, Facebook, Apple, Amazon AWS
@@ -111,7 +112,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.10.1 [18.10.2025]</summary>
+<summary>v1.10.1  [18.10.2025]</summary>
 
 * Update classification rules for the following services: Amazon, Apple, Facebook, Meta, Roblox, SalesForce, GitHub, Netflix, Twitch, Dropbox, Vultr
 * 34 new services: Google Marketing Platform, Gstatic, Eurosport, Blogger, Fox News, IMDb, Apple Siri, DuckDuckGo, Yahoo, LastPass, Bitwarden, 1Password, RoboForm, Notion, Obsidian, Wikipedia, Freelancer, Upwork, Glassdoor, Indeed, HeadHunter, Binance, Daily Mail, Der Spiegel, Forbes, Vox, SoundCloud, Last.fm, TripAdvisor, HBO, Cursor, Windsurf, Deezer, Yandex Marketing Platform
@@ -119,7 +120,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.10.0 [12.10.2025]</summary>
+<summary>v1.10.0  [12.10.2025]</summary>
 
 * Update service classification signatures
 * Introduction of a tool for automatic updating of the signature and domain name database for the supported services
@@ -130,7 +131,7 @@ permalink: /tech/changelog
 </details>
 
 <details>
-<summary>v1.9.0 [21.09.2025]</summary>
+<summary>v1.9.0   [21.09.2025]</summary>
 
 * 5 new services: GosUslugi, Google API, Uber, Cloudinary, Yandex360
 * STUN: detection algorithm update
@@ -145,14 +146,14 @@ SIP protocol. 3 new field dissection: CSeq, CSeqNumber, CSeqMethod
 </details>
 
 <details>
-<summary>v1.8.1 [1.09.2025]</summary>
+<summary>v1.8.1   [1.09.2025]</summary>
 
 * 10 new services: 2GIS, SpeedTest, Yandex Maps, Yandex Music, Ozon, Wildberries, Avito, GalaxyStore, RuStore, AppGallery.
 * Performance improvements
 </details>
 
 <details>
-<summary>v1.8.0 [30.07.2025]</summary>
+<summary>v1.8.0   [30.07.2025]</summary>
 
 * 34 new services: Facebook, Instagram, Twitter (X), Apple, iCloud Private Relay, iCloud, iTunes, Apple Updates, Apple TV, Apple Map, Apple Mail, Apple Pay, Apple Map, FaceTime, Apple Music, AppStore, MS Azure, Digital Ocean, Vultr, Amazon Cloudfront, Cloudfront DNS, Dropbox, Zendesk, Kingsoft, Facebook CDN, Spotify, Google Pay, Gmail, Google Maps, Twitch, TeamViewer, Webex, GitHub, GitLab.
 Update service classification: Apple Push Notification, Discord, YouTube, MS365 and its subsidiary services
@@ -167,7 +168,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 </details>
 
 <details>
-<summary>v1.7.0 [4.07.2025]</summary>
+<summary>v1.7.0   [4.07.2025]</summary>
 
 * tls_metadata extension. Calculates JA3 and JA3S hashes.
 * 12 new protocols: IMAPS, SMTPS, FTPS, POP3S, NNTPS, IGMP, POP3, SMTP, OSPF, IMAP, WebSocket, RTCP
@@ -179,7 +180,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 </details>
 
 <details>
-<summary>v1.6.0 [6.06.2025]</summary>
+<summary>v1.6.0   [6.06.2025]</summary>
 
 * Update API to simplify DC Engine configuration
 * Update dependencies
@@ -187,7 +188,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 </details>
 
 <details>
-<summary>v1.5.1 [21.05.2025]</summary>
+<summary>v1.5.1   [21.05.2025]</summary>
 
 * CLI update (JSON output, config statistic)
 * More examples
@@ -197,7 +198,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 </details>
 
 <details>
-<summary>v1.5.0 [10.04.2025]</summary>
+<summary>v1.5.0   [10.04.2025]</summary>
 
 * Update API for convenience purposes
 * Fix few bugs in in-built extensions
@@ -205,7 +206,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 </details>
 
 <details>
-<summary>v1.4.0 [21.03.2025]</summary>
+<summary>v1.4.0   [21.03.2025]</summary>
 
 * IPv4/IPv6 CIDR configuration
 * New 'address' field for IPv4/IPv6 protocols (to simplify configuration rules)
@@ -222,7 +223,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 **2024**
 
 <details>
-<summary>v1.3.0 [20.12.2024]</summary>
+<summary>v1.3.0   [20.12.2024]</summary>
 
 * Packet direction detection
 * Packet API is changed
@@ -268,7 +269,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 </details>
 
 <details>
-<summary>v1.2.0 [2.10.2024]</summary>
+<summary>v1.2.0   [2.10.2024]</summary>
 
 * Hotline update: updating configuration for DC Engine without application stopping
 * HTTP/2 protocol: implementation of dissection functionality of HTTP/2 protocol
@@ -282,7 +283,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 </details>
 
 <details>
-<summary>v1.1.0 [31.07.2024]</summary>
+<summary>v1.1.0   [31.07.2024]</summary>
 
 * Partial matching for String/Bytesequence types
 * "Try Dissect" protocol detection method implementation
@@ -290,7 +291,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 </details>
 
 <details>
-<summary>v1.0.0 [16.03.2024]</summary>
+<summary>v1.0.0   [16.03.2024]</summary>
 
 * Supported 17 protocols
 * Tagging system
