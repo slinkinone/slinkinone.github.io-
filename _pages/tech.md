@@ -1,7 +1,7 @@
 ---
 title: /tech
 description: Technical information about the products.
-keywords: dc engine, performance, decoders, protocols, protocol fields, services, metadata, extensions, dependencies, requirements, changelog, roadmap
+keywords: dc engine, technical characteristics, performance, decoders, protocols, protocol fields, services, metadata, extensions, dependencies, requirements, changelog, roadmap
 layout: page
 permalink: /tech
 ---
@@ -12,15 +12,14 @@ permalink: /tech
 
 ## > tech
 
-## $version
+### $version
 
-* <a href="#"># requirements</a>
-* <a href="#"># dependencies</a>
-* <a href="#"># protocols</a>
-* <a href="#"># services</a>
-* <a href="#"># metadata</a>
-* <a href="#"># extensions</a>
-* <a href="#"># information-tables</a>
-* <a href="#"># performance</a>
-* <a href="#"># changelog</a>
-* <a href="#"># roadmap</a>
+# [requirements](/tech/requirements)
+# [dependencies](/tech/dependencies)
+# [protocols](/tech/protocols)
+# [services](/tech/services)
+# [metadata](/tech/metadata)
+# [extensions](/tech/extensions)
+# [performance](/tech/performance)
+# [changelog](/tech/changelog)
+# [roadmap](/tech/roadmap)
