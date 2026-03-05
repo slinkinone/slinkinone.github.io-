@@ -1,15 +1,16 @@
 ---
-title: /tech/extensions
-description: DC Engine extensions
-keywords: dc engine, extensions
+title: /tech/services
+description: DC Engine services
+keywords: dc engine, services
 layout: page
-permalink: /tech/extensions
+permalink: /tech/services
 ---
 
 <!--
-<h1 hidden>DC Engine extensions</h1>
+<h1 hidden>DC Engine services</h1>
 -->
 
 ## > extensions
+&nbsp;
 
-TODO
+todo
