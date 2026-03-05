@@ -26,11 +26,11 @@ logo: assets/img/favicon.png
 #
 
 header_pages:
-  - index.md
-  - dc_engine.md
-  - blog.md
+  - _pages/index.md
+  - _pages/dc_engine.md
+  - _pages/blog.md
   - _pages/about.md
-  - portal.md
+  - _pages/portal.md
 
 #
 
