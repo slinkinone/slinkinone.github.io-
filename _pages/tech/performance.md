@@ -11,7 +11,6 @@ permalink: /tech/performance
 -->
 
 ## > performance
-
 &nbsp;
 
 **Preparing...**

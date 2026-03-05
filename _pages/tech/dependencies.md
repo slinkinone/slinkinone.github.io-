@@ -11,10 +11,9 @@ permalink: /tech/dependencies
 -->
 
 ## > dependencies
-
 &nbsp;
 
-| name | &nbsp;version |
+| name | &nbsp;version  |
 | :--- | :---           |
 {% for item in site.data.release.json.dependencies.dependencies %}| {{ item.name }} | &nbsp;{{ item.version }} |
 {% endfor %}
