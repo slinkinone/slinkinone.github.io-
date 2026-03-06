@@ -24,7 +24,7 @@ permalink: /tech/changelog/
     <li>Remove test depepdencies from main libraries</li>
 </details>
 
-<details>
+<details markdown="1">
 <summary>v1.13.9 [26.02.2026]</summary>
 
 - Downgrade standard C++20 -> C++17
@@ -39,7 +39,7 @@ permalink: /tech/changelog/
 - 
 </details>
 
-<details>
+<details markdown="1">
 <summary>v1.13.8 [30.01.2026]</summary>
 
 - Add C API example
@@ -48,7 +48,7 @@ permalink: /tech/changelog/
 - 
 </details>
 
-<details>
+<details markdown="1">
 <summary>v1.13.7 [18.01.2026]</summary>
 
 - Advanced performance test
