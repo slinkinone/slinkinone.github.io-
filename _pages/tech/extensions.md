@@ -16,7 +16,7 @@ permalink: /tech/extensions
 {% assign ext_data = site.data.release.json.extensions.extensions.extensions | sort: "name" %}
 
 {% for ext in ext_data %}
-# <a href="#{{ ext.name }}">{{ ext.name | slugify }}</a>
+\# <a href="#{{ ext.name }}">{{ ext.name | slugify }}</a>
 {% endfor %}
 
 <!-- \# [{{ ext.name }}](#{{ ext.name | slugify }}) -->
