@@ -23,7 +23,6 @@ author: Vyacheslav Slinkin
 
 ## > Content Table
 
-&nbsp;
 * [Introduction](#-introduction)
 * [What is a network protocol, packet, layer?](#-what-is-network-protocol-packet-and-layer)
 * [OSI](#-osi)
@@ -40,13 +39,12 @@ author: Vyacheslav Slinkin
 * [Workflow classification](#-workflow-classification)
 * [Why is it difficult?](#-why-is-it-difficult)
 * [What else is interesting about the DPI Engine?](#-what-else-is-interesting-about-the-dpi-engine)
-&nbsp;
+
 
 ---
 
 ## $ [Introduction](#-introduction)
 
-&nbsp;
 For those familiar with the term DPI (**Deep Packet Inspection**), it often evokes unpleasant associations: blocking, regulators, censorship, tightening controls, and so on. In reality, DPI is simply the name of a technology whose essence lies in the deep analysis of network traffic.
 
 It is important to clarify from the outset that DPI examines traffic "inline" — meaning it analyzes the entire packet (across all OSI model layers), not just the payload (such as the HTTP layer, which, by the way, is almost always encrypted for an in-line analyzer unless it engages in certificate substitution).
@@ -82,7 +80,6 @@ Inline deployment means that the DPI system is positioned between the client and
 
 ## $ [What is a network protocol, packet, layer?](#-what-is-network-protocol-packet-and-layer)
 
-&nbsp;
 In order to explain how traffic classification works, it is necessary to introduce some basic concepts. While these may be familiar to experienced readers, it is still worth defining them.
 
 **Packet** — a packet is a set of bytes, structured in a specific way, that is received or transmitted over a network interface.
