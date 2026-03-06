@@ -14,9 +14,11 @@ permalink: /tech/roadmap/
 
 ## > roadmap
 
-* `[ ]` not started
-* `[/]` in progress
-* `[x]` done
+* **`[ ]`** not started
+* **`[/]`** in progress
+* **`[x]`** done
+
+<hr>
 
 ### $2025
 
