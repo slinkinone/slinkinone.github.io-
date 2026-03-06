@@ -1,0 +1,5 @@
+v1.13.0 [18.11.2025]
+
+- Update classification rules for the following services: Amazon AWS, Apple, Discord, Disney Plus, Meta, Facebook, GitHub, iCloud Private Relay, Nintendo, Roblox, Vultr
+- New protocol: GTP
+- GTP encapsulation processing

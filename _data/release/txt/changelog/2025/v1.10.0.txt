@@ -1,0 +1,8 @@
+v1.10.0 [12.10.2025]
+
+- Update service classification signatures
+- Introduction of a tool for automatic updating of the signature and domain name database for the supported services
+- Isolated worker cache storage
+- Simplifying user's service configuration process
+- Manual configuration of protocol dissection list
+- 45 new services: Booking.com, Airbnb, Aviasales, Skyscanner, Ostrovok, Sutochno, CIAN, Sports.ru, BBC, Bloomberg, Washington Post, Wall Street Journal, Pinterest, Samokat, Yandex Lavka, Yandex Market, Lamoda, Chess.com, eBay, Amazon.com, Tinder, Badoo, Snapchat, TikTok, Bookmate, Salesforce, Deepseek, ChatGPT, Reddit, Threads, Shazam, Google Meet, Google Chat (aka Hangouts Chat), Google Gemini, Google Drive, Alfa bank, Raiffeisen bank, PayPal, Netflix, LinkedIn, Likee, Roblox, Duolingo, Udemy, Coursera
