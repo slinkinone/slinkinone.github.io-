@@ -31,7 +31,7 @@ permalink: /tech/extensions
 {{ ext.description }}
 
 {% comment %} Loading extension fields {% endcomment %}
-{% assign ext_fields = site.data.release.json.extensions.extensions.extensions.fields[ext.name].fields %}
+{% assign ext_fields = site.data.release.json.extensions.fields.[ext.name].fields %}
 
 {% if ext_fields %}
 <br>
