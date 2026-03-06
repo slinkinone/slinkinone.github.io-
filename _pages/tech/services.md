@@ -30,6 +30,7 @@ permalink: /tech/services
 * `categories`: {{ service.categories | join: ", " }}
 * `workflow`: {{ service.workflow | join: ", " | default: "none" }}
 
+<br>
 {{ service.description }}
 <br>
   {% endif %}
