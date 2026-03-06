@@ -36,6 +36,7 @@ permalink: /tech/changelog/
 - Improve performance characteristcs
 - Simplify documentation: remove images and use ASCII art schemes
 - Update service signatures
+- 
 </details>
 
 <details>
@@ -44,6 +45,7 @@ permalink: /tech/changelog/
 - Add C API example
 - Service update: yandex_marketing_platform, amazon_aws, apple, digital_ocean, facebook, github, google_cloud, icloud_private_relay, meta, netflix,
 - Fix small mistakes
+- 
 </details>
 
 <details>
@@ -54,6 +56,7 @@ permalink: /tech/changelog/
 - Service update: amazon_aws, apple, digital_ocean, discord, facebook, github, icloud_private_relay, meta	, netflix, roblox, vultr
 - Session state flags: protocol path, tags, offload changing
 - Fix 2 crashes: FTP cache and classifier extension
+
 </details>
 
 **2025**
