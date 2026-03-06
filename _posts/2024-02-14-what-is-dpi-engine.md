@@ -15,8 +15,6 @@ author: Vyacheslav Slinkin
 <b><center>What is DPI Engine?</center></b>
 --->
 
-&nbsp;
-
 ![](/assets/blog/what_is_dpi_engine/img/dpi_engine_cover.png "What is DPI Engine?")
 
 ---
@@ -96,7 +94,6 @@ In order to explain how traffic classification works, it is necessary to introdu
 
 ## $ [OSI](#-osi)
 
-&nbsp;
 [OSI](https://en.wikipedia.org/wiki/OSI_model) (**O**pen **S**ystems **I**nterconnection model) is a hierarchical, multi-layered framework for network protocols, where each layer plays a specific role in ensuring the successful transmission of data.
 
 ![](/assets/blog/what_is_dpi_engine/img/osi_pdu.png "Scheme 2: OSI model")
@@ -119,7 +116,6 @@ The diagram was taken from [here](https://www.linkedin.com/pulse/how-do-devices-
 
 ## $ [What is a network flow?](#-what-is-a-network-flow)
 
-&nbsp;
 A **network flow** (or simply **flow**) is an abstraction over network packets, used to group them. For example, consider the Internet, which can be viewed as a large number of packets being transmitted between different network participants. Packets are the smallest unit of network exchange. While a packet represents a more physical abstraction (information, a set of bytes transmitted over a communication channel), a flow is more of a logical entity that helps organize packets into groups. For instance, if the sender and receiver IP addresses are the same, that would constitute an IP flow. Another example: when both the sender and receiver IP addresses, as well as the TCP ports, match. This flow could be considered as part of a specific TCP connection. There can be several TCP connections (and not just TCP) between a sender and a receiver.
 
 Thus, the chaos of packets within the network takes on a more structured form when the packets are divided into groups. To better understand, it is easier to imagine a flow as a pipe through which packets fly. From the sender to the receiver, they travel through one pipe (the forward flow), while the return packets go through a neighboring one (the reverse flow). In this example, the pipe represents a grouping of packets.
@@ -165,7 +161,6 @@ For example, consider the FTP protocol. After establishing a TCP connection, whe
 
 ## $ [Flow direction](#-flow-direction)
 
-&nbsp;
 Flow direction is typically divided into **Client-To-Server** (**CTS**) and **Server-To-Client** (**STC**). To determine which side is the client, it is necessary to identify who initiated the connection. For example, if a packet contains a TCP layer with only the SYN flag set, it indicates the first packet of a session, and the initiator is the _src_ip:src_port_ socket. In this case, the packet’s direction is _Client-To-Server_. By swapping the IP addresses and ports, we obtain the socket for the _Server-To-Client_ direction.
 
 In Diagram 5, the forward and reverse flows are shown — identifiers 1 and 2. Here, the address 192.168.1.33 represents a server running an SSH service on port 22.
@@ -173,7 +168,6 @@ In Diagram 5, the forward and reverse flows are shown — identifiers 1 and 2. H
 
 ## $ [What is Uplink/Downlink and why it is not the same as CTS/STC?](#-what-is-uplink-downlink-and-why-it-is-not-the-same-as-cts-stc)
 
-&nbsp;
 In networking, the terms **Uplink** and **Downlink** are also used in relation to network interfaces. Thus, all packets captured from the Uplink interface are considered to belong to the subscriber, while packets captured from the Downlink interface belong to the external network. At first glance, it may seem that the flow direction can always be easily determined based on which interface the packet was captured from (captured from _Uplink_ — _CTS_, captured from _Downlink_ — _STC_). However, this is not entirely correct. For example, imagine a subscriber sets up a mini-server at home (such as a media server with movies), requests a static IP address from the provider, then goes on a two-week vacation and accesses their server remotely from, say, Georgia. In this case, for the provider's DPI system, traffic from the user's server to the user (which is _STC_) will actually go through Uplink, while traffic from the user to the server (_CTS_) will go through _Downlink_.
 
 ![](/assets/blog/what_is_dpi_engine/img/uplink_downlink.png "Scheme 6: Uplink/Downlink")
@@ -184,7 +178,6 @@ In Diagram 6, two devices are shown connected to an access point (a home router)
 
 ## $ [What is reassembling?](#-what-is-reassembling)
 
-&nbsp;
 Packets in a network can be compared to freight cars carrying coal. But not everything that needs to be sent can always fit into a single car.
 For example, if 180 tons of coal need to be transported from point A to point B, and each car can only hold 60 tons, three cars will be needed to deliver the full amount. The same idea applies to networks. For instance, when a user's browser forms an HTTP request to YouTube that, let's say, is 2048 bytes in size, this request is handed over to the operating system’s TCP stack. The OS kernel then takes responsibility for delivering the request to YouTube’s server. The request might be sent in a single packet or it might be split into multiple segments and sent in parts. This process is called **TCP segmentation**, and the process of putting the segments back together is called **reassembling**.
 
@@ -199,7 +192,6 @@ For example, if 180 tons of coal need to be transported from point A to point B,
 * QUIC
 * HTTP/2
 
-&nbsp;
 It’s important to note that if IPv4/IPv6 fragmentation is present in the network, the task for the reassembler becomes more complex. In this case, it first has to reconstruct the message at the IP (network) layer, and only after that can it reassemble the message at the transport layer — and, if necessary (depending on the protocol), even at the application layer.
 
 ![](/assets/blog/what_is_dpi_engine/img/reassembler.png "Scheme 7: Message assembling")
@@ -214,7 +206,6 @@ At **Stage 3**, the DPI finally receives the missing first segment. With the ful
 
 ## $ [How can reassembling affect traffic classification?](#-how-can-reassembling-affect-traffic-classification)
 
-&nbsp;
 Segmentation is one of the simplest ways to interfere with traffic classification (after tricks like changing the case in a domain name — for example, YoUTubE.COM). Why does this work? Because if a user forces their OS to set the segment size to 1 byte, and the request to a resource is 2048 bytes in size, then, in the worst case, the DPI will classify the flow only by the **2048th** packet (assuming the hostname is visible in plaintext). In practice, classification happens earlier — as soon as the DPI can extract the server_name (from the TLS protocol) or host/authority (from HTTP/HTTP2). For example, if the server name appears around the 100th byte, the DPI will classify the flow on the 100th packet.
 
 What's happening inside the DPI: the engine gathers incoming packets, byte by byte, into a buffer and continuously checks whether a hostname has already appeared. This is very expensive for high-load systems like DPI. Not only is the final buffer size unpredictable (so it has to be stretched or preallocated generously), but the system also has to repeatedly scan the buffer after every packet, which hits performance hard. Additionally, all this buffering leads to significant memory consumption — a critical issue for DPI systems. Thus, to remain operational, a DPI engine must **self-balance**: it needs to enforce limits on buffering and the number of packets it processes before a flow is marked as **unclassified** (assigned a default policy and its buffers are dropped).
@@ -224,7 +215,6 @@ Of course, these days there are entire clusters of IP addresses reserved for lar
 
 ## $ [What is a service?](#-what-is-a-service)
 
-&nbsp;
 In previous sections, the terms "service" and "protocol" have already been used. However, it is necessary to clarify these concepts to make everything completely clear.
 
 A service is a program running on a server (or a virtual machine) that accepts incoming connections from users and sends/receives data. For example, Telegram is a service for instant messaging ([IM](https://en.wikipedia.org/wiki/Instant_messaging)), YouTube is a media service for uploading and watching video content, and so on. Unlike protocols, services do not have RFCs. In other words, a service is a program that sends and receives data, regardless of the format (JSON, XML, etc.).
@@ -256,7 +246,6 @@ In summary, a service is a program. A protocol is a method for transferring or p
 
 ## $ [More than one service on a single server](#-more-than-one-service-on-a-sigle-server)
 
-&nbsp;
 It is quite common to run multiple services on a single server. For example, a user rents a virtual machine with the IPv4 address 90.156.176.56 and deploys YouTrack and GitLab on it. They purchase a domain (privatezone.com), an SSL certificate, and configure DNS records. As a result, two services are now running on the same IP address.
 If the services are launched with default parameters (HTTP port 80, TLS port 443), only the first service to start will run successfully, while the second one will fail to launch (and vice versa) because the default ports are already in use.
 To resolve this, the services must be started on different ports — for example, YouTrack on port 9000 and GitLab on port 9001. Now, when a user types privatezone.com into the browser, they will see an error, because no program is running on port 443 (TLS) or 80 (HTTP), which the browser uses by default to send requests.
@@ -280,7 +269,6 @@ From the example above, it becomes clear that if multiple services are running o
 
 ## $ [Traffic classification](#-traffic-classification)
 
-&nbsp;
 Traffic classification is the process of determining which service a network flow belongs to. Classification consists of the following steps, some of which may be skipped depending on the protocol or classification technique:
 
 * **Protocol identification** represented in the packet
@@ -294,7 +282,6 @@ Traffic classification is the process of determining which service a network flo
 
 ## $ [Protocol detection methods](#-protocol-detection-methods)
 
-&nbsp;
 From the user's perspective, who has deployed OpenVPN and Nginx on their server, everything is simple: they know that OpenVPN operates on port 1194 and Nginx serves their website on port 443. In other words, the OpenVPN server (openvpn-server), running on the user's server on UDP port 1194, knows for sure that the data in the packet is formatted according to the OpenVPN specification. If the data does not comply with this specification, it should not be processed (an error should be reported or simply ignored). Everything is straightforward for the openvpn-server, but not for the network analyzer.
 
 Protocols in a packet can be represented as bricks of different colors, stacked one after another. Determining the color of the next brick can be easy: for example, when the first blue brick says that the next one is red. This example applies to protocols like Ethernet, VLAN, IPv4, IPv6, etc. In one of the fields of such protocols, there is an indication of what protocol comes after it. However, difficulties arise when trying to determine the protocol following the transport layer (TCP/UDP). UDP and TCP protocols do not contain information about which protocol follows them, so identifying the next protocol is possible only heuristically.
@@ -318,7 +305,6 @@ There are also some edge cases where protocol identification seems straightforwa
 
 ## $ [Internet service classification methods](#-internet-service-classification-methods)
 
-&nbsp;
 The DPI Engine uses a variety of techniques to classify services. The main goal of classification is to identify the service as early as possible, so that the network flow can be offloaded, reducing the load on the software (packets belonging to an offloaded flow are no longer analyzed). There is even a concept called **FPC** (**F**irst **P**acket **C**lassification), although not all techniques can guarantee FPC.
 Below are some of the most common approaches to service classification:
 
@@ -398,7 +384,6 @@ The most popular techniques for traffic classification have been described above
 
 ## $ [Workflow classification](#-workflow-classification)
 
-&nbsp;
 Classifying the service itself is important, but it is not always enough. For example, a mobile operator might use file transfer speed in messengers as a competitive advantage for one of its tariffs. This creates a need to determine the specific nature of the work the flow is performing, known as **workflow**.
 
 Several of the most popular workflow types include:
@@ -425,7 +410,6 @@ In any case, workflow data is invaluable for both telecom solutions and informat
 
 ## $ [Why is it difficult?](#-why-is-it-difficult)
 
-&nbsp;
 The main criteria for **DPI Engine** products are classification quality and speed. Quality is especially critical for classifying services and protocols that are subject to blocking. Incorrect classification of such services (or more precisely, its absence) can lead to penalties from regulators.
 
 Performance is important because the load in networks using DPI is usually very high, and analyzing every packet in a stream is not feasible. Therefore, the goal is to deliver a verdict on the service as quickly as possible so that new packets no longer need to be analyzed and do not consume DPI resources.
@@ -437,7 +421,6 @@ As for classification quality, it is essential to keep the list of IP addresses 
 
 ## $ [What else is interesting about the DPI Engine?](#-what-else-is-interesting-about-the-dpi-engine)
 
-&nbsp;
 The application of DPI Engine is quite diverse. Here are some examples of its use:
 
 - **Attribute Extraction** – extracting protocol attributes is useful for many purposes. For example, within a network, protocols that do not use encryption (FTP, HTTP, POP3, etc.) can be monitored, sensitive data can be extracted from them, and reports can be generated showing which users, which nodes in the network, and the percentage of overall traffic use insecure connections. Another example is analyzing the ciphers used in TLS connections (cipher_suites; [Cipher Suite](https://en.wikipedia.org/wiki/Cipher_suite)) and/or TLS versions to detect outdated versions of protocols or vulnerable encryption algorithms.
