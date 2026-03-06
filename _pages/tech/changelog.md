@@ -4,45 +4,43 @@ layout: page
 permalink: /tech/changelog/
 ---
 
-
 <!--
 <h1 hidden>DC Engine changelog</h1>
 -->
-
 
 {% include back.html %}
 
 ## > changelog
 
 {% comment %} 
-  Get years from the directory structure and sort them descending (e.g., 2026, 2025)
+  Iterate through years. 
+  site.data.release.txt.changelog is an object.
+  Sorting it returns an array of [key, value] pairs.
 {% endcomment %}
-{% assign years = site.data.release.txt.changelog | sort | reverse %}
+{% assign sorted_years = site.data.release.txt.changelog | sort | reverse %}
 
-{% for year_item in years %}
-  {% assign year = year_item[0] %}
-  {% comment %} Sort release files within the year folder descending {% endcomment %}
-  {% assign releases = year_item[1] | sort | reverse %}
+{% for year_entry in sorted_years %}
+  {% assign year_name = year_entry[0] %}
+  {% comment %} 
+    year_entry[1] is an object containing files.
+    Sort files by filename (key) in descending order.
+  {% endcomment %}
+  {% assign sorted_releases = year_entry[1] | sort | reverse %}
 
-### # {{ year }}
+### # {{ year_name }}
 
-  {% for release_item in releases %}
+  {% for release_entry in sorted_releases %}
     {% comment %} 
-      release_item[0] is the filename (e.g., v1.13.0)
-      release_item[1] is the file content (text)
+      release_entry[0] is the filename (e.g., v1.13.0)
+      release_entry[1] is the actual text content of the file
     {% endcomment %}
-    {% assign full_content = release_item[1] %}
-    
-    {% comment %} Split by newline to extract the first line as header {% endcomment %}
+    {% assign full_content = release_entry[1] %}
     {% assign lines = full_content | newline_to_br | split: '<br />' %}
     {% assign header = lines | first | strip %}
-    
-    {% comment %} Remove the header line to get the list/description {% endcomment %}
     {% assign body = full_content | remove_first: header | strip %}
 
 <details markdown="1">
 <summary style="display: flex; justify-content: space-between; cursor: pointer;">
-  {% comment %} Extract version and date from "v1.0.0" {% endcomment %}
   <span>{{ header | split: ' [' | first }}</span>
   <span style="color: #888;">[{{ header | split: ' [' | last }}</span>
 </summary>
