@@ -31,6 +31,13 @@ main, .container {
   margin: 0 auto;
 }
 
+.back-link-container {
+  display: block;
+  text-align: right !important;
+  width: 100%;
+  margin-top: 10px;
+}
+
 .mobile-only { display: none; }
 
 /* If the width less than 768px (standard for mobile/laptops) */
