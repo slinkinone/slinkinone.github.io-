@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    },
+    {
+      "name": "first_byte_payload_length",
+      "type": "uint64",
+      "length": "8",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The flag field. It is set when the first byte in the payload data specifies the length of the rest payload data."
+    },
+    {
+      "name": "first_2byte_payload_length",
+      "type": "uint64",
+      "length": "8",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The flag field. It is set when the first 2 bytes in the payload data specifies the length of the rest payload data. (Little-Endian order)"
+    }
+  ]
+}

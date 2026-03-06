@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    },
+    {
+      "name": "common_name",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "true",
+      "description": "The CommonName certificate field."
+    },
+    {
+      "name": "general_dns_name",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "true",
+      "description": "The dNSName certificate field. Belongs to extension section."
+    }
+  ]
+}

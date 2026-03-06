@@ -1,0 +1,36 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    },
+    {
+      "name": "is_request",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "It is set when http meessage is request."
+    },
+    {
+      "name": "is_pipeline",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "Multiple http requests to be sent over a single tcp connection."
+    },
+    {
+      "name": "authorization_credentials",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "Base64 decoded value of Proxy-Authorization header value."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    }
+  ]
+}

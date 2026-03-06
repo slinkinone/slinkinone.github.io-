@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    },
+    {
+      "name": "spid_tag",
+      "type": "uint64",
+      "length": "8",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The classified SPID tag."
+    },
+    {
+      "name": "is_final",
+      "type": "uint64",
+      "length": "8",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The final classification flag of SPID approach."
+    }
+  ]
+}

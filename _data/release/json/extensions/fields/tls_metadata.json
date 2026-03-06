@@ -1,0 +1,60 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    },
+    {
+      "name": "ja3",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "JA3 fingerprinting the client's TLS handshake (Client Hello)."
+    },
+    {
+      "name": "ja3s",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "JA3s fingerprinting the server's response (Server Hello)."
+    },
+    {
+      "name": "ja4",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "JA4 fingerprinting the client's TLS handshake (Client Hello)."
+    },
+    {
+      "name": "ja4s",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "JA4s fingerprinting the server's response (Server Hello)."
+    },
+    {
+      "name": "ja3_md5",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "MD5 hash of JA3. Format: TLSVersion,Ciphers,Extensions,EllipticCurves,EllipticCurvePointFormats."
+    },
+    {
+      "name": "ja3s_md5",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "MD5 hash of JA3S. Format: TLSVersion,Cipher,Extensions."
+    }
+  ]
+}

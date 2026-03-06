@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    },
+    {
+      "name": "tag",
+      "type": "uint64",
+      "length": "8",
+      "mask": "ffffffffffffffff",
+      "multiple": "true",
+      "description": "The tag(s) which have been assigned by classifier extensions accordingly to configured rules."
+    },
+    {
+      "name": "type",
+      "type": "uint64",
+      "length": "8",
+      "mask": "ffffffffffffffff",
+      "multiple": "true",
+      "description": "The tag type: undefined (0), ipv4 (1), ipv6 (2), ipv4socket (3), ipv6socket (4), domain (5), dns_cache (6), session_cache (7)."
+    }
+  ]
+}

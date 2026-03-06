@@ -1,0 +1,20 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    },
+    {
+      "name": "host",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "true",
+      "description": "Host name - extracted field value from TLS/DTLS SNI, HTTP/SSDP Host header, TLS Certificate Common Name, HTTP/2 authority header value."
+    }
+  ]
+}

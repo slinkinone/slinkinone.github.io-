@@ -1,0 +1,20 @@
+{
+  "fields": [
+    {
+      "name": "is_processed",
+      "type": "uint8",
+      "length": "1",
+      "mask": "ffffffffffffffff",
+      "multiple": "false",
+      "description": "The extension function calling flag."
+    },
+    {
+      "name": "response_name",
+      "type": "ascii-string",
+      "length": "0",
+      "mask": "ffffffffffffffff",
+      "multiple": "true",
+      "description": "Processed dns response name - concatenated labels, resolving offsets, etc."
+    }
+  ]
+}
