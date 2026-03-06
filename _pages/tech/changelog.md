@@ -4,34 +4,26 @@ layout: page
 permalink: /tech/changelog/
 ---
 
-<!--
-<h1 hidden>DC Engine changelog</h1>
--->
-
 {% include back.html %}
 
 ## > changelog
 
 {% comment %} 
-  1. Get years as an array of [year_name, year_content] 
+  Iterate directly through the years object. 
+  Jekyll naturally returns them as [key, value] pairs.
 {% endcomment %}
-{% assign sorted_years = site.data.release.txt.changelog | sort | reverse %}
-
-{% for year_entry in sorted_years %}
+{% for year_entry in site.data.release.txt.changelog %}
   {% assign year_name = year_entry[0] %}
-  {% comment %} 
-    2. Get releases as an array of [file_name, file_content]
-  {% endcomment %}
-  {% assign sorted_releases = year_entry[1] | sort | reverse %}
+  {% assign releases_in_year = year_entry[1] %}
 
 ### # {{ year_name }}
 
-  {% for release_entry in sorted_releases %}
+  {% comment %} 
+    Iterate through the files in the year folder.
+    release_entry[0] is the filename, release_entry[1] is the text content.
+  {% endcomment %}
+  {% for release_entry in releases_in_year %}
     {% assign full_content = release_entry[1] %}
-    {% comment %} 
-      Jekyll reads .txt files as strings. 
-      We split by newline to get the header.
-    {% endcomment %}
     {% assign lines = full_content | newline_to_br | split: '<br />' %}
     {% assign header = lines | first | strip %}
     {% assign body = full_content | remove_first: header | strip %}
