@@ -34,10 +34,14 @@ permalink: /tech/extensions
 {% assign ext_fields = site.data.release.json.extensions.fields.[ext.name].fields %}
 
 {% if ext_fields %}
-<br>
-**Fields:**
+**fields:**
 {% for field in ext_fields %}
-* `{{ field.name }}` ({{ field.type }}, {{ field.length }} bytes) — {{ field.description }}
+* name: `{{ field.name }}`
+* type: `{{ field.type }}`
+* length: `{{ field.length }}`
+* mask: `{{ field.mask }}`
+* multiple: `{{ field.multiple }}`
+* description: `{{ field.description }}`
 {% endfor %}
 {% endif %}
 
