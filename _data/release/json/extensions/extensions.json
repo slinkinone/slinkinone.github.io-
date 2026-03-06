@@ -1,0 +1,52 @@
+{
+  "extensions": [
+    {
+      "name": "http_metadata",
+      "description": "Metadata extracting from an HTTP packet. For example: detects HTTP Pipeline, decodes the Authorization-Credentials header value, and so on."
+    },
+    {
+      "name": "hostname",
+      "description": "Hostname extracting for protocols such as SSDP, HTTP, HTTP/2, TLS, DTLS."
+    },
+    {
+      "name": "dns_response_name",
+      "description": "Domain names extracting from a DNS response."
+    },
+    {
+      "name": "tls_metadata",
+      "description": "The extension extracts additional information from TLS session - JA3/JA3S hashes, and so on."
+    },
+    {
+      "name": "tls_certificate",
+      "description": "common_name and dns_name extracting from a TLS certificate."
+    },
+    {
+      "name": "ftp_cache",
+      "description": "IP address caching and port obtained from the FTP-CONTROL stream for subsequent classification of the FTP-DATA stream (file transfer)."
+    },
+    {
+      "name": "tree",
+      "description": "Decodes HTTP/2 headers (HPACK)."
+    },
+    {
+      "name": "http2_field_block",
+      "description": "Builds a chain of protocols."
+    },
+    {
+      "name": "data_structure",
+      "description": "Checks an unrecognized protocol for various patterns, such as the first two bytes to determine the payload size."
+    },
+    {
+      "name": "spid",
+      "description": "The extension is responsible to classify tags based on statistical characteristics such as average packet size, bitrate, etc. It helps to classify tags which cannot be fully rely on _explicit_ classification."
+    },
+    {
+      "name": "classifier",
+      "description": "The extension classifies Internet services and allows user to configure a set of metrics and classification techniques for each individually. Also, the extension sets flags for the session, such as is_final_protocol, is_final_service, is_offload, and so on."
+    },
+    {
+      "name": "sip_cache",
+      "description": "The extension extracts additional information from SIP session and then classifies the child RTP/SRTP and RTCP/SRTCP flows assigning them tags of parent session."
+    }
+  ]
+}
