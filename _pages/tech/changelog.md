@@ -10,23 +10,49 @@ permalink: /tech/changelog/
 
 {% comment %} 
   Iterate through the changelog directory object.
-  year_entry[0] is the year folder name (e.g., "2025").
-  year_entry[1] is the object containing files inside that folder.
+  We use 'sort' to ensure years are in order (e.g. 2026, 2025).
 {% endcomment %}
-{% for year_entry in site.data.release.txt.changelog %}
+{% assign sorted_years = site.data.release.txt.changelog | sort | reverse %}
+
+{% for year_entry in sorted_years %}
   {% assign year_name = year_entry[0] %}
   {% assign files_object = year_entry[1] %}
 
 ### # {{ year_name }}
 
-  {% comment %} 
-    Now iterate through the files object.
-    file_entry[0] is the filename (e.g., "v1.13.0").
-  {% endcomment %}
   <div class="toc-container">
-  {% for file_entry in files_object %}
-    # {{ file_entry[0] }}<br>
+  {% comment %} 
+    Now iterate through .yml files within the year folder.
+    file_entry[0] is the version (filename), 
+    file_entry[1] is the actual text content.
+  {% endcomment %}
+  {% assign sorted_files = files_object | sort | reverse %}
+  {% for file_entry in sorted_files %}
+    {% assign version_name = file_entry[0] %}
+    # <a href="#{{ version_name | slugify }}">{{ version_name }}</a><br>
   {% endfor %}
   </div>
 
+  <hr>
+
+  {% for file_entry in sorted_files %}
+    {% assign version_name = file_entry[0] %}
+    {% assign full_text = file_entry[1] %}
+    
+    {% comment %} Parsing the first line (header) and the rest (body) {% endcomment %}
+    {% assign lines = full_text | newline_to_br | split: '<br />' %}
+    {% assign header = lines | first | strip %}
+    {% assign body = full_text | remove_first: header | strip %}
+
+<details id="{{ version_name | slugify }}" markdown="1">
+<summary style="display: flex; justify-content: space-between; cursor: pointer;">
+  <span>{{ header | split: ' [' | first }}</span>
+  <span style="color: #888;">[{{ header | split: ' [' | last }}</span>
+</summary>
+
+{{ body }}
+
+</details>
+<br>
+  {% endfor %}
 {% endfor %}
