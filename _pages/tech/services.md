@@ -12,6 +12,10 @@ permalink: /tech/services
 
 ## > services
 
+search: ...
+
+<hr>
+
 {% assign sorted_services = site.data.release.json.tag_info | sort: "name" %}
 
 {% for service in site.data.release.json.tag_info %}  
