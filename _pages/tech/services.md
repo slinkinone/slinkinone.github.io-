@@ -13,7 +13,7 @@ permalink: /tech/services
 ## > services
 <br>
 
-{% for service in site.data.release.json.tag_info.services %}  
+{% for service in site.data.release.json.tag_info %}  
   {% assign is_excluded = false %}
   {% if service.categories contains 'protocol' or service.categories contains 'metadata' %}
     {% assign is_excluded = true %}
