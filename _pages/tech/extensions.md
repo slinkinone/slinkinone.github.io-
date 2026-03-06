@@ -26,7 +26,7 @@ permalink: /tech/extensions
 {% for ext in ext_data %}
 {% assign ext_id = ext.name | slugify %}
 <h3 id="{{ ext_id }}">
-  <a href="#{{ ext_id }}">{ ext.name }}</a>
+  <a href="#{{ ext_id }}">{{ ext.name }}</a>
 </h3>
 
 {{ ext.description }}
