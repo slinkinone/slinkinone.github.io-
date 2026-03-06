@@ -18,7 +18,7 @@ permalink: /tech/extensions
 ### > table
 
 {% for ext in ext_data %}
-* [{{ ext.name }}](#{{ ext.name | slugify }})
+# [{{ ext.name }}](#{{ ext.name | slugify }})
 {% endfor %}
 
 <hr>
