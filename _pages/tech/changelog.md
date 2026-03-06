@@ -14,14 +14,16 @@ permalink: /tech/changelog/
 
 ## > changelog
 
-## > 2026
+### # 2026
 
 <details>
 <summary>v1.13.10 [03.03.2026]</summary>
-    <li>New API functions: `getFlowSize` and `getSessionSize`</li>
-    <li>Fix Dockerfile: use ubuntu 24.04</li>
-    <li>Fix global user extension object return for Tuple3 flow callback function</li>
-    <li>Remove test depepdencies from main libraries</li>
+
+- New API functions: `getFlowSize` and `getSessionSize`
+- Fix Dockerfile: use ubuntu 24.04
+- Fix global user extension object return for Tuple3 flow callback function<
+- Remove test depepdencies from main libraries
+
 </details>
 
 <details markdown="1">
@@ -36,7 +38,7 @@ permalink: /tech/changelog/
 - Improve performance characteristcs
 - Simplify documentation: remove images and use ASCII art schemes
 - Update service signatures
-- 
+
 </details>
 
 <details markdown="1">
@@ -61,7 +63,7 @@ permalink: /tech/changelog/
 
 <hr>
 
-## > 2025
+### # 2025
 
 <details>
 <summary>v1.13.6 [18.12.2025]</summary>
@@ -227,7 +229,7 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 
 <hr>
 
-## > 2024
+### # 2024
 
 <details>
 <summary>v1.3.0 [20.12.2024]</summary>
