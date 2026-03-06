@@ -15,15 +15,13 @@ permalink: /tech/extensions
 {% comment %} Load and sort {% endcomment %}
 {% assign ext_data = site.data.release.json.extensions.extensions.extensions | sort: "name" %}
 
-### > table
-
 {% for ext in ext_data %}
-\# [{{ ext.name }}](#{{ ext.name | slugify }})
+# <a href="#{{ ext.name }}">{{ ext.name | slugify }}</a>
 {% endfor %}
 
-<hr>
+<!-- \# [{{ ext.name }}](#{{ ext.name | slugify }}) -->
 
-### > extensions
+<hr>
 
 {% for ext in ext_data %}
 {% assign ext_id = ext.name | slugify %}
