@@ -22,6 +22,6 @@ permalink: /tech/
 \# [metadata](/tech/metadata)
 \# [extensions](/tech/extensions)
 \# [performance](/tech/performance)
-\# [faq](/tech/faq)
 \# [changelog](/tech/changelog)
 \# [roadmap](/tech/roadmap)
+\# [faq](/tech/faq)
