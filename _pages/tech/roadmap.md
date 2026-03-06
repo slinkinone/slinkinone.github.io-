@@ -13,7 +13,6 @@ permalink: /tech/roadmap
 ## > roadmap
 
 ### $2025
-<br>
 
 * [ ] Change C++ standard: C++20 to C++11
 * [ ] Wokflow classification: chat, audio/video call, file transfer fot the most famous services

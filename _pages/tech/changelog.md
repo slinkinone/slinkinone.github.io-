@@ -12,7 +12,6 @@ permalink: /tech/changelog
 
 ## > changelog
 
-&nbsp;
 **2026**
 
 <details>

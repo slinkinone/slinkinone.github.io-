@@ -12,8 +12,6 @@ permalink: /tech/metadata
 
 ## > metadata
 
-&nbsp;
-
 | name | description |
 | :--- | :--- |
 | Tag | The tag which is assigned by classifier extension. |

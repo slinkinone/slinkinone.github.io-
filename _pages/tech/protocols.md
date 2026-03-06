@@ -79,17 +79,14 @@ permalink: /tech/protocols
 
 ## > protocol-fields
 
-&nbsp;
 todo
 
 
 ## > protocol-decoders
 
-&nbsp;
 todo
 
 
 ## > information-tables
 
-&nbsp;
 todo
