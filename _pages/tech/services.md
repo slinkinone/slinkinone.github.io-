@@ -11,7 +11,7 @@ permalink: /tech/services
 -->
 
 ## > services
-<br>
+&nbsp;
 
 {% assign sorted_services = site.data.release.json.tag_info | sort: "name" %}
 
@@ -24,14 +24,14 @@ permalink: /tech/services
   {% if is_excluded == false %}
 
 ### {{ service.name }}
-<br>
+&nbsp;
 
 * `short_name`: {{ service.short_name }}
 * `categories`: {{ service.categories | join: ", " }}
 * `workflow`: {{ service.workflow | join: ", " | default: "none" }}
 
-<br>
+&nbsp;
 {{ service.description }}
-<br>
+&nbsp;
   {% endif %}
 {% endfor %}
