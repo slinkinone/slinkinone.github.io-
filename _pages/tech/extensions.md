@@ -10,6 +10,8 @@ permalink: /tech/extensions
 <h1 hidden>DC Engine extensions</h1>
 -->
 
+{% include back.html %}
+
 ## > extensions
 
 {% comment %} Load and sort {% endcomment %}

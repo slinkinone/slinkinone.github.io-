@@ -10,6 +10,8 @@ permalink: /tech
 <h1 hidden>DC Engine technical information: protocols, services, performance.</h1>
 -->
 
+{% include back.html %}
+
 ## > tech
 
 ### ${{ site.data.release.json.version.version.data }}
