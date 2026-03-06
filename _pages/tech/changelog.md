@@ -9,37 +9,24 @@ permalink: /tech/changelog/
 ## > changelog
 
 {% comment %} 
-  1. Get the years folder object. 
-  Jekyll should see it as site.data.release.txt.changelog
+  Iterate through the changelog directory object.
+  year_entry[0] is the year folder name (e.g., "2025").
+  year_entry[1] is the object containing files inside that folder.
 {% endcomment %}
-{% assign changelog_data = site.data.release.txt.changelog %}
-
-{% for year_item in changelog_data %}
-  {% assign year_name = year_item[0] %}
-  {% assign year_files = year_item[1] %}
+{% for year_entry in site.data.release.txt.changelog %}
+  {% assign year_name = year_entry[0] %}
+  {% assign files_object = year_entry[1] %}
 
 ### # {{ year_name }}
 
-  {% for file_item in year_files %}
-    {% comment %} 
-      file_item[0] is the filename (e.g., v1.13.10)
-      file_item[1] is the actual text content of the file
-    {% endcomment %}
-    {% assign full_text = file_item[1] %}
-    
-    {% comment %} Basic parsing of the first line {% endcomment %}
-    {% assign lines = full_text | newline_to_br | split: '<br />' %}
-    {% assign header = lines | first | strip %}
-    {% assign body = full_text | remove_first: header | strip %}
-
-<details markdown="1">
-<summary style="display: flex; justify-content: space-between; cursor: pointer;">
-  <span>{{ header | split: ' [' | first }}</span>
-  <span style="color: #888;">[{{ header | split: ' [' | last }}</span>
-</summary>
-
-{{ body }}
-
-</details>
+  {% comment %} 
+    Now iterate through the files object.
+    file_entry[0] is the filename (e.g., "v1.13.0").
+  {% endcomment %}
+  <div class="toc-container">
+  {% for file_entry in files_object %}
+    # {{ file_entry[0] }}<br>
   {% endfor %}
+  </div>
+
 {% endfor %}
