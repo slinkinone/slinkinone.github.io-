@@ -11,7 +11,6 @@ permalink: /tech/services
 -->
 
 ## > services
-&nbsp;
 
 {% assign sorted_services = site.data.release.json.tag_info | sort: "name" %}
 
@@ -26,7 +25,6 @@ permalink: /tech/services
 <h3 id="{{ service.name }}">
   <a href="#{{ service.short_name }}">{{ service.name }}</a>
 </h3>
-&nbsp;
 
 * `short_name`: {{ service.short_name }}
 * `categories`: {{ service.categories | join: ", " }}
