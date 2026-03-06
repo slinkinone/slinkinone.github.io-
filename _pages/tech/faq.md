@@ -10,6 +10,8 @@ permalink: /tech/faq
 <h1 hidden>Frequently Asked Questions</h1>
 -->
 
+{% include back.html %}
+
 ## > faq
 
 TODO

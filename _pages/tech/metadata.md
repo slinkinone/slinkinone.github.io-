@@ -10,6 +10,8 @@ permalink: /tech/metadata
 <h1 hidden>DC Engine metadata</h1>
 -->
 
+{% include back.html %}
+
 ## > metadata
 
 | name | description |

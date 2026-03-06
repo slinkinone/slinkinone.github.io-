@@ -10,6 +10,8 @@ permalink: /tech/changelog
 <h1 hidden>DC Engine changelog</h1>
 -->
 
+{% include back.html %}
+
 ## > changelog
 
 **2026**

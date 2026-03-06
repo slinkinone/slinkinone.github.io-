@@ -1,1 +1,4 @@
-<a href="../">cd ../</a>
+{% assign path_parts = page.url | split: '/' %}
+{% capture parent_url %}/{% for part in path_parts limit: 2 %}{{ part }}{% unless forloop.last %}/{% endunless %}{% endfor %}/{% endcapture %}
+
+<a href="{{ parent_url | replace: '//', '/' }}">cd ../</a>

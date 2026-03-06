@@ -10,6 +10,8 @@ permalink: /tech/dependencies
 <h1 hidden>DC Engine dependencies</h1>
 -->
 
+{% include back.html %}
+
 ## > dependencies
 
 | name | &nbsp;version  |

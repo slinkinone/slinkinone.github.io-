@@ -10,6 +10,8 @@ permalink: /tech/performance
 <h1 hidden>DC Engine performance</h1>
 -->
 
+{% include back.html %}
+
 ## > performance
 
 **Preparing...**

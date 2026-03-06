@@ -28,7 +28,7 @@ permalink: /tech/requirements
 | name                      | &nbsp;description	|
 | :---                      | :---        		|
 |compiler                   | &nbsp;clang   	|
-|programming language       | &nbsp;c++     	|
+|language                   | &nbsp;c++     	|
 |glibc                      | &nbsp;2.39    	|
-|c++ standard               | &nbsp;c++17   	|
-|building system            | &nbsp;cmake   	|
+|standard                   | &nbsp;c++17   	|
+|build            			| &nbsp;cmake   	|
