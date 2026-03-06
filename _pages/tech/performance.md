@@ -3,7 +3,7 @@ title: /tech/performance
 description: DC Engine performance
 keywords: dc engine, performance
 layout: page
-permalink: /tech/performance
+permalink: /tech/performance/
 ---
 
 <!--
