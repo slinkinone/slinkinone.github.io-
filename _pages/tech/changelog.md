@@ -14,7 +14,7 @@ permalink: /tech/changelog/
 
 ## > changelog
 
-**2026**
+## > 2026
 
 <details>
 <summary>v1.13.10 [03.03.2026]</summary>
@@ -59,7 +59,9 @@ permalink: /tech/changelog/
 
 </details>
 
-**2025**
+<hr>
+
+## > 2025
 
 <details>
 <summary>v1.13.6 [18.12.2025]</summary>
@@ -223,7 +225,9 @@ Update service classification: Apple Push Notification, Discord, YouTube, MS365 
 - Extensions priority options
 </details>
 
-**2024**
+<hr>
+
+## > 2024
 
 <details>
 <summary>v1.3.0 [20.12.2024]</summary>
