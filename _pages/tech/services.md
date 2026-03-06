@@ -23,7 +23,9 @@ permalink: /tech/services
 
   {% if is_excluded == false %}
 
-### [{{ service.name }}](#{{ service.short_name }}) {: #{{ service.short_name }} }
+<h3 id="{{ service.name }}">
+  <a href="#{{ service.short_name }}">{{ service.name }}</a>
+</h3>
 &nbsp;
 
 * `short_name`: {{ service.short_name }}
