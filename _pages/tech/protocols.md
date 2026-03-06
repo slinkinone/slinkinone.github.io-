@@ -3,7 +3,7 @@ title: /tech/protocols
 description: DC Engine protocols
 keywords: dc engine, protocols
 layout: page
-permalink: /tech/protocols
+permalink: /tech/protocols/
 ---
 
 <!--

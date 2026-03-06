@@ -3,7 +3,7 @@ title: /tech/faq
 description: DC Engine FAQ
 keywords: dc engine, faq
 layout: page
-permalink: /tech/faq
+permalink: /tech/faq/
 ---
 
 <!--

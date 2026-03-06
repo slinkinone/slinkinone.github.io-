@@ -3,7 +3,7 @@ title: /about
 description: Development team specializing in network traffic analysis, with an emphasis on performance and flexibility.
 keywords: slinkin, slinkin technologies, slinkin tech
 layout: page
-permalink: /about
+permalink: /about/
 ---
 
 <!--

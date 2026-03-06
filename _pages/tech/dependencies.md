@@ -3,7 +3,7 @@ title: /tech/dependencies
 description: DC Engine dependencies
 keywords: dc engine, dependencies
 layout: page
-permalink: /tech/dependencies
+permalink: /tech/dependencies/
 ---
 
 <!--

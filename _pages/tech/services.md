@@ -3,7 +3,7 @@ title: /tech/services
 description: DC Engine services
 keywords: dc engine, services
 layout: page
-permalink: /tech/services
+permalink: /tech/services/
 ---
 
 <!--

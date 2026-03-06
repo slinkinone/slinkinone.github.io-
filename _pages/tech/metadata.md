@@ -3,7 +3,7 @@ title: /tech/metadata
 description: DC Engine metadata
 keywords: dc engine, metadata
 layout: page
-permalink: /tech/metadata
+permalink: /tech/metadata/
 ---
 
 <!--

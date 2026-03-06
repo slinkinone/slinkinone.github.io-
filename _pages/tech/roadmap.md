@@ -3,7 +3,7 @@ title: /tech/roadmap
 description: DC Engine roadmap
 keywords: dc engine, roadmap
 layout: page
-permalink: /tech/roadmap
+permalink: /tech/roadmap/
 ---
 
 <!--

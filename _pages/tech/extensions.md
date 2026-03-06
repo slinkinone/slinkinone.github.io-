@@ -3,7 +3,7 @@ title: /tech/extensions
 description: DC Engine extensions
 keywords: dc engine, extensions
 layout: page
-permalink: /tech/extensions
+permalink: /tech/extensions/
 ---
 
 <!--

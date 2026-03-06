@@ -3,7 +3,7 @@ title: /tech/changelog
 description: DC Engine changelog
 keywords: dc engine, changelog
 layout: page
-permalink: /tech/changelog
+permalink: /tech/changelog/
 ---
 
 <!--
