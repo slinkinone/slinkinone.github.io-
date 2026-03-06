@@ -23,7 +23,7 @@ permalink: /tech/services
 
   {% if is_excluded == false %}
 
-### {{ service.name }}
+### [{{ service.name }}](#{{ service.short_name }}) {: #{{ service.short_name }} }
 &nbsp;
 
 * `short_name`: {{ service.short_name }}
@@ -32,6 +32,5 @@ permalink: /tech/services
 
 &nbsp;
 {{ service.description }}
-&nbsp;
   {% endif %}
 {% endfor %}
