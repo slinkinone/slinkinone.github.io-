@@ -13,7 +13,7 @@ permalink: /tech/extensions
 ## > extensions
 
 {% comment %} Load and sort {% endcomment %}
-{% assign ext_data = site.data.release.json.extensions.extensions | sort: "name" %}
+{% assign ext_data = site.data.release.json.extensions.extensions.extensions | sort: "name" %}
 
 ### > table
 
