@@ -36,14 +36,15 @@ permalink: /tech/extensions
 {% if ext_fields %}
 **fields:**
 {% for field in ext_fields %}
-* name: `{{ field.name }}`
-* type: `{{ field.type }}`
-* length: `{{ field.length }}`
-* mask: `{{ field.mask }}`
-* multiple: `{{ field.multiple }}`
-* description: `{{ field.description }}`
+* **name**: `{{ field.name }}`
+* **type**: `{{ field.type }}`
+* **length**: `{{ field.length }}`
+* **mask**: `{{ field.mask }}`
+* **multiple**: `{{ field.multiple }}`
+* **description**: `{{ field.description }}`
+
++++
 {% endfor %}
 {% endif %}
-
-<br>
+<hr>
 {% endfor %}
