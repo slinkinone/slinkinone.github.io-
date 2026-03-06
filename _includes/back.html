@@ -2,3 +2,7 @@
 {% capture parent_url %}/{% for part in path_parts limit: 2 %}{{ part }}{% unless forloop.last %}/{% endunless %}{% endfor %}/{% endcapture %}
 
 <a href="{{ parent_url | replace: '//', '/' }}">cd ../</a>
+
+<div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+  <a href="{{ parent_url | replace: '//', '/' }}" style="text-decoration: none;">cd ../</a>
+</div>
