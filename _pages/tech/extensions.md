@@ -42,7 +42,6 @@ permalink: /tech/extensions
 * **mask**: `{{ field.mask }}`
 * **multiple**: `{{ field.multiple }}`
 * **description**: `{{ field.description }}`
-
 {% endfor %}
 {% endif %}
 <hr>
