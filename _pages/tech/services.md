@@ -10,6 +10,24 @@ permalink: /tech/services
 <h1 hidden>DC Engine services</h1>
 -->
 
-## > extensions
+## > services
+<br>
 
-todo
+{% for service in site.data.release.json.tag_info.services %}  
+  {% assign is_excluded = false %}
+  {% if service.categories contains 'protocol' or service.categories contains 'metadata' %}
+    {% assign is_excluded = true %}
+  {% endif %}
+
+  {% if is_excluded == false %}
+
+### {{ service.name }}
+
+* `short_name`: {{ service.short_name }}
+* `categories`: {{ service.categories | join: ", " }}
+* `workflow`: {{ service.workflow | join: ", " | default: "none" }}
+
+{{ service.description }}
+<br>
+  {% endif %}
+{% endfor %}

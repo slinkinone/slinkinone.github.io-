@@ -14,7 +14,7 @@ permalink: /tech/requirements
 
 ## > requirements
 
-### # os-support-list
+### # os
 
 | os            | &nbsp;status 	|
 | :---          | :---   		|
@@ -23,7 +23,7 @@ permalink: /tech/requirements
 |windows        | &nbsp;+   	|
 
 
-### # development-requirements
+### # dev
 
 | name                      | &nbsp;description	|
 | :---                      | :---        		|
