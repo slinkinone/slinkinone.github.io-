@@ -13,28 +13,25 @@ permalink: /tech/changelog/
 ## > changelog
 
 {% comment %} 
-  Iterate through years. 
-  site.data.release.txt.changelog is an object.
-  Sorting it returns an array of [key, value] pairs.
+  1. Get years as an array of [year_name, year_content] 
 {% endcomment %}
 {% assign sorted_years = site.data.release.txt.changelog | sort | reverse %}
 
 {% for year_entry in sorted_years %}
   {% assign year_name = year_entry[0] %}
   {% comment %} 
-    year_entry[1] is an object containing files.
-    Sort files by filename (key) in descending order.
+    2. Get releases as an array of [file_name, file_content]
   {% endcomment %}
   {% assign sorted_releases = year_entry[1] | sort | reverse %}
 
 ### # {{ year_name }}
 
   {% for release_entry in sorted_releases %}
-    {% comment %} 
-      release_entry[0] is the filename (e.g., v1.13.0)
-      release_entry[1] is the actual text content of the file
-    {% endcomment %}
     {% assign full_content = release_entry[1] %}
+    {% comment %} 
+      Jekyll reads .txt files as strings. 
+      We split by newline to get the header.
+    {% endcomment %}
     {% assign lines = full_content | newline_to_br | split: '<br />' %}
     {% assign header = lines | first | strip %}
     {% assign body = full_content | remove_first: header | strip %}
