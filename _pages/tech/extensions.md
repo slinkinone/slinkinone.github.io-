@@ -23,6 +23,8 @@ permalink: /tech/extensions
 
 <hr>
 
+### > extensions
+
 {% for ext in ext_data %}
 {% assign ext_id = ext.name | slugify %}
 <h3 id="{{ ext_id }}">
