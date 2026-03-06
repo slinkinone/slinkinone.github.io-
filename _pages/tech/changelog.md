@@ -9,30 +9,28 @@ permalink: /tech/changelog/
 ## > changelog
 
 {% comment %} 
-  Iterate through years in _data/release/txt/changelog/
-  year_entry[0] is the year (e.g., "2025")
-  year_entry[1] is the object containing all files in that year folder
+  1. Get the years folder object. 
+  Jekyll should see it as site.data.release.txt.changelog
 {% endcomment %}
-{% for year_entry in site.data.release.txt.changelog %}
-  {% assign year_name = year_entry[0] %}
-  {% assign releases_object = year_entry[1] %}
+{% assign changelog_data = site.data.release.txt.changelog %}
+
+{% for year_item in changelog_data %}
+  {% assign year_name = year_item[0] %}
+  {% assign year_files = year_item[1] %}
 
 ### # {{ year_name }}
 
-  {% comment %} 
-    Now iterate through files in the year folder
-    release_entry[0] is the filename (e.g., "v1.13.0")
-    release_entry[1] is the actual text content
-  {% endcomment %}
-  {% for release_entry in releases_object %}
-    {% assign full_content = release_entry[1] %}
+  {% for file_item in year_files %}
+    {% comment %} 
+      file_item[0] is the filename (e.g., v1.13.10)
+      file_item[1] is the actual text content of the file
+    {% endcomment %}
+    {% assign full_text = file_item[1] %}
     
-    {% comment %} Parse first line for the header {% endcomment %}
-    {% assign lines = full_content | newline_to_br | split: '<br />' %}
+    {% comment %} Basic parsing of the first line {% endcomment %}
+    {% assign lines = full_text | newline_to_br | split: '<br />' %}
     {% assign header = lines | first | strip %}
-    
-    {% comment %} Everything else is the body {% endcomment %}
-    {% assign body = full_content | remove_first: header | strip %}
+    {% assign body = full_text | remove_first: header | strip %}
 
 <details markdown="1">
 <summary style="display: flex; justify-content: space-between; cursor: pointer;">
