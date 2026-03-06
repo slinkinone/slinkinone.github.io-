@@ -14,12 +14,12 @@ permalink: /tech/extensions
 
 {% comment %} Load and sort {% endcomment %}
 {% assign ext_data = site.data.release.json.extensions.extensions.extensions | sort: "name" %}
-
+<div class="toc-container">
 {% for ext in ext_data %}
-\# <a href="#{{ ext.name }}">{{ ext.name | slugify }}</a>
+  # <a href="#{{ ext.name | slugify }}">{{ ext.name }}</a><br>
 {% endfor %}
+</div>
 
-<!-- \# [{{ ext.name }}](#{{ ext.name | slugify }}) -->
 
 <hr>
 
