@@ -34,7 +34,7 @@ permalink: /tech/extensions
 {% assign ext_fields = site.data.release.json.extensions.fields.[ext.name].fields %}
 
 {% if ext_fields %}
-**fields:**
+\# **fields**
 {% for field in ext_fields %}
 * **name**: `{{ field.name }}`
 * **type**: `{{ field.type }}`
@@ -43,7 +43,6 @@ permalink: /tech/extensions
 * **multiple**: `{{ field.multiple }}`
 * **description**: `{{ field.description }}`
 
-+++
 {% endfor %}
 {% endif %}
 <hr>
