@@ -20,7 +20,6 @@ permalink: /tech/extensions
 {% endfor %}
 </div>
 
-
 <hr>
 
 {% for ext in ext_data %}
@@ -30,4 +29,17 @@ permalink: /tech/extensions
 </h3>
 
 {{ ext.description }}
+
+{% comment %} Loading extension fields {% endcomment %}
+{% assign ext_fields = site.data.release.json.extensions.extensions.extensions.fields[ext.name].fields %}
+
+{% if ext_fields %}
+<br>
+**Fields:**
+{% for field in ext_fields %}
+* `{{ field.name }}` ({{ field.type }}, {{ field.length }} bytes) — {{ field.description }}
+{% endfor %}
+{% endif %}
+
+<br>
 {% endfor %}
