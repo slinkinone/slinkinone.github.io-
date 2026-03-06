@@ -42,7 +42,7 @@ permalink: /tech/extensions
 * **mask**: `{{ field.mask }}`
 * **multiple**: `{{ field.multiple }}`
 * **description**: `{{ field.description }}`
-<br>
+&nbsp;
 {% comment %} +++ {% endcomment %}
 {% endfor %}
 {% endif %}
