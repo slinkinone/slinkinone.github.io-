@@ -38,5 +38,4 @@ search: [{{ filtered_services.size }} items]
 
 &nbsp;
 {{ service.description }}
-{% comment %} ЗДЕСЬ БЫЛ ЛИШНИЙ ENDIF, ОН УДАЛЕН {% endcomment %}
 {% endfor %}
