@@ -8,7 +8,7 @@ permalink: /tech/info/categories/
 <h1 hidden>DC Engine tag categories</h1>
 -->
 
-{% include back.html %}
+{% include double_back.html %}
 
 ## > categories
 

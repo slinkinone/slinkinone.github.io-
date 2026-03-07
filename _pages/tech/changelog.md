@@ -4,7 +4,7 @@ layout: page
 permalink: /tech/changelog/
 ---
 
-{% include back.html %}
+{% include double_back.html %}
 
 ## > changelog
 
