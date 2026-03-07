@@ -56,6 +56,8 @@ total: [{{ all_protocols.size | plus: filtered_protocols.size }} items]
 </table>
 </div>
 
+<hr>
+
 <!-- content table of configuration protocols -->
 
 <div class="toc-container">
