@@ -1,0 +1,9 @@
+v1.11.0 [5.11.2025]
+
+- New protocol: RTP Over QUIC
+- Update classification rules for the following services: Meta, Yahoo, Snapchat, Line, Kingsoft, GitHub, Google Cloud, Facebook, Apple, Amazon AWS
+- 51 new services: WeChat, Facebook Messenger, LINE, KakaoTalk, Slack, Vimeo, Amazon Video, Hulu, Disney Plus, Dailymotion, Weibo, Douyin, Nextdoor, KIK, Signal, Shodan, Mega, Yahoo Mail, Yahoo Ads, Let's Encrypt, ESPN, AnyDesk, Stripe, Alipay, AMP Project, Kaskpersky, Careem, Amediateka, IVI, START, PREMIER, Okko, Wink, ZVOOQ (Sber), OpenStreetMap, Mapbox, Mapy.com, Quora, Zhihu, StackOverflow, StackExchange, Scribd, Answers, Tumblr, Evernote, Dzen, Imgur, Google Translate, YaStatic, Yandex Mail, Yandex API
+- Update API to dissect only required protocol fields
+- Performance improvements (35%)
+- Activation/Deactivation protocols
+- Universal session storage for string data (in-built, user storage)

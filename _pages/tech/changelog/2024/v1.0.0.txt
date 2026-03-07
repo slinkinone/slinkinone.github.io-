@@ -1,0 +1,12 @@
+v1.0.0 [16.03.2024]
+
+- Supported 17 protocols
+- Tagging system
+- Internal log system
+- Extension mechanism (built-in and user extensions)
+- DC Engine CLI
+- Force tag extraction mode
+- Configurable packet frame manager
+- Configurable reassembler
+- Internal and External flow table mode
+- Benchmarks

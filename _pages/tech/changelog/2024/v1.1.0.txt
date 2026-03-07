@@ -1,0 +1,5 @@
+v1.1.0 [31.07.2024]
+
+- Partial matching for String/Bytesequence types
+- "Try Dissect" protocol detection method implementation
+- CLI: expression compiler (verifying tag expression without application launching)

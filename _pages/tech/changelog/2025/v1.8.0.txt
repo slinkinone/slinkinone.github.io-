@@ -1,0 +1,11 @@
+v1.8.0 [30.07.2025]
+
+- 34 new services: Facebook, Instagram, Twitter (X), Apple, iCloud Private Relay, iCloud, iTunes, Apple Updates, Apple TV, Apple Map, Apple Mail, Apple Pay, Apple Map, FaceTime, Apple Music, AppStore, MS Azure, Digital Ocean, Vultr, Amazon Cloudfront, Cloudfront DNS, Dropbox, Zendesk, Kingsoft, Facebook CDN, Spotify, Google Pay, Gmail, Google Maps, Twitch, TeamViewer, Webex, GitHub, GitLab.
+- Dissection of new fields in the DNS protocol (HTTPS RData section: Mandatory, NoDefaultAlpn, Alpn, Port, IPv4Hints, IPv6Hints)
+- A new field has been added to the classifier extension to determine the classification type (IP address, domain, cache, etc.)
+- The DNS Cache and Session Cache extensions have been integrated into the Classifier extension
+- Improve DNS Cache classification (SVC parameters processing and IPv6)
+- Simplification of service creation - synonym and permitted tags are removed
+- Brackets support in expression language
+- Fix error of getting session tags
+- CLI update: CSV output
