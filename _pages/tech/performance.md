@@ -12,9 +12,9 @@ permalink: /tech/performance/
 
 {% include back.html %}
 
-{% assign performance_files = site.data.release.json.performance %}
-
 ## > performance
+
+{% assign performance_files = site.data.release.json.performance %}
 
 total: [{{ performance_files.size }} items]
 

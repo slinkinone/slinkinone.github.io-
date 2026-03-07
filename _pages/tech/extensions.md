@@ -15,6 +15,9 @@ permalink: /tech/extensions/
 ## > extensions
 
 {% assign ext_data = site.data.release.json.extensions.extensions.extensions | sort: "name" %}
+
+total: [{{ ext_data.size }} items]
+
 {% assign total_ext = ext_data.size %}
 {% assign half_ext = total_ext | divided_by: 2.0 | ceil %}
 
