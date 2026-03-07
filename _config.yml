@@ -13,24 +13,11 @@ include:
 
 #
 
-collections:
-  changelog:
-    output: false
-
-#
-
 defaults:
   - scope:
       path: ""
     values:
       image: "/assets/img/logo.png"
-  - scope:
-      path: "_changelog"
-      type: "changelog"
-    values:
-      layout: nil
-
-#
 
 plugins:
   - jekyll-remote-theme
