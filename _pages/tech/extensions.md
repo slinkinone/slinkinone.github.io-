@@ -14,6 +14,28 @@ permalink: /tech/extensions/
 
 ## > extensions
 
+{% assign ext_data = site.data.release.json.extensions.extensions.extensions | sort: "name" %}
+{% assign total_ext = ext_data.size %}
+{% assign half_ext = total_ext | divided_by: 2.0 | ceil %}
+
+<div class="toc-container">
+<table style="width: 100%; border-collapse: collapse;">
+  <tr>
+    <td style="vertical-align: top; width: 50%; border: none;">
+      {% for ext in ext_data limit: half_ext %}
+        # <a href="#{{ ext.name | slugify }}">{{ ext.name }}</a><br>
+      {% endfor %}
+    </td>
+    <td style="vertical-align: top; width: 50%; border: none;">
+      {% for ext in ext_data offset: half_ext %}
+        # <a href="#{{ ext.name | slugify }}">{{ ext.name }}</a><br>
+      {% endfor %}
+    </td>
+  </tr>
+</table>
+</div>
+
+<!--
 {% comment %} Load and sort {% endcomment %}
 {% assign ext_data = site.data.release.json.extensions.extensions.extensions | sort: "name" %}
 <div class="toc-container">
@@ -21,6 +43,7 @@ permalink: /tech/extensions/
   # <a href="#{{ ext.name | slugify }}">{{ ext.name }}</a><br>
 {% endfor %}
 </div>
+-->
 
 <hr>
 
