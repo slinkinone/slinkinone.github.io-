@@ -16,7 +16,7 @@ permalink: /tech/metadata/
 
 {% assign metadata = site.data.release.json.classification.metadata | sort: "name" %}
 
-search: [**{{ metadata.size }}** items]
+total: [**{{ metadata.size }}** items]
 
 <!--
 <div class="toc-container">

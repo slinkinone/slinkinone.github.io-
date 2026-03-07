@@ -15,7 +15,7 @@ permalink: /tech/protocols/
 ## > protocols
 
 <!--todo-->
-search: [**60** items]
+total: [**60** items]
 
 | protocol | osi | field count |
 | :--- | :--- | :--- |
@@ -88,7 +88,7 @@ todo
 ## > protocol-fields
 
 <!--todo-->
-search: [**1157** items]
+total: [**1157** items]
 
 todo
 

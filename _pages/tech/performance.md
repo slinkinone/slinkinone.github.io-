@@ -16,7 +16,7 @@ permalink: /tech/performance/
 
 ## > performance
 
-total: [{{ performance_files.size }} tests]
+total: [{{ performance_files.size }} items]
 
 ## # configuration
 
@@ -70,7 +70,7 @@ total: [{{ performance_files.size }} tests]
 | metric | engine |
 | :--- | :--- |
 | packets | {{ test.engine_performance.total_packets }} |
-| bytes | {{ test.engine_performance.total_bytes | divided_by: 1073741824.0 | round: 2 }} GB [test.engine_performance.total_bytes] |
+| bytes | {{ test.engine_performance.total_bytes | divided_by: 1073741824.0 | round: 2 }} GB [{{ test.engine_performance.total_bytes }}] |
 | pps | {{ test.engine_performance.pps | round: 2 }} |
 | gbps | {{ test.engine_performance.gpbs | round: 3 }} |
 | mbps | {{ test.engine_performance.mpbs | round: 2 }} |
@@ -78,7 +78,7 @@ total: [{{ performance_files.size }} tests]
 | metric | nic |
 | :--- | :--- |
 | packets | {{ test.offload_performance.total_packets }} |
-| bytes | {{ test.offload_performance.total_bytes | divided_by: 1073741824.0 | round: 2 }} GB [test.offload_performance.total_bytes] |
+| bytes | {{ test.offload_performance.total_bytes | divided_by: 1073741824.0 | round: 2 }} GB [{{ test.offload_performance.total_bytes }}] |
 | pps | {{ test.offload_performance.pps | round: 2 }} |
 | gbps | {{ test.offload_performance.gpbs | round: 3 }} |
 | mbps | {{ test.offload_performance.mpbs | round: 2 }} |
