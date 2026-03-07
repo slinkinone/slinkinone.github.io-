@@ -14,6 +14,9 @@ permalink: /tech/protocols/
 
 ## > protocols
 
+<!--todo-->
+search: [**60** items]
+
 | protocol | osi | field count |
 | :--- | :--- | :--- |
 | Ethernet | Data Link | 3 |
@@ -83,6 +86,9 @@ permalink: /tech/protocols/
 todo
 
 ## > protocol-fields
+
+<!--todo-->
+search: [**1157** items]
 
 todo
 

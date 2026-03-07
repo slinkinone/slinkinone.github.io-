@@ -23,7 +23,7 @@ permalink: /tech/services/
 
 ## > services
 
-search: [{{ filtered_services.size }} items]
+search: [**{{ filtered_services.size }}** items]
 
 <hr>
 
