@@ -25,6 +25,11 @@ main, .container, table {
   text-align: left;
 }
 
+main, .container, p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 /* Optional: Constrain content width */
 main, .container {
   max-width: 800px;
