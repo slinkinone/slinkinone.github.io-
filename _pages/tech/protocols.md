@@ -37,6 +37,8 @@ permalink: /tech/protocols/
 
 <!-- content table of engine protocols -->
 
+total: [{{ all_protocols.size | plus: filtered_protocols.size }} items]
+
 ## # engine
 
 total: [{{ filtered_protocols.size }} items]
@@ -79,9 +81,7 @@ total: [{{ all_protocols.size }} items]
 </table>
 </div>
 
-<!-- -->
-
-<hr>
+## > engine
 
 {% for proto in all_protocols %}
 <h3 id="{{ proto.name | slugify }}"># {{ proto.name }}</h3>
@@ -98,7 +98,7 @@ total: [{{ all_protocols.size }} items]
 {% endfor %}
 
 
-## > protocol-tags
+## > configuration
 
 {% for tag in filtered_protocols %}
 <h3 id="{{ tag.short_name }}">
@@ -111,7 +111,6 @@ total: [{{ all_protocols.size }} items]
 &nbsp;
 {{ tag.description }}
 {% endfor %}
-
 
 ## > protocol-fields
 
