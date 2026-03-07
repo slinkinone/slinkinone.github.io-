@@ -68,7 +68,7 @@ todo
 {%- for tag in sorted_tags limit: 10 -%}
 
 | {{ tag.name }} | {{ tag.packets }} | {{ tag.bytes | divided_by: 1024 }} KB |
-{% endfor %}
+{%- endfor %}
 
 &nbsp;
 
