@@ -12,8 +12,14 @@ permalink: /tech/services/
 
 {% include back.html %}
 
-{% comment %} Filter service tags and sort them by name {% endcomment %}
-{% assign filtered_services = site.data.release.json.tag_info | where_exp: "item", "item.categories contains 'protocol' == false" | where_exp: "item", "item.categories contains 'metadata' == false" | sort: "name" %}
+{% assign all_tags = site.data.release.json.tag_info | sort: "name" %}
+{% assign filtered_services = "" | split: "" %}
+
+{% for item in all_tags %}
+  {% unless item.categories contains 'protocol' or item.categories contains 'metadata' %}
+    {% assign filtered_services = filtered_services | push: item %}
+  {% endunless %}
+{% endfor %}
 
 ## > services
 
