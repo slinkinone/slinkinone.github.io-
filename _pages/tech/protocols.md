@@ -81,6 +81,8 @@ total: [{{ all_protocols.size }} items]
 </table>
 </div>
 
+<hr>
+
 ## > engine
 
 {% for proto in all_protocols %}
@@ -93,10 +95,11 @@ total: [{{ all_protocols.size }} items]
 &nbsp;
 
 {% unless forloop.last %}
-<hr style="border-top: 1px dashed #333;">
+<!--<hr style="border-top: 1px dashed #333;">-->
 {% endunless %}
 {% endfor %}
 
+<hr>
 
 ## > configuration
 
