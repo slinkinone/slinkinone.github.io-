@@ -6,10 +6,6 @@ url: "https://slinkin.tech"
 
 #
 
-common_dir: &common_dir
-  - _includes
-  - data/changelog
-
 include:
   - _pages
   - _pages/tech/
@@ -23,6 +19,12 @@ defaults:
       path: ""
     values:
       image: "/assets/img/logo.png"
+  - scope:
+      path: ""
+    values:
+      image: "/assets/img/logo.png"
+
+
 
 plugins:
   - jekyll-remote-theme
