@@ -16,7 +16,8 @@ permalink: /tech/metadata/
 
 | name | description |
 | :--- | :--- |
-{% assign metadata = site.data.release.json.classification.metadata %}
-{% for item in metadata %}
+{%- assign metadata = site.data.release.json.classification.metadata -%}
+{%- for item in metadata -%}
+
 | {{ item.name }} | {{ item.description | replace: "|", "\|" }} |
 {% endfor %}
