@@ -16,7 +16,8 @@ permalink: /tech/services/
 {% assign filtered_services = "" | split: "" %}
 
 {% for item in all_tags %}
-  {% unless item.categories contains 'protocol' or item.categories contains 'metadata' %}
+  {% assign categories_string = item.categories | join: ',' | downcase %}
+  {% unless categories_string contains 'protocol' or categories_string contains 'metadata' %}
     {% assign filtered_services = filtered_services | push: item %}
   {% endunless %}
 {% endfor %}
