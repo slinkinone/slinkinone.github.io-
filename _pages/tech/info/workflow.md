@@ -22,12 +22,12 @@ permalink: /tech/info/workflow/
   <tr>
     <td style="vertical-align: top; border: none;">
       {% for item in workflow limit: half_size %}
-        # <a href="#{{ item.name | slugify }}">{{ item.name }}</a><br>
+        # <a href="#{{ item.short_name | slugify }}">{{ item.short_name }}</a><br>
       {% endfor %}
     </td>
     <td style="vertical-align: top; border: none;">
       {% for item in workflow offset: half_size %}
-        # <a href="#{{ item.name | slugify }}">{{ item.name }}</a><br>
+        # <a href="#{{ item.short_name | slugify }}">{{ item.short_name }}</a><br>
       {% endfor %}
     </td>
   </tr>
@@ -37,7 +37,7 @@ permalink: /tech/info/workflow/
 <hr>
 
 {% for item in workflow %}
-<h3 id="{{ item.name | slugify }}"># {{ item.name }}</h3>
+<h3 id="{{ item.short_name | slugify }}"># {{ item.short_name }}</h3>
 {{ item.description }}
 <hr>
 
