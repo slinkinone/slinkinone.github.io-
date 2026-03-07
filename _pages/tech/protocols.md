@@ -69,12 +69,12 @@ total: [{{ all_protocols.size }} items]
   <tr>
     <td style="vertical-align: top; width: 50%; border: none; padding-right: 20px;">
       {% for proto in filtered_protocols limit: half_size %}
-        # <a href="#{{ proto.short_name | slugify }}">{{ proto.name }}</a><br>
+        # <a href="#{{ proto.short_name | slugify }}">{{ proto.short_name }}</a><br>
       {% endfor %}
     </td>
     <td style="vertical-align: top; width: 50%; border: none; padding-left: 20px;">
       {% for proto in filtered_protocols offset: half_size %}
-        # <a href="#{{ proto.short_name | slugify }}">{{ proto.name }}</a><br>
+        # <a href="#{{ proto.short_name | slugify }}">{{ proto.short_name }}</a><br>
       {% endfor %}
     </td>
   </tr>
