@@ -69,7 +69,7 @@ total: [{{ performance_files.size }} items]
 | metric | engine |
 | :--- | :--- |
 | packets | {{ test.engine_performance.total_packets }} |
-| bytes | {{ test.engine_performance.total_bytes | divided_by: 1073741824.0 | round: 2 }}GB [{{ test.engine_performance.total_bytes }}B] |
+| bytes | {{ test.engine_performance.total_bytes | divided_by: 1073741824.0 | round: 2 }} GB [{{ test.engine_performance.total_bytes }} B] |
 | pps | {{ test.engine_performance.pps | round: 2 }} |
 | gbps | {{ test.engine_performance.gpbs | round: 3 }} |
 | mbps | {{ test.engine_performance.mpbs | round: 2 }} |
@@ -77,7 +77,7 @@ total: [{{ performance_files.size }} items]
 | metric | nic |
 | :--- | :--- |
 | packets | {{ test.offload_performance.total_packets }} |
-| bytes | {{ test.offload_performance.total_bytes | divided_by: 1073741824.0 | round: 2 }}GB [{{ test.offload_performance.total_bytes }}B] |
+| bytes | {{ test.offload_performance.total_bytes | divided_by: 1073741824.0 | round: 2 }} GB [{{ test.offload_performance.total_bytes }} B] |
 | pps | {{ test.offload_performance.pps | round: 2 }} |
 | gbps | {{ test.offload_performance.gpbs | round: 3 }} |
 | mbps | {{ test.offload_performance.mpbs | round: 2 }} |
@@ -101,7 +101,7 @@ total: [{{ performance_files.size }} items]
       <td style="padding: 5px 0;">{{ tag.name }}</td>
       <td style="padding: 5px 0;">{{ tag.packets }}</td>
       {% comment %} 1024*1024.0 = 1048576.0 {% endcomment %}
-      <td style="padding: 5px 0;">{{ tag.bytes | divided_by: 1048576.0 | round: 2 }}MB</td>
+      <td style="padding: 5px 0;">{{ tag.bytes | divided_by: 1048576.0 | round: 2 }} MB</td>
     </tr>
     {% endfor %}
   </tbody>
