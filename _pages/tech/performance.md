@@ -41,11 +41,11 @@ todo
 
 ### // performance metrics
 
-
 {% if test.engine_performance == test.offload_performance %}
 | metric | engine |
 | :--- | :--- |
 | packets | {{ test.engine_performance.total_packets }} |
+| bytes | {{ test.engine_performance.total_bytes }} |
 | pps | {{ test.engine_performance.pps | round: 2 }} |
 | gbps | {{ test.engine_performance.gpbs | round: 3 }} |
 | mbps | {{ test.engine_performance.mpbs | round: 2 }} |
@@ -53,13 +53,14 @@ todo
 | metric | nic |
 | :--- | :--- |
 | packets | {{ test.offload_performance.total_packets }} |
+| bytes | {{ test.offload_performance.total_bytes }} |
 | pps | {{ test.offload_performance.pps | round: 2 }} |
 | gbps | {{ test.offload_performance.gpbs | round: 3 }} |
 | mbps | {{ test.offload_performance.mpbs | round: 2 }} |
 {% endif %}
 
-### // top 10 tags by traffic
 
+### // top 10 tags by traffic
 
 | name | packets | bytes |
 | :--- | :--- | :--- |
