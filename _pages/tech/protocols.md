@@ -60,7 +60,7 @@ total: [{{ all_protocols.size | plus: filtered_protocols.size }} items]
 
 <!-- content table of configuration protocols -->
 
-<div class="toc-container">
+<div style="margin-top: -4px;" class="toc-container">
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <tr>
     <td style="vertical-align: top; width: 50%; border: none; padding-right: 20px;">

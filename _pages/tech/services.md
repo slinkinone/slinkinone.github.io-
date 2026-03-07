@@ -47,6 +47,5 @@ total: [{{ filtered_services.size }} items]
   {%- endfor -%}
 {%- endif %}
 
-&nbsp;
 {{ service.description }}
 {% endfor %}

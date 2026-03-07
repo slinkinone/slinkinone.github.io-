@@ -18,6 +18,13 @@ permalink: /tech/performance/
 
 total: [{{ performance_files.size }} items]
 
+<div class="toc-container">
+{% for file_entry in performance_files %}
+  {% assign test = file_entry[1] %}
+  # <a href="#{{ test.test_name | slugify }}">{{ test.test_name }}</a><br>
+{% endfor %}
+</div>
+
 ## # configuration
 
 {% assign config = site.data.release.json.config_summary.info %}
@@ -41,15 +48,6 @@ total: [{{ performance_files.size }} items]
     <tr><td>longest_domain_path</td><td style="text-align: right;">{{ config.longest_domain_path }}</td></tr>
   </tbody>
 </table>
-
-## > tests
-
-<div class="toc-container">
-{% for file_entry in performance_files %}
-  {% assign test = file_entry[1] %}
-  # <a href="#{{ test.test_name | slugify }}">{{ test.test_name }}</a><br>
-{% endfor %}
-</div>
 
 <hr>
 
