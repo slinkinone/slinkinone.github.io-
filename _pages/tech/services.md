@@ -32,13 +32,19 @@ search: ...
   <a href="#{{ service.short_name }}">{{ service.name }}</a>
 </h3>
 
-<!--* `categories`: {{ service.categories | join: ", " }}-->
+<!--
+* `categories`: {{ service.categories | join: ", " }}
+* `workflow`: {{ service.workflow | join: ", " | default: "none" }}
+-->
 
 * `short_name`: {{ service.short_name }}
 * `categories`: {% for cat in service.categories -%}
 <a href="{{ '/tech/info/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
 {%- endfor %}
-* `workflow`: {{ service.workflow | join: ", " | default: "none" }}
+* `workflow`: {% if service.workflow == "none" or service.workflow == nil %}none{% else -%}
+  {%- for wf in service.workflow -%}
+<a href="{{ '/tech/info/workflow/' | relative_url }}#{{ wf | slugify }}">{{ wf }}</a>{% unless forloop.last %}, {% endunless %}
+  {%- endfor -%}
 
 &nbsp;
 {{ service.description }}
