@@ -25,8 +25,8 @@ permalink: /tech/services/
 
 total: [{{ filtered_services.size }} items]
 
-\# [!categories](/tech/info/categories)
-\# [!workflow](/tech/info/workflow)
+\# [categories](/tech/info/categories)
+\# [workflow](/tech/info/workflow)
 
 <hr>
 
