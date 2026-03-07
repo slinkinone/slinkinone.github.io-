@@ -85,7 +85,7 @@ total: [{{ all_protocols.size | plus: filtered_protocols.size }} items]
 <h3 id="{{ proto.name | slugify }}"># {{ proto.name }}</h3>
 
 * **type**: `engine`
-* **fields**: todo
+* **fields**: `todo`
 * **osi layer**: `{{ proto.osi }}`
 * **ports**: `{{ proto.ports | default: "none" }}`
 * **patterns**: `{{ proto.patterns | default: "none" }}`
@@ -108,8 +108,8 @@ Description is absent.
 <!--* **name**: {{ tag.name }}-->
 <!--* **short_name**: {{ tag.short_name }}-->
 * **type**: `configuration`
-* **fields**: absent
-* **osi layer**: `-`
+* **fields**: `absent`
+* **osi layer**: `absent`
 * **ports**: `{{ proto.ports | default: "none" }}`
 * **patterns**: `{{ proto.patterns | default: "none" }}`
 
