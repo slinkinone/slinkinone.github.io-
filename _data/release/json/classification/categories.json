@@ -145,11 +145,6 @@
     "description": "Marketplace is an online platform where buyers and sellers can connect and conduct transactions for goods and services, e.g. Amazon, Ebay, AliExpress, etc."
   },
   {
-    "name": "Online Shop",
-    "short_name": "online_shop",
-    "description": "An online shop (or e-shop/e-commerce store) is a digital storefront on the internet where businesses sell products or services directly to customers through a website or app, allowing them to browse, pay, and order goods or services electronically, 24/7, for delivery or pickup."
-  },
-  {
     "name": "Drive",
     "short_name": "drive",
     "description": "Drive is a set of services are digital platforms, usually mobile apps, that connect passengers with nearby drivers offering transportation on demand."
