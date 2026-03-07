@@ -1,0 +1,18 @@
+{
+  "info": {
+    "active_tag_count": 565,
+    "inactive_tag_count": 1,
+    "expression_count": 17,
+    "classifier_tag_count": 553,
+    "no_offload_protocol_count": 6,
+    "domain_count": 62889,
+    "ipv4_cidr_count": 402552,
+    "ipv6_cidr_count": 628704,
+    "ipv4_socket_count": 0,
+    "ipv6_socket_count": 0,
+    "dns_cache_tag_count": 1,
+    "session_cache_tag_count": 0,
+    "longest_domain_path": 8,
+    "session_storage_element_count": 0
+  }
+}
