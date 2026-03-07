@@ -1,0 +1,328 @@
+{
+  "protocols": [
+    {
+      "name": "payload",
+      "osi": "undefined",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "ethernet",
+      "osi": "data-link",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "arp",
+      "osi": "data-link",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "rarp",
+      "osi": "data-link",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "ppp",
+      "osi": "session",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "pppoe",
+      "osi": "data-link",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "ipv4",
+      "osi": "network",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "ipv6",
+      "osi": "network",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "icmp",
+      "osi": "network",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "icmpv6",
+      "osi": "network",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "igmp",
+      "osi": "network",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "wireguard",
+      "osi": "network",
+      "ports": "udp: 51820",
+      "patterns": ""
+    },
+    {
+      "name": "openvpn",
+      "osi": "network",
+      "ports": "tcp: 1194; udp: 1194",
+      "patterns": ""
+    },
+    {
+      "name": "ospf",
+      "osi": "network",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "tcp",
+      "osi": "transport",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "udp",
+      "osi": "transport",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "quic",
+      "osi": "transport",
+      "ports": "udp: 443",
+      "patterns": ""
+    },
+    {
+      "name": "gtp",
+      "osi": "transport",
+      "ports": "udp: 2152, 2123",
+      "patterns": ""
+    },
+    {
+      "name": "pptp",
+      "osi": "data-link",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "socks",
+      "osi": "session",
+      "ports": "tcp: 1080",
+      "patterns": ""
+    },
+    {
+      "name": "tls",
+      "osi": "session",
+      "ports": "tcp: 995, 993, 443",
+      "patterns": ""
+    },
+    {
+      "name": "dtls",
+      "osi": "transport",
+      "ports": "udp: 443",
+      "patterns": ""
+    },
+    {
+      "name": "isakmp",
+      "osi": "session",
+      "ports": "udp: 500",
+      "patterns": ""
+    },
+    {
+      "name": "telnet",
+      "osi": "application",
+      "ports": "tcp: 23",
+      "patterns": ""
+    },
+    {
+      "name": "ssh",
+      "osi": "application",
+      "ports": "tcp: 22",
+      "patterns": ""
+    },
+    {
+      "name": "http",
+      "osi": "application",
+      "ports": "tcp: 80",
+      "patterns": "HTTP/1.1, HTTP/1.0, GET, POST, HEAD, PUT, DELETE, CONNECT, OPTIONS, TRACE, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, SEARCH, UNLOCK, BIND, REBIND, UNBIND, ACL, REPORT, MKACTIVITY, CHECKOUT, MERGE, PATCH, PURGE, MKCALENDAR, LINK, UNLINK, SOURCE"
+    },
+    {
+      "name": "http2",
+      "osi": "application",
+      "ports": "tcp: 80",
+      "patterns": "PRI * HTTP/2.0\\r\\n\\r\\nSM\\r\\n\\r\\n"
+    },
+    {
+      "name": "http3",
+      "osi": "application",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "ssdp",
+      "osi": "application",
+      "ports": "udp: 1900",
+      "patterns": "HTTP/1.1, HTTP/1.0, M-SEARCH, NOTIFY, SUBSCRIBE, SSDPC"
+    },
+    {
+      "name": "dns",
+      "osi": "application",
+      "ports": "tcp: 53; udp: 53",
+      "patterns": ""
+    },
+    {
+      "name": "mdns",
+      "osi": "application",
+      "ports": "tcp: 5353; udp: 5353",
+      "patterns": ""
+    },
+    {
+      "name": "ftp",
+      "osi": "application",
+      "ports": "tcp: 21",
+      "patterns": ""
+    },
+    {
+      "name": "sftp",
+      "osi": "application",
+      "ports": "tcp: 115",
+      "patterns": ""
+    },
+    {
+      "name": "pop3",
+      "osi": "application",
+      "ports": "tcp: 25",
+      "patterns": ""
+    },
+    {
+      "name": "smtp",
+      "osi": "application",
+      "ports": "tcp: 587, 110",
+      "patterns": ""
+    },
+    {
+      "name": "imap",
+      "osi": "application",
+      "ports": "tcp: 143",
+      "patterns": ""
+    },
+    {
+      "name": "sip",
+      "osi": "application",
+      "ports": "tcp: 5060; udp: 5060",
+      "patterns": "INVITE, ACK, BYE, CANCEL, REGISTER, OPTIONS, INFO, PRACK, PUBLISH, REFER, SUBSCRIBE, UPDATE, SIP/2.0"
+    },
+    {
+      "name": "rtp",
+      "osi": "application",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "rtcp",
+      "osi": "session",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "srtp",
+      "osi": "application",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "srtcp",
+      "osi": "session",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "dropbox_lan_sync_discovery",
+      "osi": "application",
+      "ports": "udp: 17500",
+      "patterns": "{\\\"host_int\\\""
+    },
+    {
+      "name": "dropbox_lan_sync",
+      "osi": "application",
+      "ports": "tcp: 17500",
+      "patterns": ""
+    },
+    {
+      "name": "stun",
+      "osi": "application",
+      "ports": "tcp: 3478; udp: 3478",
+      "patterns": ""
+    },
+    {
+      "name": "ntp",
+      "osi": "application",
+      "ports": "udp: 123",
+      "patterns": ""
+    },
+    {
+      "name": "bittorrent",
+      "osi": "application",
+      "ports": "tcp: 6889, 6888, 6884, 6883, 6885, 6887, 6886, 6882, 6881",
+      "patterns": ""
+    },
+    {
+      "name": "bittorrent_dht",
+      "osi": "application",
+      "ports": "",
+      "patterns": "d1:ad, d1:rd, d2:ip, d1:el"
+    },
+    {
+      "name": "bittorrent_utp",
+      "osi": "transport",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "bittorrent_tracker",
+      "osi": "application",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "websocket",
+      "osi": "application",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "vlan_c_tag",
+      "osi": "data-link",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "gre",
+      "osi": "data-link",
+      "ports": "",
+      "patterns": ""
+    },
+    {
+      "name": "l2tp",
+      "osi": "session",
+      "ports": "udp: 1701",
+      "patterns": ""
+    },
+    {
+      "name": "teredo",
+      "osi": "network",
+      "ports": "tcp: 1723; udp: 3544",
+      "patterns": ""
+    }
+  ]
+}

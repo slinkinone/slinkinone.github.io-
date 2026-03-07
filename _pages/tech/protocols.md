@@ -17,68 +17,44 @@ permalink: /tech/protocols/
 <!--todo-->
 total: [**60** items]
 
-| protocol | osi | field count |
-| :--- | :--- | :--- |
-| Ethernet | Data Link | 3 |
-| ARP/RARP | Data Link | 10 |
-| GRE | Data Link | 6 |
-| VLAN-C-Tag | Data Link | 5 |
-| PPPoE | Data Link | 6 |
-| PPTP | Data Link | 5 |
-| IPv4 | Network | 18 |
-| IPv6 | Network | 42 |
-| ICMP | Network | 5 |
-| ICMPv6 | Network | 5 |
-| IGMP | Network | 1 |
-| OSPF | Network | 11 |
-| Teredo | Network | 14 |
-| Wireguard | Network | 14 |
-| OpenVPN | Network | 17 |
-| TCP | Transport | 19 |
-| UDP | Transport | 5 |
-| GTP | Transport | 16 |
-| QUIC | Transport | 75 |
-| DTLS | Transport | 174 |
-| TLS | Session | 156 |
-| ISAKMP | Session | 10 |
-| L2TP | Session | 19 |
-| PPP | Session | 3 |
-| SOCKS | Session | 19 |
-| RTCP | Session | 35 |
-| SRTCP | Session | 7 |
-| DNS | Application | 78 |
-| MDNS | Application | 80 |
-| Dropbox Lan Sync | Application | 4 |
-| Dropbox Lan Sync Discovery | Application | 1 |
-| FTP | Application | 10 |
-| FTPS | Application | - |
-| SFTP | Application | 7 |
-| SSH | Application | - |
-| Telnet | Application | 1 |
-| POP3 | Application | 5 |
-| POP3S | Application | - |
-| SMTP | Application | 5 |
-| SMTPS | Application | - |
-| IMAP | Application | - |
-| IMAPS | Application | - |
-| NNTPS | Application | - |
-| WebSocket | Application | 10 |
-| STUN | Application | 10 |
-| RTP | Application | 18 |
-| SRTP | Application | 10 |
-| NTP | Application | - |
-| HTTP | Application | 73 |
-| HTTP/2 | Application | 60 |
-| SIP | Application | 73 |
-| BitTorrent | Application | - |
-| BitTorrent DHT | Application | 12 |
-| BitTorrent UTP | Application | - |
-| BitTorrent Tracker | Application | - |
-| DNSCrypt | Application | - |
-| DNS over TLS | Application | - |
-| DNS over QUIC | Application | - |
-| SRTP over DTLS | Application | - |
-| RTP over QUIC | Application | - |
+{% assign all_protocols = site.data.release.json.protocols.protocols.protocols | sort: "name" %}
+
+{% comment %} Оглавление в две колонки {% endcomment %}
+{% assign total_size = all_protocols.size %}
+{% assign half_size = total_size | divided_by: 2.0 | ceil %}
+
+<div class="toc-container">
+<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+  <tr>
+    <td style="vertical-align: top; width: 50%; border: none; padding-right: 20px;">
+      {% for proto in all_protocols limit: half_size %}
+        # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
+      {% endfor %}
+    </td>
+    <td style="vertical-align: top; width: 50%; border: none; padding-left: 20px;">
+      {% for proto in all_protocols offset: half_size %}
+        # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
+      {% endfor %}
+    </td>
+  </tr>
+</table>
+</div>
+
+<hr>
+
+{% for proto in all_protocols %}
+<h3 id="{{ proto.name | slugify }}"># {{ proto.name }}</h3>
+
+* **osi layer**: `{{ proto.osi }}`
+{% if proto.ports != "" %}* **default ports**: `{{ proto.ports }}`{% endif %}
+{% if proto.patterns != "" %}* **signature patterns**: `{{ proto.patterns }}`{% endif %}
+
+&nbsp;
+
+{% unless forloop.last %}
+<hr style="border-top: 1px dashed #333;">
+{% endunless %}
+{% endfor %}
 
 
 ## > protocol-tags
