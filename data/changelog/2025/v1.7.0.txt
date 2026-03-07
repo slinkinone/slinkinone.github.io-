@@ -1,0 +1,9 @@
+v1.7.0 [4.07.2025]
+
+- tls_metadata extension. Calculates JA3 and JA3S hashes.
+- 12 new protocols: IMAPS, SMTPS, FTPS, POP3S, NNTPS, IGMP, POP3, SMTP, OSPF, IMAP, WebSocket, RTCP
+- 7 new services: Cloudflare, Fastly, Akamai, Amazon AWS, Sberbank, TBank, Revolut
+- HTTP/2 decoder bug fix
+- HTTP and FTP field list update
+- CLI: print field decoder information
+- Small bugs fixes and cosmetic API changes

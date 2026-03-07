@@ -1,0 +1,7 @@
+v1.13.7 [18.01.2026]
+
+- Advanced performance test
+- Fix some service naming
+- Service update: amazon_aws, apple, digital_ocean, discord, facebook, github, icloud_private_relay, meta	, netflix, roblox, vultr
+- Session state flags: protocol path, tags, offload changing
+- Fix 2 crashes: FTP cache and classifier extension

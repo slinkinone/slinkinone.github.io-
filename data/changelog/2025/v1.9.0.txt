@@ -1,0 +1,12 @@
+v1.9.0 [21.09.2025]
+
+- 5 new services: GosUslugi, Google API, Uber, Cloudinary, Yandex360
+- STUN: detection algorithm update
+- QUIC and OpenVPN: detection algorithm update
+- HTTP Content-Length processing bug fix
+- SDP (SIP body) dissection
+- 2 new protocols: SRTP, SRTCP
+- SIP cache extension for classification child flows
+- CLI: first protocol configuration
+- Update service signatures: yandex, yandex_cloud, meta, facebook, apple, dropbox, github, kingsoft, teamviwer, twitch, webex, amazon_aws, amazon_cloudfront, digital_ocean, vultr, zoom, icloud_private_relay, ms_azure, ms365, ms_exchange, ms_sharepoint, ms_teams, telegram, cloudflare, fastly, discord, google_cloud, whatsapp, vkontakte, nintendo.
+- SIP protocol. 3 new field dissection: CSeq, CSeqNumber, CSeqMethod

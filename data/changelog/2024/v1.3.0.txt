@@ -1,0 +1,43 @@
+v1.3.0 [20.12.2024]
+
+- Packet direction detection
+- Packet API is changed
+- ILayer API is changed
+- HTTP Authentication data extraction
+- HTTP FileType and Mime information extraction
+- Telnet protocol
+- ISAKMP protocol
+- OpenVPN protocol
+- Wireguard protocol
+- NTP protocol
+- FTP protocol
+- SFTP protocol
+- STUN protocol
+- SSH protocol
+- SOCKS protocol
+- IPv6 protocol
+- ICMPv6 protocol
+- RTP protocol
+- L2TP protocol
+- SIP protocol
+- SIP Over TLS protocol
+- Teredo protocol
+- PPTP Protocol
+- PPP protocol
+- PPPOE (Session and Discovery) protocol
+- BitTorrent protocol
+- BitTorrent DHT
+- BitTorrent UTP
+- BitTorrent Tracker
+- IPv6 Flow table
+- Data cache is added for session context to allow detect protocols which have high entropy
+- Update protocol tree extension
+- TLS/DTLS Session Cache
+- FTP Cache extension. The extension helps to classify FTP Data Plane flows
+- Final extension. The extension allows to finalize protocol detection and service classification process
+- Update Protocol Tree extension to allow build tree based on TLS ALPN and PPP types
+- Extension configuration
+- Fixed small bugs and improved library stability
+- CLI is updated: time measuring, printing specific fields, table/flow/packet output modes for printing events
+- Apple Push Notification service classification
+- Fixed small bugs and improved library stability

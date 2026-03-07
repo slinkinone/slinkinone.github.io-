@@ -1,0 +1,11 @@
+v1.13.9 [26.02.2026]
+
+- Downgrade standard C++20 -> C++17
+- Remove spdlog and Trace library dependency and provide callback mechanism for trace events
+- Update C API and packet_processor examples
+- LayerFabric pool. New configurations settings: `memory_pool`
+- Fix mpsc_queue queue count initialisation
+- Fix User Extension Context assigning to Global object on flow release callback stage
+- Improve performance characteristcs
+- Simplify documentation: remove images and use ASCII art schemes
+- Update service signatures

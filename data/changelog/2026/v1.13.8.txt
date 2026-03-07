@@ -1,0 +1,5 @@
+v1.13.8 [30.01.2026]
+
+- Add C API example
+- Service update: yandex_marketing_platform, amazon_aws, apple, digital_ocean, facebook, github, google_cloud, icloud_private_relay, meta, netflix,
+- Fix small mistakes
