@@ -22,25 +22,24 @@ total: [{{ performance_files.size }} tests]
 
 {% assign config = site.data.release.json.config_summary.info %}
 
-<table style="width: 100%; border-collapse: collapse; font-family: monospace;">
-  <tr>
-    <td style="vertical-align: top; width: 50%; border: none;">
-      # **tags**<br>
-      - active: `{{ config.active_tag_count }}`<br>
-      - inactive: `{{ config.inactive_tag_count }}`<br>
-      - classifier: `{{ config.classifier_tag_count }}`<br>
-      - dns_cache: `{{ config.dns_cache_tag_count }}`<br>
-      - session_cache: `{{ config.session_cache_tag_count }}`
-    </td>
-    <td style="vertical-align: top; width: 50%; border: none;">
-      # **network & rules**<br>
-      - ipv4_cidr: `{{ config.ipv4_cidr_count }}`<br>
-      - ipv6_cidr: `{{ config.ipv6_cidr_count }}`<br>
-      - domains: `{{ config.domain_count }}`<br>
-      - expressions: `{{ config.expression_count }}`<br>
-      - longest_path: `{{ config.longest_domain_path }}`
-    </td>
-  </tr>
+<table style="width: 100%; border-collapse: collapse; font-family: monospace; margin-bottom: 20px;">
+  <thead>
+    <tr>
+      <th style="text-align: left; border-bottom: 1px solid #555; padding: 8px 0;">parameter</th>
+      <th style="text-align: right; border-bottom: 1px solid #555; padding: 8px 0;">value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>active_tag_count</td><td style="text-align: right;">{{ config.active_tag_count }}</td></tr>
+    <tr><td>inactive_tag_count</td><td style="text-align: right;">{{ config.inactive_tag_count }}</td></tr>
+    <tr><td>expression_count</td><td style="text-align: right;">{{ config.expression_count }}</td></tr>
+    <tr><td>classifier_tag_count</td><td style="text-align: right;">{{ config.classifier_tag_count }}</td></tr>
+    <tr><td>domain_count</td><td style="text-align: right;">{{ config.domain_count }}</td></tr>
+    <tr><td>ipv4_cidr_count</td><td style="text-align: right;">{{ config.ipv4_cidr_count }}</td></tr>
+    <tr><td>ipv6_cidr_count</td><td style="text-align: right;">{{ config.ipv6_cidr_count }}</td></tr>
+    <tr><td>dns_cache_tag_count</td><td style="text-align: right;">{{ config.dns_cache_tag_count }}</td></tr>
+    <tr><td>longest_domain_path</td><td style="text-align: right;">{{ config.longest_domain_path }}</td></tr>
+  </tbody>
 </table>
 
 
