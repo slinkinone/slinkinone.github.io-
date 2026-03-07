@@ -9,12 +9,11 @@ permalink: /tech/changelog/
 ## > changelog
 
 {% assign all_logs = site.static_files | where_exp: "item", "item.path contains '/data/changelog/'" | sort: "path" | reverse %}
-
 {% assign current_year = "" %}
 
 {% for log in all_logs %}
   {% assign parts = log.path | split: "/" %}
-  {% comment %} Path: /data/changelog/2025/v1.txt -> parts index is 3 {% endcomment %}
+  {% comment %} Path: /data/changelog/2026/v1.13.9.txt -> index 3 is year {% endcomment %}
   {% assign log_year = parts[3] %}
 
   {% if log_year != current_year %}
@@ -30,8 +29,8 @@ permalink: /tech/changelog/
       <b>{{ log.basename }}</b>
     </summary>
     <div style="margin-top: 10px; padding: 15px; background: #111; border: 1px dashed #444; font-family: monospace; white-space: pre-wrap; color: #0f0;">
-      {% capture content %}{% include_relative ../../data/changelog/{{ log_year }}/{{ log.name }} %}{% endcapture %}
-      {{ content | strip }}
+      {% capture log_path %}../data/changelog/{{ log_year }}/{{ log.name }}{% endcapture %}
+      {% include {{ log_path }} %}
     </div>
   </details>
 
