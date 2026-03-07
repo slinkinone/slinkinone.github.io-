@@ -29,8 +29,12 @@ permalink: /tech/changelog/
       <b>{{ log.basename }}</b>
     </summary>
     <div style="margin-top: 10px; padding: 15px; background: #111; border: 1px dashed #444; font-family: monospace; white-space: pre-wrap; color: #0f0;">
-      {% capture log_path %}../data/changelog/{{ log_year }}/{{ log.name }}{% endcapture %}
-      {% include {{ log_path }} %}
+      {% comment %} 
+         Теперь путь считается от добавленного в конфиг data/changelog.
+         Поэтому передаем только 'year/filename'
+      {% endcomment %}
+      {% capture log_file %}{{ log_year }}/{{ log.name }}{% endcapture %}
+      {% include {{ log_file }} %}
     </div>
   </details>
 

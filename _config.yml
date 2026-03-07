@@ -6,6 +6,10 @@ url: "https://slinkin.tech"
 
 #
 
+common_dir: &common_dir
+  - _includes
+  - data/changelog
+
 include:
   - _pages
   - _pages/tech/
