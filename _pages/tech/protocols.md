@@ -35,10 +35,11 @@ permalink: /tech/protocols/
 
 <!-- tag protocols -->
 
-engine total: [{{ filtered_protocols.size }} items]
-configuration total: [{{ all_protocols.size }} items]
-
 <!-- content table of engine protocols -->
+
+## # engine
+
+total: [{{ filtered_protocols.size }} items]
 
 <div class="toc-container">
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
@@ -50,6 +51,27 @@ configuration total: [{{ all_protocols.size }} items]
     </td>
     <td style="vertical-align: top; width: 50%; border: none; padding-left: 20px;">
       {% for proto in all_protocols offset: half_size %}
+        # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
+      {% endfor %}
+    </td>
+  </tr>
+</table>
+</div>
+
+## # configuration
+
+total: [{{ all_protocols.size }} items]
+
+<div class="toc-container">
+<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+  <tr>
+    <td style="vertical-align: top; width: 50%; border: none; padding-right: 20px;">
+      {% for proto in filtered_protocols limit: half_size %}
+        # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
+      {% endfor %}
+    </td>
+    <td style="vertical-align: top; width: 50%; border: none; padding-left: 20px;">
+      {% for proto in filtered_protocols offset: half_size %}
         # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
       {% endfor %}
     </td>
