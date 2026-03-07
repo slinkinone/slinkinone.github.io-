@@ -14,21 +14,6 @@ permalink: /tech/metadata/
 
 ## > metadata
 
-{% unless service.categories contains 'metadata' %}
-  <h3 id="{{ service.name }}">
-    <a href="#{{ service.short_name }}">{{ service.name }}</a>
-  </h3>
-
-  * `short_name`: {{ service.short_name }}
-  * `categories`: {{ service.categories | join: ", " }}
-  * `workflow`: {{ service.workflow | join: ", " | default: "none" }}
-
-  &nbsp;
-  {{ service.description }}
-{% endunless %}
-
-<hr>
-
 | name | description |
 | :--- | :--- |
 | Tag | The tag which is assigned by classifier extension. |
