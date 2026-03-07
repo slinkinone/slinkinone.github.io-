@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Tag",
+    "description": "The tag which is assigned by classifier extension."
+  },
+  {
+    "name": "Tag Type",
+    "description": "The type of tag matching (IP, Domain, Cache, etc.)."
+  },
+  {
+    "name": "ECH",
+    "description": "Encrypted Client Hello. The tag is presented only when ECH exists, but SNI doesn't exist."
+  },
+  {
+    "name": "FTP DATA",
+    "description": "FTP data trasnmission."
+  },
+  {
+    "name": "DNS Response Name",
+    "description": "Processed dns response name - concatenated labels, resolving offsets, etc."
+  },
+  {
+    "name": "JA3",
+    "description": "The fingerprinting the client's TLS handshake (Client Hello)."
+  },
+  {
+    "name": "JA3S",
+    "description": "The fingerprinting the server's response (Server Hello)."
+  },
+  {
+    "name": "JA3 hash",
+    "description": "MD5 hash of JA3. Format: TLSVersion,Ciphers,Extensions,EllipticCurves,EllipticCurvePointFormats."
+  },
+  {
+    "name": "JA3 MD5",
+    "description": "MD5 hash of JA3. Format: TLSVersion,Ciphers,Extensions,EllipticCurves,EllipticCurvePointFormats."
+  },
+  {
+    "name": "JA3S MD5",
+    "description": "MD5 hash of JA3S. Format: TLSVersion,Cipher,Extensions."
+  },
+  {
+    "name": "HTTP/2 Header",
+    "description": "The http/2 protocol header block field: name:value."
+  },
+  {
+    "name": "HTTP/2 Push Promise header",
+    "description": "The http/2 protocol push-promise block field: name:value."
+  },
+  {
+    "name": "HTTP/2 Continuation header",
+    "description": "The http/2 protocol continuation block field: name:value."
+  },
+  {
+    "name": "HTTP Authorization Credentials",
+    "description": "Base64 decoded value of Proxy-Authorization header value."
+  },
+  {
+    "name": "TLS Certificate Common name",
+    "description": "The CommonName certificate field."
+  },
+  {
+    "name": "TLS Certificate General DNS Name",
+    "description": "The dNSName certificate field. Belongs to extension section."
+  },
+  {
+    "name": "Protocol Path",
+    "description": "Protocol path string (hierarchical chain of protocol that are used in a session)."
+  },
+  {
+    "name": "Bitrate",
+    "description": "The bitrate is a measure of how much data is transferred over a network in a given period of time. Measured in bits per second (bps)."
+  },
+  {
+    "name": "Average packet size",
+    "description": "Average packet size of processed packets."
+  },
+  {
+    "name": "Inter-arrival Time",
+    "description": "Inter-arrival Time is the difference in time between the arrival of two consecutive packets at a receiver. Measured in nanoseconds. For one flow packet avg iat is 0."
+  },
+  {
+    "name": "Flow start time",
+    "description": "Timestamp of the first flow packet.."
+  },
+  {
+    "name": "Flow last activity time",
+    "description": "Timestamp of the last flow packet."
+  },
+  {
+    "name": "Flow duration",
+    "description": "The flow duration time."
+  }
+]

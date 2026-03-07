@@ -1,0 +1,317 @@
+[
+  {
+    "name": "Ecosystem",
+    "short_name": "ecosystem",
+    "description": "Ecosystem in the context of network services refers to a complex network of interconnected services, applications, devices, and technologies that work together to create a comprehensive and integrated user experience."
+  },
+  {
+    "name": "CDN",
+    "short_name": "cdn",
+    "description": "CDN is a Content Delivery Network is a network of interconnected servers that speeds up webpage loading for data-heavy applications. The most popular services are Cloudflare, Google Cloud, Akamai, Fastly."
+  },
+  {
+    "name": "DNS",
+    "short_name": "dns",
+    "description": "DNS or Domain Name System is a naming service that translates human-friendly domain names into machine-readable IP addresses. It enables users to access websites using names like example.com instead of numeric IPs. Popular services include Google DNS, Cloudflare (Cloudfront), etc."
+  },
+  {
+    "name": "Instant Messenger",
+    "short_name": "im",
+    "description": "Instant Messenger is a real-time communication application that allows users to send text messages, images, videos, and other multimedia content to each other over the internet. These applications often include features such as group chats, voice and video calls, file sharing, and status updates. Examples of instant messaging apps include WhatsApp, Facebook Messenger, and Telegram."
+  },
+  {
+    "name": "Design",
+    "short_name": "design",
+    "description": "A Design service is a specialized online platform dedicated to the curation, presentation, discovery, and professional networking of creative visual work. It functions as a digital ecosystem for designers, artists, agencies, and clients, primarily serving as a portfolio showcase, inspiration hub, and talent marketplace."
+  },
+  {
+    "name": "Social Network",
+    "short_name": "social_network",
+    "description": "Social Network refers to online platforms and applications that enable users to create, share, and interact with content and with each other. These platforms facilitate networking, communication, and the exchange of information through various formats, including text, images, videos, and live streams. Popular social media platforms include Facebook, Twitter, Instagram, and LinkedIn."
+  },
+  {
+    "name": "Web",
+    "short_name": "web",
+    "description": "Web is a general term for all Internet services. If the Internet tag/service cannot be explicitly assigned to other category it can be used as Web."
+  },
+  {
+    "name": "Code",
+    "short_name": "code",
+    "description": "Code is a code management service, also known as source code management (SCM) or version control, is a system that tracks and manages changes to software code."
+  },
+  {
+    "name": "Music",
+    "short_name": "music",
+    "description": "Music services provide streaming, storage, and playback of audio content over the internet. These platforms allow users to access vast libraries of songs, albums, and podcasts on demand. Popular services include Spotify, Apple Music, YouTube Music, Amazon Music, SoundCloud."
+  },
+  {
+    "name": "Meetings",
+    "short_name": "meetings",
+    "description": "Meetings platforms enable real-time audio, video, and screen-sharing communication for individuals or teams. These tools support remote collaboration, webinars, and virtual conferences. Common services include Zoom, Microsoft Teams, Google Meet, Webex, Skype."
+  },
+  {
+    "name": "Gaming",
+    "short_name": "gaming",
+    "description": "Gaming in the context of network services refers to set of services that are used to support users to play video/computer games."
+  },
+  {
+    "name": "Banking",
+    "short_name": "banking",
+    "description": "Banking services encompass the various financial products and activities offered by banks and other financial institutions."
+  },
+  {
+    "name": "Protocol",
+    "short_name": "protocol",
+    "description": "Protocol is a a tag that implies usage a network protocol."
+  },
+  {
+    "name": "VPN",
+    "short_name": "vpn",
+    "description": "VPN (Virtual Private Network) is a service that creates a secure, encrypted connection over a less secure network, such as the internet. VPNs are used to protect users' online privacy, mask their IP addresses, and allow them to access restricted content by routing their internet traffic through servers in different locations."
+  },
+  {
+    "name": "Media",
+    "short_name": "media",
+    "description": "Media refers to the various channels and tools used to store, deliver, and communicate information or entertainment to the public. This can include traditional forms such as newspapers, television, and radio, as well as digital forms like websites, social media platforms, and streaming services. Media encompasses a broad range of content, including news, music, films, books, and more, delivered through various means of communication."
+  },
+  {
+    "name": "File Storage",
+    "short_name": "file_storage",
+    "description": "File Storage is a type of cloud or networked storage system where data is stored and organized as files in directories. Examples: Microsoft SharePoint, Google Cloud, Dropbox, Google Drive, etc."
+  },
+  {
+    "name": "Cloud",
+    "short_name": "cloud",
+    "description": "Cloud is a set of services that offers server space on virtual machines, internal networks, VPN connections, disk storage, machine language SaaS (Software as a Service) applications, etc. Examples: Google Cloud, Digital Ocean, Yandex Cloud, Amazon AWS, etc."
+  },
+  {
+    "name": "Office",
+    "short_name": "office",
+    "description": "Office is a set of services that provides access to productivity tools typically associated with office work, such as word processing, spreadsheets, presentations, email, and more."
+  },
+  {
+    "name": "Mail",
+    "short_name": "mail",
+    "description": "Mail services provide electronic messaging functionality, enabling users to send, receive, and manage email communication over the internet. Common providers include Gmail, Outlook, Yahoo Mail, ProtonMail, Zoho Mail."
+  },
+  {
+    "name": "Network Service",
+    "short_name": "network_service",
+    "description": "Network Service refers to backend infrastructure components that provide connectivity and communication capabilities between devices. Examples include DNS servers, FTP servers, DHCP, NTP, VPN, and proxy services."
+  },
+  {
+    "name": "Update",
+    "short_name": "update",
+    "description": "Update services manage the distribution and installation of software or firmware improvements, patches, and security fixes. These services ensure systems remain up-to-date. Examples: Windows Update, Google Play System Update, macOS Software Update."
+  },
+  {
+    "name": "Push",
+    "short_name": "push",
+    "description": "Push services deliver real-time notifications or data updates from servers to client devices without a request. Used in messaging, alerts, and live data feeds. Common providers: Firebase Cloud Messaging, Apple Push Notification Service, Web Push API."
+  },
+  {
+    "name": "Application Store",
+    "short_name": "application_store",
+    "description": "Application Store is a digital platform that allows users to browse, download, and update software applications. These stores often include user ratings, reviews, and developer tools. Examples: Apple App Store, Google Play, Microsoft Store, Amazon Appstore."
+  },
+  {
+    "name": "Payment",
+    "short_name": "payment",
+    "description": "Payment services handle the processing of financial transactions online or in apps. They offer features like digital wallets, subscriptions, and checkout systems. Popular services: PayPal, Stripe, Apple Pay, Google Pay, Square."
+  },
+  {
+    "name": "Maps",
+    "short_name": "maps",
+    "description": "Maps services provide geolocation, routing, and spatial data for navigation and location-based applications. They support real-time traffic, satellite views, and APIs. Key providers include Google Maps, Apple Maps, Mapbox, OpenStreetMap."
+  },
+  {
+    "name": "Enterprise",
+    "short_name": "enterprise",
+    "description": "Enterprise services provide business-oriented tools for customer support, operations, collaboration, and resource management. These platforms are designed for scalability, security, and integration across large organizations. Examples include Zendesk, Salesforce, ServiceNow, Atlassian Jira, SAP."
+  },
+  {
+    "name": "Remote Access",
+    "short_name": "remote_access",
+    "description": "Remote Access service (RAS) allows users to connect to a private network or computer from a different, remote location, giving them access to files, applications, and resources as if they were physically present"
+  },
+  {
+    "name": "Forum",
+    "short_name": "forum",
+    "description": "A forum service is an online platform where users can have structured, topic-driven discussions, ask questions, and share information."
+  },
+  {
+    "name": "Marketplace",
+    "short_name": "marketplace",
+    "description": "Marketplace is an online platform where buyers and sellers can connect and conduct transactions for goods and services, e.g. Amazon, Ebay, AliExpress, etc."
+  },
+  {
+    "name": "Online Shop",
+    "short_name": "online_shop",
+    "description": "An online shop (or e-shop/e-commerce store) is a digital storefront on the internet where businesses sell products or services directly to customers through a website or app, allowing them to browse, pay, and order goods or services electronically, 24/7, for delivery or pickup."
+  },
+  {
+    "name": "Drive",
+    "short_name": "drive",
+    "description": "Drive is a set of services are digital platforms, usually mobile apps, that connect passengers with nearby drivers offering transportation on demand."
+  },
+  {
+    "name": "Government",
+    "short_name": "government",
+    "description": "Government service portals are official platforms—usually online—that allow citizens to access public services without needing to visit government offices in person."
+  },
+  {
+    "name": "API",
+    "short_name": "api",
+    "description": "API services are digital interfaces provided by companies or platforms that allow software applications to communicate with each other and access specific functionalities, data, or tools without needing to build them from scratch."
+  },
+  {
+    "name": "Travel",
+    "short_name": "travel",
+    "description": "Applications and services that help users plan, book, and manage trips, including flights, hotels, transportation, and travel experiences."
+  },
+  {
+    "name": "Real Estate",
+    "short_name": "real_estate",
+    "description": "Platforms that facilitate buying, selling, renting, or managing properties, often providing listings, pricing insights, and agent connections."
+  },
+  {
+    "name": "Sport",
+    "short_name": "sport",
+    "description": "Applications dedicated to sports-related content, including live scores, news, training tools, team management, and fan engagement."
+  },
+  {
+    "name": "Delivery",
+    "short_name": "delivery",
+    "description": "Services that enable the transportation of goods from sellers or service providers to customers, typically including real-time tracking and logistics management."
+  },
+  {
+    "name": "Food",
+    "short_name": "food",
+    "description": "Applications related to dining, recipes, food delivery, restaurant discovery, and culinary experiences."
+  },
+  {
+    "name": "Online Shop",
+    "short_name": "online_shop",
+    "description": "Digital storefronts that allow users to browse, purchase, and manage orders for a variety of goods or services through the internet."
+  },
+  {
+    "name": "Clothes",
+    "short_name": "clothes",
+    "description": "Platforms focused on fashion and apparel, offering clothing, accessories, and styling tools, often with virtual fitting or customization options."
+  },
+  {
+    "name": "News",
+    "short_name": "news",
+    "description": "Applications and services that deliver current events, articles, and updates from various sources, helping users stay informed about local, national, and global developments in real time."
+  },
+  {
+    "name": "Books",
+    "short_name": "books",
+    "description": "Services that provide access to physical or digital books, audiobooks, and literary content, including e-readers and online bookstores."
+  },
+  {
+    "name": "AI",
+    "short_name": "ai",
+    "description": "Applications that utilize machine learning or intelligent algorithms to automate tasks, provide insights, or enhance user experiences."
+  },
+  {
+    "name": "E-commerce",
+    "short_name": "ecommerce",
+    "description": "A broad category of digital platforms that facilitate online buying and selling of products or services, including payment, logistics, and customer service integrations."
+  },
+  {
+    "name": "Study",
+    "short_name": "study",
+    "description": "Applications and services designed to support learning and education, offering courses, lessons, and interactive tools for skill development, language learning, and academic improvement (e.g., Udemy, Duolingo)."
+  },
+  {
+    "name": "Crypto",
+    "short_name": "crypto",
+    "description": "Applications and platforms that facilitate cryptocurrency trading, investment, management, and blockchain-based financial services."
+  },
+  {
+    "name": "Job",
+    "short_name": "job",
+    "description": "Services and applications that help users find employment, freelance work, or career opportunities, often including job listings, applications, and recruitment tools."
+  },
+  {
+    "name": "Knowledge",
+    "short_name": "knowledge",
+    "description": "Platforms that provide access to structured or crowd-sourced information, educational content, and reference materials for learning and research."
+  },
+  {
+    "name": "Productivity",
+    "short_name": "productivity",
+    "description": "Applications designed to enhance personal or professional efficiency, including task management, note-taking, goal tracking, and workflow organization."
+  },
+  {
+    "name": "Security",
+    "short_name": "security",
+    "description": "Services and applications focused on protecting digital data, accounts, and privacy, including password managers, encryption tools, and cybersecurity solutions."
+  },
+  {
+    "name": "Blog",
+    "short_name": "blog",
+    "description": "Platforms that enable individuals or organizations to create, publish, and manage written content online, often supporting multimedia and audience engagement."
+  },
+  {
+    "name": "Search Engine",
+    "short_name": "search_engine",
+    "description": "Applications that allow users to search for information on the internet, providing relevant results, indexing, and sometimes privacy-focused features."
+  },
+  {
+    "name": "Advertisement",
+    "short_name": "advertisement",
+    "description": "Platforms and tools that help businesses promote products or services, track user engagement, and optimize marketing campaigns through analytics and targeted advertising."
+  },
+  {
+    "name": "Adult",
+    "short_name": "adult",
+    "description": "Adult content refers to material that is sexually explicit or intended for mature audiences, often restricted by age."
+  },
+  {
+    "name": "Health",
+    "short_name": "health",
+    "description": "A wide range of applications that are designed to support and improve users' health, well-being (mental and physical), and medical management. Medical apps, health and fitness apps, and health research apps are examples of health apps."
+  },
+  {
+    "name": "Bookmaker",
+    "short_name": "bookmaker",
+    "description": "Bookmakers, also commonly referred to as betting agencies, are companies or individuals that facilitate betting on the outcome of various events, mostly sporting events."
+  },
+  {
+    "name": "Telecom",
+    "short_name": "telecom",
+    "description": "The provides telecommunications services such as telephony and data communications access, e.g. Telecommunications Service Provider (TSP) or Internet Service Provider (ISP)."
+  },
+  {
+    "name": "Mobile",
+    "short_name": "mobile",
+    "description": "The term mobile service refers to a type of radio communication that occurs between mobile stations (such as vehicles or portable devices) and land stations. It also includes communication among mobile stations themselves."
+  },
+  {
+    "name": "Airline",
+    "short_name": "airline",
+    "description": "A major form of mass travel in the world's transportation network, airlines are organizations of people, airplanes, equipment, and buildings for transporting passengers, freight, and mail by air between specified points."
+  },
+  {
+    "name": "Torrent",
+    "short_name": "torrent",
+    "description": "Downloading and sharing files directly with other users online through a peer-to-peer (P2P) networking system called the BitTorrent protocol. Instead of pulling the whole file from a central server, users exchange small pieces with each other until everyone has the complete file."
+  },
+  {
+    "name": "Metadata",
+    "short_name": "metadata",
+    "description": "Metadata refers to auxiliary information about a service or data stream, often used for classification, routing, or analysis. In network contexts, this includes characteristics like data transmission protocols, TLS Encrypted Client Hello (ECH) usage, etc."
+  },
+  {
+    "name": "Workflow",
+    "short_name": "workflow",
+    "description": "Workflow describes the sequence and structure of actions or data exchanges that occur to complete a network-based task. It includes patterns like file transfer, audio/video calls, web page loading, and authentication flows, often involving multiple services and protocols in a defined order."
+  },
+  {
+    "name": "Helper",
+    "short_name": "helper",
+    "description": "Helper is not a service, but it covers the set of tags which help to classify the service."
+  }
+]
