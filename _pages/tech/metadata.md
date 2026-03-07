@@ -23,5 +23,6 @@ search: ...
 {% for item in metadata %}
 ## # {{ item.name }}
 {{ item.description }}
+<hr>
 
 {% endfor %}
