@@ -41,10 +41,11 @@ search: ...
 * `categories`: {% for cat in service.categories -%}
 <a href="{{ '/tech/info/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
 {%- endfor %}
-* `workflow`: {% if service.workflow == "none" or service.workflow == nil %}none{% else -%}
+* `workflow`: {% if service.workflow == "none" or service.workflow == nil or service.workflow.size == 0 %}none{% else -%}
   {%- for wf in service.workflow -%}
 <a href="{{ '/tech/info/workflow/' | relative_url }}#{{ wf | slugify }}">{{ wf }}</a>{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}
+{%- endif %}
 
 &nbsp;
 {{ service.description }}
