@@ -12,4 +12,33 @@ permalink: /tech/info/workflow/
 
 ## > workflow
 
-todo
+{% assign workflow = site.data.release.json.classification.workflow | sort: "name" %}
+
+{% assign total_size = workflow.size %}
+{% assign half_size = total_size | divided_by: 2.0 | ceil %}
+
+<div class="toc-container">
+<table>
+  <tr>
+    <td style="vertical-align: top; border: none;">
+      {% for item in workflow limit: half_size %}
+        # <a href="#{{ item.name | slugify }}">{{ item.name }}</a><br>
+      {% endfor %}
+    </td>
+    <td style="vertical-align: top; border: none;">
+      {% for item in workflow offset: half_size %}
+        # <a href="#{{ item.name | slugify }}">{{ item.name }}</a><br>
+      {% endfor %}
+    </td>
+  </tr>
+</table>
+</div>
+
+<hr>
+
+{% for item in workflow %}
+<h3 id="{{ item.name | slugify }}"># {{ item.name }}</h3>
+{{ item.description }}
+<hr>
+
+{% endfor %}
