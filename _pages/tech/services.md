@@ -28,8 +28,8 @@ search: ...
 
   {% if is_excluded == false %}
 
-<h3 id="{{ service.name }}">
-  <a href="#{{ service.short_name }}">{{ service.name }}</a>
+<h3 id="{{ service.short_name }}">
+  <a href="#{{ service.short_name }}">{{ service.short_name }}</a>
 </h3>
 
 <!--
