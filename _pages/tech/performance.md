@@ -42,8 +42,7 @@ total: [{{ performance_files.size }} items]
   </tbody>
 </table>
 
-
-## > performance
+## > tests
 
 <div class="toc-container">
 {% for file_entry in performance_files %}
@@ -57,7 +56,7 @@ total: [{{ performance_files.size }} items]
 {% for file_entry in performance_files %}
   {% assign test = file_entry[1] %}
   
-<h2 id="{{ test.test_name | slugify }}"># {{ test.test_name }}</h2>
+<h3 id="{{ test.test_name | slugify }}"># {{ test.test_name }}</h3>
 
 ### // general
 
