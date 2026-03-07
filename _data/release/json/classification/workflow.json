@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Generic",
+    "name_snake": "generic",
+    "description": "Connection establishing with remote server/service."
+  },
+  {
+    "name": "Incoming audio",
+    "name_snake": "incoming_audio",
+    "description": "`Incoming audio` refers to sound or audio signals that are received by a device or system. Audio calls focus solely on the transmission of sound, enabling conversation without visual interaction."
+  },
+  {
+    "name": "Outgoing audio",
+    "name_snake": "outgoing_audio",
+    "description": "`Outgoing audio` refers to sound or audio signals that are transmitted or sent out from a device or system. Audio calls focus solely on the transmission of sound, enabling conversation without visual interaction."
+  },
+  {
+    "name": "Audio",
+    "name_snake": "audio",
+    "description": "`Audio` is a voice communication between two or more parties without involving video. Audio calls focus solely on the transmission of sound, enabling conversation without visual interaction."
+  },
+  {
+    "name": "Incoming video",
+    "name_snake": "incoming_video",
+    "description": "`Incoming video` refers to video signals that are received by a device or system from an external source. This can include video feeds from a camera, a live stream, a video call, or any other video content being transmitted to the device."
+  },
+  {
+    "name": "Outgoing video",
+    "name_snake": "outgoing_video",
+    "description": "`Outgoing video` refers to video signals that are transmitted or sent out from a device or system to an external destination. This can include video feeds from a camera, a live stream, a video call, or any other video content being transmitted to the device."
+  },
+  {
+    "name": "Video",
+    "name_snake": "video",
+    "description": "`Video call` is a communication session between two or more parties where participants can see and hear each other in real-time. This type of call utilizes video and audio technology to transmit both the visual and auditory aspects of communication over the internet or telecommunication networks."
+  },
+  {
+    "name": "Chat",
+    "name_snake": "chat",
+    "description": "`Chat` refers to a real-time text-based communication between two or more users over a network. This can occur in various forms, such as instant messaging, online chat rooms, or within social media platforms."
+  },
+  {
+    "name": "Incoming file transfer",
+    "name_snake": "incoming_file_transfer",
+    "description": "`Incoming file transfer` refers to the process of receiving files from another device or system. This can involve various types of files such as documents, images, videos, or software being sent to a user's device over a network."
+  },
+  {
+    "name": "Outgoing file transfer",
+    "name_snake": "outgoing_file_transfer",
+    "description": "`Outgoing file transfer` refers to the process of sending files from one device or system to another. This involves transmitting various types of files such as documents, images, videos, or software from the user's device to a recipient over a network"
+  },
+  {
+    "name": "File Transfer",
+    "name_snake": "file_transfer",
+    "description": "`File transfer` refers to the process of moving or copying digital files from one device or system to another. This can include both incoming and outgoing transfers, facilitating the exchange of data between users, computers, servers, or other digital storage devices."
+  },
+  {
+    "name": "Incoming landline",
+    "name_snake": "incoming_landline",
+    "description": "`Incoming landline` refers to a telephone call that is received by a traditional wired telephone connected to the public switched telephone network (PSTN). This type of call originates from another telephone and is directed to the landline device."
+  },
+  {
+    "name": "Outgoing landline",
+    "name_snake": "outgoing_landline",
+    "description": "`Outgoing landline` refers to a telephone call that is initiated from a traditional wired telephone connected to the public switched telephone network (PSTN). This call is made from the landline device to another telephone number."
+  },
+  {
+    "name": "Landline",
+    "name_snake": "landline",
+    "description": "`Landline` refers to a traditional telephone system that uses a physical, wired connection for communication. This system operates through the public switched telephone network (PSTN) and involves the transmission of voice signals over copper or fiber-optic cables."
+  }
+]
