@@ -23,7 +23,7 @@ permalink: /tech/services/
 
 ## > services
 
-total: [**{{ filtered_services.size }}** items]
+total: [{{ filtered_services.size }} items]
 
 <hr>
 
@@ -33,8 +33,15 @@ total: [**{{ filtered_services.size }}** items]
 </h3>
 
 * `short_name`: {{ service.short_name }}
-* `categories`: {% for cat in service.categories -%}
-<a href="{{ '/tech/info/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+* `categories`: {% for cat_id in service.categories -%}
+  {% assign category_info = site.data.release.json.classification.categories | where: "short_name", cat_id | first %}
+  <a href="{{ '/tech/info/categories/' | relative_url }}#{{ cat_id | slugify }}">
+    {%- if category_info -%}
+      {{ category_info.short_name }}
+    {%- else -%}
+      {{ cat_id }}
+    {%- endif -%}
+  </a>{% unless forloop.last %}, {% endunless %}
 {%- endfor %}
 * `workflow`: {% if service.workflow == "none" or service.workflow == nil or service.workflow.size == 0 %}none{% else -%}
   {%- for wf in service.workflow -%}
