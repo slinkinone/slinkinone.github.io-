@@ -14,10 +14,10 @@ permalink: /tech/metadata/
 
 ## > metadata
 
-| name | description |
-| :--- | :--- |
-{%- assign metadata = site.data.release.json.classification.metadata -%}
-{%- for item in metadata -%}
+{% assign metadata = site.data.release.json.classification.metadata | sort: "name" %}
 
-| {{ item.name }} | {{ item.description | replace: "|", "\|" }} |
+{% for item in metadata %}
+## # {{ item.name }}
+{{ item.description }}
+
 {% endfor %}
