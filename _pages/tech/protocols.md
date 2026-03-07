@@ -61,11 +61,10 @@ total: [**60** items]
 {% assign filtered_protocols = "" | split: "" %}
 
 {% for item in all_tags %}
-  {% if item.categories contains 'protocol' %}
+  {% if item.categories contains 'Protocol' %}
     {% assign filtered_protocols = filtered_protocols | push: item %}
   {% endif %}
 {% endfor %}
-
 
 total: [{{ filtered_protocols.size }} items]
 
