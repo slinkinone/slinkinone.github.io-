@@ -62,13 +62,25 @@ todo
 
 ### // top 10 tags by traffic
 
-| name | packets | bytes |
-| :--- | :--- | :--- |
-{%- assign sorted_tags = test.tag_stat | sort: "bytes" | reverse -%}
-{%- for tag in sorted_tags limit: 10 -%}
-
-| {{ tag.name }} | {{ tag.packets }} | {{ tag.bytes | divided_by: 1024 }} KB |
-{% endfor %}
+<table style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="text-align: left; border-bottom: 1px solid;">name</th>
+      <th style="text-align: left; border-bottom: 1px solid;">packets</th>
+      <th style="text-align: left; border-bottom: 1px solid;">bytes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign sorted_tags = test.tag_stat | sort: "bytes" | reverse %}
+    {% for tag in sorted_tags limit: 10 %}
+    <tr>
+      <td style="padding: 5px 0;">{{ tag.name }}</td>
+      <td style="padding: 5px 0;">{{ tag.packets }}</td>
+      <td style="padding: 5px 0;">{{ tag.bytes | divided_by: 1024 }} KB</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 &nbsp;
 
