@@ -90,7 +90,6 @@ total: [{{ all_protocols.size | plus: filtered_protocols.size }} items]
 * **ports**: `{{ proto.ports | default: "none" }}`
 * **patterns**: `{{ proto.patterns | default: "none" }}`
 
-&nbsp;
 <!--{{ proto.description }}-->
 Description is absent.
 
