@@ -36,8 +36,14 @@ todo
   
 <h2 id="{{ test.test_name | slugify }}"># {{ test.test_name }}</h2>
 
-* **flow_count:** {{ test.flow_count | divided_by: 1000 }}k
-* **duration:** {{ test.time_ms }} ms
+<!--
+**flow_count:** {{ test.flow_count | divided_by: 1000 }}k
+**duration:** {{ test.time_ms }} ms
+-->
+
+{% assign flows_formatted = test.flow_count | reverse | replace: '(\d{3})', '\1 ' | reverse %} 
+**flow_count:** {{ test.flow_count | replace: ".", "," | reverse | replace: "000", "000 " | reverse }}
+**duration:** {{ test.time_ms | divided_by: 1000.0 | round: 2 }}s [{{ test.time_ms }}ms]
 
 ### // performance metrics
 
@@ -76,7 +82,8 @@ todo
     <tr>
       <td style="padding: 5px 0;">{{ tag.name }}</td>
       <td style="padding: 5px 0;">{{ tag.packets }}</td>
-      <td style="padding: 5px 0;">{{ tag.bytes | divided_by: 1024 }} KB</td>
+      {% comment %} 1024*1024.0 = 1048576.0 {% endcomment %}
+      <td style="padding: 5px 0;">{{ tag.bytes | divided_by: 1048576.0 | round: 2 }} MB</td>
     </tr>
     {% endfor %}
   </tbody>
