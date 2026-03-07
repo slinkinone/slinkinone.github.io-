@@ -92,7 +92,7 @@ total: [{{ all_protocols.size | plus: filtered_protocols.size }} items]
 Description is absent.
 
 {% unless forloop.last %}
-<!--<hr style="border-top: 1px dashed #333;">-->
+<hr style="border-top: 1px dashed #333;">
 {% endunless %}
 {% endfor %}
 
@@ -112,11 +112,8 @@ Description is absent.
 
 &nbsp;
 {{ tag.description }}
+
+{% unless forloop.last %}
+<hr style="border-top: 1px dashed #333;">
+{% endunless %}
 {% endfor %}
-
-## > protocol-fields
-
-<!--todo-->
-total: [**1157** items]
-
-todo
