@@ -14,10 +14,13 @@ permalink: /tech/protocols/
 
 ## > protocols
 
-<!--todo-->
-total: [**60** items]
+\# [decoders](/tech/info/decoders)
+\# [tables](/tech/info/tables)
 
 {% assign all_protocols = site.data.release.json.protocols.protocols.protocols | sort: "name" %}
+
+dissection total: [{{ all_protocols.size }} items]
+
 {% assign total_size = all_protocols.size %}
 {% assign half_size = total_size | divided_by: 2.0 | ceil %}
 
@@ -38,6 +41,20 @@ total: [**60** items]
 </table>
 </div>
 
+<!-- tag protocols -->
+
+{% assign all_tags = site.data.release.json.tag_info | sort: "name" %}
+{% assign filtered_protocols = "" | split: "" %}
+
+{% for item in all_tags %}
+  {% assign categories_string = item.categories | join: ',' | downcase %}
+  {% if categories_string contains 'protocol' %}
+    {% assign filtered_protocols = filtered_protocols | push: item %}
+  {% endif %}
+{% endfor %}
+
+detection total: [{{ filtered_protocols.size }} items]
+
 <hr>
 
 {% for proto in all_protocols %}
@@ -57,33 +74,13 @@ total: [**60** items]
 
 ## > protocol-tags
 
-{% assign all_tags = site.data.release.json.tag_info | sort: "name" %}
-{% assign filtered_protocols = "" | split: "" %}
-
-{% for item in all_tags %}
-  {% assign categories_string = item.categories | join: ',' | downcase %}
-  {% if categories_string contains 'protocol' %}
-    {% assign filtered_protocols = filtered_protocols | push: item %}
-  {% endif %}
-{% endfor %}
-
-total: [{{ filtered_protocols.size }} items]
-
 {% for tag in filtered_protocols %}
 <h3 id="{{ tag.short_name }}">
   <a href="#{{ tag.short_name }}">{{ tag.short_name }}</a>
 </h3>
 
-* `name`: {{ tag.name }}
-* `short_name`: {{ tag.short_name }}
-* `categories`: {% for cat in tag.categories -%}
-<a href="{{ '/tech/info/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat | downcase }}</a>{% unless forloop.last %}, {% endunless %}
-{%- endfor %}
-* `workflow`: {% if tag.workflow == "none" or service.workflow == nil or service.workflow.size == 0 %}none{% else -%}
-  {%- for wf in tag.workflow -%}
-<a href="{{ '/tech/info/workflow/' | relative_url }}#{{ wf | slugify }}">{{ wf }}</a>{% unless forloop.last %}, {% endunless %}
-  {%- endfor -%}
-{%- endif %}
+* **name**: {{ tag.name }}
+* **short_name**: {{ tag.short_name }}
 
 &nbsp;
 {{ tag.description }}
