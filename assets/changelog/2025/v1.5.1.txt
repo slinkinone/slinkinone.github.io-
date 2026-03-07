@@ -1,7 +1,0 @@
-v1.5.1 [21.05.2025]
-
-- CLI update (JSON output, config statistic)
-- More examples
-- CLI (CPU pinning)
-- Performance improvements
-- Small bug fixes

@@ -8,35 +8,23 @@ permalink: /tech/changelog/
 
 ## > changelog
 
-{% assign all_logs = site.static_files | where_exp: "item", "item.path contains '/data/changelog/'" | sort: "path" | reverse %}
+{% assign logs = site.static_files | where_exp: "item", "item.path contains '/tech/logs/'" | sort: "path" | reverse %}
 {% assign current_year = "" %}
 
-{% for log in all_logs %}
-  {% assign parts = log.path | split: "/" %}
-  {% comment %} Path: /data/changelog/2026/v1.13.9.txt -> index 3 is year {% endcomment %}
-  {% assign log_year = parts[3] %}
+{% for log in logs %}
+  {% assign year = log.path | split: "/" | slice: -2, 1 %}
 
-  {% if log_year != current_year %}
-    {% if current_year != "" %}</div>{% endif %}
-    {% assign current_year = log_year %}
+  {% if year != current_year %}
     <br>
-    ### # {{ current_year }}
-    <div class="changelog-year-section">
+    ### # {{ year }}
+    {% assign current_year = year %}
   {% endif %}
 
-  <details style="margin-bottom: 12px; cursor: pointer;">
-    <summary style="font-family: monospace;">
-      <b>{{ log.basename }}</b>
-    </summary>
-    <div style="margin-top: 10px; padding: 15px; background: #111; border: 1px dashed #444; font-family: monospace; white-space: pre-wrap; color: #0f0;">
-      {% comment %} 
-         Теперь путь считается от добавленного в конфиг data/changelog.
-         Поэтому передаем только 'year/filename'
-      {% endcomment %}
-      {% capture log_file %}{{ log_year }}/{{ log.name }}{% endcapture %}
-      {% include {{ log_file }} %}
-    </div>
+  <details style="margin-bottom: 10px; cursor: pointer;">
+    <summary style="font-family: monospace;"><b>{{ log.basename }}</b></summary>
+    <pre style="margin-top: 10px; padding: 10px; background: #111; border: 1px solid #333; color: #0f0; white-space: pre-wrap;">
+      {%- capture path -%}logs/{{ year }}/{{ log.name }}{%- endcapture -%}
+      {%- include_relative {{ path }} -%}
+    </pre>
   </details>
-
-  {% if forloop.last %}</div>{% endif %}
 {% endfor %}

@@ -1,5 +1,0 @@
-v1.10.1 [18.10.2025]
-
-- Update classification rules for the following services: Amazon, Apple, Facebook, Meta, Roblox, SalesForce, GitHub, Netflix, Twitch, Dropbox, Vultr
-- 34 new services: Google Marketing Platform, Gstatic, Eurosport, Blogger, Fox News, IMDb, Apple Siri, DuckDuckGo, Yahoo, LastPass, Bitwarden, 1Password, RoboForm, Notion, Obsidian, Wikipedia, Freelancer, Upwork, Glassdoor, Indeed, HeadHunter, Binance, Daily Mail, Der Spiegel, Forbes, Vox, SoundCloud, Last.fm, TripAdvisor, HBO, Cursor, Windsurf, Deezer, Yandex Marketing Platform
-- Hotline update: configuration updating without stopping traffic processing

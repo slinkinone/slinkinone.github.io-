@@ -1,5 +1,0 @@
-v1.6.0 [6.06.2025]
-
-- Update API to simplify DC Engine configuration
-- Update dependencies
-- Add Nintendo service

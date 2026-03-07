@@ -1,6 +1,0 @@
-v1.12.0 [10.11.2025]
-
-- Update classification rules for the following services: Meta, Facebook, Apple, Amazon AWS, Netflix
-- Universal session storage for byte-sequence data (in-built, user storage)
-- IP reclassification
-- Improve QUIC reassembler: message assembling from different packets

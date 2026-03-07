@@ -1,6 +1,0 @@
-v1.13.10 [03.03.2026]
-
-- New API functions: `getFlowSize` and `getSessionSize`
-- Fix Dockerfile: use ubuntu 24.04
-- Fix global user extension object return for Tuple3 flow callback function<
-- Remove test depepdencies from main libraries
