@@ -12,69 +12,49 @@ permalink: /tech/protocols/
 
 {% include back.html %}
 
-## > protocols
+{% comment %} 1. Prepare and Merge names for TOC {% endcomment %}
+{% assign engine_protos = site.data.release.json.protocols.protocols.protocols %}
+{% assign config_tags = "" | split: "" %}
 
-\# [decoders](/tech/info/decoders)
-\# [tables](/tech/info/tables)
-
-{% assign all_protocols = site.data.release.json.protocols.protocols.protocols | sort: "name" %}
-{% assign total_size = all_protocols.size %}
-{% assign half_size = total_size | divided_by: 2.0 | ceil %}
-
-<!-- tag protocols -->
-
-{% assign all_tags = site.data.release.json.tag_info | sort: "name" %}
-{% assign filtered_protocols = "" | split: "" %}
-
-{% for item in all_tags %}
+{% for item in site.data.release.json.tag_info %}
   {% assign categories_string = item.categories | join: ',' | downcase %}
   {% if categories_string contains 'protocol' %}
-    {% assign filtered_protocols = filtered_protocols | push: item %}
+    {% assign config_tags = config_tags | push: item %}
   {% endif %}
 {% endfor %}
 
-<!-- tag protocols -->
+{% assign unified_toc = "" | split: "" %}
+{% for p in engine_protos %}{% assign unified_toc = unified_toc | push: p.name %}{% endfor %}
+{% for t in config_tags %}{% assign unified_toc = unified_toc | push: t.short_name %}{% endfor %}
 
-<!-- content table of engine protocols -->
+{% assign sorted_toc = unified_toc | sort | uniq %}
+{% assign total_size = sorted_toc.size %}
 
-total: [{{ all_protocols.size | plus: filtered_protocols.size }} items]
+{% comment %} 2. Calculate size for 3 columns {% endcomment %}
+{% assign col_size = total_size | divided_by: 3.0 | ceil %}
+{% assign second_col_offset = col_size %}
+{% assign third_col_offset = col_size | times: 2 %}
 
-## # engine
+## > protocols
 
-total: [{{ filtered_protocols.size }} items]
-
-<div class="toc-container">
-<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
-  <tr>
-    <td style="vertical-align: top; width: 50%; border: none; padding-right: 20px;">
-      {% for proto in all_protocols limit: half_size %}
-        # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
-      {% endfor %}
-    </td>
-    <td style="vertical-align: top; width: 50%; border: none; padding-left: 20px;">
-      {% for proto in all_protocols offset: half_size %}
-        # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
-      {% endfor %}
-    </td>
-  </tr>
-</table>
-</div>
-
-## # configuration
-
-total: [{{ all_protocols.size }} items]
+total: [{{ total_size }} items]
 
 <div class="toc-container">
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <tr>
-    <td style="vertical-align: top; width: 50%; border: none; padding-right: 20px;">
-      {% for proto in filtered_protocols limit: half_size %}
-        # <a href="#{{ proto.short_name | slugify }}">{{ proto.short_name }}</a><br>
+    <td style="vertical-align: top; width: 33%; border: none; padding-right: 10px;">
+      {% for name in sorted_toc limit: col_size %}
+        # <a href="#{{ name | slugify }}">{{ name | downcase }}</a><br>
       {% endfor %}
     </td>
-    <td style="vertical-align: top; width: 50%; border: none; padding-left: 20px;">
-      {% for proto in filtered_protocols offset: half_size %}
-        # <a href="#{{ proto.short_name | slugify }}">{{ proto.short_name }}</a><br>
+    <td style="vertical-align: top; width: 33%; border: none; padding-right: 10px; padding-left: 10px;">
+      {% for name in sorted_toc offset: second_col_offset limit: col_size %}
+        # <a href="#{{ name | slugify }}">{{ name | downcase }}</a><br>
+      {% endfor %}
+    </td>
+    <td style="vertical-align: top; width: 33%; border: none; padding-left: 10px;">
+      {% for name in sorted_toc offset: third_col_offset %}
+        # <a href="#{{ name | slugify }}">{{ name | downcase }}</a><br>
       {% endfor %}
     </td>
   </tr>
@@ -82,6 +62,7 @@ total: [{{ all_protocols.size }} items]
 </div>
 
 <hr>
+
 
 ## > engine
 
