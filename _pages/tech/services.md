@@ -21,16 +21,10 @@ search: [{{ filtered_services.size }} items]
 
 <hr>
 
-
 {% for service in filtered_services %}
 <h3 id="{{ service.short_name }}">
   <a href="#{{ service.short_name }}">{{ service.short_name }}</a>
 </h3>
-
-<!--
-* `categories`: {{ service.categories | join: ", " }}
-* `workflow`: {{ service.workflow | join: ", " | default: "none" }}
--->
 
 * `short_name`: {{ service.short_name }}
 * `categories`: {% for cat in service.categories -%}
@@ -44,5 +38,5 @@ search: [{{ filtered_services.size }} items]
 
 &nbsp;
 {{ service.description }}
-  {% endif %}
+{% comment %} ЗДЕСЬ БЫЛ ЛИШНИЙ ENDIF, ОН УДАЛЕН {% endcomment %}
 {% endfor %}
