@@ -14,6 +14,10 @@ permalink: /tech/metadata/
 
 ## > metadata
 
+search: ...
+
+<hr>
+
 {% assign metadata = site.data.release.json.classification.metadata | sort: "name" %}
 
 {% for item in metadata %}
