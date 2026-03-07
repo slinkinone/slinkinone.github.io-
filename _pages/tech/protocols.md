@@ -57,7 +57,38 @@ total: [**60** items]
 
 ## > protocol-tags
 
-todo
+{% assign all_tags = site.data.release.json.tag_info | sort: "name" %}
+{% assign filtered_protocols = "" | split: "" %}
+
+{% for item in all_tags %}
+  {% if item.categories contains 'protocol' %}
+    {% assign filtered_protocols = filtered_protocols | push: item %}
+  {% endif %}
+{% endfor %}
+
+
+total: [{{ filtered_protocols.size }} items]
+
+{% for tag in filtered_protocols %}
+<h3 id="{{ tag.short_name }}">
+  <a href="#{{ tag.short_name }}">{{ tag.short_name }}</a>
+</h3>
+
+* `name`: {{ tag.name }}
+* `short_name`: {{ tag.short_name }}
+* `categories`: {% for cat in tag.categories -%}
+<a href="{{ '/tech/info/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat | downcase }}</a>{% unless forloop.last %}, {% endunless %}
+{%- endfor %}
+* `workflow`: {% if tag.workflow == "none" or service.workflow == nil or service.workflow.size == 0 %}none{% else -%}
+  {%- for wf in tag.workflow -%}
+<a href="{{ '/tech/info/workflow/' | relative_url }}#{{ wf | slugify }}">{{ wf }}</a>{% unless forloop.last %}, {% endunless %}
+  {%- endfor -%}
+{%- endif %}
+
+&nbsp;
+{{ tag.description }}
+{% endfor %}
+
 
 ## > protocol-fields
 
