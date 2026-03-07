@@ -12,49 +12,63 @@ permalink: /tech/protocols/
 
 {% include back.html %}
 
-{% comment %} 1. Prepare and Merge names for TOC {% endcomment %}
-{% assign engine_protos = site.data.release.json.protocols.protocols.protocols %}
-{% assign config_tags = "" | split: "" %}
+## > protocols
 
-{% for item in site.data.release.json.tag_info %}
+\# [decoders](/tech/info/decoders)
+\# [tables](/tech/info/tables)
+
+{% assign all_protocols = site.data.release.json.protocols.protocols.protocols | sort: "name" %}
+{% assign total_size = all_protocols.size %}
+{% assign half_size = total_size | divided_by: 2.0 | ceil %}
+
+<!-- tag protocols -->
+
+{% assign all_tags = site.data.release.json.tag_info | sort: "name" %}
+{% assign filtered_protocols = "" | split: "" %}
+
+{% for item in all_tags %}
   {% assign categories_string = item.categories | join: ',' | downcase %}
   {% if categories_string contains 'protocol' %}
-    {% assign config_tags = config_tags | push: item %}
+    {% assign filtered_protocols = filtered_protocols | push: item %}
   {% endif %}
 {% endfor %}
 
-{% assign unified_toc = "" | split: "" %}
-{% for p in engine_protos %}{% assign unified_toc = unified_toc | push: p.name %}{% endfor %}
-{% for t in config_tags %}{% assign unified_toc = unified_toc | push: t.short_name %}{% endfor %}
+<!-- tag protocols -->
 
-{% assign sorted_toc = unified_toc | sort | uniq %}
-{% assign total_size = sorted_toc.size %}
+<!-- content table of engine protocols -->
 
-{% comment %} 2. Calculate size for 3 columns {% endcomment %}
-{% assign col_size = total_size | divided_by: 3.0 | ceil %}
-{% assign second_col_offset = col_size %}
-{% assign third_col_offset = col_size | times: 2 %}
-
-## > protocols
-
-total: [{{ total_size }} items]
+total: [{{ all_protocols.size | plus: filtered_protocols.size }} items]
 
 <div class="toc-container">
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <tr>
-    <td style="vertical-align: top; width: 33%; border: none; padding-right: 10px;">
-      {% for name in sorted_toc limit: col_size %}
-        # <a href="#{{ name | slugify }}">{{ name | downcase }}</a><br>
+    <td style="vertical-align: top; width: 50%; border: none; padding-right: 20px;">
+      {% for proto in all_protocols limit: half_size %}
+        # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
       {% endfor %}
     </td>
-    <td style="vertical-align: top; width: 33%; border: none; padding-right: 10px; padding-left: 10px;">
-      {% for name in sorted_toc offset: second_col_offset limit: col_size %}
-        # <a href="#{{ name | slugify }}">{{ name | downcase }}</a><br>
+    <td style="vertical-align: top; width: 50%; border: none; padding-left: 20px;">
+      {% for proto in all_protocols offset: half_size %}
+        # <a href="#{{ proto.name | slugify }}">{{ proto.name }}</a><br>
       {% endfor %}
     </td>
-    <td style="vertical-align: top; width: 33%; border: none; padding-left: 10px;">
-      {% for name in sorted_toc offset: third_col_offset %}
-        # <a href="#{{ name | slugify }}">{{ name | downcase }}</a><br>
+  </tr>
+</table>
+</div>
+
+<!-- content table of configuration protocols -->
+
+<div class="toc-container">
+<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+  <tr>
+    <td style="vertical-align: top; width: 50%; border: none; padding-right: 20px;">
+      {% for proto in filtered_protocols limit: half_size %}
+        # <a href="#{{ proto.short_name | slugify }}">{{ proto.short_name }}</a><br>
+      {% endfor %}
+    </td>
+    <td style="vertical-align: top; width: 50%; border: none; padding-left: 20px;">
+      {% for proto in filtered_protocols offset: half_size %}
+        # <a href="#{{ proto.short_name | slugify }}">{{ proto.short_name }}</a><br>
       {% endfor %}
     </td>
   </tr>
@@ -63,34 +77,38 @@ total: [{{ total_size }} items]
 
 <hr>
 
-
-## > engine
+<!-- engine protocols -->
 
 {% for proto in all_protocols %}
 <h3 id="{{ proto.name | slugify }}"># {{ proto.name }}</h3>
 
+* **type**: `engine`
 * **osi layer**: `{{ proto.osi }}`
-{% if proto.ports != "" %}* **ports**: `{{ proto.ports }}`{% endif %}
-{% if proto.patterns != "" %}* **patterns**: `{{ proto.patterns }}`{% endif %}
+* **ports**: `{{ proto.ports | default: "none" }}`
+* **patterns**: `{{ proto.patterns | default: "none" }}`
 
 &nbsp;
+<!--{{ proto.description }}-->
+Description is absent.
 
 {% unless forloop.last %}
 <!--<hr style="border-top: 1px dashed #333;">-->
 {% endunless %}
 {% endfor %}
 
-<hr>
-
-## > configuration
+<!-- configuration protocols -->
 
 {% for tag in filtered_protocols %}
 <h3 id="{{ tag.short_name }}">
   <a href="#{{ tag.short_name }}">{{ tag.short_name }}</a>
 </h3>
 
-* **name**: {{ tag.name }}
-* **short_name**: {{ tag.short_name }}
+<!--* **name**: {{ tag.name }}-->
+<!--* **short_name**: {{ tag.short_name }}-->
+* **type**: `configuration`
+* **osi layer**: `-`
+* **ports**: `{{ proto.ports | default: "none" }}`
+* **patterns**: `{{ proto.patterns | default: "none" }}`
 
 &nbsp;
 {{ tag.description }}
@@ -100,15 +118,5 @@ total: [{{ total_size }} items]
 
 <!--todo-->
 total: [**1157** items]
-
-todo
-
-
-## > protocol-decoders
-
-todo
-
-
-## > information-tables
 
 todo
