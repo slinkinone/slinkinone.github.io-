@@ -14,14 +14,18 @@ permalink: /tech/metadata/
 
 ## > metadata
 
-search: ...
+<div class="toc-container">
+{% for item in metadata %}
+  # <a href="#{{ item.name | slugify }}">{{ item.name }}</a><br>
+{% endfor %}
+</div>
 
 <hr>
 
 {% assign metadata = site.data.release.json.classification.metadata | sort: "name" %}
 
 {% for item in metadata %}
-## # {{ item.name }}
+<h3 id="{{ item.name | slugify }}"># {{ item.name }}</h3>
 {{ item.description }}
 <hr>
 
