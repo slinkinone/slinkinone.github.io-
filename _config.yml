@@ -10,7 +10,7 @@ include:
   - _pages
   - _pages/tech/
   - _pages/tech/info/
-  - data/changelog
+  - _data/release/txt/changelog
 
 #
 
@@ -19,12 +19,6 @@ defaults:
       path: ""
     values:
       image: "/assets/img/logo.png"
-  - scope:
-      path: ""
-    values:
-      image: "/assets/img/logo.png"
-
-
 
 plugins:
   - jekyll-remote-theme
