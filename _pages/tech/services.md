@@ -25,6 +25,9 @@ permalink: /tech/services/
 
 total: [{{ filtered_services.size }} items]
 
+\# [!categories](/tech/info/categories)
+\# [!workflow](/tech/info/workflow)
+
 <hr>
 
 {% for service in filtered_services %}
