@@ -34,7 +34,7 @@ todo
 {% for file_entry in performance_files %}
   {% assign test = file_entry[1] %}
   
-<h2 id="{{ test.test_name | slugify }}"># test: {{ test.test_name }}</h2>
+<h2 id="{{ test.test_name | slugify }}"># {{ test.test_name }}</h2>
 
 * **flow_count:** {{ test.flow_count | divided_by: 1000 }}k
 * **duration:** {{ test.time_ms }} ms
@@ -42,12 +42,24 @@ todo
 ### // performance metrics
 
 
-| metric | engine {% unless test.engine_performance == test.offload_performance %}| offload{% endunless %} |
-| :--- | :--- {% unless test.engine_performance == test.offload_performance %}| :---{% endunless %} |
-| packets | {{ test.engine_performance.total_packets }} {% unless test.engine_performance == test.offload_performance %}| {{ test.offload_performance.total_packets }}{% endunless %} |
-| pps | {{ test.engine_performance.pps | round: 2 }} {% unless test.engine_performance == test.offload_performance %}| {{ test.offload_performance.pps | round: 2 }}{% endunless %} |
-| gbps | {{ test.engine_performance.gpbs | round: 3 }} {% unless test.engine_performance == test.offload_performance %}| {{ test.offload_performance.gpbs | round: 3 }}{% endunless %} |
-| mbps | {{ test.engine_performance.mpbs | round: 2 }} {% unless test.engine_performance == test.offload_performance %}| {{ test.offload_performance.mpbs | round: 2 }}{% endunless %} |
+{% if test.engine_performance == test.offload_performance %}
+
+| metric | engine |
+| :--- | :--- |
+| packets | {{ test.engine_performance.total_packets }} |
+| pps | {{ test.engine_performance.pps | round: 2 }} |
+| gbps | {{ test.engine_performance.gpbs | round: 3 }} |
+| mbps | {{ test.engine_performance.mpbs | round: 2 }} |
+{% else %}
+{% comment %}
+
+| metric | nic |
+| :--- | :--- |
+| packets | {{ test.offload_performance.total_packets }} |
+| pps | {{ test.offload_performance.pps | round: 2 }} |
+| gbps | {{ test.offload_performance.gpbs | round: 3 }} |
+| mbps | {{ test.offload_performance.mpbs | round: 2 }} |
+{% endif %}
 
 ### // top 10 tags by traffic
 
