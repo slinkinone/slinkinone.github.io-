@@ -1,312 +1,148 @@
 [
   {
     "short_name": "ftp_data",
-    "name": "ftp_data",
+    "name": "FTP DATA",
     "description": "FTP data trasnmission.",
     "categories": [
-      "metadata"
+      "Metadata"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "dns_over_tls",
-    "name": "dns_over_tls",
+    "name": "DNS Over TLS",
     "description": "Port based and ALPN signature classification for DNS Over TLS.",
     "categories": [
-      "protocol"
+      "Protocol"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "dns_over_quic",
-    "name": "dns_over_quic",
+    "name": "DNS Over QUIC",
     "description": "Port based and ALPN signature classification for DNS Over QUIC.",
     "categories": [
-      "protocol"
+      "Protocol"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "dnscrypt",
-    "name": "dnscrypt",
+    "name": "DNSCrypt",
     "description": "Port based and data signature classification for DNSCrypt.",
     "categories": [
-      "protocol"
+      "Protocol"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "srtp_over_dtls",
-    "name": "srtp_over_dtls",
+    "name": "SRTP Over DTLS",
     "description": "SRTP Over DTLS.",
     "categories": [
-      "protocol"
+      "Protocol"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "imaps",
-    "name": "imaps",
+    "name": "IMAPS",
     "description": "Secured IMAP.",
     "categories": [
-      "protocol",
-      "network_service",
-      "mail"
+      "Protocol",
+      "Network Service",
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "smtps",
-    "name": "smtps",
-    "description": "Secured SMTP.",
+    "name": "SMTPS",
+    "description": "Secured SMTPS.",
     "categories": [
-      "protocol",
-      "network_service",
-      "mail"
+      "Protocol",
+      "Network Service",
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ftps",
-    "name": "ftps",
-    "description": "Secured FTP.",
+    "name": "FTPS",
+    "description": "Secured SMTPS.",
     "categories": [
-      "protocol",
-      "network_service",
-      "mail"
+      "Protocol",
+      "Network Service",
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "pop3s",
-    "name": "pop3s",
+    "name": "POP3S",
     "description": "Secured POP3.",
     "categories": [
-      "protocol",
-      "network_service",
-      "mail"
+      "Protocol",
+      "Network Service",
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "nntps",
-    "name": "nntps",
+    "name": "NNTPS",
     "description": "Secured NNTP.",
     "categories": [
-      "protocol",
-      "network_service",
-      "mail"
+      "Protocol",
+      "Network Service",
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "rtp_over_quic",
-    "name": "rtp_over_quic",
+    "name": "RTP Over QUIC",
     "description": "ALPN signature classification for RTP Over QUIC.",
     "categories": [
-      "protocol"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "yandex",
-    "name": "yandex",
-    "description": "Yandex LLC is a Russian technology company that provides Internet-related products and services including a web browser, search engine, cloud computing, web mapping, online food ordering, streaming media, online shopping, and a ridesharing company.",
-    "categories": [
-      "ecosystem"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "google",
-    "name": "google",
-    "description": "Google LLC is an American multinational corporation and technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI).",
-    "categories": [
-      "ecosystem"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "meta",
-    "name": "meta",
-    "description": "Meta Platforms, Inc. is an American multinational technology company which owns and operates Facebook, Instagram, Threads, and WhatsApp, among other products and services.",
-    "categories": [
-      "ecosystem"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "apple",
-    "name": "apple",
-    "description": "Apple Inc. is an American multinational corporation and technology company.",
-    "categories": [
-      "ecosystem"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "yahoo",
-    "name": "yahoo",
-    "description": "Yahoo is an American web portal and internet services provider that offers a wide range of online services, including the search engine Yahoo Search, Yahoo Mail, Yahoo News, and Yahoo Finance.",
-    "categories": [
-      "ecosystem"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "yandex_cdn",
-    "name": "yandex_cdn",
-    "description": "Yandex Cloud CDN - a service for setting up Content Delivery Networks (CDN). Cloud CDN helps you streamline static content delivery for your web service, boost user loyalty, and improve your SEO ranking.",
-    "categories": [
-      "CDN"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "google_cloud",
-    "name": "google_cloud",
-    "description": "Google Cloud is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for their own consumer products, such as Google Search, Gmail, and YouTube.",
-    "categories": [
-      "cloud"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "ms365",
-    "name": "ms365",
-    "description": "Microsoft 365 is a cloud-powered productivity platform which provides the access to the following applications: Microsoft Teams, Word, Excel, PowerPoint, Outlook, OneDrive, and so much more.",
-    "categories": [
-      "office"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "cloudflare",
-    "name": "cloudflare",
-    "description": "Cloudflare is an American company that provides content delivery network services, cybersecurity, DDoS mitigation, wide area network services, reverse proxies, Domain Name Service, ICANN-accredited domain registration, and other services.",
-    "categories": [
-      "cloud",
-      "CDN"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "cloudflare_dns",
-    "name": "cloudflare_dns",
-    "description": "Cloudflare DNS is a service that provides both authoritative DNS and a public DNS resolver for faster and more private internet browsing.",
-    "categories": [
-      "DNS",
-      "network_service"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "fastly",
-    "name": "fastly",
-    "description": "Fastly is an American company that provides content delivery network services, image optimization, and load balancing services.",
-    "categories": [
-      "cloud",
-      "CDN"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "akamai",
-    "name": "akamai",
-    "description": "Akamai is the cybersecurity and cloud computing company that powers and protects business online.",
-    "categories": [
-      "cloud",
-      "CDN"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "amazon_aws",
-    "name": "amazon_aws",
-    "description": "Amazon Web Services (AWS) is a comprehensive and widely adopted cloud computing platform offered by Amazon.",
-    "categories": [
-      "cloud"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "amazon_cloudfront",
-    "name": "amazon_cloudfront",
-    "description": "Amazon CloudFront is a web service that speeds up distribution of your static and dynamic web content, such as .html, .css, .js, and image files, to your users.",
-    "categories": [
-      "CDN"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "cloudinary",
-    "name": "cloudinary",
-    "description": "Cloudinary is a cloud-based media experience platform that provides an end-to-end solution for managing and delivering images and videos.",
-    "categories": [
-      "CDN"
-    ],
-    "workflow": [
-    ]
-  },
-  {
-    "short_name": "yandex360",
-    "name": "yandex360",
-    "description": "The set of Yandex digital services such as mail, disk, telemost, calendar, notes, etc.",
-    "categories": [
-      "office"
+      "Protocol"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "digital_ocean",
-    "name": "digital_ocean",
+    "name": "Digital Ocean",
     "description": "DigitalOcean is a cloud computing platform, specifically an infrastructure as a service (IaaS) provider, designed to offer developers, startups, and small to medium-sized businesses (SMBs) simple and affordable cloud solutions.",
     "categories": [
-      "cloud"
+      "Cloud"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "vultr",
-    "name": "vultr",
+    "name": "Vultr",
     "description": "Vultr is a cloud computing company that provides cloud infrastructure services, including cloud servers, cloud storage, and bare metal solutions.",
     "categories": [
-      "cloud"
+      "Cloud"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "facebook_cdn",
-    "name": "facebook_cdn",
-    "description": "Facebook's CDN, also known as the Facebook Edge Network, is a distributed network of servers that stores and delivers content like images, videos, and scripts closer to users, optimizing content delivery and improving loading times.",
+    "short_name": "imgix",
+    "name": "Imgix",
+    "description": "Imgix is an image processing and optimization service delivered via CDN.",
     "categories": [
       "CDN"
     ],
@@ -315,18 +151,524 @@
   },
   {
     "short_name": "kingsoft",
-    "name": "kingsoft",
+    "name": "Kingsoft",
     "description": "Kingsoft is a Chinese software and internet services company that is known for its office suite, WPS Office, and its cloud computing services, Kingsoft Cloud.",
     "categories": [
-      "cloud",
+      "Cloud",
       "CDN"
     ],
     "workflow": [
     ]
   },
   {
+    "short_name": "cloudinary",
+    "name": "Cloudinary",
+    "description": "Cloudinary is a cloud-based media experience platform that provides an end-to-end solution for managing and delivering images and videos.",
+    "categories": [
+      "CDN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "amazon_aws",
+    "name": "Amazon AWS",
+    "description": "Amazon Web Services (AWS) is a comprehensive and widely adopted cloud computing platform offered by Amazon.",
+    "categories": [
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "amazon_cloudfront",
+    "name": "Amazon Cloudfront",
+    "description": "Amazon CloudFront is a web service that speeds up distribution of your static and dynamic web content, such as .html, .css, .js, and image files, to your users.",
+    "categories": [
+      "CDN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "akamai",
+    "name": "Akamai",
+    "description": "Akamai is the cybersecurity and cloud computing company that powers and protects business online.",
+    "categories": [
+      "Cloud",
+      "CDN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "fastly",
+    "name": "Fastly",
+    "description": "Fastly is an American company that provides content delivery network services, image optimization, and load balancing services.",
+    "categories": [
+      "Cloud",
+      "CDN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "cloudflare",
+    "name": "Cloudflare",
+    "description": "Cloudflare is an American company that provides content delivery network services, cybersecurity, DDoS mitigation, wide area network services, reverse proxies, Domain Name Service, ICANN-accredited domain registration, and other services.",
+    "categories": [
+      "Cloud",
+      "CDN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "yandex",
+    "name": "Yandex",
+    "description": "Yandex LLC is a Russian technology company that provides Internet-related products and services including a web browser, search engine, cloud computing, web mapping, online food ordering, streaming media, online shopping, and a ridesharing company.",
+    "categories": [
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "yandex_cdn",
+    "name": "Yandex CDN",
+    "description": "Yandex Cloud CDN - a service for setting up Content Delivery Networks (CDN). Cloud CDN helps you streamline static content delivery for your web service, boost user loyalty, and improve your SEO ranking.",
+    "categories": [
+      "CDN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "yandex360",
+    "name": "Yandex360",
+    "description": "The set of Yandex digital services such as mail, disk, telemost, calendar, notes, etc.",
+    "categories": [
+      "Office"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "google",
+    "name": "Google",
+    "description": "Google LLC is an American multinational corporation and technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI).",
+    "categories": [
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "google_cloud",
+    "name": "Google Cloud",
+    "description": "Google Cloud is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for their own consumer products, such as Google Search, Gmail, and YouTube.",
+    "categories": [
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "meta",
+    "name": "Meta",
+    "description": "Meta Platforms, Inc. is an American multinational technology company which owns and operates Facebook, Instagram, Threads, and WhatsApp, among other products and services.",
+    "categories": [
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "facebook_cdn",
+    "name": "Facebook CDN",
+    "description": "Facebook's CDN, also known as the Facebook Edge Network, is a distributed network of servers that stores and delivers content like images, videos, and scripts closer to users, optimizing content delivery and improving loading times.",
+    "categories": [
+      "CDN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "microsoft",
+    "name": "Microsoft",
+    "description": "Microsoft Public IP Space.",
+    "categories": [
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "apple",
+    "name": "Apple",
+    "description": "Apple Inc. is an American multinational corporation and technology company.",
+    "categories": [
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "yahoo",
+    "name": "Yahoo",
+    "description": "Yahoo is an American web portal and internet services provider that offers a wide range of online services, including the search engine Yahoo Search, Yahoo Mail, Yahoo News, and Yahoo Finance.",
+    "categories": [
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "adobe",
+    "name": "Adobe",
+    "description": "Adobe is a software company providing creative, marketing, and document management solutions.",
+    "categories": [
+      "Design",
+      "Productivity",
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "alibaba",
+    "name": "Alibaba",
+    "description": "Alibaba is a Chinese multinational technology company focused on e-commerce, cloud computing, logistics, and digital services.",
+    "categories": [
+      "Ecommerce",
+      "Marketplace",
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "baidu",
+    "name": "Baidu",
+    "description": "Baidu is a Chinese technology company focused on search, AI, and cloud computing.",
+    "categories": [
+      "Search Engine",
+      "AI",
+      "Cloud",
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "huawei",
+    "name": "Huawei",
+    "description": "Huawei is a multinational technology company specializing in telecommunications equipment and consumer electronics.",
+    "categories": [
+      "Telecom",
+      "Mobile",
+      "Ecosystem",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ibm",
+    "name": "IBM",
+    "description": "IBM is a global technology company offering enterprise software, hardware, cloud, and consulting services.",
+    "categories": [
+      "Enterprise",
+      "Cloud",
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "xiaomi",
+    "name": "Xiaomi",
+    "description": "Xiaomi is a consumer electronics company producing smartphones and smart devices.",
+    "categories": [
+      "Enterprise",
+      "Ecosystem"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "vmware",
+    "name": "VMware",
+    "description": "VMware develops virtualization and cloud infrastructure software.",
+    "categories": [
+      "Cloud",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "rackspace",
+    "name": "Rackspace",
+    "description": "Rackspace provides managed cloud and hosting services.",
+    "categories": [
+      "Cloud",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "heroku",
+    "name": "Heroku",
+    "description": "Heroku is a cloud platform for deploying and managing applications.",
+    "categories": [
+      "Cloud",
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "hostgator",
+    "name": "HostGator",
+    "description": "HostGator is a web hosting provider offering shared and cloud hosting.",
+    "categories": [
+      "Cloud",
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "uplynk",
+    "name": "Uplynk",
+    "description": "Uplynk provides cloud-based video streaming and monetization services.",
+    "categories": [
+      "Media",
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "oracle",
+    "name": "Oracle",
+    "description": "Oracle is an enterprise software company specializing in databases and cloud solutions.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "nvidia",
+    "name": "Nvidia",
+    "description": "NVIDIA designs GPUs and AI computing technologies.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "intel",
+    "name": "Intel",
+    "description": "Intel is a semiconductor company producing processors and computing technologies.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "cisco",
+    "name": "Cisco",
+    "description": "Cisco is a networking technology company providing hardware, software, and security solutions.",
+    "categories": [
+      "Security",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sony",
+    "name": "Sony",
+    "description": "Sony is a multinational corporation operating in electronics, gaming, and entertainment.",
+    "categories": [
+      "Enterprise",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "atlassian",
+    "name": "Atlassian",
+    "description": "Atlassian develops collaboration and project management software such as Jira and Confluence.",
+    "categories": [
+      "Enterprise",
+      "Productivity"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "qualcomm",
+    "name": "Qualcomm",
+    "description": "Qualcomm is a semiconductor company specializing in wireless communication technologies and mobile processors.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "amd",
+    "name": "AMD",
+    "description": "AMD is a semiconductor company designing CPUs and GPUs for consumer and enterprise markets.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "dell",
+    "name": "Dell",
+    "description": "Dell is a technology company producing computers, servers, and IT infrastructure.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "datadog",
+    "name": "Datadog",
+    "description": "Datadog is a cloud-based monitoring and observability platform for infrastructure and applications.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "new_relic",
+    "name": "New Relic",
+    "description": "New Relic is an observability platform for monitoring application performance.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "pendo",
+    "name": "Pendo",
+    "description": "Pendo provides product analytics and user experience insights.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sap",
+    "name": "SAP",
+    "description": "SAP provides enterprise software for business operations and analytics.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "servicenow",
+    "name": "ServiceNow",
+    "description": "ServiceNow is a cloud platform for IT service management and automation.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tableau",
+    "name": "Tableau",
+    "description": "Tableau is a data visualization and business intelligence platform.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tesla",
+    "name": "Tesla",
+    "description": "Tesla is an electric vehicle and energy technology company.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "red_hat",
+    "name": "Red Hat",
+    "description": "Red Hat provides enterprise open-source software solutions.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ubiquiti",
+    "name": "Ubiquiti",
+    "description": "Ubiquiti develops networking hardware and wireless communication products.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zoho",
+    "name": "Zoho",
+    "description": "Zoho provides a suite of cloud-based business applications.",
+    "categories": [
+      "Office",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ms365",
+    "name": "MS365",
+    "description": "Microsoft 365 is a cloud-powered productivity platform which provides the access to the following applications: Microsoft Teams, Word, Excel, PowerPoint, Outlook, OneDrive, and so much more.",
+    "categories": [
+      "Office"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "cloudflare_dns",
+    "name": "Cloudflare DNS",
+    "description": "Cloudflare DNS is a service that provides both authoritative DNS and a public DNS resolver for faster and more private internet browsing.",
+    "categories": [
+      "DNS",
+      "Network Service"
+    ],
+    "workflow": [
+    ]
+  },
+  {
     "short_name": "telegram",
-    "name": "telegram",
+    "name": "Telegram",
     "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
     "categories": [
       "IM"
@@ -336,7 +678,7 @@
   },
   {
     "short_name": "viber",
-    "name": "viber",
+    "name": "Viber",
     "description": "Viber is a cross-platform voice over IP (VoIP) and instant messaging (IM) software application owned by Japanese multinational company Rakuten, provided as freeware for the Google Android, iOS, Microsoft Windows, Apple macOS and Linux platforms.",
     "categories": [
       "IM"
@@ -346,88 +688,148 @@
   },
   {
     "short_name": "youtube",
-    "name": "youtube",
+    "name": "YouTube",
     "description": "YouTube is an American social media and online video sharing platform owned by Google.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_cloud",
-    "name": "yandex_cloud",
+    "name": "Yandex Cloud",
     "description": "Yandex Cloud - a full-fledged cloud platform providing scalable infrastructure, storage, machine learning and development tools to build and enhance digital services and applications.",
     "categories": [
-      "cloud"
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tencent_cloud",
+    "name": "Tencent Cloud",
+    "description": "Tencent Cloud delivers cloud computing, big data, and AI services from Tencent.",
+    "categories": [
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "oracle_cloud",
+    "name": "Oracle Cloud",
+    "description": "Oracle Cloud provides cloud infrastructure and enterprise applications.",
+    "categories": [
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "alibaba_cloud",
+    "name": "Alibaba Cloud",
+    "description": "Alibaba Cloud is a cloud computing platform providing infrastructure, platform, and data services.",
+    "categories": [
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "huawei_cloud",
+    "name": "Huawei Cloud",
+    "description": "Huawei Cloud provides enterprise cloud infrastructure, AI services, and data platforms.",
+    "categories": [
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ibm_cloud",
+    "name": "IBM Cloud",
+    "description": "IBM Cloud is a hybrid cloud platform designed for enterprise workloads and AI-driven applications.",
+    "categories": [
+      "Cloud"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "redis_cloud",
+    "name": "Redis Cloud",
+    "description": "Redis Cloud is a fully managed database-as-a-service that brings the speed and reliability of Redis to the cloud, offering seamless scalability.",
+    "categories": [
+      "Code"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_dns",
-    "name": "yandex_dns",
+    "name": "Yandex DNS",
     "description": "Yandex DNS service.",
     "categories": [
       "DNS",
-      "network_service"
+      "Network Service"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ms_teams",
-    "name": "ms_teams",
+    "name": "MS Teams",
     "description": "Microsoft Teams is a team collaboration application developed by Microsoft as part of the Microsoft 365 family of products, offering workspace chat and video conferencing, file storage, and integration of proprietary and third-party applications and services.",
     "categories": [
-      "office"
+      "Office"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ms_exchange",
-    "name": "ms_exchange",
+    "name": "MS Exchange",
     "description": "Microsoft Exchange Service is Microsoft's email, calendaring, contact, scheduling and collaboration platform.",
     "categories": [
-      "office"
+      "Office"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ms_sharepoint",
-    "name": "ms_sharepoint",
+    "name": "MS Sharepoint",
     "description": "SharePoint Online and OneDrive for Business.",
     "categories": [
-      "office"
+      "Office"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ms_azure",
-    "name": "ms_azure",
+    "name": "MS Azure",
     "description": "Microsoft Azure is the cloud computing platform developed by Microsoft. It has management, access and development of applications and services to individuals, companies, and governments through its global infrastructure.",
     "categories": [
-      "cloud"
+      "Cloud"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "facebook",
-    "name": "facebook",
+    "name": "Facebook",
     "description": "Facebook is a social media and social networking service owned by the American technology conglomerate Meta.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "whatsapp",
-    "name": "whatsapp",
+    "name": "WhatsApp",
     "description": "WhatsApp is an instant messaging (IM) and voice-over-IP (VoIP) service owned by technology conglomerate Meta.",
     "categories": [
       "IM"
@@ -437,536 +839,1325 @@
   },
   {
     "short_name": "instagram",
-    "name": "instagram",
+    "name": "Instagram",
     "description": "Instagram is a photo and video sharing social networking service owned by Meta Platforms.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "twitter",
-    "name": "twitter",
+    "name": "Twitter",
     "description": "Twitter is a social networking service that was rebranded in 2023 to create the social networking service X.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "vkontakte",
-    "name": "vkontakte",
+    "name": "VKontakte",
     "description": "VK (VKontakte) is a Russian online social media and social networking service based in Saint Petersburg.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "discord",
-    "name": "discord",
+    "name": "Discord",
     "description": "Discord is a free communication app used by tens of millions of people to talk and hang out with their favorite creators, communities and friends.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "nintendo",
-    "name": "nintendo",
+    "name": "Nintendo",
     "description": "Nintendo is a multinational consumer electronics and video game company.",
     "categories": [
-      "gaming"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "sberbank",
-    "name": "sberbank",
+    "name": "SberBank",
     "description": "Sberbank is a large Russian banking and financial services company.",
     "categories": [
-      "banking"
+      "Banking"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "tbank",
-    "name": "tbank",
+    "name": "TBank",
     "description": "TBank, formerly known as Tinkoff Bank is a Russian commercial bank.",
     "categories": [
-      "banking"
+      "Banking"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "revolut",
-    "name": "revolut",
+    "name": "Revolut",
     "description": "Revolut is a British multinational neobank and fintech company that offers banking services for individuals and businesses.",
     "categories": [
-      "banking"
+      "Banking"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "alfabank",
-    "name": "alfabank",
+    "name": "AlfaBank",
     "description": "Alfa Bank JSC is the largest of the private banks in Russia.",
     "categories": [
-      "banking"
+      "Banking"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "raiffeisenbank",
-    "name": "raiffeisenbank",
+    "name": "RaiffeisenBank",
     "description": "Raiffeisen Bank International (RBI) is a key entity of the decentralized Raiffeisen Banking Group in Austria, acting both as the latter's domestic central financial entity and as the holding company for all the group's operations outside of Austria.",
     "categories": [
-      "banking"
+      "Banking"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "paypal",
-    "name": "paypal",
+    "name": "PayPal",
     "description": "PayPal is an online payment system that allows you to send and receive money around the world.",
     "categories": [
-      "ecommerce"
+      "Ecommerce"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "stripe",
-    "name": "stripe",
+    "name": "Stripe",
     "description": "Stripe is an online payment processing platform that allows businesses to accept payments online, send payouts, and manage their finances.",
     "categories": [
-      "payment",
-      "ecommerce"
+      "Payment",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "payproglobal",
+    "name": "PayPro Global",
+    "description": "A global e-commerce and payment processing platform for software and digital goods companies.",
+    "categories": [
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "cloudtips",
+    "name": "CloudTips",
+    "description": "A leading platform that lets your audience support you with one-click tips during live streams and on social media, turning engagement into earnings.",
+    "categories": [
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sber_tips",
+    "name": "Sber Tips",
+    "description": "A seamless micro-donation service integrated into SberBank's ecosystem, enabling easy tips and donations to creators and charities directly from your bank account.",
+    "categories": [
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "netmonet",
+    "name": "NetMonet",
+    "description": "A Russian fintech platform for restaurants and service businesses that started as a QR-code based cashless tipping service but expanded to offer digital menus, online ordering, and bill payment, all integrated through QR codes for easy customer use and business management.",
+    "categories": [
+      "Ecommerce"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "alipay",
-    "name": "alipay",
+    "name": "Alipay",
     "description": "Alipay is a popular digital wallet and mobile payment app, primarily used in China, that facilitates online and in-store payments, money transfers, and various lifestyle services like booking taxis and paying bills.",
     "categories": [
-      "payment",
-      "ecommerce"
+      "Payment",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "adyen",
+    "name": "Adyen",
+    "description": "Adyen is a global payment processing platform for online and in-store payments.",
+    "categories": [
+      "Payment",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "afterpay",
+    "name": "Afterpay",
+    "description": "Afterpay offers installment-based payment services for consumers.",
+    "categories": [
+      "Payment",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "american_express",
+    "name": "American Express",
+    "description": "American Express is a financial services company offering credit cards and payment solutions.",
+    "categories": [
+      "Banking",
+      "Payment"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mastercard",
+    "name": "Mastercard",
+    "description": "Mastercard is a global payment network enabling electronic transactions.",
+    "categories": [
+      "Payment",
+      "Banking"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "paytm",
+    "name": "Paytm",
+    "description": "Paytm is a digital payments and financial services platform.",
+    "categories": [
+      "Payment"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "razorpay",
+    "name": "Razorpay",
+    "description": "Razorpay is a payment gateway and financial services platform.",
+    "categories": [
+      "Payment",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "square",
+    "name": "Square",
+    "description": "Square provides payment processing and point-of-sale solutions for businesses.",
+    "categories": [
+      "Payment"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "visa",
+    "name": "Visa",
+    "description": "Visa is a global payments technology company facilitating digital payments.",
+    "categories": [
+      "Payment",
+      "Banking"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wells_fargo",
+    "name": "Wells Fargo",
+    "description": "Wells Fargo is a multinational financial services company.",
+    "categories": [
+      "Banking",
+      "Payment"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wise",
+    "name": "Wise",
+    "description": "Wise is a financial technology company offering international money transfers.",
+    "categories": [
+      "Payment"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "zoom",
-    "name": "zoom",
+    "name": "Zoom",
     "description": "Zoom is a cloud-based video conferencing platform that enables users to conduct online meetings, webinars, and live chats.",
     "categories": [
-      "meetings"
+      "Meetings"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "adobe_connect",
+    "name": "Adobe Connect",
+    "description": "Adobe Connect is a web conferencing and virtual classroom platform.",
+    "categories": [
+      "Meetings"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "spotify",
-    "name": "spotify",
+    "name": "Spotify",
     "description": "Spotify is a popular audio streaming service that provides access to millions of songs, podcasts, and other audio content.",
     "categories": [
-      "music",
-      "media"
+      "Music",
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "dropbox",
-    "name": "dropbox",
+    "name": "Dropbox",
     "description": "Dropbox is a cloud storage service that allows users to store, share, and sync files across multiple devices.",
     "categories": [
-      "file_storage"
+      "File Storage"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "zendesk",
-    "name": "zendesk",
+    "name": "Zendesk",
     "description": "Zendesk is a cloud-based customer service platform that helps businesses manage and streamline interactions with customers across various channels like email, chat, social media, and voice calls.",
     "categories": [
-      "enterprise"
+      "Enterprise"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "twitch",
-    "name": "twitch",
+    "name": "Twitch",
     "description": "Twitch is an interactive livestreaming service for content spanning gaming, entertainment, sports, music, and more.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "teamviewer",
-    "name": "teamviewer",
+    "name": "TeamViewer",
     "description": "TeamViewer is a software application that enables remote access, control, and support for computers and other devices. ",
     "categories": [
-      "enterprise",
-      "remote_access"
+      "Enterprise",
+      "Remote Access"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "github",
-    "name": "github",
+    "name": "GitHub",
     "description": "GitHub is a proprietary developer platform that allows developers to create, store, manage, and share their code.",
     "categories": [
-      "code",
-      "social_network"
+      "Code",
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "gitlab",
-    "name": "gitlab",
+    "name": "GitLab",
     "description": "GitLab is a web-based DevOps platform that provides Git repository management, CI/CD, and other tools for software development and project management.",
     "categories": [
-      "code",
-      "social_network"
+      "Code",
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sourceforge",
+    "name": "SourceForge",
+    "description": "A long-established web service for software developers to manage and distribute open-source software.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "codility",
+    "name": "Codility",
+    "description": "A platform used by companies to test the coding skills of potential hires.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "leetcode",
+    "name": "LeetCode",
+    "description": "A global platform for practicing coding problems and preparing for technical interviews.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "laravel",
+    "name": "Laravel",
+    "description": "A popular, elegant open-source PHP web framework for building web applications.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "gitbook",
+    "name": "GitBook",
+    "description": "A modern documentation platform powered by Git, where teams can document knowledge and products.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tilda",
+    "name": "Tilda",
+    "description": "A popular Russian no-code website builder focused on creating beautiful landing pages and websites.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "flutterflow",
+    "name": "FlutterFlow",
+    "description": "A low-code visual builder for creating native mobile applications using Google's Flutter framework.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "jfrog",
+    "name": "jFrog",
+    "description": "A global technology company providing a universal DevOps platform for binary repository management (Artifactory).",
+    "categories": [
+      "Code"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "webex",
-    "name": "webex",
+    "name": "Webex",
     "description": "Webex is a comprehensive collaboration platform developed by Cisco.",
     "categories": [
-      "meetings"
+      "Meetings"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "2gis",
-    "name": "2gis",
+    "name": "2GIS",
     "description": "2GIS is a free business listings app with a detailed 3D city map, contact details, and public transport routes.",
     "categories": [
-      "maps"
+      "Maps"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "speedtest",
-    "name": "speedtest",
+    "name": "SpeedTest",
     "description": "SpeedTest is a web service that provides free analysis of Internet access performance metrics, such as connection data rate and latency.",
     "categories": [
-      "web"
+      "Web"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ozon",
-    "name": "ozon",
+    "name": "Ozon",
     "description": "Ozon is a leading multi-category e-commerce platform and one of the largest internet companies in Russia.",
     "categories": [
-      "marketplace"
+      "Marketplace"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "wildberries",
-    "name": "wildberries",
+    "name": "Wildberries",
     "description": "Wildberries is a major Russian e-commerce platform and online retailer.",
     "categories": [
-      "marketplace"
+      "Marketplace"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "biggeek",
+    "name": "BigGeek",
+    "description": "A Russian online retailer specializing in gadgets, electronics, and novelty tech items.",
+    "categories": [
+      "Marketplace"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "avito",
-    "name": "avito",
+    "name": "Avito",
     "description": "Avito is a Russian classified advertisements website with sections devoted to general goods for sale, jobs, real estate, personals, cars for sale, and services.",
     "categories": [
-      "marketplace"
+      "Marketplace"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "profi_ru",
+    "name": "PROFI RU",
+    "description": "A large Russian online platform for finding and hiring local service professionals (freelancers for repairs, tutoring, events, etc.).",
+    "categories": [
+      "Job"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "betboom",
+    "name": "BetBoom",
+    "description": "A popular Russian online bookmaker and betting platform.",
+    "categories": [
+      "Bookmaker"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "winline",
+    "name": "Winline",
+    "description": "A major Russian bookmaker and betting company.",
+    "categories": [
+      "Bookmaker"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "fonbet",
+    "name": "Fonbet",
+    "description": "One of Russia's largest and oldest betting companies, offering sports betting and casinos.",
+    "categories": [
+      "Bookmaker"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "pari",
+    "name": "PARI",
+    "description": "A leading Russian bookmaker, rebranded from Liga Stavok.",
+    "categories": [
+      "Bookmaker"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "leon",
+    "name": "Leon",
+    "description": "An international brand for online betting and casino games.",
+    "categories": [
+      "Bookmaker"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "olimpbet",
+    "name": "OlimpBet",
+    "description": "A Russian bookmaking company.",
+    "categories": [
+      "Bookmaker"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "betcity",
+    "name": "BetCity",
+    "description": "A Russian bookmaker.",
+    "categories": [
+      "Bookmaker"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ligastavok",
+    "name": "LigaStavok",
+    "description": "A major Russian bookmaker, now rebranded as Pari.",
+    "categories": [
+      "Bookmaker"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "galaxystore",
-    "name": "galaxystore",
+    "name": "GalaxyStore",
     "description": "The Galaxy Store is Samsung's app store, exclusively for Galaxy devices like smartphones, tablets, and smartwatches.",
     "categories": [
-      "application_store"
+      "Application Store"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "rustore",
-    "name": "rustore",
+    "name": "RuStore",
     "description": "RuStore is the official Russian app store for Android devices.",
     "categories": [
-      "application_store"
+      "Application Store"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "appgallery",
-    "name": "appgallery",
+    "name": "AppGallery",
     "description": "Huawei AppGallery is Huawei's official app distribution platform, functioning as a marketplace for users to discover, download, manage, and share apps on Huawei devices.",
     "categories": [
-      "application_store"
+      "Application Store"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "rutracker",
+    "name": "RuTracker",
+    "description": "A very large and popular Russian-language BitTorrent tracker and forum.",
+    "categories": [
+      "Torrent"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "the_pirate_bay",
+    "name": "The Pirate Bay",
+    "description": "The Pirate Bay is an online index for peer-to-peer file sharing.",
+    "categories": [
+      "Torrent"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "gosuslugi",
-    "name": "gosuslugi",
+    "name": "GosUslugi",
     "description": "Gosuslugi is a digital platform operated by the Russian government that providing individuals and legal entities with online access to information about state and municipal services.",
     "categories": [
-      "government"
+      "Government"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "regru",
+    "name": "Reg RU",
+    "description": "A major Russian domain name registrar and web hosting provider.",
+    "categories": [
+      "Hosting"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ru_center",
+    "name": "Ru Center",
+    "description": "One of Russia's largest and oldest domain registrars and hosting providers.",
+    "categories": [
+      "Hosting"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "nalog_ru",
+    "name": "Nalog Ru",
+    "description": "The official website of Russia's Federal Tax Service (FTS).",
+    "categories": [
+      "Government"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "rzd",
+    "name": "RZD",
+    "description": "Russian Railways. The state-owned national railway company of Russia, operating passenger and freight services.",
+    "categories": [
+      "Railways"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "whoosh",
+    "name": "Whoosh",
+    "description": "A major Russian scooter and bicycle sharing service, similar to Bird or Lime in other countries. It is one of the largest micromobility operators in Russia and the CIS.",
+    "categories": [
+      "Drive"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "urent",
+    "name": "Urent",
+    "description": "An e-scooter and bike-sharing service provider of e-scooter and bikes for public transportation and urban mobility.",
+    "categories": [
+      "Drive"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "megafon",
+    "name": "Megafon",
+    "description": "A major Russian telecommunications provider offering mobile, fixed-line, and internet services.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tele2",
+    "name": "Tele2",
+    "description": "A large, value-focused mobile operator in Russia, known for competitive pricing.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "beeline",
+    "name": "Beeline",
+    "description": "A key brand of VimpelCom, offering mobile, TV, and internet services across Russia.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "yota",
+    "name": "Yota",
+    "description": "A Russian mobile virtual network operator (MVNO) and internet service provider, often recognized for its 4G/LTE networks.",
+    "categories": [
+      "Telecom",
+      "Mobile",
+      "Mvno"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tinkoff_mobile",
+    "name": "Tinkoff Mobile",
+    "description": "T-Mobile (formerly Tinkoff Mobile) is a Russian Mobile Virtual Network Operator (MVNO) that is part of the T-Bank (formerly Tinkoff Bank) ecosystem.",
+    "categories": [
+      "Telecom",
+      "Mobile",
+      "Mvno"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sber_mobile",
+    "name": "Sber Mobile",
+    "description": "A mobile virtual network operator (MVNO) launched by SberBank, Russia's largest bank, offering telecom services to its customers.",
+    "categories": [
+      "Telecom",
+      "Mobile",
+      "Mvno"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "emirates",
+    "name": "Emirates",
+    "description": "A major international airline based in Dubai, United Arab Emirates.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "s7",
+    "name": "S7",
+    "description": "A leading Russian airline, based in Novosibirsk, and a member of the oneworld alliance.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "aeroflot",
+    "name": "Aeroflot",
+    "description": "The flag carrier and largest airline of Russia.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "pobeda",
+    "name": "Pobeda",
+    "description": "A low-cost airline based in Russia, a subsidiary of Aeroflot Group.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "utair",
+    "name": "Utair",
+    "description": "A Russian airline with a focus on regional and charter flights, especially in Western Siberia.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ural_airlines",
+    "name": "Ural Airlines",
+    "description": "A Russian airline based in Yekaterinburg.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "nordwind",
+    "name": "NordWind",
+    "description": "A Russian charter airline.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "smartavia",
+    "name": "Smartavia",
+    "description": "A Russian airline formerly known as Nordavia.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "redwings",
+    "name": "Redwings",
+    "description": "A Russian scheduled and charter airline.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "american_airlines",
+    "name": "American Airlines",
+    "description": "American Airlines is a major airline providing passenger and cargo transportation.",
+    "categories": [
+      "Airline"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "chat_ruletka",
+    "name": "Chat Ruletka",
+    "description": "A globally known online platform for random video chatting with strangers.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "lucidchart",
+    "name": "LucidChart",
+    "description": "An international cloud-based intelligent diagramming and visualization application.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "dribbble",
+    "name": "Dribbble",
+    "description": "A global online community and social platform for designers to showcase their work.",
+    "categories": [
+      "Design",
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "uber",
-    "name": "uber",
+    "name": "Uber",
     "description": "Uber is a multinational technology company that connects users to on-demand transportation and delivery services through its smartphone app.",
     "categories": [
-      "drive"
+      "Drive"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "booking",
-    "name": "booking",
+    "name": "Booking",
     "description": "Booking.com is a leading online travel platform that connects travelers with accommodations, flights, car rentals, and tours and activities worldwide.",
     "categories": [
-      "travel"
+      "Travel"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "airbnb",
-    "name": "airbnb",
+    "name": "Airbnb",
     "description": "Airbnb is an American company operating an online marketplace for short-and-long-term homestays, experiences and services in various countries and regions.",
     "categories": [
-      "travel"
+      "Travel"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "aviasales",
-    "name": "aviasales",
+    "name": "Aviasales",
     "description": "Aviasales is a travel metasearch service that helps users find and compare the best prices for flight tickets by aggregating results from numerous airlines and travel agencies.",
     "categories": [
-      "travel"
+      "Travel"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "skyscanner",
-    "name": "skyscanner",
+    "name": "Skyscanner",
     "description": "Skyscanner is a global travel search engine that helps users find and compare prices for flights, hotels, and car rentals from various providers to book their trips.",
     "categories": [
-      "travel"
+      "Travel"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ostrovok",
-    "name": "ostrovok",
+    "name": "Ostrovok",
     "description": "Ostrovok is a Russian online travel platform that allows users to book hotels, flights, apartments, and other accommodations worldwide.",
     "categories": [
-      "travel"
+      "Travel"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "sutochno",
-    "name": "sutochno",
+    "name": "Sutochno",
     "description": "Sutochno.ru is a Russian online short-term rental accommodation booking service offering travelers apartments, houses, cottages, and rooms in Russia and other countries.",
     "categories": [
-      "travel"
+      "Travel"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "cian",
-    "name": "cian",
+    "name": "CIAN",
     "description": "Cian.ru is Russia's leading online real estate platform, providing residential and commercial real estate sales and rentals.",
     "categories": [
-      "real_estate"
+      "Real Estate"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "sports",
-    "name": "sports",
+    "name": "Sports",
     "description": "Sports.ru is a major Russian online sports publication, founded in 1998, that provides news, broadcasts, analysis, and runs a social community for fans.",
     "categories": [
-      "news",
-      "sport"
+      "News",
+      "Sport"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "championat",
+    "name": "Championat",
+    "description": "Championat is a Russian digital sports media platform providing comprehensive coverage of domestic and international sporting events.",
+    "categories": [
+      "News",
+      "Sport"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sportbox",
+    "name": "SportBox",
+    "description": "Sportbox is a Russian sports information portal focused on live coverage, results, and multimedia content.",
+    "categories": [
+      "News",
+      "Sport"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "match_tv",
+    "name": "Match TV",
+    "description": "Match TV is a Russian sports television network and digital platform that broadcasts live sporting events, sports news programs, and analytical shows.",
+    "categories": [
+      "News",
+      "Sport"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "yandex_drive",
+    "name": "Yandex Drive",
+    "description": "Russian car-sharing service that provides short-term vehicle rentals through a mobile application.",
+    "categories": [
+      "Drive"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "delimobil",
+    "name": "DeliMobil",
+    "description": "Car-sharing platform in Russia that enables users to rent vehicles for short trips using a smartphone app.",
+    "categories": [
+      "Drive"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "citydrive",
+    "name": "CityDrive",
+    "description": "Russian car-sharing service offering access to a fleet of vehicles for short- and medium-term use.",
+    "categories": [
+      "Drive"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "belkacar",
+    "name": "BelkaCar",
+    "description": "Russian car-sharing service offering access to a fleet of vehicles for short- and medium-term use.",
+    "categories": [
+      "Drive"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "citymobil",
+    "name": "CityMobil",
+    "description": "Russian ride-hailing and taxi aggregation service that connects passengers with drivers via a mobile application.",
+    "categories": [
+      "Drive"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "bbc",
-    "name": "bbc",
+    "name": "BBC",
     "description": "The BBC is the world's leading public service broadcaster.",
     "categories": [
-      "travel"
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "washington_post",
-    "name": "washington_post",
+    "name": "Washington Post",
     "description": "The Washington Post (WaPo or WP) is an American daily newspaper published in Washington, D.C., the national capital.",
     "categories": [
-      "news"
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "wall_street_journal",
-    "name": "wall_street_journal",
+    "name": "Wall Street Journal",
     "description": "The Wall Street Journal (WSJ) is an American daily business and financial newspaper, and a global news organization, published by Dow Jones & Company.",
     "categories": [
-      "news"
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "bloomberg",
-    "name": "bloomberg",
+    "name": "Bloomberg",
     "description": "Bloomberg is a global provider of financial news and information, including real-time and historical price data, trading news, and analyst coverage.",
     "categories": [
-      "news"
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "pinterest",
-    "name": "pinterest",
+    "name": "Pinterest",
     "description": "Pinterest is a visual discovery engine for finding ideas like recipes, home and style inspiration, and more.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "samokat",
-    "name": "samokat",
+    "name": "Samokat",
     "description": "Samokat is a Russian-founded instant delivery service that delivers groceries and household goods in approximately 15 minutes.",
     "categories": [
-      "delivery",
-      "food"
+      "Delivery",
+      "Food"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "lamoda",
-    "name": "lamoda",
+    "name": "Lamoda",
     "description": "Lamoda is a major online fashion retailer and marketplace in Russia and the CIS, selling a wide range of clothing, shoes, accessories, cosmetics, and household goods from global brands.",
     "categories": [
-      "onlineshop",
-      "clothes"
+      "Onlineshop",
+      "Clothes"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "chess_com",
-    "name": "chess_com",
+    "name": "Chess Com",
     "description": "Chess.com is the world's largest online chess platform.",
     "categories": [
-      "gaming"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ebay",
-    "name": "ebay",
+    "name": "eBay",
     "description": "eBay is a global e-commerce platform where users can buy and sell a vast range of new and used items, from collectibles to everyday goods.",
     "categories": [
-      "marketplace"
+      "Marketplace"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "amazon_com",
-    "name": "amazon_com",
+    "name": "Amazon Com",
     "description": "Amazon.com is the US-specific e-commerce website of the American multinational technology company, Amazon, Inc., a global leader in online retail, cloud computing, and digital streaming.",
     "categories": [
-      "marketplace"
+      "Marketplace"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "aliexpress",
+    "name": "AliExpress",
+    "description": "AliExpress is an online retail marketplace connecting global buyers and sellers.",
+    "categories": [
+      "Marketplace"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "etsy",
+    "name": "Etsy",
+    "description": "Etsy is an online marketplace for handmade and vintage goods.",
+    "categories": [
+      "Marketplace",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "gumtree",
+    "name": "Gumtree",
+    "description": "Gumtree is an online classifieds platform.",
+    "categories": [
+      "Marketplace",
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "shopee",
+    "name": "Shopee",
+    "description": "Shopee is an e-commerce marketplace operating primarily in Asia.",
+    "categories": [
+      "Marketplace",
+      "Ecommerce",
+      "Online Shop"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "temu",
+    "name": "Temu",
+    "description": "Temu is an online marketplace offering low-cost consumer goods.",
+    "categories": [
+      "Marketplace",
+      "Ecommerce",
+      "Online Shop"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ticketmaster",
+    "name": "Ticketmaster",
+    "description": "Ticketmaster is an online ticketing platform for events and entertainment.",
+    "categories": [
+      "Marketplace"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tmall",
+    "name": "Tmall",
+    "description": "Tmall is a Chinese online retail platform operated by Alibaba.",
+    "categories": [
+      "Online Shop",
+      "Marketplace",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wish",
+    "name": "Wish",
+    "description": "Wish is an ecommerce platform focused on discounted consumer goods.",
+    "categories": [
+      "Marketplace",
+      "Ecommerce"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "tinder",
-    "name": "tinder",
+    "name": "Tinder",
     "description": "Tinder is a popular, location-based mobile dating application that connects users with potential matches based on their profile and proximity.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "badoo",
-    "name": "badoo",
+    "name": "Badoo",
     "description": "Badoo is an online dating-focused and social networking application.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "snapchat",
-    "name": "snapchat",
+    "name": "Snapchat",
     "description": "Snapchat is a mobile messaging and social media app, developed by Snap Inc., that allows users to send disappearing photos and videos called 'Snaps' to friends, along with text and drawings.",
     "categories": [
       "IM"
@@ -976,37 +2167,58 @@
   },
   {
     "short_name": "tiktok",
-    "name": "tiktok",
+    "name": "TikTok",
     "description": "TikTok is a popular social media app owned by Chinese tech company ByteDance, where users create, share, and discover short-form videos ranging from a few seconds to 10 minutes long.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "bookmate",
-    "name": "bookmate",
+    "name": "Bookmate",
     "description": "Bookmate is a social ebook subscription service, available primarily on mobile.",
     "categories": [
-      "books"
+      "Books"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "salesforce",
-    "name": "salesforce",
+    "name": "Salesforce",
     "description": "Salesforce is the world’s leading customer relationship management technology (What is CRM?), helping you build and improve your customer relationships.",
     "categories": [
-      "enterprise"
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "hubspot",
+    "name": "HubSpot",
+    "description": "A leading American developer of marketing, sales, and customer service software platforms.",
+    "categories": [
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "jetbrains",
+    "name": "JetBrains",
+    "description": "A renowned global software development company creating IDEs like IntelliJ IDEA, PyCharm, and PhpStorm.",
+    "categories": [
+      "Enterprise",
+      "IT"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "deepseek",
-    "name": "deepseek",
+    "name": "DeepSeek",
     "description": "DeepSeek is an open-source suite of artificial intelligence models, developed by a Chinese company also named DeepSeek.",
     "categories": [
       "AI"
@@ -1016,7 +2228,7 @@
   },
   {
     "short_name": "chatgpt",
-    "name": "chatgpt",
+    "name": "ChatGPT",
     "description": "ChatGPT is a popular artificial intelligence (AI) chatbot developed by OpenAI that uses natural language processing to generate human-like text, hold conversations, and perform various tasks in response to user prompts.",
     "categories": [
       "AI"
@@ -1025,420 +2237,1101 @@
     ]
   },
   {
+    "short_name": "krea",
+    "name": "Krea",
+    "description": "A platform for AI-powered image generation and real-time design.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "seedance",
+    "name": "Seedance",
+    "description": "An AI tool likely focused on creative generation.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "flux",
+    "name": "Flux",
+    "description": "A leading AI model for image generation",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ideogram",
+    "name": "Ideogram",
+    "description": "A popular AI image generation tool known for its effective text rendering within images.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "seedream",
+    "name": "Seedream",
+    "description": "Another AI image generator.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "kling",
+    "name": "Kling",
+    "description": "An AI model capable of generating video from text prompts.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wan",
+    "name": "Wan",
+    "description": "AI-driven video creation tool that can generate videos using text, images, and audio clips as input.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "hunyuan",
+    "name": "Hunyuan",
+    "description": "A large AI model developed by Tencent for text and image generation.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "hailuoai",
+    "name": "Hailuoai",
+    "description": "A Chinese AI platform offering chat and creation tools.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "luma",
+    "name": "Luma",
+    "description": "A company specializing in AI for 3D scene generation and visualization.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "pika",
+    "name": "Pika",
+    "description": "An AI platform known for generating and editing videos from text or image prompts.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "runway_gen",
+    "name": "Runway Gen",
+    "description": "AI video editing and generation.",
+    "categories": [
+      "AI"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "russia_today",
+    "name": "Russia Today",
+    "description": "A Russian state-controlled international television network and news website.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "gazeta",
+    "name": "Gazeta",
+    "description": "A popular Russian online newspaper and news website covering general news.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "rbc",
+    "name": "RBC",
+    "description": "A leading Russian media group focusing on business, financial, and political news.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "lenta",
+    "name": "Lenta",
+    "description": "A major Russian online newspaper with sections on politics, business, and culture.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "newsru",
+    "name": "NewsRu",
+    "description": "A Russian-language news website aggregating headlines from various sources.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "liferu",
+    "name": "LifeRu",
+    "description": "A Russian news website and former TV channel known for its sensationalist approach and crime reporting.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "aif",
+    "name": "Aif",
+    "description": "A widely circulated Russian weekly newspaper known for its societal and political commentary.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "kp",
+    "name": "Kp",
+    "description": "One of Russia's most popular daily tabloid newspapers.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "360ru",
+    "name": "360ru",
+    "description": "A Russian federal TV channel and news website.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ura_news",
+    "name": "Ura News",
+    "description": "A news agency based in Yekaterinburg, focusing on the Ural Federal District and national news.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "baza_io",
+    "name": "baza",
+    "description": "A Telegram-based news channel and outlet known for breaking news, often related to law enforcement.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "fontanka",
+    "name": "Fontanka",
+    "description": "A prominent news website based in Saint Petersburg, covering Northwestern Russia.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "pravda",
+    "name": "Pravda",
+    "description": "An online news portal, named after the historic Soviet newspaper, covering Russian and international news.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mk",
+    "name": "Mk",
+    "description": "A major Russian daily newspaper, known for its investigative journalism.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "kommersant",
+    "name": "Kommersant",
+    "description": "A respected Russian daily newspaper focusing on politics and business, known for its high-quality reporting.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "izvestiya",
+    "name": "Izvestiya",
+    "description": "A long-established Russian newspaper, now a daily broadsheet covering general news.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "cnews",
+    "name": "CNews",
+    "description": "A Russian media outlet and website specializing in news about information technology and business.",
+    "categories": [
+      "News",
+      "IT"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "lifehacker",
+    "name": "Lifehacker",
+    "description": "The Russian edition of the popular productivity and lifestyle advice blog.",
+    "categories": [
+      "Productivity"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "livejournal",
+    "name": "LiveJournal",
+    "description": "LiveJournal (LJ) is a blogging platform and social networking website that allows users to maintain an online diary or journal and connect with a community of friends and people who share common interests.",
+    "categories": [
+      "Blog"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tjournal",
+    "name": "Tjournal",
+    "description": "A now-defunct Russian online publication that covered internet culture, social media, and technology. Its community and some projects live on.",
+    "categories": [
+      "News",
+      "Blog"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "hacker_news",
+    "name": "Hacker News",
+    "description": "A social news website focused on computer science and entrepreneurship, run by Y Combinator.",
+    "categories": [
+      "News",
+      "IT"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "marca",
+    "name": "Marca",
+    "description": "A leading Spanish daily sports newspaper, famously focused on football.",
+    "categories": [
+      "News",
+      "Sport"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "axios",
+    "name": "Axios",
+    "description": "Axios is a digital media company focused on news and analysis.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "digg",
+    "name": "Digg",
+    "description": "Digg is a content aggregation platform for news discovery.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tmz",
+    "name": "TMZ",
+    "description": "TMZ is an entertainment news and celebrity gossip platform.",
+    "categories": [
+      "News",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "toutiao",
+    "name": "Toutiao",
+    "description": "Toutiao is a Chinese news and content aggregation platform.",
+    "categories": [
+      "News",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "vice",
+    "name": "VICE",
+    "description": "VICE is a digital media company producing news and cultural content.",
+    "categories": [
+      "News",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "viu",
+    "name": "Viu",
+    "description": "Viu is a video streaming service focused on Asian content.",
+    "categories": [
+      "Media",
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "vix",
+    "name": "VIX",
+    "description": "ViX is a Spanish-language streaming service.",
+    "categories": [
+      "Media",
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "webmd",
+    "name": "WebM",
+    "description": "WebMD provides health information and medical resources online.",
+    "categories": [
+      "Health",
+      "Knowledge",
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
     "short_name": "reddit",
-    "name": "reddit",
+    "name": "Reddit",
     "description": "Reddit is an American proprietary social news aggregation and forum social media platform.",
     "categories": [
-      "social_network",
-      "news"
+      "Social Network",
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "threads",
-    "name": "threads",
+    "name": "Threads",
     "description": "Threads is a social media app from Instagram developed by Meta, designed for public text-based conversations and sharing short updates.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "netflix",
-    "name": "netflix",
+    "name": "Netflix",
     "description": "Netflix is an American subscription video on-demand over-the-top streaming service.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "linkedin",
-    "name": "linkedin",
+    "name": "Linkedin",
     "description": "LinkedIn is the world's largest professional network on the internet.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "likee",
-    "name": "likee",
+    "name": "Likee",
     "description": "Likee is a short-video creation and sharing app, available for iOS and Android operating systems.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "roblox",
-    "name": "roblox",
+    "name": "Roblox",
     "description": "Roblox is an online game platform and game creation system developed by Roblox Corporation that allows users to program and play games created by themselves or other users.",
     "categories": [
-      "gaming"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "duolingo",
-    "name": "duolingo",
+    "name": "Duolingo",
     "description": "Duolingo is a popular, free language-learning platform that offers bite-sized, game-like lessons to help users learn vocabulary, grammar, reading, writing, and speaking skills in over 40 languages through interactive exercises.",
     "categories": [
-      "study"
+      "Study"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "skyeng",
+    "name": "SkyEng",
+    "description": "The largest online English language school in Russia and Eastern Europe.",
+    "categories": [
+      "Study"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "lingualeo",
+    "name": "LinguaLeo",
+    "description": "A popular Russian online platform and app for learning English.",
+    "categories": [
+      "Study"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "edx",
+    "name": "edX",
+    "description": "A massive open online course (MOOC) provider created by Harvard and MIT, hosting university-level courses.",
+    "categories": [
+      "Study"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "steipk",
+    "name": "Steipk",
+    "description": "A Russian online education platform with a wide range of courses, especially strong in programming and data science.",
+    "categories": [
+      "Study"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "udemy",
-    "name": "udemy",
+    "name": "Udemy",
     "description": "Udemy is a global online learning platform that functions as a marketplace for e-learning.",
     "categories": [
-      "study"
+      "Study"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "coursera",
-    "name": "coursera",
+    "name": "Coursera",
     "description": "Coursera is an online learning platform featuring many different subjects across an array of learning formats, such as courses, Specializations, Professional Certificates, degrees, and tutorials.",
     "categories": [
-      "study"
+      "Study"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "duckduckgo",
-    "name": "duckduckgo",
+    "name": "DuckDuckGo",
     "description": "DuckDuckGo is a privacy-focused search engine and software company that protects user data by not tracking searches or collecting personal information.",
     "categories": [
-      "search_engine"
+      "Search Engine"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "bing",
+    "name": "Bing",
+    "description": "Bing is a web search engine developed by Microsoft.",
+    "categories": [
+      "Search Engine"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "imdb",
-    "name": "imdb",
+    "name": "IMDb",
     "description": "IMDb, which stands for Internet Movie Database, is a comprehensive online database of information about movies, TV shows, video games, and celebrities.",
     "categories": [
-      "web"
+      "Web"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "blogger",
-    "name": "blogger",
+    "name": "Blogger",
     "description": "Blogger is a free, online service owned by Google that allows users to create and publish blogs.",
     "categories": [
-      "blog"
+      "Blog"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "medium",
+    "name": "Medium",
+    "description": "Medium is an online publishing platform for articles and blogs.",
+    "categories": [
+      "Blog",
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "fox_news",
-    "name": "fox_news",
+    "name": "Fox News",
     "description": "The Fox News Channel (FNC), commonly known as Fox News, is an American multinational conservative news and political commentary television channel and website.",
     "categories": [
-      "news"
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "eurosport",
-    "name": "eurosport",
+    "name": "Eurosport",
     "description": "Eurosport is a European sports media company that runs pay-TV channels and streaming services, offering live broadcasts of major sporting events like Grand Slam tennis, cycling's Grand Tours, and the Olympics.",
     "categories": [
-      "sport",
-      "news",
-      "media"
+      "Sport",
+      "News",
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "lastpass",
-    "name": "lastpass",
+    "name": "LastPass",
     "description": "LastPass is a password manager that stores user credentials and sensitive information in an encrypted vault, requiring users to only remember one master password.",
     "categories": [
-      "web",
-      "security"
+      "Web",
+      "Security"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "bitwarden",
-    "name": "bitwarden",
+    "name": "Bitwarden",
     "description": "Bitwarden is an open-source password manager that securely stores login credentials, credit card details, and other sensitive information in an encrypted vault.",
     "categories": [
-      "web",
-      "security"
+      "Web",
+      "Security"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "1password",
-    "name": "1password",
+    "name": "1Password",
     "description": "1Password is a password manager that creates, stores, and securely manages passwords, financial information, and other sensitive data for individuals, families, and businesses.",
     "categories": [
-      "web",
-      "security"
+      "Web",
+      "Security"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "roboform",
-    "name": "roboform",
+    "name": "RoboForm",
     "description": "RoboForm is a password manager and form-filling tool that creates, stores, and automatically fills in strong, unique passwords and personal information for websites and apps.",
     "categories": [
-      "web",
-      "security"
+      "Web",
+      "Security"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "notion",
-    "name": "notion",
+    "name": "Notion",
     "description": "Notion is a single workspace that combines note-taking, project management, wikis, and databases into one customizable application.",
     "categories": [
-      "web",
-      "productivity"
+      "Web",
+      "Productivity"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "obsidian",
-    "name": "obsidian",
+    "name": "Obsidian",
     "description": "Obsidian is a note-taking app and personal knowledge base that works by storing your notes in local Markdown files.",
     "categories": [
-      "web",
-      "productivity"
+      "Web",
+      "Productivity"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "miro",
+    "name": "Miro",
+    "description": "A leading online collaborative whiteboarding platform for remote and distributed teams.",
+    "categories": [
+      "Productivity"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "trello",
+    "name": "Trello",
+    "description": "Trello is a project management tool based on boards and cards.",
+    "categories": [
+      "Productivity"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wondershare",
+    "name": "Wondershare",
+    "description": "Wondershare develops multimedia and productivity software.",
+    "categories": [
+      "Productivity"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "workday",
+    "name": "Workday",
+    "description": "Workday provides cloud-based finance and human capital management software.",
+    "categories": [
+      "Web",
+      "Productivity"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "fatsecret",
+    "name": "FatSecret",
+    "description": "FatSecret is a global health tool.",
+    "categories": [
+      "Health",
+      "Productivity"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "wikipedia",
-    "name": "wikipedia",
+    "name": "Wikipedia",
     "description": "Wikipedia is a free, multilingual, online encyclopedia created and maintained by a community of volunteer editors.",
     "categories": [
-      "web",
-      "knowledge"
+      "Web",
+      "Knowledge"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "freelancer",
-    "name": "freelancer",
+    "name": "Freelancer",
     "description": "A freelancer is a self-employed individual who offers professional services to clients on a contract or project basis, rather than being a full-time employee.",
     "categories": [
-      "web",
-      "job"
+      "Web",
+      "Job"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "upwork",
-    "name": "upwork",
+    "name": "Upwork",
     "description": "Upwork is the world's largest online freelancing platform that connects businesses with a global pool of independent professionals, or freelancers, for both short-term and long-term projects.",
     "categories": [
-      "web",
-      "job"
+      "Web",
+      "Job"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "toptal",
+    "name": "Toptal",
+    "description": "An exclusive global network that connects businesses with the top 3% of freelance talent in software development, design, and finance.",
+    "categories": [
+      "Web",
+      "Job"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "kaggle",
+    "name": "Kaggle",
+    "description": "A global online community and platform for data scientists and machine learning competitions.",
+    "categories": [
+      "Web",
+      "Job"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "hackerone",
+    "name": "HackerOne",
+    "description": "A leading global cybersecurity platform that connects businesses with penetration testers and ethical hackers.",
+    "categories": [
+      "Web",
+      "Job"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "bugcrowd",
+    "name": "Bugcrowd",
+    "description": "A major crowdsourced cybersecurity platform for vulnerability disclosure and bug bounty programs.",
+    "categories": [
+      "Web",
+      "Job"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "glassdoor",
-    "name": "glassdoor",
+    "name": "Glassdoor",
     "description": "Glassdoor is an American website and service where current and former employees can anonymously review companies, share salary information, and find job listings.",
     "categories": [
-      "web",
-      "job"
+      "Web",
+      "Job"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "indeed",
-    "name": "indeed",
+    "name": "Indeed",
     "description": "Indeed is a multinational employment website that functions as a job search engine and all-in-one hiring platform.",
     "categories": [
-      "web",
-      "job"
+      "Web",
+      "Job"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "headhunter",
-    "name": "headhunter",
+    "name": "HeadHunter",
     "description": "HeadHunter Russia, or HeadHunter (hh.ru), is Russia's largest online recruitment platform and one of the world's leading job and employee search sites.",
     "categories": [
-      "web",
-      "job"
+      "Web",
+      "Job"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "binance",
-    "name": "binance",
+    "name": "Binance",
     "description": "Binance is the world's largest cryptocurrency exchange where users can buy, sell, and trade a wide variety of digital currencies like Bitcoin and Ethereum.",
     "categories": [
-      "crypto"
+      "Crypto"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "daily_mail",
-    "name": "daily_mail",
+    "name": "Daily Mail",
     "description": "The Daily Mail is a British daily newspaper, founded in 1896, that is right-wing and conservative.",
     "categories": [
-      "news"
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "der_spiegel",
-    "name": "der_spiegel",
+    "name": "Der Spiegel",
     "description": "Der Spiegel is known in German-speaking countries mostly for its investigative journalism.",
     "categories": [
-      "news"
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "forbes",
-    "name": "forbes",
+    "name": "Forbes",
     "description": "Forbes is an American media and publishing company, founded in 1917, that focuses on business, finance, and entrepreneurship.",
     "categories": [
-      "news"
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "people",
+    "name": "People",
+    "description": "People is an American weekly magazine that specializes in celebrity news and human-interest stories.",
+    "categories": [
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "genius",
+    "name": "Genius",
+    "description": "Genius.com is a massive, community-driven digital platform and database for music knowledge, lyrics, and artist insights, allowing users to annotate songs, share stories, and get verified explanations directly from musicians.",
+    "categories": [
+      "Music"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "vox",
-    "name": "vox",
+    "name": "Vox",
     "description": "Vox is a general interest news site for the 21st century. Its mission: to help everyone understand our complicated world, so that we can all help shape it.",
     "categories": [
-      "web",
-      "news"
+      "Web",
+      "News"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "soundcloud",
-    "name": "soundcloud",
+    "name": "SoundCloud",
     "description": "SoundCloud is an online audio streaming and distribution platform that allows users to upload, stream, share, and listen to music and podcasts.",
     "categories": [
-      "music",
-      "media"
+      "Music",
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "lastfm",
-    "name": "lastfm",
+    "name": "Last.fm",
     "description": "Last.fm is a music streaming and discovery platform that tracks and records your listening habits through a feature called \"scrobbling\".",
     "categories": [
-      "music",
-      "media"
+      "Music",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "boosty",
+    "name": "Boosty",
+    "description": "A Russian crowdfunding and subscription platform popular with content creators (bloggers, artists, musicians).",
+    "categories": [
+      "Crowdfunding"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "kickstarter",
+    "name": "Kickstarter",
+    "description": "A globally renowned American crowdfunding platform for creative projects.",
+    "categories": [
+      "Crowdfunding"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "safetywing",
+    "name": "SafetyWing",
+    "description": "A global insurance company built for remote workers and nomads, offering travel medical insurance.",
+    "categories": [
+      "Travel",
+      "Insurance"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "onetwotrip",
+    "name": "OneTwoTrip",
+    "description": "A major Russian online travel agency for booking flights, hotels, and other services.",
+    "categories": [
+      "Travel"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "blablacar",
+    "name": "BlaBlaCar",
+    "description": "An international long-distance carpooling and ride-sharing service.",
+    "categories": [
+      "Travel",
+      "Drive"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "tripadvisor",
-    "name": "tripadvisor",
+    "name": "TripAdvisor",
     "description": "TripAdvisor is a global travel research and booking company that provides a platform for users to find and share reviews for accommodations, restaurants, and activities.",
     "categories": [
-      "travel"
+      "Travel"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "flightradar24",
+    "name": "Flightradar24",
+    "description": "Flightradar24 is a real-time flight tracking service.",
+    "categories": [
+      "Maps",
+      "Travel"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "kayak",
+    "name": "KAYAK",
+    "description": "KAYAK is a travel search engine for flights, hotels, and car rentals.",
+    "categories": [
+      "Travel"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "hbo",
-    "name": "hbo",
+    "name": "HBO",
     "description": "HBO, which stands for Home Box Office, is an American premium television network and a streaming service known for its high-quality original programming.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "cursor",
-    "name": "cursor",
+    "name": "Cursor",
     "description": "Cursor is an AI-assisted integrated development environment for Windows, macOS and Linux.",
     "categories": [
       "AI",
-      "code"
+      "Code"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "windsurf",
-    "name": "windsurf",
+    "name": "Windsurf",
     "description": "Windsurf AI is an AI-powered integrated development environment (IDE) designed to help developers code more efficiently by providing advanced features like code generation, debugging, and project-wide context awareness.",
     "categories": [
       "AI",
-      "code"
+      "Code"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "deezer",
-    "name": "deezer",
+    "name": "Deezer",
     "description": "Deezer is a French music and podcast streaming service that offers access to over 90 million tracks.",
     "categories": [
-      "music",
-      "media"
+      "Music",
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "wechat",
-    "name": "wechat",
+    "name": "WeChat",
     "description": "WeChat is a Chinese \"super app\" that combines messaging, social media, and payment services into a single platform.",
     "categories": [
       "IM",
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "line",
-    "name": "line",
+    "name": "LINE",
     "description": "LINE is a free communication and instant messaging (IM) application developed by Japan's LY Corporation.",
     "categories": [
       "IM"
@@ -1448,7 +3341,7 @@
   },
   {
     "short_name": "messenger",
-    "name": "messenger",
+    "name": "Messenger",
     "description": "Messenger is a free messaging app developed by Meta Platforms that lets users send instant messages, photos, videos, and make voice and video calls to friends and family.",
     "categories": [
       "IM"
@@ -1458,7 +3351,7 @@
   },
   {
     "short_name": "kakaotalk",
-    "name": "kakaotalk",
+    "name": "KakaoTalk",
     "description": "KakaoTalk is South Korea's most popular messaging app, functioning as a \"super-app\" that goes beyond simple messaging to include a wide range of services like mobile payments, banking, and e-commerce.",
     "categories": [
       "IM"
@@ -1468,100 +3361,100 @@
   },
   {
     "short_name": "slack",
-    "name": "slack",
+    "name": "Slack",
     "description": "Slack is a business communication and collaboration platform that centralizes conversations, apps, and files into one workspace to help teams stay organized and productive.",
     "categories": [
       "IM",
-      "office"
+      "Office"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "vimeo",
-    "name": "vimeo",
+    "name": "Vimeo",
     "description": "Vimeo is an online video hosting and sharing platform popular with creators for its high-quality, ad-free video hosting, and professional-grade features.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "amazon_video",
-    "name": "amazon_video",
+    "name": "Amazon Video",
     "description": "Amazon Video, more formally known as Amazon Prime Video, is a subscription streaming service that offers a vast library of movies, TV shows, and live sports.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "hulu",
-    "name": "hulu",
+    "name": "Hulu",
     "description": "Hulu is an American subscription streaming service that offers a wide variety of on-demand and live content, including popular TV shows, movies, and exclusive Hulu Originals.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "disney_plus",
-    "name": "disney_plus",
+    "name": "Disney Plus",
     "description": "Disney+ is an online streaming service offering movies, series, and documentaries from Disney, Pixar, Marvel, Star Wars, and National Geographic.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "dailymotion",
-    "name": "dailymotion",
+    "name": "Dailymotion",
     "description": "Dailymotion is a global video-sharing platform, similar to YouTube, that allows users to upload, share, and watch videos on various topics like news, entertainment, and sports.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "weibo",
-    "name": "weibo",
+    "name": "Weibo",
     "description": "Weibo is a leading Chinese microblogging platform that combines elements of Twitter, Facebook, and a comprehensive social media ecosystem.",
     "categories": [
-      "blog",
-      "social_network"
+      "Blog",
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "douyin",
-    "name": "douyin",
+    "name": "Douyin",
     "description": "Douyin is Chinese version of the short-form video app TikTok.",
     "categories": [
       "IM",
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "nextdoor",
-    "name": "nextdoor",
+    "name": "Nextdoor",
     "description": "Nextdoor is a social networking platform for neighbors that connects people in a specific geographical area, such as a town or a city.",
     "categories": [
-      "social_network"
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "kik",
-    "name": "kik",
+    "name": "Kik",
     "description": "Kik is a mobile messaging application.",
     "categories": [
       "IM"
@@ -1570,9 +3463,708 @@
     ]
   },
   {
+    "short_name": "shodan",
+    "name": "Shodan",
+    "description": "Shodan is a search engine for internet-connected devices, including computers, IoT devices, and industrial control systems, that scans and collects data about them.",
+    "categories": [
+      "Search Engine"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mega",
+    "name": "Mega",
+    "description": "MEGA is a cloud storage service that provides secure, encrypted file storage, sharing, and collaboration tools.",
+    "categories": [
+      "File Storage"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "lets_encrypt",
+    "name": "Lets Encrypt",
+    "description": "Let's Encrypt is a non-profit organization that provides free, automated, and encrypted TLS certificates to enable HTTPS connections for websites.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "espn",
+    "name": "ESPN",
+    "description": "ESPN is a global multiplatform sports media company, originally an acronym for Entertainment and Sports Programming Network.",
+    "categories": [
+      "Web",
+      "Sports",
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "anydesk",
+    "name": "AnyDesk",
+    "description": "AnyDesk is a remote desktop application that allows users to access and control another computer or device over a network, like the internet.",
+    "categories": [
+      "Enterprise",
+      "Remote Access"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "amp",
+    "name": "AMP",
+    "description": "The AMP Project is an open-source initiative to create fast-loading, mobile-friendly web pages using a simplified HTML framework.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "kaspersky",
+    "name": "Kaspersky",
+    "description": "Kaspersky is a cybersecurity company that develops and sells a range of security products, including antivirus software, for individuals and businesses.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "acronis",
+    "name": "Acronis",
+    "description": "Acronis provides backup, disaster recovery, and cyber protection solutions.",
+    "categories": [
+      "Security",
+      "File Storage"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "auth0",
+    "name": "Auth0",
+    "description": "Auth0 is an identity management platform offering authentication and authorization services.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "avast",
+    "name": "Avast",
+    "description": "Avast provides cybersecurity software including antivirus and internet security.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "brave_browser",
+    "name": "Brave Browser",
+    "description": "Brave Browser is a privacy-focused web browser with built-in ad and tracker blocking.",
+    "categories": [
+      "Web",
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "checkpoint",
+    "name": "CheckPoint",
+    "description": "Check Point is a cybersecurity company specializing in network and cloud security.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "digicert",
+    "name": "DigiCert",
+    "description": "DigiCert provides digital certificates and public key infrastructure services.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "eset",
+    "name": "ESET",
+    "description": "ESET provides cybersecurity software including antivirus and endpoint protection.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "fortinet",
+    "name": "Fortinet",
+    "description": "Fortinet provides cybersecurity solutions including firewalls and network protection.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "malwarebytes",
+    "name": "Malwarebytes",
+    "description": "Malwarebytes develops software for malware detection and removal.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mcafee",
+    "name": "McAfee",
+    "description": "McAfee provides cybersecurity software for consumer and enterprise protection.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "okta",
+    "name": "Okta",
+    "description": "Okta is an identity and access management platform for enterprises.",
+    "categories": [
+      "Security",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sophos",
+    "name": "Sophos",
+    "description": "Sophos provides cybersecurity solutions for networks and endpoints.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zscaler",
+    "name": "Zscaler",
+    "description": "Zscaler provides cloud-based security and zero-trust access services.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "splunk",
+    "name": "Splunk",
+    "description": "Splunk is a data analytics platform for monitoring and searching machine data.",
+    "categories": [
+      "Enterprise",
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "bitdefender",
+    "name": "BitDefender",
+    "description": "Bitdefender provides cybersecurity solutions including antivirus and endpoint protection.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "symantec",
+    "name": "Symantec",
+    "description": "Symantec provides enterprise cybersecurity and threat protection solutions.",
+    "categories": [
+      "Security",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "trend_micro",
+    "name": "Trend Micro",
+    "description": "Trend Micro provides cybersecurity solutions for consumers and enterprises.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "veeam",
+    "name": "Veeam",
+    "description": "Veeam provides backup, recovery, and data protection solutions.",
+    "categories": [
+      "Security",
+      "File Storage",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "microsoft_authentication",
+    "name": "Microsoft Authentication",
+    "description": "Microsoft Authentication provides identity and access management services.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "myoffice",
+    "name": "MyOffice",
+    "description": "A Russian developer of office software suites, including word processing and spreadsheets.",
+    "categories": [
+      "Office"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "careem",
+    "name": "Careem",
+    "description": "Careem is 'the everything app' for the region, making it easier than ever to move around, order food and groceries, manage payments, and more.",
+    "categories": [
+      "Web",
+      "Payment"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ivi",
+    "name": "IVI",
+    "description": "IVI Cinema is a Russian online video streaming service that offers a wide library of movies, TV shows, music videos, and other content, including its own original productions.",
+    "categories": [
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "start",
+    "name": "Start",
+    "description": "Start is a subscription-based international streaming service available worldwide with Russian-based production.",
+    "categories": [
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "premier",
+    "name": "Premier",
+    "description": "Premier is a Russian streaming service that offers films, series, and live TV channels with a focus on Russian content, including exclusive originals.",
+    "categories": [
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "okko",
+    "name": "Okko",
+    "description": "Okko is a Russian online cinema and streaming service that offers a large library of movies, TV series, cartoons, and live TV channels.",
+    "categories": [
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wink",
+    "name": "Wink",
+    "description": "Wink is a Russian multimedia platform that provides interactive TV, online cinema, and other entertainment services.",
+    "categories": [
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zvooq",
+    "name": "Zvooq",
+    "description": "Zvooq is an independent Russian music streaming service that offers a vast library of music and podcasts.",
+    "categories": [
+      "Music",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "openstreetmap",
+    "name": "OpenStreetMap",
+    "description": "OpenStreetMap (OSM) is a collaborative, free, and open-source project to create a detailed map of the world.",
+    "categories": [
+      "Maps"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mapbox",
+    "name": "Mapbox",
+    "description": "Mapbox is a cloud-based platform that provides developers with tools and services to create custom, interactive online maps for websites and applications.",
+    "categories": [
+      "Maps"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mapy",
+    "name": "Mapy",
+    "description": "Mapy is an online mapping and navigation service, originally known as Mapy.cz.",
+    "categories": [
+      "Maps"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "quora",
+    "name": "Quora",
+    "description": "Quora is a social question-and-answer website where users can ask questions, provide answers, and share knowledge on a wide range of topics.",
+    "categories": [
+      "Web",
+      "Forum"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zhihu",
+    "name": "Zhihu",
+    "description": "Zhihu is a Chinese social question and answer site and news aggregator.",
+    "categories": [
+      "Web",
+      "Forum"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "stackoverflow",
+    "name": "StackOverflow",
+    "description": "Stack Overflow is a question and answer site for professional and enthusiast programmers.",
+    "categories": [
+      "Web",
+      "Forum"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "stackexchange",
+    "name": "StackExchange",
+    "description": "Stack Exchange is a network of question-and-answer (Q&A) websites on topics in diverse fields, each site covering a specific topic.",
+    "categories": [
+      "Web",
+      "Forum"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "stackshare",
+    "name": "Stackshare",
+    "description": "A platform where developers and companies share the software tools and services they use in their tech stacks.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "crunchbase",
+    "name": "Crunchbase",
+    "description": "A platform for finding business information about private and public companies, focusing on startups and investments.",
+    "categories": [
+      "Web",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tradingview",
+    "name": "TradingView",
+    "description": "A social network and charting platform for traders and investors in stocks, forex, and cryptocurrencies.",
+    "categories": [
+      "Web",
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "reverso_context",
+    "name": "Reverso Context",
+    "description": "A translation tool providing translations in context with real-life example sentences.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "grammarly",
+    "name": "Grammarly",
+    "description": "A widely used AI-powered writing assistant that checks grammar, spelling, and style.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "urban_dictionary",
+    "name": "Urban Dictionary",
+    "description": "A crowdsourced online dictionary for slang words and phrases.",
+    "categories": [
+      "Web",
+      "Knowledge"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "scribd",
+    "name": "Scribd",
+    "description": "Scribd is a digital subscription service that offers a large collection of e-books, audiobooks, magazines, podcasts, and documents.",
+    "categories": [
+      "Books"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "answers",
+    "name": "Answers",
+    "description": "Answers.com is a website that used to serve as a platform for users to ask questions and receive answers on a wide range of topics.",
+    "categories": [
+      "Web",
+      "Forum"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tumblr",
+    "name": "Tumblr",
+    "description": "Tumblr is a social media and microblogging platform where users can post multimedia content like photos, text, GIFs, videos, and audio.",
+    "categories": [
+      "Web",
+      "Blog",
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "evernote",
+    "name": "Evernote",
+    "description": "Evernote is a note-taking and organization app that allows users to capture, organize, and find information across devices.",
+    "categories": [
+      "Web",
+      "Productivity"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "dzen",
+    "name": "Dzen",
+    "description": "Dzen is a Russian news aggregator.",
+    "categories": [
+      "Web",
+      "News"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "imgur",
+    "name": "Imgur",
+    "description": "Imgur is a free online image hosting service that allows users to upload and share photos, GIFs, and other media.",
+    "categories": [
+      "Web",
+      "File Storage"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "namecheap",
+    "name": "Namecheap",
+    "description": "Namecheap offers domain registration, hosting, and internet services.",
+    "categories": [
+      "Web",
+      "DNS"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "godaddy",
+    "name": "GoDaddy",
+    "description": "GoDaddy provides domain registration and web hosting services.",
+    "categories": [
+      "Web",
+      "DNS"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "nextdns",
+    "name": "NextDNS",
+    "description": "NextDNS offers DNS-based security, privacy, and content filtering services.",
+    "categories": [
+      "DNS",
+      "Security",
+      "Network Service"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "onlyfans",
+    "name": "OnlyFans",
+    "description": "OnlyFans is a subscription-based content sharing platform.",
+    "categories": [
+      "Adult",
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "pornhub",
+    "name": "PornHub",
+    "description": "Pornhub is an adult video streaming platform.",
+    "categories": [
+      "Adult",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "redtube",
+    "name": "RedTube",
+    "description": "RedTube is an adult video streaming website.",
+    "categories": [
+      "Adult",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "xhamster",
+    "name": "xHamster",
+    "description": "xHamster is an adult content streaming website.",
+    "categories": [
+      "Adult",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "xnxx",
+    "name": "XNXX",
+    "description": "XNXX is an adult video streaming platform.",
+    "categories": [
+      "Adult",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "xvideos",
+    "name": "XVIDEOS",
+    "description": "XVideos is an adult video hosting and streaming platform.",
+    "categories": [
+      "Adult",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "youjizz",
+    "name": "YouJizz",
+    "description": "YouJizz is an adult video sharing website.",
+    "categories": [
+      "Adult",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "youporn",
+    "name": "YouPorn",
+    "description": "YouPorn is an adult video sharing website.",
+    "categories": [
+      "Adult",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
     "short_name": "signal",
-    "name": "signal",
-    "description": "Signal is an open-source, encrypted messaging service for instant messaging, voice calls, and video calls.",
+    "name": "Signal",
+    "description": "Signal is an encrypted messaging application focused on privacy.",
+    "categories": [
+      "IM",
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "omegle",
+    "name": "Omegle",
+    "description": "Omegle is an online chat platform that pairs users randomly.",
+    "categories": [
+      "IM",
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "qq",
+    "name": "QQ",
+    "description": "QQ is an instant messaging platform operated by Tencent.",
     "categories": [
       "IM"
     ],
@@ -1580,303 +4172,1357 @@
     ]
   },
   {
-    "short_name": "shodan",
-    "name": "shodan",
-    "description": "Shodan is a search engine for internet-connected devices, including computers, IoT devices, and industrial control systems, that scans and collects data about them.",
+    "short_name": "threema",
+    "name": "Threema",
+    "description": "Threema is an encrypted messaging application.",
     "categories": [
-      "search_engine"
+      "IM"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "mega",
-    "name": "mega",
-    "description": "MEGA is a cloud storage service that provides secure, encrypted file storage, sharing, and collaboration tools.",
+    "short_name": "docusign",
+    "name": "DocuSign",
+    "description": "DocuSign enables electronic signatures and digital agreement workflows.",
     "categories": [
-      "file_storage"
+      "Office"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "lets_encrypt",
-    "name": "lets_encrypt",
-    "description": "Let's Encrypt is a non-profit organization that provides free, automated, and encrypted TLS certificates to enable HTTPS connections for websites.",
+    "short_name": "epic_games",
+    "name": "Epic Games",
+    "description": "Epic Games is a video game company known for Fortnite and Unreal Engine.",
     "categories": [
-      "web"
+      "Gaming",
+      "Application Store"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "espn",
-    "name": "espn",
-    "description": "ESPN is a global multiplatform sports media company, originally an acronym for Entertainment and Sports Programming Network.",
+    "short_name": "minecraft",
+    "name": "Minecraft",
+    "description": "Minecraft is a sandbox video game developed by Mojang.",
     "categories": [
-      "web",
-      "sports",
-      "news"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "anydesk",
-    "name": "anydesk",
-    "description": "AnyDesk is a remote desktop application that allows users to access and control another computer or device over a network, like the internet.",
+    "short_name": "moonton",
+    "name": "Moonton",
+    "description": "Moonton is a video game developer best known for mobile games.",
     "categories": [
-      "enterprise",
-      "remote_access"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "amp",
-    "name": "amp",
-    "description": "The AMP Project is an open-source initiative to create fast-loading, mobile-friendly web pages using a simplified HTML framework.",
+    "short_name": "origin_ea",
+    "name": "Origin Ea",
+    "description": "Origin is EA’s digital distribution platform for video games.",
     "categories": [
-      "web"
+      "Gaming",
+      "Application Store"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "kaspersky",
-    "name": "kaspersky",
-    "description": "Kaspersky is a cybersecurity company that develops and sells a range of security products, including antivirus software, for individuals and businesses.",
+    "short_name": "playstation",
+    "name": "Playstation",
+    "description": "PlayStation is Sony’s gaming platform and console ecosystem.",
     "categories": [
-      "security"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "careem",
-    "name": "careem",
-    "description": "Careem is 'the everything app' for the region, making it easier than ever to move around, order food and groceries, manage payments, and more.",
+    "short_name": "steam",
+    "name": "Steam",
+    "description": "Steam is a digital distribution platform for PC games.",
     "categories": [
-      "web",
-      "payment"
+      "Gaming",
+      "Application Store",
+      "Social Network"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "ivi",
-    "name": "ivi",
-    "description": "IVI Cinema is a Russian online video streaming service that offers a wide library of movies, TV shows, music videos, and other content, including its own original productions.",
+    "short_name": "ubisoft",
+    "name": "Ubisoft",
+    "description": "Ubisoft is a video game publisher and developer.",
     "categories": [
-      "media"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "start",
-    "name": "start",
-    "description": "Start is a subscription-based international streaming service available worldwide with Russian-based production.",
+    "short_name": "unity",
+    "name": "Unity",
+    "description": "Unity is a game development and real-time 3d engine.",
     "categories": [
-      "media"
+      "Gaming",
+      "Code",
+      "Design"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "premier",
-    "name": "premier",
-    "description": "Premier is a Russian streaming service that offers films, series, and live TV channels with a focus on Russian content, including exclusive originals.",
+    "short_name": "valorant",
+    "name": "VALORANT",
+    "description": "Valorant is an online tactical shooter game developed by Riot Games.",
     "categories": [
-      "media"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "okko",
-    "name": "okko",
-    "description": "Okko is a Russian online cinema and streaming service that offers a large library of movies, TV series, cartoons, and live TV channels.",
+    "short_name": "wargaming",
+    "name": "Wargaming",
+    "description": "Wargaming is a video game developer focused on online multiplayer games.",
     "categories": [
-      "media"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "wink",
-    "name": "wink",
-    "description": "Wink is a Russian multimedia platform that provides interactive TV, online cinema, and other entertainment services.",
+    "short_name": "xbox",
+    "name": "Xbox",
+    "description": "Xbox is Microsoft’s gaming console and online gaming platform.",
     "categories": [
-      "media"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "zvooq",
-    "name": "zvooq",
-    "description": "Zvooq is an independent Russian music streaming service that offers a vast library of music and podcasts.",
+    "short_name": "zynga",
+    "name": "Zynga",
+    "description": "Zynga is a mobile game developer and publisher.",
     "categories": [
-      "music",
-      "media"
+      "Gaming"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "openstreetmap",
-    "name": "openstreetmap",
-    "description": "OpenStreetMap (OSM) is a collaborative, free, and open-source project to create a detailed map of the world.",
+    "short_name": "doubleverify",
+    "name": "DoubleVerify",
+    "description": "DoubleVerify provides digital media measurement and ad fraud prevention.",
     "categories": [
-      "maps"
+      "Advertisement",
+      "Security"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "mapbox",
-    "name": "mapbox",
-    "description": "Mapbox is a cloud-based platform that provides developers with tools and services to create custom, interactive online maps for websites and applications.",
+    "short_name": "adobe_ads",
+    "name": "Adobe Ads",
+    "description": "Adobe Advertising provides tools for digital ad buying, optimization, and measurement.",
     "categories": [
-      "maps"
+      "Advertisement",
+      "Enterprise"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "mapy",
-    "name": "mapy",
-    "description": "Mapy is an online mapping and navigation service, originally known as Mapy.cz.",
+    "short_name": "appnexus",
+    "name": "AppNexus",
+    "description": "AppNexus is a programmatic advertising and real-time bidding platform.",
     "categories": [
-      "maps"
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "quora",
-    "name": "quora",
-    "description": "Quora is a social question-and-answer website where users can ask questions, provide answers, and share knowledge on a wide range of topics.",
+    "short_name": "comscore",
+    "name": "Comscore",
+    "description": "Comscore provides media measurement and analytics for digital platforms.",
     "categories": [
-      "web",
-      "forum"
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "zhihu",
-    "name": "zhihu",
-    "description": "Zhihu is a Chinese social question and answer site and news aggregator.",
+    "short_name": "criteo",
+    "name": "Criteo",
+    "description": "Criteo is a digital advertising company focused on performance marketing and retargeting.",
     "categories": [
-      "web",
-      "forum"
+      "Advertisement",
+      "Ecommerce"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "stackoverflow",
-    "name": "stackoverflow",
-    "description": "Stack Overflow is a question and answer site for professional and enthusiast programmers.",
+    "short_name": "heap",
+    "name": "Heap",
+    "description": "Heap is a digital analytics platform that tracks user behavior automatically.",
     "categories": [
-      "web",
-      "forum"
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "stackexchange",
-    "name": "stackexchange",
-    "description": "Stack Exchange is a network of question-and-answer (Q&A) websites on topics in diverse fields, each site covering a specific topic.",
+    "short_name": "hootsuite",
+    "name": "Hootsuite",
+    "description": "Hootsuite is a social media management and analytics platform.",
     "categories": [
-      "web",
-      "forum"
+      "Social Network",
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "scribd",
-    "name": "scribd",
-    "description": "Scribd is a digital subscription service that offers a large collection of e-books, audiobooks, magazines, podcasts, and documents.",
+    "short_name": "hotjar",
+    "name": "Hotjar",
+    "description": "Hotjar provides website analytics through heatmaps and user recordings.",
     "categories": [
-      "books"
+      "Advertisement",
+      "Web"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "answers",
-    "name": "answers",
-    "description": "Answers.com is a website that used to serve as a platform for users to ask questions and receive answers on a wide range of topics.",
+    "short_name": "liftoff",
+    "name": "Liftoff",
+    "description": "Liftoff is a mobile app marketing and user acquisition platform.",
     "categories": [
-      "web",
-      "forum"
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "tumblr",
-    "name": "tumblr",
-    "description": "Tumblr is a social media and microblogging platform where users can post multimedia content like photos, text, GIFs, videos, and audio.",
+    "short_name": "moloco",
+    "name": "Moloco",
+    "description": "Moloco provides machine learning–based mobile advertising solutions.",
     "categories": [
-      "web",
-      "blog",
-      "social_network"
+      "Advertisement",
+      "AI"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "evernote",
-    "name": "evernote",
-    "description": "Evernote is a note-taking and organization app that allows users to capture, organize, and find information across devices.",
+    "short_name": "mopub",
+    "name": "MoPub",
+    "description": "MoPub is a mobile advertising platform for app monetization.",
     "categories": [
-      "web",
-      "productivity"
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "dzen",
-    "name": "dzen",
-    "description": "Dzen is a Russian news aggregator.",
+    "short_name": "nielsen",
+    "name": "Nielsen",
+    "description": "Nielsen provides audience measurement, analytics, and media research services.",
     "categories": [
-      "web",
-      "news"
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
-    "short_name": "imgur",
-    "name": "imgur",
-    "description": "Imgur is a free online image hosting service that allows users to upload and share photos, GIFs, and other media.",
+    "short_name": "outbrain",
+    "name": "Outbrain",
+    "description": "Outbrain provides content recommendation and native advertising services.",
     "categories": [
-      "web",
-      "file_storage"
+      "Advertisement",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "pulsepoint",
+    "name": "PulsePoint",
+    "description": "PulsePoint is a digital advertising and real-time bidding platform.",
+    "categories": [
+      "Advertisement",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "taboola",
+    "name": "Taboola",
+    "description": "Taboola is a content discovery and native advertising platform.",
+    "categories": [
+      "Advertisement",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "the_trade_desk",
+    "name": "The Trade Desk",
+    "description": "The Trade Desk is a programmatic advertising platform for managing digital ad campaigns.",
+    "categories": [
+      "Advertisement"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tubi",
+    "name": "Tubi",
+    "description": "Tubi is a free ad-supported streaming television service.",
+    "categories": [
+      "Media",
+      "Advertisement"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "weborama",
+    "name": "Weborama",
+    "description": "Weborama provides digital advertising and audience data services.",
+    "categories": [
+      "Advertisement"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wurl",
+    "name": "Wurl",
+    "description": "Wurl provides streaming distribution and monetization services.",
+    "categories": [
+      "Media",
+      "Advertisement"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "xumo",
+    "name": "Xumo",
+    "description": "Xumo is a free ad-supported streaming television platform.",
+    "categories": [
+      "Media",
+      "Advertisement"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "yieldmo",
+    "name": "Yieldmo",
+    "description": "Yieldmo is a digital advertising platform specializing in mobile formats.",
+    "categories": [
+      "Advertisement"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "protonmail",
+    "name": "ProtonMail",
+    "description": "Proton Mail is an encrypted email service emphasizing user privacy.",
+    "categories": [
+      "Mail",
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sendgrid",
+    "name": "SendGrid",
+    "description": "SendGrid is an email delivery and marketing platform.",
+    "categories": [
+      "Mail"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ring",
+    "name": "Ring",
+    "description": "Ring develops smart home security and video doorbell products.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tor",
+    "name": "Tor",
+    "description": "Tor is a privacy-focused network enabling anonymous internet communication.",
+    "categories": [
+      "Security"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "firefox",
+    "name": "FireFox",
+    "description": "Firefox is an open-source web browser developed by Mozilla.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "opera",
+    "name": "Opera",
+    "description": "Opera is a web browser offering built-in privacy and productivity features.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "at_and_t",
+    "name": "AT&T",
+    "description": "AT&T is a telecommunications company providing wireless and broadband services.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "comcast",
+    "name": "Comcast",
+    "description": "Comcast is a telecommunications company offering internet, cable, and media services.",
+    "categories": [
+      "Telecom",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "optus",
+    "name": "Optus",
+    "description": "Optus is an Australian telecommunications provider.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sky",
+    "name": "Sky",
+    "description": "Sky is a telecommunications and media company offering TV and broadband services.",
+    "categories": [
+      "Telecom",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "starhub",
+    "name": "StarHub",
+    "description": "StarHub is a telecommunications provider based in Singapore.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "t_mobile",
+    "name": "T Mobile",
+    "description": "T-Mobile is a mobile telecommunications provider.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "telia",
+    "name": "Telia",
+    "description": "Telia is a Nordic telecommunications and digital services provider.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "telenor",
+    "name": "Telenor",
+    "description": "Telenor is a multinational telecommunications company.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "three",
+    "name": "Three",
+    "description": "Three is a mobile telecommunications provider.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "verizon",
+    "name": "Verizon",
+    "description": "Verizon is a telecommunications company providing wireless and internet services.",
+    "categories": [
+      "Telecom",
+      "Mobile"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zattoo",
+    "name": "Zattoo",
+    "description": "Zattoo is a live TV streaming service.",
+    "categories": [
+      "Media",
+      "Telecom"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "bestbuy",
+    "name": "BestBuy",
+    "description": "Best Buy is a consumer electronics retailer operating online and physical stores.",
+    "categories": [
+      "Online Shop",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "bigcommerce",
+    "name": "BigCommerce",
+    "description": "BigCommerce is an e-commerce platform for building and scaling online stores.",
+    "categories": [
+      "Ecommerce",
+      "Online Shop"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "costco",
+    "name": "Costco",
+    "description": "Costco is a membership-based retail warehouse chain.",
+    "categories": [
+      "Online Shop",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ikea",
+    "name": "IKEA",
+    "description": "IKEA is a global furniture retailer offering home furnishings and accessories.",
+    "categories": [
+      "Online Shop",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "nike",
+    "name": "Nike",
+    "description": "Nike is a global brand specializing in athletic footwear and apparel.",
+    "categories": [
+      "Clothes",
+      "Online Shop",
+      "Sport"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "shein",
+    "name": "Shein",
+    "description": "SHEIN is an online fast-fashion retail platform.",
+    "categories": [
+      "Clothes",
+      "Online Shop",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "shopify",
+    "name": "Shopify",
+    "description": "Shopify is an e-commerce platform for creating and managing online stores.",
+    "categories": [
+      "Ecommerce",
+      "Online Shop"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "shutterfly",
+    "name": "Shutterfly",
+    "description": "Shutterfly provides photo printing and personalized products.",
+    "categories": [
+      "Online Shop",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "target",
+    "name": "Target",
+    "description": "Target is a retail corporation operating physical and online stores.",
+    "categories": [
+      "Online Shop",
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "walmart",
+    "name": "Walmart",
+    "description": "Walmart is a multinational retail corporation operating physical and online stores.",
+    "categories": [
+      "Online Shop"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wayfair",
+    "name": "Wayfair",
+    "description": "Wayfair is an online retailer specializing in home goods.",
+    "categories": [
+      "Online Shop"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zalando",
+    "name": "Zalando",
+    "description": "Zalando is an online fashion retail platform.",
+    "categories": [
+      "Clothes",
+      "Online Shop"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zillow",
+    "name": "Zillow",
+    "description": "Zillow is an online real estate marketplace.",
+    "categories": [
+      "Real Estate"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "lyft",
+    "name": "Lyft",
+    "description": "Lyft is a ride-hailing and transportation services platform.",
+    "categories": [
+      "Drive"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "patreon",
+    "name": "Patreon",
+    "description": "Patreon is a membership platform enabling creators to monetize content.",
+    "categories": [
+      "Ecommerce"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "woocommerce",
+    "name": "WooCommerce",
+    "description": "WooCommerce is an open-source e-commerce plugin for WordPress.",
+    "categories": [
+      "Ecommerce",
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "bootstrap",
+    "name": "Bootstrap",
+    "description": "Bootstrap is a front-end framework for building responsive web interfaces.",
+    "categories": [
+      "Code",
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "jquery",
+    "name": "jQuery",
+    "description": "jQuery is a JavaScript library for simplifying HTML DOM manipulation.",
+    "categories": [
+      "Code",
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "docker",
+    "name": "Docker",
+    "description": "Docker is a platform for building, shipping, and running applications using containers.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ubuntu",
+    "name": "Ubuntu",
+    "description": "Ubuntu is a Linux-based operating system developed by Canonical.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "virtualbox",
+    "name": "VirtualBox",
+    "description": "VirtualBox is a virtualization software platform.",
+    "categories": [
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "webflow",
+    "name": "Webflow",
+    "description": "Webflow is a visual web design and hosting platform.",
+    "categories": [
+      "Web",
+      "Design",
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "weebly",
+    "name": "Weebly",
+    "description": "Weebly is a website builder and hosting service.",
+    "categories": [
+      "Code",
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wix",
+    "name": "Wix",
+    "description": "Wix is a website building and hosting platform.",
+    "categories": [
+      "Web",
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wordpress",
+    "name": "WordPress",
+    "description": "WordPress is an open-source content management system.",
+    "categories": [
+      "Web",
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "grafana",
+    "name": "Grafana",
+    "description": "Grafana is an open-source platform for monitoring, visualization, and observability.",
+    "categories": [
+      "Enterprise",
+      "Code"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "coinbase",
+    "name": "Coinbase",
+    "description": "Coinbase is a cryptocurrency exchange and digital asset platform.",
+    "categories": [
+      "Crypto"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ethereum",
+    "name": "Ethereum",
+    "description": "Ethereum is a decentralized blockchain platform supporting smart contracts.",
+    "categories": [
+      "Crypto"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "monero",
+    "name": "Monero",
+    "description": "Monero is a privacy-focused cryptocurrency designed for anonymous payments.",
+    "categories": [
+      "Crypto"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "z_cash",
+    "name": "Z Cash",
+    "description": "Zcash is a cryptocurrency focused on privacy-preserving transactions.",
+    "categories": [
+      "Crypto"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sharefile",
+    "name": "ShareFile",
+    "description": "ShareFile is a secure file sharing and collaboration platform.",
+    "categories": [
+      "File Storage",
+      "Enterprise"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wasabi",
+    "name": "Wasabi",
+    "description": "Wasabi provides cloud-based object storage services.",
+    "categories": [
+      "File Storage"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "behance",
+    "name": "Behance",
+    "description": "Behance is an online platform for showcasing and discovering creative portfolios.",
+    "categories": [
+      "Design",
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mewe",
+    "name": "MeWe",
+    "description": "MeWe is a social networking platform emphasizing privacy.",
+    "categories": [
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "flickr",
+    "name": "Flickr",
+    "description": "Flickr is an online photo sharing and hosting platform.",
+    "categories": [
+      "Media",
+      "Design",
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "sharethis",
+    "name": "ShareThis",
+    "description": "ShareThis provides social sharing and audience data services.",
+    "categories": [
+      "Social Network"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "bytedance",
+    "name": "ByteDance",
+    "description": "ByteDance is a technology company operating global content platforms including TikTok and Toutiao.",
+    "categories": [
+      "Social Network",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mtv",
+    "name": "MTV",
+    "description": "MTV is a media brand focused on music and entertainment content.",
+    "categories": [
+      "Music",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "naver",
+    "name": "NAVER",
+    "description": "Naver is a South Korean technology company operating search and digital platforms.",
+    "categories": [
+      "Search Engine",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "roku",
+    "name": "Roku",
+    "description": "Roku provides streaming devices and a digital media platform.",
+    "categories": [
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "starz",
+    "name": "STARZ",
+    "description": "Starz is a premium television network and streaming service.",
+    "categories": [
+      "Media",
+      "Music"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "wistia",
+    "name": "Wistia",
+    "description": "Wistia provides video hosting and analytics for businesses.",
+    "categories": [
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "tidal",
+    "name": "TIDAL",
+    "description": "Tidal is a music streaming service offering high-fidelity audio.",
+    "categories": [
+      "Music",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "vevo",
+    "name": "Vevo",
+    "description": "Vevo is a music video hosting and distribution platform.",
+    "categories": [
+      "Music",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "youku",
+    "name": "Youku",
+    "description": "Youku is a Chinese video streaming service.",
+    "categories": [
+      "Media",
+      "Music"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "dazn",
+    "name": "DAZN",
+    "description": "DAZN is a sports streaming service providing live and on-demand content.",
+    "categories": [
+      "Sport",
+      "Media"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "adobe_fonts",
+    "name": "Adobe Fonts",
+    "description": "Adobe Fonts is a font subscription service integrated with Adobe Creative Cloud.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "discourse",
+    "name": "Discourse",
+    "description": "Discourse is an open-source discussion and forum platform.",
+    "categories": [
+      "Forum",
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "mozilla",
+    "name": "Mozilla",
+    "description": "Mozilla is an organization developing open-source internet technologies.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "pubnub",
+    "name": "PubNub",
+    "description": "PubNub provides real-time data streaming and messaging services.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "squarespace",
+    "name": "Squarespace",
+    "description": "Squarespace is a website building and hosting platform.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "umeng",
+    "name": "Umeng",
+    "description": "Umeng provides mobile analytics and developer services.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "gravatar",
+    "name": "Gravatar",
+    "description": "Gravatar provides globally recognized avatars linked to email addresses.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "bitly",
+    "name": "Bitly",
+    "description": "Bitly provides URL shortening and link analytics services.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "urban_airship",
+    "name": "Urban Airship",
+    "description": "Urban Airship provides mobile engagement and push notification services.",
+    "categories": [
+      "Push",
+      "Mobile",
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "userreport",
+    "name": "UserReport",
+    "description": "UserReport provides website analytics and user feedback tools.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "yelp",
+    "name": "Yelp",
+    "description": "Yelp is an online platform for business reviews and recommendations.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zapier",
+    "name": "Zapier",
+    "description": "Zapier automates workflows by connecting web applications.",
+    "categories": [
+      "Web"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ups",
+    "name": "UPS",
+    "description": "UPS is a logistics and package delivery company.",
+    "categories": [
+      "Delivery"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "zomato",
+    "name": "Zomato",
+    "description": "Zomato is an online restaurant discovery and food delivery platform.",
+    "categories": [
+      "Food",
+      "Delivery"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "instacart",
+    "name": "Instacart",
+    "description": "Instacart is an online grocery delivery and pickup service.",
+    "categories": [
+      "Food",
+      "Delivery"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "doordash",
+    "name": "DoorDash",
+    "description": "DoorDash is an online food ordering and delivery platform.",
+    "categories": [
+      "Food",
+      "Delivery"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "canva",
+    "name": "Canva",
+    "description": "Canva is an online graphic design platform for creating visual content.",
+    "categories": [
+      "Design"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "figma",
+    "name": "Figma",
+    "description": "Figma is a collaborative interface design and prototyping platform.",
+    "categories": [
+      "Design"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "giphy",
+    "name": "GIPHY",
+    "description": "Giphy is a searchable platform for animated GIFs and short video content.",
+    "categories": [
+      "Design"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "cyberghostvpn",
+    "name": "CyberGhostVPN",
+    "description": "CyberGhost VPN provides encrypted VPN services for privacy and security.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "expressvpn",
+    "name": "ExpressVPN",
+    "description": "ExpressVPN offers VPN services focused on privacy and secure internet access.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "hotspot_shield",
+    "name": "Hotspot Shield",
+    "description": "Hotspot Shield is a VPN service providing encrypted internet access.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "ivpn",
+    "name": "iVPN",
+    "description": "IVPN provides privacy-focused virtual private network services.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "nordvpn",
+    "name": "NordVPN",
+    "description": "NordVPN provides encrypted VPN services for privacy and security.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "privateinternetaccess",
+    "name": "PrivateInternetAccess",
+    "description": "Private Internet Access is a VPN service focused on privacy and security.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "proton_vpn",
+    "name": "Proton VPN",
+    "description": "Proton VPN is a privacy-focused VPN service developed by Proton.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "surfshark",
+    "name": "Surfshark",
+    "description": "Surfshark provides VPN and online privacy services.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "urbanvpn",
+    "name": "UrbanVPN",
+    "description": "Urban VPN provides free VPN and privacy services.",
+    "categories": [
+      "VPN"
+    ],
+    "workflow": [
+    ]
+  },
+  {
+    "short_name": "windscribe",
+    "name": "Windscribe",
+    "description": "Windscribe provides VPN and privacy protection services.",
+    "categories": [
+      "VPN"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "icloud",
-    "name": "icloud",
+    "name": "iCloud",
     "description": "iCloud is Apple's cloud service that securely stores your data and keeps it synchronized across your Apple devices.",
     "categories": [
-      "file_storage"
+      "File Storage"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "icloud_private_relay",
-    "name": "icloud_private_relay",
+    "name": "iCloud Private Relay",
     "description": "iCloud Private Relay — part of an iCloud+ subscription — helps protect your privacy when you browse the web in Safari.",
     "categories": [
       "VPN"
@@ -1886,121 +5532,121 @@
   },
   {
     "short_name": "itunes",
-    "name": "itunes",
+    "name": "iTunes",
     "description": "iTunes is a media player, media library, and mobile device management (MDM) utility developed by Apple.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "apple_mail",
-    "name": "apple_mail",
+    "name": "Apple Mail",
     "description": "Apple Mail is Apple's built-in email client for its operating systems like macOS, iOS, iPadOS, watchOS, and visionOS.",
     "categories": [
-      "mail"
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "apple_tv",
-    "name": "apple_tv",
+    "name": "Apple TV",
     "description": "Apple TV is a digital media player and microconsole developed and sold by Apple Inc..",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "apple_updates",
-    "name": "apple_updates",
+    "name": "Apple Updates",
     "description": "Apple Updates is a service provided for installing, restoring, and updating software on Apple devices: iOS, iPadOS, macOS, watchOS, and tvOS.",
     "categories": [
-      "update"
+      "Update"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "apple_push_notification",
-    "name": "apple_push_notification",
+    "name": "Apple Push Notification",
     "description": "Apple Push Notification service (APNs) is a cloud-based service provided by Apple that enables third-party developers to send notifications to Apple devices (iPhones, iPads, Macs, Apple Watches, and Apple TVs).",
     "categories": [
-      "push"
+      "Push"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "appstore",
-    "name": "appstore",
+    "name": "AppStore",
     "description": "App Store is a digital marketplace, like Apple's App Store or Google Play Store, where users can discover, download, and purchase software applications (apps) for their devices.",
     "categories": [
-      "application_store"
+      "Application Store"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "facetime",
-    "name": "facetime",
+    "name": "FaceTime",
     "description": "FaceTime is a video and audio call service developed by Apple.",
     "categories": [
-      "meetings"
+      "Meetings"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "apple_pay",
-    "name": "apple_pay",
+    "name": "Apple Pay",
     "description": "Apple Pay is a mobile payment and digital wallet service developed by Apple, allowing users to make contactless payments using their Apple devices like iPhones, Apple Watches, iPads, and Macs.",
     "categories": [
-      "payment"
+      "Payment"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "apple_maps",
-    "name": "apple_maps",
+    "name": "Apple Maps",
     "description": "Apple Maps is a navigation and mapping application developed by Apple, pre-installed on Apple devices like iPhones, iPads, Apple Watches, and Macs.",
     "categories": [
-      "maps"
+      "Maps"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "apple_music",
-    "name": "apple_music",
+    "name": "Apple Music",
     "description": "Apple Music is a subscription-based music and video streaming service offered by Apple Inc. ",
     "categories": [
-      "music",
-      "media"
+      "Music",
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "shazam",
-    "name": "shazam",
+    "name": "Shazam",
     "description": "Shazam is an Apple-owned mobile application and service that identifies music, movies, television shows, and advertisements by listening to a short sample of their audio using a device's microphone.",
     "categories": [
-      "music"
+      "Music"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "apple_siri",
-    "name": "apple_siri",
+    "name": "Apple Siri",
     "description": "Siri is a virtual assistant developed by Apple Inc. that uses voice commands and artificial intelligence to perform tasks, answer questions, and provide information on Apple devices like iPhones, iPads, and Macs.",
     "categories": [
-      "assistant",
+      "Assistant",
       "AI"
     ],
     "workflow": [
@@ -2008,37 +5654,37 @@
   },
   {
     "short_name": "gmail",
-    "name": "gmail",
+    "name": "Gmail",
     "description": "Gmail is a free, web-based email service provided by Google.",
     "categories": [
-      "mail"
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "google_maps",
-    "name": "google_maps",
+    "name": "Google Maps",
     "description": "Google Maps is a web mapping service developed by Google, providing detailed geographical information and navigation tools.",
     "categories": [
-      "maps"
+      "Maps"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "google_play",
-    "name": "google_play",
+    "name": "Google Play",
     "description": "Google Play is a digital distribution service operated by Google.",
     "categories": [
-      "application_store"
+      "Application Store"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "google_api",
-    "name": "google_api",
+    "name": "Google API",
     "description": "Google APIs are application programming interfaces (APIs) developed by Google which allow communication with Google Services and their integration to other services.",
     "categories": [
       "API"
@@ -2048,17 +5694,17 @@
   },
   {
     "short_name": "google_meet",
-    "name": "google_meet",
+    "name": "Google Meet",
     "description": "Google Meet is a secure video-communication service from Google that provides virtual meetings and calls through video, audio, and chat.",
     "categories": [
-      "meetings"
+      "Meetings"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "google_chat",
-    "name": "google_chat",
+    "name": "Google Chat",
     "description": "Google Chat is a free, secure Google service for instant messaging, group conversations, and team collaboration, integrated with other Google Workspace products like Gmail, Drive, and Meet.",
     "categories": [
       "IM"
@@ -2068,7 +5714,7 @@
   },
   {
     "short_name": "google_gemini",
-    "name": "google_gemini",
+    "name": "Google Gemini",
     "description": "Google Gemini is Google's family of multimodal large language models (LLMs) and the AI-powered chatbot that uses them to understand, generate, and combine different types of data like text, images, audio, video, and code.",
     "categories": [
       "AI"
@@ -2078,125 +5724,125 @@
   },
   {
     "short_name": "google_drive",
-    "name": "google_drive",
+    "name": "Google Drive",
     "description": "Google Drive is a cloud-based service from Google that provides secure online storage for files, allowing users to access, organize, and share them from any device.",
     "categories": [
-      "file_storage"
+      "File Storage"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "google_marketing_platform",
-    "name": "google_marketing_platform",
+    "name": "Google Marketing Platform",
     "description": "Google Marketing Platform, a unified marketing and analytics platform for smarter marketing measurement and better results. It includes: Google Analytics, Google Ads, etc.",
     "categories": [
-      "web",
-      "advertisement"
+      "Web",
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "gstatic",
-    "name": "gstatic",
+    "name": "Gstatic",
     "description": "Gstatic is a legitimate Google service that acts as a content delivery network (CDN) to host and quickly deliver static content for Google's services, such as JavaScript, CSS files, and images.",
     "categories": [
-      "web"
+      "Web"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "google_translate",
-    "name": "google_translate",
+    "name": "Google Translate",
     "description": "Google Translate is a free service from Google that translates text, speech, and images between over 200 languages.",
     "categories": [
-      "web"
+      "Web"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_maps",
-    "name": "yandex_maps",
+    "name": "Yandex Maps",
     "description": "Yandex Maps is a Russian web mapping service and app developed by Yandex.",
     "categories": [
-      "maps"
+      "Maps"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_music",
-    "name": "yandex_music",
+    "name": "Yandex Music",
     "description": "Yandex Music is a Russian music streaming service developed by Yandex.",
     "categories": [
-      "music",
-      "media"
+      "Music",
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_lavka",
-    "name": "yandex_lavka",
+    "name": "Yandex Lavka",
     "description": "Yandex Lavka is a Russian service for ordering prepared meals, groceries, and household goods from local warehouses via a mobile app or website.",
     "categories": [
-      "delivery",
-      "food"
+      "Delivery",
+      "Food"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_marketing_platform",
-    "name": "yandex_marketing_platform",
+    "name": "Yandex Marketing Platform",
     "description": "The set of Yandex digital marketing services: Ads, Metrika, Direct, Webmaster, Audience.",
     "categories": [
-      "web",
-      "advertisement"
+      "Web",
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_market",
-    "name": "yandex_market",
+    "name": "Yandex Market",
     "description": "Yandex Market is a large Russian e-commerce platform and online marketplace where customers can search for, compare, and buy millions of products from numerous online stores and sellers.",
     "categories": [
-      "marketplace"
+      "Marketplace"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yastatic",
-    "name": "yastatic",
+    "name": "Yastatic",
     "description": "Yandex Static is a content delivery network (CDN) operated by Yandex.",
     "categories": [
-      "web"
+      "Web"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_mail",
-    "name": "yandex_mail",
+    "name": "Yandex Mail",
     "description": "Yandex Mail is a free email service developed by the Russian technology company Yandex.",
     "categories": [
-      "web",
-      "mail"
+      "Web",
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yandex_api",
-    "name": "yandex_api",
+    "name": "Yandex API",
     "description": "A Yandex API is a service that provides developers with programmatic access to Yandex's various platforms, such as its search engine, maps, and language models.",
     "categories": [
-      "web",
+      "Web",
       "API"
     ],
     "workflow": [
@@ -2204,41 +5850,41 @@
   },
   {
     "short_name": "amediateka",
-    "name": "amediateka",
+    "name": "Amediateka",
     "description": "Amediateka is a Russian subscription-based streaming service for TV series and movies, featuring content from major studios like HBO, Showtime, and Sony Pictures.",
     "categories": [
-      "media"
+      "Media"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yahoo_mail",
-    "name": "yahoo_mail",
+    "name": "Yahoo Mail",
     "description": "Yahoo Mail is a free, web-based email service provided by the company Yahoo! Inc..",
     "categories": [
-      "mail"
+      "Mail"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "yahoo_ads",
-    "name": "yahoo_ads",
+    "name": "Yahoo Ads",
     "description": "Yahoo Ads is an advertising platform where businesses can display ads across Yahoo's own properties, like its Mail, News, and Sports sites, as well as on other third-party websites, apps, and connected TVs.",
     "categories": [
-      "web",
-      "advertisement"
+      "Web",
+      "Advertisement"
     ],
     "workflow": [
     ]
   },
   {
     "short_name": "ech",
-    "name": "ech",
+    "name": "ECH",
     "description": "Encrypted Client Hello. The tag is presented only when ECH exists, but SNI doesn't exist.",
     "categories": [
-      "metadata"
+      "Metadata"
     ],
     "workflow": [
     ]
