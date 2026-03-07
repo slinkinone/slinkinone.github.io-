@@ -114,7 +114,6 @@ Description is absent.
 * **ports**: `{{ proto.ports | default: "none" }}`
 * **patterns**: `{{ proto.patterns | default: "none" }}`
 
-&nbsp;
 {{ tag.description }}
 
 {% unless forloop.last %}
