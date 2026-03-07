@@ -72,5 +72,9 @@ permalink: /tech/extensions/
 {% comment %} +++ {% endcomment %}
 {% endfor %}
 {% endif %}
+
+{% unless forloop.last %}
 <hr>
+{% endunless %}
+
 {% endfor %}

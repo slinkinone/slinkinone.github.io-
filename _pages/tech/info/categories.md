@@ -39,6 +39,9 @@ permalink: /tech/info/categories/
 {% for item in categories %}
 <h3 id="{{ item.short_name | slugify }}"># {{ item.short_name }}</h3>
 {{ item.description }}
+
+{% unless forloop.last %}
 <hr>
+{% endunless %}
 
 {% endfor %}
