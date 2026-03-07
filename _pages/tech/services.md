@@ -32,8 +32,14 @@ search: ...
   <a href="#{{ service.short_name }}">{{ service.name }}</a>
 </h3>
 
+<!--* `categories`: {{ service.categories | join: ", " }}-->
+
 * `short_name`: {{ service.short_name }}
-* `categories`: {{ service.categories | join: ", " }}
+* `categories`: 
+  {%- for cat in service.categories -%}
+    <a href="/tech/info/categories/#{{ cat | slugify }}">{{ cat }}</a>
+    {%- unless forloop.last -%}, {% endunless -%}
+  {%- endfor -%}
 * `workflow`: {{ service.workflow | join: ", " | default: "none" }}
 
 &nbsp;
