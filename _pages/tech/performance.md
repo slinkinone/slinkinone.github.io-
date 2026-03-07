@@ -43,7 +43,6 @@ todo
 
 
 {% if test.engine_performance == test.offload_performance %}
-
 | metric | engine |
 | :--- | :--- |
 | packets | {{ test.engine_performance.total_packets }} |
@@ -51,8 +50,6 @@ todo
 | gbps | {{ test.engine_performance.gpbs | round: 3 }} |
 | mbps | {{ test.engine_performance.mpbs | round: 2 }} |
 {% else %}
-{% comment %}
-
 | metric | nic |
 | :--- | :--- |
 | packets | {{ test.offload_performance.total_packets }} |
