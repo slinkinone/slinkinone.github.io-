@@ -18,11 +18,27 @@ permalink: /tech/protocols/
 \# [tables](/tech/info/tables)
 
 {% assign all_protocols = site.data.release.json.protocols.protocols.protocols | sort: "name" %}
-
-dissection total: [{{ all_protocols.size }} items]
-
 {% assign total_size = all_protocols.size %}
 {% assign half_size = total_size | divided_by: 2.0 | ceil %}
+
+<!-- tag protocols -->
+
+{% assign all_tags = site.data.release.json.tag_info | sort: "name" %}
+{% assign filtered_protocols = "" | split: "" %}
+
+{% for item in all_tags %}
+  {% assign categories_string = item.categories | join: ',' | downcase %}
+  {% if categories_string contains 'protocol' %}
+    {% assign filtered_protocols = filtered_protocols | push: item %}
+  {% endif %}
+{% endfor %}
+
+<!-- tag protocols -->
+
+engine total: [{{ filtered_protocols.size }} items]
+configuration total: [{{ all_protocols.size }} items]
+
+<!-- content table of engine protocols -->
 
 <div class="toc-container">
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
@@ -41,19 +57,7 @@ dissection total: [{{ all_protocols.size }} items]
 </table>
 </div>
 
-<!-- tag protocols -->
-
-{% assign all_tags = site.data.release.json.tag_info | sort: "name" %}
-{% assign filtered_protocols = "" | split: "" %}
-
-{% for item in all_tags %}
-  {% assign categories_string = item.categories | join: ',' | downcase %}
-  {% if categories_string contains 'protocol' %}
-    {% assign filtered_protocols = filtered_protocols | push: item %}
-  {% endif %}
-{% endfor %}
-
-detection total: [{{ filtered_protocols.size }} items]
+<!-- -->
 
 <hr>
 
