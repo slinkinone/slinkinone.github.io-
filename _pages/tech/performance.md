@@ -64,8 +64,8 @@ todo
 
 | name | packets | bytes |
 | :--- | :--- | :--- |
-{% assign sorted_tags = test.tag_stat | sort: "bytes" | reverse %}
-{% for tag in sorted_tags limit: 10 %}
+{%- assign sorted_tags = test.tag_stat | sort: "bytes" | reverse -%}
+{%- for tag in sorted_tags limit: 10 -%}
 
 | {{ tag.name }} | {{ tag.packets }} | {{ tag.bytes | divided_by: 1024 }} KB |
 {% endfor %}
