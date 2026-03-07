@@ -35,11 +35,9 @@ search: ...
 <!--* `categories`: {{ service.categories | join: ", " }}-->
 
 * `short_name`: {{ service.short_name }}
-* `categories`: 
-  {%- for cat in service.categories -%}
-    <a href="/tech/info/categories/#{{ cat | slugify }}">{{ cat }}</a>
-    {%- unless forloop.last -%}, {% endunless -%}
-  {%- endfor -%}
+* `categories`: {% for cat in service.categories -%}
+<a href="{{ '/tech/info/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+{%- endfor %}
 * `workflow`: {{ service.workflow | join: ", " | default: "none" }}
 
 &nbsp;
