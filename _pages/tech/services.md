@@ -28,16 +28,6 @@ total: [{{ filtered_services.size }} items]
 \# [categories](/tech/info/categories)
 \# [workflow](/tech/info/workflow)
 
-<div class="search-container">
-  <label for="service-search">> search: </label>
-  <input type="text" id="service-search" list="services-list" placeholder="type service name...">
-  <datalist id="services-list">
-    {% for service in filtered_services %}
-      <option value="{{ service.short_name }}">
-    {% endfor %}
-  </datalist>
-</div>
-
 <hr>
 
 {% for service in filtered_services %}
