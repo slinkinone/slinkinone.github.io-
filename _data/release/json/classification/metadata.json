@@ -1,94 +1,94 @@
 [
   {
-    "name": "Tag",
+    "name": "tag",
     "description": "The tag which is assigned by classifier extension."
   },
   {
-    "name": "Tag Type",
+    "name": "tag_type",
     "description": "The type of tag matching (IP, Domain, Cache, etc.)."
   },
   {
-    "name": "ECH",
+    "name": "ech",
     "description": "Encrypted Client Hello. The tag is presented only when ECH exists, but SNI doesn't exist."
   },
   {
-    "name": "FTP DATA",
+    "name": "ftp_data",
     "description": "FTP data trasnmission."
   },
   {
-    "name": "DNS Response Name",
+    "name": "dns_response_name",
     "description": "Processed dns response name - concatenated labels, resolving offsets, etc."
   },
   {
-    "name": "JA3",
+    "name": "ja3",
     "description": "The fingerprinting the client's TLS handshake (Client Hello)."
   },
   {
-    "name": "JA3S",
+    "name": "ja3s",
     "description": "The fingerprinting the server's response (Server Hello)."
   },
   {
-    "name": "JA3 hash",
+    "name": "ja3_hash",
     "description": "MD5 hash of JA3. Format: TLSVersion,Ciphers,Extensions,EllipticCurves,EllipticCurvePointFormats."
   },
   {
-    "name": "JA3 MD5",
+    "name": "ja3_md5",
     "description": "MD5 hash of JA3. Format: TLSVersion,Ciphers,Extensions,EllipticCurves,EllipticCurvePointFormats."
   },
   {
-    "name": "JA3S MD5",
+    "name": "ja3s_md5",
     "description": "MD5 hash of JA3S. Format: TLSVersion,Cipher,Extensions."
   },
   {
-    "name": "HTTP/2 Header",
+    "name": "http2_header",
     "description": "The http/2 protocol header block field: name:value."
   },
   {
-    "name": "HTTP/2 Push Promise header",
+    "name": "http2_push_promise_header",
     "description": "The http/2 protocol push-promise block field: name:value."
   },
   {
-    "name": "HTTP/2 Continuation header",
+    "name": "http2_continuation_header",
     "description": "The http/2 protocol continuation block field: name:value."
   },
   {
-    "name": "HTTP Authorization Credentials",
+    "name": "http_authorization_credentials",
     "description": "Base64 decoded value of Proxy-Authorization header value."
   },
   {
-    "name": "TLS Certificate Common name",
+    "name": "tls_certificate_common_name",
     "description": "The CommonName certificate field."
   },
   {
-    "name": "TLS Certificate General DNS Name",
+    "name": "tls_certificate_general_dns_name",
     "description": "The dNSName certificate field. Belongs to extension section."
   },
   {
-    "name": "Protocol Path",
+    "name": "protocol_path",
     "description": "Protocol path string (hierarchical chain of protocol that are used in a session)."
   },
   {
-    "name": "Bitrate",
+    "name": "bitrate",
     "description": "The bitrate is a measure of how much data is transferred over a network in a given period of time. Measured in bits per second (bps)."
   },
   {
-    "name": "Average packet size",
+    "name": "average_packet_size",
     "description": "Average packet size of processed packets."
   },
   {
-    "name": "Inter-arrival Time",
+    "name": "inter_arrival_time",
     "description": "Inter-arrival Time is the difference in time between the arrival of two consecutive packets at a receiver. Measured in nanoseconds. For one flow packet avg iat is 0."
   },
   {
-    "name": "Flow start time",
+    "name": "flow_start_time",
     "description": "Timestamp of the first flow packet.."
   },
   {
-    "name": "Flow last activity time",
+    "name": "flow_last_activity_time",
     "description": "Timestamp of the last flow packet."
   },
   {
-    "name": "Flow duration",
+    "name": "flow_duration",
     "description": "The flow duration time."
   }
 ]
