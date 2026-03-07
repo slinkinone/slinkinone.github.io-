@@ -11,11 +11,24 @@ include:
   - _pages/tech/
   - _pages/tech/info/
 
+#
+
+collections:
+  changelog:
+    output: false
+
+#
+
 defaults:
   - scope:
       path: ""
     values:
       image: "/assets/img/logo.png"
+  - scope:
+      path: "_changelog"
+      type: "changelog"
+    values:
+      layout: nil
 
 #
 

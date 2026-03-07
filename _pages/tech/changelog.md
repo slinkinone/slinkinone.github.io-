@@ -8,35 +8,25 @@ permalink: /tech/changelog/
 
 ## > changelog
 
-{% comment %} 
-  Iterate through the changelog directory object.
-  year_entry[0] is the year folder name (e.g., "2025").
-  year_entry[1] is the object containing files inside that folder.
-{% endcomment %}
-{% for year_entry in site.data.release.txt.changelog %}
-  {% assign year_name = year_entry[0] %}
-  {% assign files_object = year_entry[1] %}
+{% assign grouped_logs = site.changelog | sort: "path" | reverse | group_by_exp: "item", "item.path | split: '/' | slice: -2, 1" %}
 
-### # {{ year_name }}
+{% for group in grouped_logs %}
+  {% assign year = group.name %}
+  
+### # {{ year }}
 
-  {% comment %} 
-    Now iterate through the files object.
-    file_entry[0] is the filename (e.g., "v1.13.0").
-  {% endcomment %}
-  <div class="toc-container">
-  {% for file_entry in files_object %}
-    # {{ file_entry[0] }}<br>
+  <div class="changelog-year-section">
+  {% for log in group.items %}
+    <details style="margin-bottom: 12px; cursor: pointer;">
+      <summary style="font-family: monospace;">
+        <b>{{ log.basename }}</b>
+      </summary>
+      <div style="margin-top: 10px; padding: 15px; background: #111; border: 1px dashed #444; font-family: monospace; white-space: pre-wrap; color: #0f0;">
+{{ log.content | strip }}
+      </div>
+    </details>
   {% endfor %}
   </div>
 
+  {% unless forloop.last %}<hr style="border-top: 1px double #333;">{% endunless %}
 {% endfor %}
-
-
-<ul>
-  {% assign changelogs = site.static_files | where_exp: "file", "file.path contains '_data/release/txt/changelog/2025/'" %}
-  {% for file in changelogs %}
-    <li>
-      <a href="{{ file.path | relative_url }}">{{ file.basename }}</a>
-    </li>
-  {% endfor %}
-</ul>
