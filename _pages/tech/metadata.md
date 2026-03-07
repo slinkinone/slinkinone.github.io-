@@ -14,6 +14,8 @@ permalink: /tech/metadata/
 
 ## > metadata
 
+{% assign metadata = site.data.release.json.classification.metadata | sort: "name" %}
+
 <div class="toc-container">
 {% for item in metadata %}
   # <a href="#{{ item.name | slugify }}">{{ item.name }}</a><br>
@@ -21,8 +23,6 @@ permalink: /tech/metadata/
 </div>
 
 <hr>
-
-{% assign metadata = site.data.release.json.classification.metadata | sort: "name" %}
 
 {% for item in metadata %}
 <h3 id="{{ item.name | slugify }}"># {{ item.name }}</h3>
