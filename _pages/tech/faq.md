@@ -46,4 +46,4 @@ Unix-like, MacOS, Windows.
 
 ## # What about performance?
 
-Performance tests are carried out after each release. The latest information can be found on this portal in **performance** section.
+Performance tests are carried out after each release. The latest information can be found in the **performance** section of the changelog.
